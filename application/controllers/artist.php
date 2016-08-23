@@ -17,7 +17,30 @@ class Artist extends CI_Controller{
         $data['page_title']='Dashboard';
         $data['page']='myaccount';
         $this->load->view('artist/page',$data);
-    }
+    }		
+	
+	function addContest(){		
+		$this->load->model('contest_model');		
+		$this->load->model('fields_model');		        
+		$this->form_validation->set_rules('txt_contest_name', 'Contest Name', 'required');        
+		$this->form_validation->set_rules('txt_budget', 'Price', 'required');        
+		if($this->form_validation->run()){                   
+			$this->contest_model->addContest();     
+			redirect('/artist/myContest/','refresh');			
+		}else{			
+			$data['skills']=$this->fields_model->allActiveDirectorylist();			
+			$data['page_title']='Add Contest';			
+			$data['page']='addContest';			
+			$this->load->view('artist/page',$data);					
+		}	
+	}		
+	
+	function myContest(){		
+		$this->load->model('contest_model');		
+		$data['page_title']='My Contest';		
+		$data['page']='myContest';		
+		$this->load->view('artist/page',$data);	
+	}
 
     function accountDetails(){
         $session_arr=$this->session->userdata('user');

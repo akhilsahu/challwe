@@ -14,7 +14,15 @@ class Content extends CI_Controller{
         $data['page_title']='Industry Directory';
         $data['page']='home';
         $this->load->view('artist/page',$data);
-    }
+    }		
+	
+	function listcontest(){	
+		$this->load->model('contest_model');
+		$data['list']=$this->contest_model->allActiveContestlist();
+		$data['page_title']='Contest List';        
+		$data['page']='listContest';        
+		$this->load->view('artist/page',$data);		
+	}
 
     function searchlist(){
         if($this->input->post('search_directory')){

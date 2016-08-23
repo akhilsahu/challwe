@@ -10,8 +10,8 @@
 <link href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/colors/green.css" id="colors">
-<link href="<?php echo base_url();?>assets/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css">
-<script src="<?php echo base_url();?>assets/scripts/jquery-2.1.3.min.js"></script>
+<link href="<?php echo base_url();?>assets/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css"><link href="<?php echo base_url();?>plugins/select2/select2.min.css" rel="stylesheet" type="text/css">
+<script src="<?php echo base_url();?>assets/scripts/jquery-2.1.3.min.js"></script><script src="<?php echo base_url();?>plugins/select2/select2.full.min.js"></script>
 <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -87,7 +87,7 @@
                     </ul>
                 </li> -->
                 <li><a href="<?php echo site_url();?>/content/home" id="current">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
+                <li><a href="<?php echo site_url();?>/content/listcontest">Contest</a></li>
                 <li><a href="<?php echo site_url()?>/content/bloglist">Blog</a></li>
                 <li><a href="#">About Challwe</a></li>
             </ul>
