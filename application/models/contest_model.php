@@ -79,7 +79,7 @@ class Contest_model extends CI_Model{
 		
 		$sql.=" order by dt_created_on desc";
 		
-		if($limit!='') $sql.=" Limit ".$offset.",".$limit;
+		if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
 		
 		$query=$this->db->query($sql);
 
