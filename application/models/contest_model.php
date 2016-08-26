@@ -75,11 +75,15 @@ class Contest_model extends CI_Model{
 
 	function allActiveContestlist($limit=10,$offset=0){
 
-		$sql="select * from ".$this->table." where int_status=0 and dt_last_date> '".date('Y-m-d H:i:s')."' ";
+	 $sql="select * from ".$this->table."  as a  LEFT JOIN tab_fields b ON a.int_skill1 = b.int_field_id
+
+	 	where a.int_status=0 and a.dt_last_date> '".date('Y-m-d H:i:s')."' ";
 		
 		$sql.=" order by dt_created_on desc";
 		
-		if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
+		//if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
+
+
 		
 		$query=$this->db->query($sql);
 
@@ -229,7 +233,27 @@ class Contest_model extends CI_Model{
 
 	}
 
+/////////////////////////////////////////Created By Me///////////////////////////////////////////////////////////////
 
+	function allManageContestlist($limit=10,$offset=0){
+
+	$sql="select * from ".$this->table." as a  LEFT JOIN tab_fields b ON a.int_skill1 = b.int_field_id
+
+	 where a.int_status=0 and a.dt_last_date> '".date('Y-m-d H:i:s')."' ";
+		
+		$sql.=" order by dt_created_on desc";
+		
+		//if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
+
+
+		
+		$query=$this->db->query($sql);
+
+		$result=$query->result_array();
+
+		return $result;
+
+	}
 
 }
 
