@@ -27,11 +27,10 @@
 		<?php if($user['logged_in']){?>
 			<span style="float:right;">
 				<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Contest</a>
-				
-				<a href="<?php echo site_url();?>/artist/manageContest" class=" button">Manage Contest</a>
+				<a href="<?php echo site_url();?>/artist/addContest" class=" button">Create Contest</a>
 			</span>
 		<?php }?>
-		<!-- <a href="<?php echo site_url();?>/artist/addContest" class=" button">Create Contest</a> -->
+	
 
 		<table class="manage-table resumes responsive-table">
 
@@ -46,7 +45,12 @@
 
 			<!-- Item #1 -->
 			<?php 
-			
+		/*	echo "<pre><br>";
+			print_r($directory);
+*/
+
+
+
 			foreach($list as $val){
 
 				$getskill = "";
@@ -72,8 +76,8 @@
 				<td class="keywords"><?php echo $getskill;?></td>
 				<td>$ <?php echo $val['txt_budget'];?></td>
 				<td class="action">
-					<a href="<?php echo site_url();?>/content/showContest"><i class="fa fa-check-circle-o"></i> Show Contest</a>
-					<a onclick="setparticipate('<?=$value["int_contest_id"]?>');"><i class="fa fa-eye-slash"></i> participate</a>
+					<?php /*<a href="<?php echo site_url();?>/content/showContest"><i class="fa fa-check-circle-o"></i> Show Contest</a>
+					<a href="#"><i class="fa fa-eye-slash"></i> participate</a>*/ ?>
 				</td>
 			</tr>
 			<?php }?>
@@ -84,16 +88,3 @@
 	</div>
 
 </div>
-<script type="text/javascript">
-	function setparticipate(id){
-	$.ajax({
-			type: "POST",
-			url: "<?=site_url()?>artist/updateparticipate",
-			data: { 'id' : id } ,
-			cache: false,
-			success: function(data) {
-
-			}
-	});
-}
-</script>
