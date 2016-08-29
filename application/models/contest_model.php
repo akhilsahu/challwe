@@ -40,7 +40,9 @@ class Contest_model extends CI_Model{
 			'dt_start_date'=>date('Y-m-d H:i:s',strtotime($dt_start_date)),
 			'dt_last_date'=>date('Y-m-d H:i:s',strtotime($dt_end_date)),
 			'int_status'=>0,
-			'int_winner1'=>0
+			'int_winner1'=>0,
+			'int_winner2'=>0,
+			'int_winner3'=>0
 		);
 		$this->db->insert('tab_contest',$data);
 		$contestId=$this->db->insert_id();
