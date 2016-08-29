@@ -64,6 +64,7 @@ class Contest_model extends CI_Model{
 				
 			}
 		}
+		/*
 		if(count($arr)>0){
 			$val=json_encode($arr);
 			$data1=array(
@@ -71,7 +72,7 @@ class Contest_model extends CI_Model{
 			);
 			$thsi->db->where('int_contest_id',$contestId);
 			$this->db->update('tab_contest',$data1);
-		}
+		}*/
 		
 	}
 
