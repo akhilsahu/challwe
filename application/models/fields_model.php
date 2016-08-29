@@ -173,11 +173,11 @@ class Fields_model extends CI_Model{
 
 	function allShowActiveDirectorylist($sk1='',$sk2='',$sk3='',$sk4='',$sk5=''){
 	
-		$sk1=$sk1!=''?$sk1:NULL;
-		$sk2=$sk2!=''?$sk2:NULL;
-		$sk3=$sk3!=''?$sk3:NULL;
-		$sk4=$sk4!=''?$sk4:NULL;
-		$sk5=$sk5!=''?$sk5:NULL;
+		$sk1=$sk1!=''?$sk1:'NULL';
+		$sk2=$sk2!=''?$sk2:'NULL';
+		$sk3=$sk3!=''?$sk3:'NULL';
+		$sk4=$sk4!=''?$sk4:'NULL';
+		$sk5=$sk5!=''?$sk5:'NULL';
 		
 
 		$sql="select string_agg(txt_field_name,',') as skill_name
