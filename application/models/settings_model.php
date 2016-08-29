@@ -9,7 +9,7 @@ class Settings_model extends CI_Model{
 	}
 	
 	 function getAllSettings(){
-		$sql="Select * from ".$this->table." where 1 ";
+		$sql="Select * from ".$this->table."";
 		$query=$this->db->query($sql);
 		$result=$query->result_array();
 		return $result;
