@@ -39,7 +39,7 @@ class Contest_model extends CI_Model{
 			'int_created_by'=>$user['int_artist_id'],
 			'dt_start_date'=>date('Y-m-d H:i:s',strtotime($dt_start_date)),
 			'dt_last_date'=>date('Y-m-d H:i:s',strtotime($dt_end_date)),
-			'int_status'=>0
+			'int_status'=>0,
 			'int_winner1'=>0
 		);
 		$this->db->insert('tab_contest',$data);
