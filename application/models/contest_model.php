@@ -47,20 +47,20 @@ class Contest_model extends CI_Model{
 		$this->db->insert('tab_contest',$data);
 		$contestId=$this->db->insert_id();
 		
-		mkdir("contest_documents/".$contestId);	
+		//mkdir("contest_documents/".$contestId);	
 		$arr=array();
 		for($i=0;$i<count($_FILES['image_file']['name']);$i++){	
 			if($_FILES['image_file']['name'][$i]!=''){
-				$allowedtype=array("image/jpg","image/png","image/jpeg");
+				//$allowedtype=array("image/jpg","image/png","image/jpeg");
 				
-				if (in_array($_FILES["image_file"]["type"][$i],$allowedtype)){
+				//if (in_array($_FILES["image_file"]["type"][$i],$allowedtype)){
 					$ext=explode(".",$_FILES["image_file"]["name"][$i]);		
-					$filename=date('Ymdhis').$i;
+					$filename=$contestId."_".date('Ymdhis').$i;
 					$imgtype=$_FILES["image_file"]["type"][$i];
-					$file_name="contest_documents/".$contestId."/".$filename.".".$ext[count($ext)-1];
+					$file_name="contest_documents/".$filename.".".$ext[count($ext)-1];
 					move_uploaded_file($_FILES['image_file'][tmp_name][$i],$file_name);
 					$arr[]=$file_name;
-				}
+				//}
 				
 			}
 		}
