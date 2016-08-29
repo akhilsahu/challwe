@@ -173,7 +173,7 @@ class Fields_model extends CI_Model{
 
 	function allShowActiveDirectorylist($sk1='',$sk2='',$sk3='',$sk4='',$sk5=''){
 
-		$sql="select array_to_string(txt_field_name,',') as skill_name
+		$sql="select string_agg(txt_field_name,',') as skill_name
 		 from ".$this->table." where int_is_active=1 
 		and ( int_field_id = '".$sk1."' OR int_field_id = '".$sk2."' OR int_field_id = '".$sk3."' OR int_field_id = '".$sk4."'  OR int_field_id = '".$sk5."' ) ";
 
