@@ -54,17 +54,17 @@ class Contest_model extends CI_Model{
 				//$allowedtype=array("image/jpg","image/png","image/jpeg");
 				
 				//if (in_array($_FILES["image_file"]["type"][$i],$allowedtype)){
-					/*$ext=explode(".",$_FILES["image_file"]["name"][$i]);		
+					$ext=explode(".",$_FILES["image_file"]["name"][$i]);		
 					$filename=$contestId."_".date('Ymdhis').$i;
 					$imgtype=$_FILES["image_file"]["type"][$i];
 					$file_name="contest_documents/".$filename.".".$ext[count($ext)-1];
 					move_uploaded_file($_FILES['image_file'][tmp_name][$i],$file_name);
-					$arr[]=$file_name;*/
+					$arr[]=$file_name;
 				//}
 				
 			}
 		}
-		
+		/*
 		if(count($arr)>0){
 			$val=json_encode($arr);
 			$data1=array(
@@ -72,7 +72,7 @@ class Contest_model extends CI_Model{
 			);
 			$thsi->db->where('int_contest_id',$contestId);
 			$this->db->update('tab_contest',$data1);
-		}
+		}*/
 		
 	}
 
