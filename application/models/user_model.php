@@ -392,7 +392,7 @@ class User_model extends CI_Model{
 
 	function getArtistBusinessDetails($user){
 
-		$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city = c.id where int_artist_id=$user";
+		$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on CAST(a.txt_reg_city as integer)= c.id where int_artist_id=$user";
 		//$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city::integer = c.id where int_artist_id=$user";
 
 		$query=$this->db->query($sql);
