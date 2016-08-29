@@ -64,6 +64,10 @@ class Contest_model extends CI_Model{
 				
 			}
 		}
+		print_r($arr);
+		$val=json_encode($arr);
+		print_r($val);
+		die();
 		/*
 		if(count($arr)>0){
 			$val=json_encode($arr);
