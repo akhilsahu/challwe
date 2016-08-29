@@ -45,6 +45,24 @@
             width: 100%;
             z-index: 1001;
           } 
+		  
+		  .tooltip {
+			  top:-10px;
+			  background-color:black;
+			  color:white;
+			  border-radius:5px;
+			  opacity:0;
+			  position:absolute;
+			  -webkit-transition: opacity 0.5s;
+			  -moz-transition:  opacity 0.5s;
+			  -ms-transition: opacity 0.5s;
+			  -o-transition:  opacity 0.5s;
+			  transition:  opacity 0.5s;
+			}
+
+			.hover:hover .tooltip {
+				opacity:1;
+			}
     </style>
 
   <body>
@@ -95,7 +113,11 @@
 
             <ul class="float-right">
                 <?php if($user['logged_in']){
-                    ?>  
+                    ?>
+					<li>
+						<a href="<?php echo site_url();?>/wallet/addAmount" class="hover"><?php echo $user['int_challwe_coins'];?> Coins</a>
+						<div class="tooltip">asdadasd</div>
+					</li>	
                     <li><a href="javascript:void(0)"> Hi <?php echo $user['txt_fname']?></a></li>
                     <li><a href="<?php echo site_url()?>/artist/dashboard"> My Account</a></li>    
                     <?php 

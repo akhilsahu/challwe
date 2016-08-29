@@ -61,7 +61,7 @@ class Admin extends CI_Controller{
         }else{
             echo "Failed";
         }
-    }
+    }		function manageTransactions(){		$this->load->model('user_model');		$data['users']=$this->user_model->allArtistlistId();        $this->form_validation->set_rules('int_user_id', 'User', 'required');        if($this->form_validation->run())        {				$userId=$this->input->post('int_user_id');			$this->load->model('wallet_model');            $data['list']=$this->wallet_model->getTransactionsByMember($userId);			$data['page_title']='Manage Transections';            $data['page']='manageTransactions';            $this->load->view('admin/page',$data);        }        else        {            $data['page_title']='Manage Transections';            $data['page']='manageTransactions';            $this->load->view('admin/page',$data);        }	}		function manageSettings(){		$this->load->model('settings_model');        $this->form_validation->set_rules('txt_site_name', 'Site Name', 'required');		$this->form_validation->set_rules('txt_cost_per_coin', 'Cost Per Coin', 'required');        if($this->form_validation->run())        {	            $this->settings_model->settingsEdit();            redirect('/admin/manageSettings/', 'refresh');        }        else        {            $data['list']=$this->settings_model->getAllSettings();            $data['page_title']='Settings';            $data['page']='add_settings';            $this->load->view('admin/page',$data);        }	}
     
     function editDirectory($id=''){
         $this->load->model('fields_model');

@@ -114,7 +114,7 @@ $user=$this->session->userdata('user');
 
               <a href="">
 
-                <i class="fa fa-dashboard"></i> <span>Member</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-users"></i> <span>Member</span> <i class="fa fa-angle-left pull-right"></i>
 
               </a>
 
@@ -198,6 +198,17 @@ $user=$this->session->userdata('user');
 
 
             </li>
+			<li class="treeview">
+				  <a href="<?php echo site_url()."/admin/manageTransactions";?>">
+					<i class="fa fa-history"></i> <span>Transaction History</span>
+				  </a>
+			</li>
+			  
+			 <li class="treeview">
+				  <a href="<?php echo site_url()."/admin/manageSettings";?>">
+					<i class="fa fa-cog"></i> <span>Settings</span>
+				  </a>
+			  </li>
 
 
 

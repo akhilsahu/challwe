@@ -46,21 +46,9 @@
 
 			<!-- Item #1 -->
 			<?php 
-			
+
 			foreach($list as $val){
 
-				$getskill = "";
-				if($val['int_skill1']){
-					$getskill = $val['txt_field_name']." ";
-				}else if($val['int_skill2']){
-					$getskill .= $val['txt_field_name']." ";
-				}else if($val['int_skill3']){
-					$getskill .= $val['txt_field_name']." ";
-				}else if($val['int_skill4']){
-					$getskill .= $val['txt_field_name']." ";
-				}else if($val['int_skill5']){
-					$getskill .= $val['txt_field_name']." ";
-				}
 
 				$s_date=date_create($val['dt_start_date']);
 				$c_date=date_create($val['dt_last_date']);
@@ -69,11 +57,18 @@
 				<td class="alert-name"><?php echo $val['txt_contest_name'];?></td>
 				<td><?php echo date_format($s_date,"F j, Y");?></td>
 				<td><?php echo date_format($c_date,"F j, Y");?></td>
-				<td class="keywords"><?php echo $getskill;?></td>
+				<td class="keywords"><?php echo $val['skills'];?></td>
 				<td>$ <?php echo $val['txt_budget'];?></td>
 				<td class="action">
-					<a href="<?php echo site_url();?>/content/showContest"><i class="fa fa-check-circle-o"></i> Show Contest</a>
-					<a onclick="setparticipate('<?=$value["int_contest_id"]?>');"><i class="fa fa-eye-slash"></i> participate</a>
+					<a href="<?php echo site_url();?>/content/showContest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i> Show Contest</a>
+					<?php if($val['int_status'] == 1 ){
+						echo "Participated ";
+					}else{  ?>
+					<a onclick="javascript:
+					if(confirm('Are you sure? You want to participate in contest?')){
+						setparticipate('<?php echo $val["int_contest_id"]?>','<?php echo $val['int_created_by'] ?>');
+					}"><i class="fa fa-eye-slash"></i> participate</a>
+					<?php } ?>
 				</td>
 			</tr>
 			<?php }?>
@@ -85,14 +80,14 @@
 
 </div>
 <script type="text/javascript">
-	function setparticipate(id){
+	function setparticipate(id,name){
 	$.ajax({
 			type: "POST",
-			url: "<?=site_url()?>artist/updateparticipate",
-			data: { 'id' : id } ,
+			url: "<?php echo site_url(); ?>/artist/updateparticipate",
+			data: { 'id' : id  , 'artist_id' : name } ,
 			cache: false,
 			success: function(data) {
-
+				window.location='<?php echo site_url(); ?>/content/listcontest/';
 			}
 	});
 }

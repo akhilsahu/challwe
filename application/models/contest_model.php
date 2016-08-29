@@ -73,14 +73,13 @@ class Contest_model extends CI_Model{
 
 
 
-	function allActiveContestlist($limit=10,$offset=0){
+	function allActiveContestlist($id='',$limit=10,$offset=0){
 
-	 $sql="select * from ".$this->table."  as a  LEFT JOIN tab_fields b ON a.int_skill1 = b.int_field_id
-
-	 	where a.int_status=0 and a.dt_last_date> '".date('Y-m-d H:i:s')."' ";
-		
+	$sql="select a.*,  c.int_status from ".$this->table."  as a  
+			LEFT JOIN tab_invites c ON a.int_contest_id = c.int_contest_id
+			where a.int_status=0 and a.dt_last_date> '".date('Y-m-d H:i:s')."'";
+			if($id) $sql .= " and  a.int_contest_id=".$_GET['id'];
 		$sql.=" order by dt_created_on desc";
-		
 		//if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
 
 
@@ -254,6 +253,30 @@ class Contest_model extends CI_Model{
 		return $result;
 
 	}
+
+
+	function allShowActiveContest($id='',$limit=10,$offset=0){
+
+	$sql="select a.*, b.*, c.int_status from ".$this->table."  as a  
+			LEFT JOIN tab_fields b ON a.int_skill1 = b.int_field_id
+			LEFT JOIN tab_invites c ON a.int_contest_id = c.int_contest_id
+			where a.int_status=0 ";
+			if($id) $sql .= " and  a.int_contest_id=".$_GET['id'];
+		$sql.=" order by dt_created_on desc";
+		
+		//if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
+
+
+		
+		$query=$this->db->query($sql);
+
+		$result=$query->result_array();
+
+		return $result;
+
+	}
+
+	
 
 }
 

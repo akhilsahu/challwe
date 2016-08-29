@@ -35,12 +35,7 @@ class Artist extends CI_Controller{
 		}	
 	}		
 	
-	function myContest(){		
-		$this->load->model('contest_model');		
-		$data['page_title']='My Contest';		
-		$data['page']='myContest';		
-		$this->load->view('artist/page',$data);	
-	}
+	
 
     function accountDetails(){
         $session_arr=$this->session->userdata('user');
@@ -185,18 +180,69 @@ class Artist extends CI_Controller{
         $this->load->view('artist/page',$data);
     }
 
-/////////////////////////////////////////////////////Created By Me/////////////////////////////////////////
+/////////////////////////////////////////////////////Created By Kavita/////////////////////////////////////////
 
     function manageContest(){ 
         $this->load->model('contest_model');
-        $data['list']=$this->contest_model->allManageContestlist();
+        $this->load->model('fields_model');
+        $i=0;
+        $response_data = array();
+       // $data['list'] = $this->contest_model->allActiveContestlist();
+        $data_list =$this->contest_model->allActiveContestlist();
+        foreach($data_list as $value) {
+                $skill = $this->fields_model->allShowActiveDirectorylist($value['int_skill1'],$value['int_skill2'],$value['int_skill3'],$value['int_skill4'],$value['int_skill5']);
+                $response_data[$i]["int_contest_id"] = $value["int_contest_id"];
+                $response_data[$i]["txt_contest_name"] = $value["txt_contest_name"];
+                $response_data[$i]["dt_start_date"] = $value["dt_start_date"];
+                $response_data[$i]["dt_last_date"] = $value["dt_last_date"];
+                $response_data[$i]["txt_budget"] = $value["txt_budget"];
+                $response_data[$i]["int_created_by"] = $value["int_created_by"];
+                $response_data[$i]["int_status"] = $value["int_status"];
+                $response_data[$i]["skills"] = $skill[0]['skill_name'];
+                $i++;   
+        }
+        $data['list'] = $response_data;
         $data['page_title']='Manage Contest List';        
         $data['page']='manageContest';        
         $this->load->view('artist/page',$data);     
     }
+    function updateparticipate($id,$name){
+       // echo "<pre>";print_r($this->input->post());
+        $formdata=$this->input->post();
+        extract($formdata);
+        $data=array(
+            'int_contest_id'=>$id,
+            'int_artist_id'=>$artist_id,
+            'int_status'=> 1
 
-    function updateparticipate($id){
-        
+            );
+        $this->db->insert('tab_invites',$data);
+        echo $invites_id=$this->db->insert_id();
+    }
+
+    function myContest(){       
+        $this->load->model('contest_model');
+        $this->load->model('fields_model');
+        $i=0;
+        $response_data = array();
+       // $data['list'] = $this->contest_model->allActiveContestlist();
+        $data_list =$this->contest_model->allActiveContestlist();
+        foreach($data_list as $value) {
+                $skill = $this->fields_model->allShowActiveDirectorylist($value['int_skill1'],$value['int_skill2'],$value['int_skill3'],$value['int_skill4'],$value['int_skill5']);
+                $response_data[$i]["int_contest_id"] = $value["int_contest_id"];
+                $response_data[$i]["txt_contest_name"] = $value["txt_contest_name"];
+                $response_data[$i]["dt_start_date"] = $value["dt_start_date"];
+                $response_data[$i]["dt_last_date"] = $value["dt_last_date"];
+                $response_data[$i]["txt_budget"] = $value["txt_budget"];
+                $response_data[$i]["int_created_by"] = $value["int_created_by"];
+                $response_data[$i]["int_status"] = $value["int_status"];
+                $response_data[$i]["skills"] = $skill[0]['skill_name'];
+                $i++;   
+        }
+        $data['list'] = $response_data;       
+        $data['page_title']='My Contest';       
+        $data['page']='myContest';      
+        $this->load->view('artist/page',$data); 
     }
 
 }

@@ -53,19 +53,6 @@
 
 			foreach($list as $val){
 
-				$getskill = "";
-				if($val['int_skill1']){
-					$getskill = $val['txt_field_name']." ";
-				}else if($val['int_skill2']){
-					$getskill .= $val['txt_field_name']." ";
-				}else if($val['int_skill3']){
-					$getskill .= $val['txt_field_name']." ";
-				}else if($val['int_skill4']){
-					$getskill .= $val['txt_field_name']." ";
-				}else if($val['int_skill5']){
-					$getskill .= $val['txt_field_name']." ";
-				}
-
 				$s_date=date_create($val['dt_start_date']);
 				$c_date=date_create($val['dt_last_date']);
 				?>
@@ -73,11 +60,11 @@
 				<td class="alert-name"><?php echo $val['txt_contest_name'];?></td>
 				<td><?php echo date_format($s_date,"F j, Y");?></td>
 				<td><?php echo date_format($c_date,"F j, Y");?></td>
-				<td class="keywords"><?php echo $getskill;?></td>
+				<td class="keywords"><?php echo $val['skills'];?></td>
 				<td>$ <?php echo $val['txt_budget'];?></td>
 				<td class="action">
-					<?php /*<a href="<?php echo site_url();?>/content/showContest"><i class="fa fa-check-circle-o"></i> Show Contest</a>
-					<a href="#"><i class="fa fa-eye-slash"></i> participate</a>*/ ?>
+					<a href="<?php echo site_url();?>/content/viewcontest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i>View</a>
+					
 				</td>
 			</tr>
 			<?php }?>

@@ -169,6 +169,21 @@ class Fields_model extends CI_Model{
 		return $result;
 
 	}
+////////////////////////////////////////////////////////Created By Kavita ///////////////////////////////////////////
+
+	function allShowActiveDirectorylist($sk1='',$sk2='',$sk3='',$sk4='',$sk5=''){
+
+		$sql="select GROUP_CONCAT( DISTINCT txt_field_name SEPARATOR ',' ) as skill_name
+		 from ".$this->table." where int_is_active=1 
+		and ( int_field_id = '".$sk1."' OR int_field_id = '".$sk2."' OR int_field_id = '".$sk3."' OR int_field_id = '".$sk4."'  OR int_field_id = '".$sk5."' ) ";
+
+		$query=$this->db->query($sql);
+
+		$result=$query->result_array();
+
+		return $result;
+
+	}
 
 
 

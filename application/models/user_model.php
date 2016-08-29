@@ -48,7 +48,7 @@ class User_model extends CI_Model{
 
 		$password=md5($txt_password);
 
-		$sql="select txt_fname,txt_lname,txt_password,int_artist_id,txt_email,txt_profile_image,int_is_blocked from ".$this->table_artist." where txt_email='".$txt_email."' and txt_password='".$password."' and int_is_blocked=0  ";
+		$sql="select txt_fname,txt_lname,txt_password,int_artist_id,txt_email,txt_profile_image,int_is_blocked,int_challwe_coins from ".$this->table_artist." where txt_email='".$txt_email."' and txt_password='".$password."' and int_is_blocked=0  ";
 
 		$query=$this->db->query($sql);
 
@@ -63,6 +63,18 @@ class User_model extends CI_Model{
 	function allArtistlist(){
 
 		$sql="select a.* from ".$this->table_artist." a where 1 ";
+
+		$query=$this->db->query($sql);
+
+		$result=$query->result_array();
+
+		return $result;
+
+	}
+	
+	function allArtistlistId(){
+
+		$sql="select a.txt_fname,a.txt_lname,a.int_artist_id from ".$this->table_artist." a where 1 ";
 
 		$query=$this->db->query($sql);
 
@@ -590,6 +602,7 @@ class User_model extends CI_Model{
 		return $query?1:0;
 
 	}
+
 
 }
 

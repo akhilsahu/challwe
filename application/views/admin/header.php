@@ -53,7 +53,7 @@ $user=$this->session->userdata('user');
     <link rel="stylesheet" href="<?php echo base_url();?>filterizer/css/index.css">
 
     <link href='<?php echo base_url();?>dist/css/jquery.popdown.css' rel='stylesheet' />
-
+	<link href='<?php echo base_url();?>plugins/select2/select2.min.css' rel='stylesheet' />
     <script src="<?php echo base_url();?>plugins/jQuery/jQuery-2.1.4.min.js"></script>
 
     <!-- Bootstrap 3.3.5 -->

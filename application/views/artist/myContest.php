@@ -42,63 +42,38 @@
 			</tr>
 
 			<!-- Item #1 -->
+			<?php 
+
+			foreach($list as $val){
+
+
+				$s_date=date_create($val['dt_start_date']);
+				$c_date=date_create($val['dt_last_date']);
+				?>
 			<tr>
-				<td class="alert-name">Looking for job</td>
-				<td>September 30, 2015</td>
-				<td>September 1, 2015</td>
-				<td class="keywords">Web Developer, PHP, HTML</td>
-				<td>$120</td>
+				<td class="alert-name"><?php echo $val['txt_contest_name'];?></td>
+				<td><?php echo date_format($s_date,"F j, Y");?></td>
+				<td><?php echo date_format($c_date,"F j, Y");?></td>
+				<td class="keywords"><?php echo $val['skills'];?></td>
+				<td>$ <?php echo $val['txt_budget'];?></td>
 				<td class="action">
-					<a href="#"><i class="fa fa-check-circle-o"></i> Show Contest</a>
-					<a href="#"><i class="fa fa-eye-slash"></i> participate</a>
+					<a href="<?php echo site_url();?>/content/showContest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i> Show Contest</a>
+					<?php if($val['int_status'] == 1 ){
+						echo "Participated ";
+					}else{  ?>
+					<a onclick="javascript:
+					if(confirm('Are you sure? You want to participate in contest?')){
+						setparticipate('<?php echo $val["int_contest_id"]?>','<?php echo $val['int_created_by'] ?>');
+					}"><i class="fa fa-eye-slash"></i> participate</a>
+					<?php } ?>
 				</td>
 			</tr>
+			<?php }?>
 
 		</table>
 
 		<br>
-	<?php /*
-		<a href="#small-dialog" class="popup-with-zoom-anim button">Add Alert</a>
-
-		<div id="small-dialog" class="zoom-anim-dialog mfp-hide apply-popup">
-			<div class="small-dialog-headline">
-				<h2>Add Alert</h2>
-			</div>
-
-			<div class="small-dialog-content">
-				<form action="#" method="get" >
-					<input type="text" placeholder="Alert Name" value=""/>
-					<input type="text" placeholder="Keyword" value=""/>
-					<input type="text" placeholder="Location" value=""/>
-
-					<!-- Select -->
-					<select data-placeholder="Email Frequency" class="chosen-select-no-single">
-						<option value="">Email Frequency</option>
-						<option value="1">Daily</option>
-						<option value="2">Weekly</option>
-						<option value="3">Fortnightly</option>
-					</select>
-
-					<div class="clearfix"></div>
-					<div class="margin-top-15"></div>
-
-					<!-- Select -->
-					<select data-placeholder="Job Type" class="chosen-select" multiple>
-						<option value="1">Full-Time</option>
-						<option value="2">Part-Time</option>
-						<option value="3">Internship</option>
-						<option value="4">Freelance</option>
-						<option value="5">Temporary</option>
-					</select>
-
-					<div class="margin-top-20"></div>
-					<div class="divider"></div>
-
-					<button class="send">Save Alert</button>
-				</form>
-			</div>
-			
-			*/?>
+	
 		</div>
 	</div>
 
