@@ -74,7 +74,7 @@ class User_model extends CI_Model{
 	
 	function allArtistlistId(){
 
-		$sql="select a.txt_fname,a.txt_lname,a.int_artist_id from ".$this->table_artist." a where 1 ";
+		$sql="select a.txt_fname,a.txt_lname,a.int_artist_id from ".$this->table_artist." a";
 
 		$query=$this->db->query($sql);
 
