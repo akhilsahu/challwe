@@ -115,7 +115,7 @@
                 <?php if($user['logged_in']){
                     ?>
 					<li>
-						<a href="<?php echo site_url();?>/wallet/addAmount" class="hover"><?php echo $user['int_challwe_coins'];?> Coins</a>
+						<a href="<?php echo site_url();?>/wallet/mytransections" class="hover"><?php echo $user['int_challwe_coins'];?> Wallet</a>
 						<div class="tooltip">asdadasd</div>
 					</li>	
                     <!--<li><a href="javascript:void(0)"> Hi <?php //echo $user['txt_fname']?></a></li>-->
