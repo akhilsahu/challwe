@@ -1,7 +1,7 @@
 <?php  (defined('BASEPATH')) OR exit('No direct script access allowed');
 
 class Content extends CI_Controller{
-	
+	public $datas = array();
     function __construct()
     {
             parent::__construct();
@@ -15,23 +15,6 @@ class Content extends CI_Controller{
         $data['page']='home';
         $this->load->view('artist/page',$data);
     }		
-	
-	function contest_download($contest_id,$sno){
-		$this->load->model('contest_model');
-		$data=$this->contest_model->getContestMedia($contest_id);	
-		$data=json_decode($data[0]['txt_attachements']);
-		$dir=base_url().$data[$sno-1];
-		if($dir){
-		   header('Pragma: public');
-		   header('Cache-Control: public, no-cache');
-		   header('Content-Type: application/octet-stream');
-		   header('Content-Length: ' . filesize($dir));
-		   header('Content-Disposition: attachment; filename="' . basename($dir) . '"');
-		   header('Content-Transfer-Encoding: binary');
-
-		   readfile($dir);
-		}
-	 }
 	
 	function listcontest(){	
 		$this->load->model('contest_model');
@@ -49,7 +32,6 @@ class Content extends CI_Controller{
                 $response_data[$i]["txt_budget"] = $value["txt_budget"];
                 $response_data[$i]["int_created_by"] = $value["int_created_by"];
                 $response_data[$i]["int_status"] = $value["int_status"];
-				$response_data[$i]["user_status"] = $value["user_status"];
                 $response_data[$i]["skills"] = $skill[0]['skill_name'];
                 $i++;   
         }
@@ -98,15 +80,47 @@ class Content extends CI_Controller{
 
 
 
-    function showcontest(){ 
-      
+//////////////////////////////////////////////Created By Me/////////////////////////////////////////////////////
+
+function viewcontest(){ 
         $this->load->model('contest_model');
         $this->load->model('fields_model');
-        $data['list']=$this->contest_model->showContestDetails($_GET['id']);
+
+        $data['list']=$this->contest_model->allShowActiveContest($_GET['id']);
         //print_r($data['list']);
         $data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['list'][0]['int_skill1'],$data['list'][0]['int_skill2'],$data['list'][0]['int_skill3'],$data['list'][0]['int_skill4'],$data['list'][0]['int_skill5']);
+        $i=0;
+        $response_data = array();
+        $data_list =$this->contest_model->allActiveContestlist();
+        foreach($data_list as $value) {
+                $skill = $this->fields_model->allShowActiveDirectorylist($value['int_skill1'],$value['int_skill2'],$value['int_skill3'],$value['int_skill4'],$value['int_skill5']);
+                $response_data[$i]["int_contest_id"] = $value["int_contest_id"];
+                $response_data[$i]["txt_contest_name"] = $value["txt_contest_name"];
+                $response_data[$i]["dt_start_date"] = $value["dt_start_date"];
+                $response_data[$i]["dt_last_date"] = $value["dt_last_date"];
+                $response_data[$i]["txt_budget"] = $value["txt_budget"];
+                $response_data[$i]["int_created_by"] = $value["int_created_by"];
+                $response_data[$i]["int_status"] = $value["int_status"];
+                $response_data[$i]["skills"] = $skill[0]['skill_name'];
+                $i++;   
+        }
+        $data['participated']= $response_data;
 
-        $data['userContestStatus']= $this->contest_model->getUserContestStatus($_GET['id']);
+
+        
+        $data['page_title']='Contest List';        
+        $data['page']='viewContest';        
+        $this->load->view('artist/page',$data);     
+    }
+
+
+    function showcontest(){ 
+        $this->load->model('contest_model');
+        $this->load->model('fields_model');
+
+        $data['list']=$this->contest_model->allShowActiveContest($_GET['id']);
+        //print_r($data['list']);
+        $data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['list'][0]['int_skill1'],$data['list'][0]['int_skill2'],$data['list'][0]['int_skill3'],$data['list'][0]['int_skill4'],$data['list'][0]['int_skill5']);
         
         $data['page_title']='Contest List';        
         $data['page']='showContest';        
@@ -119,9 +133,6 @@ class Content extends CI_Controller{
         $data['page']='showContest';        
         $this->load->view('artist/page',$data);    
 }
- 
-       
-      
 
 
 }

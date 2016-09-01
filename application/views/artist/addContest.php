@@ -6,7 +6,7 @@
 	<div class="container">
 
 		<div class="sixteen columns">
-			<h2><i class="fa fa-plus-circle"></i> Add Contest</h2>
+			<h2><i class="fa fa-plus-circle"></i> Add Challenge</h2>
 		</div>
 
 	</div>
@@ -14,7 +14,7 @@
 
 <?php if($user['logged_in']){?>
 	<span style="float:right;padding-right:5%;">
-		<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Contest</a>
+		<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Challenge</a>
 	</span>
 <?php }?>
 

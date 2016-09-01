@@ -38,7 +38,11 @@ class Contest_model extends CI_Model{
 			'dt_created_on'=>date('Y-m-d H:i:s'),
 			'int_created_by'=>$user['int_artist_id'],
 			'dt_start_date'=>date('Y-m-d H:i:s',strtotime($dt_start_date)),
-			'dt_last_date'=>date('Y-m-d H:i:s',strtotime($dt_end_date))
+			'dt_last_date'=>date('Y-m-d H:i:s',strtotime($dt_end_date)),
+			'int_status'=>0,
+			'int_winner1'=>0,
+			'int_winner2'=>0,
+			'int_winner3'=>0
 		);
 		$this->db->insert('tab_contest',$data);
 		$contestId=$this->db->insert_id();
@@ -47,20 +51,19 @@ class Contest_model extends CI_Model{
 		$arr=array();
 		for($i=0;$i<count($_FILES['image_file']['name']);$i++){	
 			if($_FILES['image_file']['name'][$i]!=''){
-				//$allowedtype=array("image/jpg","image/png","image/jpeg");
+				$allowedtype=array("image/jpg","image/png","image/jpeg");
 				
-				//if (in_array($_FILES["image_file"]["type"][$i],$allowedtype)){
+				if (in_array($_FILES["image_file"]["type"][$i],$allowedtype)){
 					$ext=explode(".",$_FILES["image_file"]["name"][$i]);		
 					$filename=date('Ymdhis').$i;
 					$imgtype=$_FILES["image_file"]["type"][$i];
 					$file_name="contest_documents/".$contestId."/".$filename.".".$ext[count($ext)-1];
 					move_uploaded_file($_FILES['image_file'][tmp_name][$i],$file_name);
 					$arr[]=$file_name;
-				//}
+				}
 				
 			}
 		}
-
 		if(count($arr)>0){
 			$val=json_encode($arr);
 			$data1=array(
@@ -71,97 +74,19 @@ class Contest_model extends CI_Model{
 		}
 		
 	}
-	
-	function myContestlist($limit=10,$offset=0){
-		$session_arr=$this->session->userdata('user');
-		$sql="select a.*,  c.int_status from ".$this->table."  as a  
-			INNER JOIN tab_invites c ON a.int_contest_id = c.int_contest_id
-			where c.int_status=1 and c.int_artist_id=".$session_arr['int_artist_id']." and a.dt_last_date> '".date('Y-m-d H:i:s')."'";
-		$sql.=" order by dt_created_on desc";
-		//if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
 
 
-		
-		$query=$this->db->query($sql);
-
-		$result=$query->result_array();
-
-		return $result;
-
-	}
-	
-	function showContestDetails($id){ 
-		$session_arr=$this->session->userdata('user');
-		if($session_arr['int_artist_id']) $sql="select a.*,  (select d.int_status from tab_invites d where d.int_artist_id=".$session_arr['int_artist_id']." and d.int_contest_id=a.int_contest_id ) as user_status ";
-		else $sql="select a.* ";
-		$sql.=" from ".$this->table."  as a  
-			LEFT JOIN tab_invites c ON a.int_contest_id = c.int_contest_id
-			where a.int_contest_id=".$id;
-		
-		//echo $sql;die();
-	
-		$query=$this->db->query($sql);
-		$result=$query->result_array();
-		return $result;
-	}
-	
-	function getContestParticipant($id){
-		$sql=" select a.*,b.txt_fname,b.txt_lname,txt_profile_image from tab_invites a inner join tab_artists b on a.int_artist_id=b.int_artist_id where a.int_status=1 And a.int_contest_id=".$id;
-		$query=$this->db->query($sql);
-		$result=$query->result_array();
-		return $result;
-	}
-	
-	function getContestOwner($id){
-		$sql=" select a.int_created_by from tab_contest a where a.int_contest_id=".$id;
-		$query=$this->db->query($sql);
-		$result=$query->result_array();
-		return $result[0];
-	}
-	
-	function getContestRequest($id){
-		$sql=" select a.*,b.txt_fname,b.txt_lname,txt_profile_image from tab_invites a inner join tab_artists b on a.int_artist_id=b.int_artist_id where a.int_status=0 And a.int_contest_id=".$id;
-		$query=$this->db->query($sql);
-		$result=$query->result_array();
-		return $result;
-	}
-	
-	function getContestByOwner($id){
-		$session_arr=$this->session->userdata('user');
-		$sql="select a.* from ".$this->table."  as a  
-			LEFT JOIN tab_invites c ON a.int_contest_id = c.int_contest_id
-			where a.int_contest_id=".$id." And a.int_created_by=".$session_arr['int_artist_id'];
-		
-		//echo $sql;die();
-	
-		$query=$this->db->query($sql);
-		$result=$query->result_array();
-		return $result;
-	}
-
-	function getUserContestStatus($id){
-		$session_arr=$this->session->userdata('user');
-		if($session_arr['int_artist_id']){
-			$sql="select int_status from tab_invites where int_artist_id=".$session_arr['int_artist_id']." and int_contest_id=".$id;
-		
-			$query=$this->db->query($sql);
-			$result=$query->result_array();
-			return $result;
-		}
-	}
 
 	function allActiveContestlist($id='',$limit=10,$offset=0){
-		$session_arr=$this->session->userdata('user');
-		if($session_arr['int_artist_id']) $sql="select a.*,  (select d.int_status from tab_invites d where d.int_artist_id=".$session_arr['int_artist_id']." and d.int_contest_id=a.int_contest_id ) as user_status ";
-		else $sql="select a.* ";
-		$sql.=" from ".$this->table."  as a  
+
+	$sql="select a.*,  c.int_status from ".$this->table."  as a  
 			LEFT JOIN tab_invites c ON a.int_contest_id = c.int_contest_id
 			where a.int_status=0 and a.dt_last_date> '".date('Y-m-d H:i:s')."'";
 			if($id) $sql .= " and  a.int_contest_id=".$_GET['id'];
 		$sql.=" order by dt_created_on desc";
 		//if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
 
-		//echo $sql;die();
+
 		
 		$query=$this->db->query($sql);
 
@@ -354,37 +279,6 @@ class Contest_model extends CI_Model{
 		return $result;
 
 	}
-
-
-	function allloginActiveContestlist($id='',$limit=10,$offset=0){
-
-	 $sql="select a.*,  c.int_status from ".$this->table."  as a  
-			LEFT JOIN tab_invites c ON a.int_contest_id = c.int_contest_id
-			where  a.int_created_by=".$id;
-		$sql.=" order by dt_created_on desc";
-		//if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
-		
-		$query=$this->db->query($sql);
-
-		$result=$query->result_array();
-
-		return $result;
-
-	}
-
-
-	function getContestMedia($id){
-
-		$sql="select txt_attachements from  tab_contest  where int_contest_id =$id";
-
-		$query=$this->db->query($sql);
-
-		$result=$query->result_array();
-
-		return $result;
-
-	}
-
 
 	
 

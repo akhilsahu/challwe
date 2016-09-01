@@ -4,12 +4,12 @@
 	<div class="container">
 
 		<div class="sixteen columns">
-			<h2>My Contest</h2>
+			<h2>My Challenges</h2>
 			<nav id="breadcrumbs">
 				<ul>
 					<li>You are here:</li>
-					<li><a href="#">Home</a></li>
-					<li>My Contest List</li>
+					<li>Home</li>
+					<li>My Challenge List</li>
 				</ul>
 			</nav>
 		</div>
@@ -26,7 +26,7 @@
 
 		<?php if($user['logged_in']){?>
 			<span style="float:right;padding-right:5%;">
-				<a href="<?php echo site_url();?>/artist/addContest" class=" button">Create Contest</a>
+				<a href="<?php echo site_url();?>/artist/manageContest" class=" button">Manage Challenge</a>
 			</span>
 		<?php }?>
 
@@ -45,7 +45,7 @@
 			<?php 
 
 			foreach($list as $val){
-
+				if($val['int_status'] == 1 ){
 
 				$s_date=date_create($val['dt_start_date']);
 				$c_date=date_create($val['dt_last_date']);
@@ -57,18 +57,11 @@
 				<td class="keywords"><?php echo $val['skills'];?></td>
 				<td>$ <?php echo $val['txt_budget'];?></td>
 				<td class="action">
-					<a href="<?php echo site_url();?>/content/showContest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i> Show Contest</a>
-					<?php if($val['int_status'] == 1 ){
-						echo "Participated ";
-					}else{  ?>
-					<a onclick="javascript:
-					if(confirm('Are you sure? You want to participate in contest?')){
-						setparticipate('<?php echo $val["int_contest_id"]?>','<?php echo $val['int_created_by'] ?>');
-					}"><i class="fa fa-eye-slash"></i> participate</a>
-					<?php } ?>
+					<a href="<?php echo site_url();?>/content/showContest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i> Show Challenge</a>
 				</td>
 			</tr>
-			<?php }?>
+			<?php }
+			 }?>
 
 		</table>
 

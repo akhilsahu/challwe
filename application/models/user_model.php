@@ -7,12 +7,16 @@ class User_model extends CI_Model{
 	public $table="tab_users";
 
 	public $table_artist="tab_artists";
+	
+	public $table_preferances="tab_profile_preferances";
 
 	public $table_artist__business="tab_artist_business";
 
 	public $table_artist_media="tab_artist_media";
 
 	public $table_artist_links="tab_artist_links";
+	
+	public $table_contest = "tab_contest";
 
 
 
@@ -63,18 +67,6 @@ class User_model extends CI_Model{
 	function allArtistlist(){
 
 		$sql="select a.* from ".$this->table_artist." a where 1 ";
-
-		$query=$this->db->query($sql);
-
-		$result=$query->result_array();
-
-		return $result;
-
-	}
-	
-	function allArtistlistId(){
-
-		$sql="select a.txt_fname,a.txt_lname,a.int_artist_id from ".$this->table_artist." a";
 
 		$query=$this->db->query($sql);
 
@@ -188,7 +180,10 @@ class User_model extends CI_Model{
 
 		$artistId=$this->db->insert_id();
 
-
+		$data2=array(
+			'int_artist_id'=>$artistId
+		);	
+		$this->db->insert($this->table_preferances,$data2);
 
 		for($i=0;$i<count($b_txt_name);$i++){
 
@@ -373,6 +368,13 @@ class User_model extends CI_Model{
 		return $result;
 
 	}
+	
+	function getArtistShowDetails($user){		
+		$sql="select * from ".$this->table_preferances." where int_artist_id=$user";
+		$query=$this->db->query($sql);
+		$result=$query->row_array();
+		return $result;	
+	}
 
 
 
@@ -392,7 +394,7 @@ class User_model extends CI_Model{
 
 	function getArtistBusinessDetails($user){
 
-		$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on CAST(a.txt_reg_city as integer)= c.id where int_artist_id=$user";
+		$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city = c.id where int_artist_id=$user";
 		//$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city::integer = c.id where int_artist_id=$user";
 
 		$query=$this->db->query($sql);
@@ -416,6 +418,9 @@ class User_model extends CI_Model{
 		return $result;
 
 	}
+
+
+	
 
 
 
@@ -462,6 +467,8 @@ class User_model extends CI_Model{
 			'txt_lname'=>$txt_lname,
 
 			'dt_dob'=>date('Y-m-d',strtotime($dt_dob)),
+			
+			'txt_place_of_birth'=>$txt_place_of_birth,
 
 			'txt_cell_no'=>$txt_cell_no,
 
@@ -496,8 +503,8 @@ class User_model extends CI_Model{
 
 
 
-		//$artistId=$sess_array['int_artist_id'];
-		$artistId = $hid_int_artist_id;
+		$artistId=$sess_array['int_artist_id'];
+		//$artistId = $hid_int_artist_id;
 
 		$ext="";
 
@@ -552,7 +559,22 @@ class User_model extends CI_Model{
 		$this->db->where('int_artist_id',$artistId);
 
 		$this->db->update($this->table_artist,$data);
-
+		
+		$data1=array(
+				'int_email'=>$int_email,
+				'int_dob'=>$int_dob,
+				'int_place_of_birth'=>$int_place_of_birth,
+				'int_cell_no'=>$int_cell_no,
+				'int_country'=>$int_country,
+				'int_office_address'=>$int_office_address,
+				'int_skills'=>$int_skills,
+				'int_experience'=>$int_experience,
+				'int_tag_line'=>$int_tag_line,
+				'int_hourly_charge'=>$int_hourly_charge,
+				'int_roles'=>$int_roles
+			);
+		$this->db->where('int_artist_id',$artistId);
+		$this->db->update($this->table_preferances,$data1);
 	}
 
 

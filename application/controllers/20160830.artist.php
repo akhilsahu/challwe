@@ -1,7 +1,7 @@
 <?php  (defined('BASEPATH')) OR exit('No direct script access allowed');
 
 class Artist extends CI_Controller{
-	public $user;
+	
     function __construct()
     {
         parent::__construct();
@@ -11,7 +11,6 @@ class Artist extends CI_Controller{
             redirect('user/login', 'refresh');  
             die();
         }
-		$this->user=$this->session->userdata('user');
     }
        
     function dashboard(){
@@ -44,7 +43,6 @@ class Artist extends CI_Controller{
         $this->load->model('user_model'); 
         $this->load->model('fields_model');        
         $data['user_details']=$this->user_model->getArtistDetails($session_arr['int_artist_id']);
-		$data['display_details']=$this->user_model->getArtistShowDetails($session_arr['int_artist_id']);
         $data['business_details']=$this->user_model->getArtistBusinessDetails($session_arr['int_artist_id']);
         $data['directory']=$this->fields_model->allActiveDirectorylist();
         $data['countries']=$this->location_model->get_all_countries();
@@ -77,6 +75,7 @@ class Artist extends CI_Controller{
         // echo "<pre>";print_r($this->input->post());print_r($_FILES);die();
         $this->load->model('user_model');
         $this->form_validation->set_rules('txt_fname', 'First Name', 'required');
+        $this->form_validation->set_rules('txt_lname', 'Last Name', 'required');
         if($this->form_validation->run())
         {       
             $this->user_model->artistUpdatedetails();
@@ -180,25 +179,6 @@ class Artist extends CI_Controller{
         $data['page']='account_statistics';
         $this->load->view('artist/page',$data);
     }
-	
-	//////////////////////////////////////////////Created By Me/////////////////////////////////////////////////////
-
-function viewcontest(){ 
-        $this->load->model('contest_model');
-        $this->load->model('fields_model');
-        $this->load->model('user_model'); 
-        $data['list']=$this->contest_model->getContestByOwner($_GET['id']);
-        //print_r($data['list']);
-        $data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['list'][0]['int_skill1'],$data['list'][0]['int_skill2'],$data['list'][0]['int_skill3'],$data['list'][0]['int_skill4'],$data['list'][0]['int_skill5']);
-
-        $data['participated']= $this->contest_model->getContestParticipant($_GET['id']);
-		$data['requests']= $this->contest_model->getContestRequest($_GET['id']);
-		//echo "<pre>";print_r($data);die();
-        $data['media_details']= $this->contest_model->getContestMedia($_GET['id']);
-        $data['page_title']='Contest List';        
-        $data['page']='viewContest';        
-        $this->load->view('artist/page',$data);     
-    }
 
 /////////////////////////////////////////////////////Created By Kavita/////////////////////////////////////////
 
@@ -208,7 +188,7 @@ function viewcontest(){
         $i=0;
         $response_data = array();
        // $data['list'] = $this->contest_model->allActiveContestlist();
-        $data_list =$this->contest_model->allloginActiveContestlist($this->user['int_artist_id']);
+        $data_list =$this->contest_model->allActiveContestlist();
         foreach($data_list as $value) {
                 $skill = $this->fields_model->allShowActiveDirectorylist($value['int_skill1'],$value['int_skill2'],$value['int_skill3'],$value['int_skill4'],$value['int_skill5']);
                 $response_data[$i]["int_contest_id"] = $value["int_contest_id"];
@@ -226,64 +206,19 @@ function viewcontest(){
         $data['page']='manageContest';        
         $this->load->view('artist/page',$data);     
     }
-    function updateparticipate($id){ 
+    function updateparticipate($id,$name){
        // echo "<pre>";print_r($this->input->post());
         $formdata=$this->input->post();
         extract($formdata);
         $data=array(
             'int_contest_id'=>$id,
-            'int_artist_id'=>$this->user['int_artist_id'],
-            'int_status'=> 0
+            'int_artist_id'=>$artist_id,
+            'int_status'=> 1
+
             );
         $this->db->insert('tab_invites',$data);
         echo $invites_id=$this->db->insert_id();
     }
-	function updateparticipateac(){ 
-		$this->load->model('contest_model');		
-        $formdata=$this->input->post();
-        extract($formdata);
-		$owner=$this->contest_model->getContestOwner($id);
-		if($this->user['int_artist_id']==$owner['int_created_by']){
-			$data=array(
-				'int_status'=> 1
-				);
-			$this->db->where('int_artist_id',$artist_id);
-			$this->db->where('int_contest_id',$id);
-			$this->db->update('tab_invites',$data);
-			echo "Success";
-		}else{
-			echo "Failed";
-		}
-    }
-
-    function updateparticipaterj($id,$name){
-		$this->load->model('contest_model');		
-        $formdata=$this->input->post();
-        extract($formdata);
-		$owner=$this->contest_model->getContestOwner($id);
-		if($this->user['int_artist_id']==$owner['int_created_by']){
-			$data=array(
-				'int_status'=> 2
-				);
-			$this->db->where('int_artist_id',$artist_id);
-			$this->db->where('int_contest_id',$id);
-			$this->db->update('tab_invites',$data);
-			echo "Success";
-		}else{
-			echo "Failed";
-		}
-    }
-	
-	function submitContest(){
-		$this->load->model('contest_model');
-        $this->form_validation->set_rules('txt_description', 'Description', 'required');
-        if($this->form_validation->run())
-        {       
-            $this->user_model->artistUpdatedetails();
-            
-        }
-        redirect();
-	}
 
     function myContest(){       
         $this->load->model('contest_model');
@@ -291,7 +226,7 @@ function viewcontest(){
         $i=0;
         $response_data = array();
        // $data['list'] = $this->contest_model->allActiveContestlist();
-        $data_list =$this->contest_model->myContestlist();
+        $data_list =$this->contest_model->allActiveContestlist();
         foreach($data_list as $value) {
                 $skill = $this->fields_model->allShowActiveDirectorylist($value['int_skill1'],$value['int_skill2'],$value['int_skill3'],$value['int_skill4'],$value['int_skill5']);
                 $response_data[$i]["int_contest_id"] = $value["int_contest_id"];

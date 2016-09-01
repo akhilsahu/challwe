@@ -235,7 +235,7 @@ h2.title {
                                       <div class="col-sm-7">
 
                                         <input type="text" placeholder="Email" id="txt_email" value="<?php echo $user_details['txt_email']?>" disabled class="form-control">
-
+										<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_email'])?"checked":"";?> name="int_email" id="int_email" ></span>
                                       </div>
 
                                     </div>    
@@ -298,8 +298,24 @@ h2.title {
 
                                       <div class="col-sm-7">
 
-                                        <input type="text" placeholder="DOB" id="dt_dob" name="dt_dob" value="<?php echo $user_details['dt_dob']?>" class="form-control">
+                                        <input type="text" placeholder="DOB" id="dt_dob" name="dt_dob" value="<?php echo date('m/d/Y',strtotime($user_details['dt_dob']))?>" class="form-control">
+										<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_dob'])?"checked":"";?> name="int_dob" id="int_dob" ></span>
+                                      </div>
 
+                                    </div>    
+
+                                </div>
+								
+								<div class="row">
+
+                                    <div class="form-group">
+
+                                      <label class="col-sm-3 control-label" for="inputEmail3">Place oF Birth</label>
+
+                                      <div class="col-sm-7">
+
+                                        <input type="text" placeholder="Place Of Birth" id="txt_place_of_birth" name="txt_place_of_birth" value="<?php echo $user_details['txt_place_of_birth']?>" class="form-control">
+										<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_place_of_birth'])?"checked":"";?> name="int_place_of_birth" id="int_place_of_birth" ></span>				
                                       </div>
 
                                     </div>    
@@ -315,7 +331,7 @@ h2.title {
                                       <div class="col-sm-7">
 
                                         <input type="text" placeholder="Cell No" id="txt_cell_no" name="txt_cell_no" value="<?php echo $user_details['txt_cell_no']?>" class="form-control">
-
+										<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_cell_no'])?"checked":"";?> name="int_cell_no" id="int_cell_no" ></span>
                                       </div>
 
                                     </div>    
@@ -341,14 +357,14 @@ h2.title {
                                                <?php } ?>
 
                                             </select>
-
+											<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_country'])?"checked":"";?> name="int_country" id="int_country" ></span>
                                         </div>
 
                                     </div>
 
                                 </div>
 
-                                <div class="row">
+                        <?php /*        <div class="row">
 
                                     <div class="form-group">
 
@@ -399,24 +415,8 @@ h2.title {
                                     </div>
 
                                 </div>
-
-                                <div class="row">
-
-                                    <div class="form-group">
-
-                                      <label class="col-sm-3 control-label" for="inputEmail3">Office Address</label>
-
-                                      <div class="col-sm-7">
-
-                                        <textarea placeholder="Office Address" id="txt_office_address" name="txt_office_address" class="form-control"><?php echo $user_details['txt_office_address']?></textarea>
-
-                                      </div>
-
-                                    </div>    
-
-                                </div>
-
-                                <div class="row">
+																                                
+								<div class="row">
 
                                     <div class="form-group">
 
@@ -431,6 +431,41 @@ h2.title {
                                     </div>    
 
                                 </div>
+								*/ ?>
+								
+								<div class="row">
+
+                                        <div class="form-group">
+
+                                          <label class="col-sm-3 control-label" for="inputEmail3">Biographic Information</label>
+
+                                          <div class="col-sm-7">
+
+                                                <textarea id="txt_biographic_info" name="txt_biographic_info" class="form-control" placeholder="Biographic Information"><?php echo $user_details['txt_biographic_info']?></textarea>
+
+                                          </div>
+
+                                        </div>    
+
+                                    </div>
+	
+								<div class="row">
+
+                                    <div class="form-group">
+
+                                      <label class="col-sm-3 control-label" for="inputEmail3">Office Address</label>
+
+                                      <div class="col-sm-7">
+
+                                        <textarea placeholder="Office Address" id="txt_office_address" name="txt_office_address" class="form-control"><?php echo $user_details['txt_office_address']?></textarea>
+										<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_office_address'])?"checked":"";?> name="int_office_address" id="int_office_address" ></span>	
+                                      </div>
+
+                                    </div>    
+
+                                </div>
+								
+                                
 
                                 <div class="row">
 
@@ -444,7 +479,7 @@ h2.title {
 
                                         <span id="span_img_preview">
 
-                                            <img src="<?php echo ($user_details['txt_profile_image'])? base_url().$user_details['txt_profile_image']:base_url()."uploads/no-image.png"?>" width="150px" height="150px" id="img_preview">
+                                            <img src="<?php echo ($user_details['txt_profile_image'])? base_url().$user_details['txt_profile_image']:base_url()."uploads/no-image.png"?>" style="width:150px;height:150px;" id="img_preview">
 
                                         </span>
 
@@ -486,7 +521,7 @@ h2.title {
 
 
                                             </select>
-
+											<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_skills'])?"checked":"";?> name="int_skills" id="int_skills" ></span>	
                                           </div>
 
                                         </div>    
@@ -502,7 +537,7 @@ h2.title {
                                           <div class="col-sm-7">
 
                                             <input type="text" placeholder="Experience" id="txt_experience" name="txt_experience" value="<?php echo $user_details['txt_experience']?>" class="form-control">
-
+											<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_experience'])?"checked":"";?> name="int_experience" id="int_experience" ></span>
                                           </div>
 
                                         </div>    
@@ -534,7 +569,7 @@ h2.title {
                                           <div class="col-sm-7">
 
                                                 <input type="text" placeholder="Tagline" id="txt_tagline" name="txt_tagline" value="<?php echo $user_details['txt_tagline']?>" class="form-control">
-
+												<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_tag_line'])?"checked":"";?> name="int_tag_line" id="int_tag_line" ></span>
                                           </div>
 
                                         </div>    
@@ -550,7 +585,7 @@ h2.title {
                                           <div class="col-sm-7">
 
                                                 <input type="text" id="txt_hourly_charge" name="txt_hourly_charge" value="<?php echo $user_details['txt_hourly_charge']?>" class="form-control">
-
+												<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_hourly_charge'])?"checked":"";?> name="int_hourly_charge" id="int_hourly_charge" ></span>
                                           </div>
 
                                         </div>    
@@ -566,29 +601,13 @@ h2.title {
                                           <div class="col-sm-7">
 
                                                 <input type="text" id="txt_fashion_community_roles" name="txt_fashion_community_roles" value="<?php echo $user_details['txt_fashion_community_roles']?>" class="form-control">
-
+												<span class="cl-show-field"><input type="checkbox" value="1" <?php echo ($display_details['int_roles'])?"checked":"";?> name="int_roles" id="int_roles" ></span>
                                           </div>
 
                                         </div>    
 
                                     </div>
-
-                                    <div class="row">
-
-                                        <div class="form-group">
-
-                                          <label class="col-sm-3 control-label" for="inputEmail3">Biographic Information</label>
-
-                                          <div class="col-sm-7">
-
-                                                <input type="text" id="txt_biographic_info" name="txt_biographic_info" value="<?php echo $user_details['txt_biographic_info']?>" class="form-control">
-
-                                          </div>
-
-                                        </div>    
-
-                                    </div>
-
+                                    
                                     <div class="row">
 
                                         <div class="form-group">
@@ -853,7 +872,14 @@ h2.title {
 
      $(document).ready(function(){
       $("#int_directory_id").select2();
-        $("#dt_dob").datepicker();
+        $("#dt_dob").datepicker({
+			changeYear: true,
+			<?php if($user_details['dt_dob']){?>
+            minDate: '01/01/<?php echo date('Y',strtotime($user_details['dt_dob']));?>',
+            maxDate: '12/31/<?php echo date('Y',strtotime($user_details['dt_dob']));?>',
+            defaultDate: <?php echo date('m/d/Y',strtotime($user_details['dt_dob']));?>
+			<?php }?>
+		});
 
         $(document).on("click",".a-bus-delete",function(){
 
@@ -999,13 +1025,13 @@ h2.title {
 
         });
 
-        $('#int_country_id').change(function(){
+        //$('#int_country_id').change(function(){
 
-            var country=$('#int_country_id').val();
+          //  var country=$('#int_country_id').val();
 
-            getState(country,'int_state_id');
+            //getState(country,'int_state_id');
 
-        });
+        //});
 
         $('#int_state_id').change(function(){
 

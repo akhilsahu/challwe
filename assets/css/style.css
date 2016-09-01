@@ -56,6 +56,7 @@ header {
 	margin-left: 0;
 	display: inline-block;
 	float: left;
+        margin-top: 20px;
 }
 
 #logo img { margin-top: 24px; }
@@ -6027,3 +6028,47 @@ label.upload-btn input[type="file"] { display: none; }
 	}
 	
 	@media only screen and (max-width: 1024px) {#style-switcher {display: none;}}
+        
+        /***custom style*****/
+        .user-menu .dropdown-toggle{
+            padding: 7px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;                
+        }
+        .user-menu .dropdown-toggle .user-image{
+            max-width: 25px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .user-menu .dropdown-menu{
+            width: 100%;
+            min-width: 300px;
+            padding: 0;
+            right: 0;
+            left: auto;
+        }
+        .user-menu .dropdown-menu p{
+            color: #fff;
+        }
+        .dropdown-menu>li.user-header{
+            height: 175px;
+            padding: 10px;
+            text-align: center;
+                background-color: #58ba2b;
+        }
+        .dropdown-menu>.user-body{
+            padding: 15px;
+            border-bottom: 1px solid #f4f4f4;
+            border-top: 1px solid #dddddd;
+        }
+        .dropdown-menu>.user-footer{
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+        .btn-success .modal-title{
+                color: #fff;
+        }
+        .modal-header .close:hover{
+            background: transparent;
+        }
