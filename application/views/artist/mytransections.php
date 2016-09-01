@@ -4,12 +4,12 @@
 	<div class="container">
 
 		<div class="sixteen columns">
-			<h2>My Transections</h2>
+			<h2>My Transactions</h2>
 			<nav id="breadcrumbs">
 				<ul>
 					<li>You are here:</li>
 					<li><a href="#">Home</a></li>
-					<li>My Transection History</li>
+					<li>My Transaction History</li>
 				</ul>
 			</nav>
 		</div>
