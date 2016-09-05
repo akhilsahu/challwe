@@ -35,6 +35,7 @@ class Contest_model extends CI_Model{
 			'int_skill4'=>$int_skills[3],
 			'int_skill5'=>$int_skills[4],
 			'txt_budget'=>$txt_budget,
+			'int_status'=>0,
 			'dt_created_on'=>date('Y-m-d H:i:s'),
 			'int_created_by'=>$user['int_artist_id'],
 			'dt_start_date'=>date('Y-m-d H:i:s',strtotime($dt_start_date)),
