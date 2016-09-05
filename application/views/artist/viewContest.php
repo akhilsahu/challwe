@@ -17,13 +17,8 @@
 		</div>
 
 		<div class="six columns">
-		<?php if($list[0]['int_status'] != 1){ ?>
-			<a href="#"  onclick="javascript:
-					if(confirm('Are you sure? You want to participate in contest?')){
-						setparticipate('<?php echo $list[0]["int_contest_id"]?>','<?php echo $list[0]['int_created_by'] ?>');
-					}" class="button white"></i>Participate</a>
-		<?php }else{ ?>
-			<a href="#" class="button white"><?php echo "Participated"; ?></a>
+			<?php if($list[0]['int_status'] != 1){ ?>
+				<a href="#" class="button white"><?php echo "Decide Winner"; ?></a>
 			<?php } ?>
 		</div>
 
@@ -60,6 +55,7 @@
 		
 	</div>
 	<br>
+
 	<div class="col-sm-14 col-md-14 col-lg-14">
 
                     <div class="title-box">
@@ -73,78 +69,72 @@
 
                             <li><a href="#tabs-1">Paritcipated</a></li>
 
-                            <li><a href="#tabs-2">Non Paritcipated</a></li>
+                            <li><a href="#tabs-2">Request</a></li>
 
-                            <li><a href="#tabs-3">view</a></li>
+                            <li><a href="#tabs-3">Submissions</a></li>
 
                           </ul>
 
                           <div id="tabs-1">
+                          	
+							<div class="jFiler-items jFiler-row">
+							<ul class="jFiler-items-list jFiler-items-grid">			
+							<?php 
+								foreach($participated as $val){
+									$profile_pic='';
+									if($val['txt_profile_image']) $profile_pic=base_url().$val['txt_profile_image'];
+									else $profile_pic=base_url()."uploads/no-image.png";
+									?>
+									<li class="jFiler-item" data-jfiler-index="1" style="">                        
+										<div class="jFiler-item-container">                            
+											<div class="jFiler-item-inner">                                
+												<div class="jFiler-item-thumb">                                    
+													<div class="jFiler-item-status"></div>                                    
+													<div class="jFiler-item-info">                                        
+														<span class="jFiler-item-title"><b title=""><?php echo $val['txt_fname']." ".$val['txt_lname'];?></b></span>
+													</div>                                    
+													<div class="jFiler-item-thumb-image">
+														<a href="#">
+															<img src="<?php echo $profile_pic;?>" draggable="false">                                
+														</a>
+													</div>	
+												</div>                                                       
+											</div>                        
+										</div>                    
+									</li>
+								<?php
+							}?>                                  
 
-                              <table class="manage-table resumes responsive-table">
-								<tr>
-									<th><i class="fa fa-file-text"></i> Title</th>
-									<th><i class="fa fa-calendar"></i> Start Date</th>
-									<th><i class="fa fa-calendar"></i> Date Closed</th>
-									<th><i class="fa fa-tags"></i> Skills</th>
-									<th><i class="fa fa-map-marker"></i> Price</th>
-									<th></th>
-								</tr>  
-								<?php 
-
-									foreach($participated as $val){
-
-										if($val['int_status'] == 1 ){
-										$s_date=date_create($val['dt_start_date']);
-										$c_date=date_create($val['dt_last_date']);
-										?>
-									<tr>
-										<td class="alert-name"><?php echo $val['txt_contest_name'];?></td>
-										<td><?php echo date_format($s_date,"F j, Y");?></td>
-										<td><?php echo date_format($c_date,"F j, Y");?></td>
-										<td class="keywords"><?php echo $val['skills'];?></td>
-										<td>$ <?php echo $val['txt_budget'];?></td>
-										<td class="action">
-											
-										</td>
-									</tr>
-									<?php }
-								}?>                             
-
-                                  
-                            </table>
-                                
-
-                          </div>
+							</ul>
+							</div>	
+	                          
+                         	
+							
+                       
+                        	</div>
 
                           <div id="tabs-2">
 	                          	<table class="manage-table resumes responsive-table">
-									<tr>
-										<th><i class="fa fa-file-text"></i> Title</th>
-										<th><i class="fa fa-calendar"></i> Start Date</th>
-										<th><i class="fa fa-calendar"></i> Date Closed</th>
-										<th><i class="fa fa-tags"></i> Skills</th>
-										<th><i class="fa fa-map-marker"></i> Price</th>
-										<th></th>
-									</tr> 
+									
 									<?php 
 
-									foreach($participated as $val){
-
-										if($val['int_status'] != 1 ){
-										$s_date=date_create($val['dt_start_date']);
-										$c_date=date_create($val['dt_last_date']);
-										?>
-									<tr>
-										<td class="alert-name"><?php echo $val['txt_contest_name'];?></td>
-										<td><?php echo date_format($s_date,"F j, Y");?></td>
-										<td><?php echo date_format($c_date,"F j, Y");?></td>
-										<td class="keywords"><?php echo $val['skills'];?></td>
-										<td>$ <?php echo $val['txt_budget'];?></td>
-										<td class="action">
-											
-										</td>
-									</tr>
+									foreach($requests as $val){
+										if($val['int_status'] != 1 ){ ?>
+									<h6 style='border-bottom: 1px solid #e0e0e0;'>
+										<tr><td>
+										<?php echo $val['txt_fname']." ".$val['txt_lname']; ?>
+										</td><td>
+											<a onclick="javascript:
+											if(confirm('Are you sure? You want to Accept the request?')){
+												setparticipate('<?php echo $val["int_contest_id"]?>','<?php echo $val['int_artist_id'] ?>');
+											}"><i class="fa fa-eye-slash"></i>Accept</a>
+												&nbsp;&nbsp;&nbsp;&nbsp;
+											<a onclick="javascript:
+											if(confirm('Are you sure? You want to Reject the request?')){
+												setparticipaterj('<?php echo $val["int_contest_id"]?>','<?php echo $val['int_artist_id'] ?>');
+											}"><i class="fa fa-eye-slash"></i>Reject</a>
+										</td>		
+										</h6>
 									<?php }
 								}?>                                  
 
@@ -156,11 +146,10 @@
 
                           	  <table class="manage-table resumes responsive-table">
 								<tr>
-									<th><i class="fa fa-file-text"></i> Title</th>
-									<th><i class="fa fa-calendar"></i> Start Date</th>
-									<th><i class="fa fa-calendar"></i> Date Closed</th>
-									<th><i class="fa fa-tags"></i> Skills</th>
-									<th><i class="fa fa-map-marker"></i> Price</th>
+									<th><i class="fa fa-file-text"></i> Name</th>
+									<th><i class="fa fa-calendar"></i> Submission Date Date</th>
+									<th><i class="fa fa-calendar"></i> Description</th>
+									<th><i class="fa fa-tags"></i> Attachments</th>
 									<th></th>
 								</tr>                               
 
@@ -178,6 +167,44 @@
                     </div>
 
                 </div>
+                <br>
+	<h2 style="    border-bottom: 1px solid #e0e0e0;">Attachments</h2>
+	<br>
+	<div class="col-sm-9 col-md-9 col-lg-9">                  
+			<div class="jFiler-items jFiler-row">
+				<ul class="jFiler-items-list jFiler-items-grid">
+					<?php 
+					$i=1;
+					$media_details=json_decode($list[0]['txt_attachements']);
+					foreach($media_details as $val){
+						$ext=explode(".",$val);
+						$url='';
+						if($ext[count($ext)-1]=='pdf') $url=base_url()."uploads/pdf_icon.jpg";
+						else if($ext[count($ext)-1]=='xls') $url=base_url()."uploads/excell_icon.jpg";
+						else if($ext[count($ext)-1]=='docx' || $ext[0]=='doc') $url=base_url()."uploads/word_icon.jpg";
+						else $url=base_url().$val;
+						?>
+					<li class="jFiler-item" data-jfiler-index="1" style="">                        
+						<div class="jFiler-item-container">                            
+							<div class="jFiler-item-inner">                                
+								<div class="jFiler-item-thumb">                                    
+									<div class="jFiler-item-status"></div>                                    
+									<div class="jFiler-item-info">                                        
+									<!-- <span class="jFiler-item-title"><b title="city_1 (1).jpg">city_1 (1).jpg</b></span>                                                                         -->
+									</div>                                    
+									<div class="jFiler-item-thumb-image">
+										<a href="<?php echo site_url()."/content/contest_download/".$list[0]['int_contest_id']."/".$i++;?>">
+											<img src="<?php echo $url;?>" draggable="false">                                
+										</a>
+									</div>	
+								</div>                                                       
+							</div>                        
+						</div>                    
+					</li>
+					<?php } ?>
+				</ul>
+				</div>
+		</div>
 	</div>
 
 
@@ -245,17 +272,29 @@
 </div>
 <script type="text/javascript">
 	function setparticipate(id,name){
-	$.ajax({
-			type: "POST",
-			url: "<?php echo site_url(); ?>/artist/updateparticipate",
-			data: { 'id' : id  , 'artist_id' : name } ,
-			cache: false,
-			success: function(data) {
-				window.location='<?php echo site_url(); ?>/content/listcontest/';
-			}
-	});
-}
+		$.ajax({
+				type: "POST",
+				url: "<?php echo site_url(); ?>/artist/updateparticipateac",
+				data: { 'id' : id  , 'artist_id' : name } ,
+				cache: false,
+				success: function(data) {
+					  location.reload();
+				}
+		});
+	}
+	function setparticipaterj(id,name){
+		$.ajax({
+				type: "POST",
+				url: "<?php echo site_url(); ?>/artist/updateparticipaterj",
+				data: { 'id' : id  , 'artist_id' : name } ,
+				cache: false,
+				success: function(data) {
+					  location.reload();
+				}
+		});
+	}
 </script>
+
 <style>
 
 .sidebar .widget, .widget {
@@ -425,3 +464,11 @@ h2.title {
 	 });
 
 </script>
+<link href="<?php echo base_url();?>plugins/jQuery.filer/css/jquery.filer.css" type="text/css" rel="stylesheet" />
+
+<link href="<?php echo base_url();?>plugins/jQuery.filer/css/themes/jquery.filer-dragdropbox-theme.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="<?php echo base_url();?>plugins/jQuery.filer/js/jquery.filer.min.js?v=1.0.5"></script>
+
+<script type="text/javascript" src="<?php echo base_url();?>plugins/jQuery.filer/js/custom.js?v=1.0.5"></script>
+

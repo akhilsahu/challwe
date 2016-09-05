@@ -10,6 +10,7 @@
 <link href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/colors/green.css" id="colors">
+<!--<link rel="stylesheet" href="<?php //echo base_url();?>assets/css/vine-ember.css" id="colors">-->
 <link href="<?php echo base_url();?>assets/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css"><link href="<?php echo base_url();?>plugins/select2/select2.min.css" rel="stylesheet" type="text/css">
 <script src="<?php echo base_url();?>assets/scripts/jquery-2.1.3.min.js"></script><script src="<?php echo base_url();?>plugins/select2/select2.full.min.js"></script>
 <!--[if lt IE 9]>
@@ -59,7 +60,6 @@
 			  -o-transition:  opacity 0.5s;
 			  transition:  opacity 0.5s;
 			}
-
 			.hover:hover .tooltip {
 				opacity:1;
 			}
@@ -93,7 +93,7 @@
         </div>
 
         <!-- Menu -->
-        <nav id="navigation" class="menu">
+        <nav id="navigation" class="menu hello">
             <ul id="responsive">
 
                 <!-- <li><a href="index-2.html" id="current">Home</a>
@@ -105,7 +105,7 @@
                     </ul>
                 </li> -->
                 <li><a href="<?php echo site_url();?>/content/home" id="current">Home</a></li>
-                <li><a href="<?php echo site_url();?>/content/listcontest">Contest</a></li>
+                <li><a href="<?php echo site_url();?>/content/listcontest">Challenge</a></li>
                 <li><a href="<?php echo site_url()?>/content/bloglist">Blog</a></li>
                 <li><a href="#">About Challwe</a></li>
             </ul>
@@ -115,21 +115,64 @@
                 <?php if($user['logged_in']){
                     ?>
 					<li>
-						<a href="<?php echo site_url();?>/wallet/addAmount" class="hover"><?php echo $user['int_challwe_coins'];?> Coins</a>
+						<a href="<?php echo site_url();?>/wallet/mytransections" class="hover"><?php echo $user['int_challwe_coins'];?> Wallet</a>
 						<div class="tooltip">asdadasd</div>
 					</li>	
-                    <li><a href="javascript:void(0)"> Hi <?php echo $user['txt_fname']?></a></li>
-                    <li><a href="<?php echo site_url()?>/artist/dashboard"> My Account</a></li>    
-                    <?php 
-                    if($user['login_type']=='web'){?>
-                        <li><a href="<?php echo site_url()?>/user/signoutArt"><i class="fa fa-unlock"></i> Signout</a></li>
-                    <?php }else{?>
-                        <li><a href="<?php echo site_url()?>/user/facebooklogout"><i class="fa fa-unlock"></i> Signout</a></li>    
-                <?php } 
-                }else{?>                
-                    <li><a href="<?php echo site_url()?>/user/login"><i class="fa fa-lock"></i> Login</a></li>
+                    <!--<li><a href="javascript:void(0)"> Hi <?php //echo $user['txt_fname']?></a></li>-->
+                    <!--<li><a href="<?php echo site_url()?>/artist/dashboard"> My Account</a></li>-->
+                    <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <img src="<?php echo ($user['txt_profile_image'])?base_url().$user['txt_profile_image']:base_url().'assets/images/avatar-placeholder.png'?>" class="user-image img-circle" alt="User Image">
+                                <span class="hidden-xs"> Hi <?php echo $user['txt_fname']?></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="<?php echo ($user['txt_profile_image'])?base_url().$user['txt_profile_image']:base_url().'assets/images/avatar-placeholder.png'?>" class="img-circle" alt="User Image" style="max-width: 125px;display: inline-block;">
+
+                                    <p>
+                                        <?php echo $user['txt_fname']?>
+                                        <!--<small>Member since Nov. 2012</small>-->
+                                    </p>
+                                </li>
+                                <!-- Menu Body -->
+<!--                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Followers</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Sales</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Friends</a>
+                                        </div>
+                                    </div>
+                                     /.row 
+                                </li>-->
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="<?php echo site_url()?>/artist/dashboard" class="btn btn-default btn-flat">My Account</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <!--a href="<?php echo site_url()?>/user/signoutArt" class="btn btn-default btn-flat">Sign out</a-->
+										<?php if($user['login_type']=='web'){?>
+											<a href="<?php echo site_url()?>/user/signoutArt" class="btn btn-default btn-flat">Signout</a>
+										<?php }else{?>
+											<a href="<?php echo site_url()?>/user/facebooklogout" class="btn btn-default btn-flat">Signout</a>    
+										<?php } ?>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    
+                <?php }else{?>
+					<li><a href="javascript:void(0);"  data-toggle="modal" data-target="#login-user"><i class="fa fa-lock"></i> Login</a></li>
+<li><a href="javascript:void(0);"  data-toggle="modal" data-target="#register-user"><i class="fa fa-lock"></i> Sign Up</a></li>					
+                    <!--li><a href="<?php echo site_url()?>/user/login"><i class="fa fa-user"></i> Login</a></li>
                     <li><a href="<?php echo site_url()?>/user/login/register"><i class="fa fa-user"></i> Sign Up</a></li>
-                    <li><a href="<?php echo site_url()?>/user/adminlogin"><i class="fa fa-user"></i> Admin Login</a></li>
+                    <li><a href="<?php echo site_url()?>/user/adminlogin"><i class="fa fa-user"></i> Admin Login</a></li-->
                 <?php }?>
             </ul>
 

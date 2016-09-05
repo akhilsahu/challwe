@@ -38,7 +38,11 @@ class Contest_model extends CI_Model{
 			'dt_created_on'=>date('Y-m-d H:i:s'),
 			'int_created_by'=>$user['int_artist_id'],
 			'dt_start_date'=>date('Y-m-d H:i:s',strtotime($dt_start_date)),
-			'dt_last_date'=>date('Y-m-d H:i:s',strtotime($dt_end_date))
+			'dt_last_date'=>date('Y-m-d H:i:s',strtotime($dt_end_date)),
+			'int_status'=>0,
+			'int_winner1'=>0,
+			'int_winner2'=>0,
+			'int_winner3'=>0
 		);
 		$this->db->insert('tab_contest',$data);
 		$contestId=$this->db->insert_id();
@@ -65,7 +69,7 @@ class Contest_model extends CI_Model{
 			$data1=array(
 				'txt_attachements'=>$val
 			);
-			$thsi->db->where('int_contest_id',$contestId);
+			$this->db->where('int_contest_id',$contestId);
 			$this->db->update('tab_contest',$data1);
 		}
 		
@@ -75,13 +79,11 @@ class Contest_model extends CI_Model{
 
 	function allActiveContestlist($id='',$limit=10,$offset=0){
 
-	$sql="select a.*, b.*, c.int_status from ".$this->table."  as a  
-			LEFT JOIN tab_fields b ON a.int_skill1 = b.int_field_id
+	$sql="select a.*,  c.int_status from ".$this->table."  as a  
 			LEFT JOIN tab_invites c ON a.int_contest_id = c.int_contest_id
 			where a.int_status=0 and a.dt_last_date> '".date('Y-m-d H:i:s')."'";
 			if($id) $sql .= " and  a.int_contest_id=".$_GET['id'];
 		$sql.=" order by dt_created_on desc";
-		
 		//if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
 
 

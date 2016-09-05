@@ -59,7 +59,7 @@ class User extends CI_Controller{
         $this->facebook->destroySession();
         $this->session->unset_userdata('user');
 		$this->session->sess_destroy();
-        redirect('user/login');
+        redirect('content/home');
 	}
 
 	function login(){
@@ -95,10 +95,10 @@ class User extends CI_Controller{
 			}
 			else
 			{
-				redirect('user/login', 'refresh');			
+				redirect('content/home', 'refresh');			
 			}
         }else{
-        	redirect('user/login', 'refresh');
+        	redirect('content/home', 'refresh');
         }
 	}
 
@@ -117,10 +117,10 @@ class User extends CI_Controller{
 				$this->sendWelcomeMail($formdata['txt_email'],$formdata['txt_fname'],$formdata['txt_password']);
 				redirect('content/home', 'refresh');			
 			}else{
-				redirect('user/login/2', 'refresh');
+				redirect('content/home', 'refresh');
 			}
         }else{
-        	redirect('user/login/1', 'refresh');
+        	redirect('content/home', 'refresh');
         }
 	}
 
@@ -321,9 +321,9 @@ class User extends CI_Controller{
 		if($user['logged_in']==1){
 			   $this->session->unset_userdata('user');
 			   $this->session->sess_destroy();
-			   redirect('user/login', 'refresh');
+			   redirect('content/home', 'refresh');
 		}else{
-			redirect('user/login', 'refresh');
+			redirect('content/home', 'refresh');
 		}
 	}
 

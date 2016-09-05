@@ -1,5 +1,8 @@
 <!-- Titlebar
 ================================================== -->
+<style>
+
+</style>
 <div id="titlebar" class="single">
 	<div class="container">
 

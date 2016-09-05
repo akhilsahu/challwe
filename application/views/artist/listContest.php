@@ -4,12 +4,12 @@
 	<div class="container">
 
 		<div class="sixteen columns">
-			<h2>Active Contest</h2>
+			<h2>Active Challenges</h2>
 			<nav id="breadcrumbs">
 				<ul>
 					<li>You are here:</li>
 					<li><a href="#">Home</a></li>
-					<li>Contest List</li>
+					<li>Challenge List</li>
 				</ul>
 			</nav>
 		</div>
@@ -26,7 +26,7 @@
 
 		<?php if($user['logged_in']){?>
 			<span style="float:right;">
-				<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Contest</a>
+				<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Challenges</a>
 				
 				<a href="<?php echo site_url();?>/artist/manageContest" class=" button">Manage Contest</a>
 			</span>
@@ -60,13 +60,11 @@
 				<td class="keywords"><?php echo $val['skills'];?></td>
 				<td>$ <?php echo $val['txt_budget'];?></td>
 				<td class="action">
-					<a href="<?php echo site_url();?>/content/showContest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i> Show Contest</a>
-					<?php if($val['int_status'] == 1 ){
-						echo "Participated ";
-					}else{  ?>
+					<a href="<?php echo site_url();?>/content/showContest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i> Show Challenge</a>
+					<?php if($val['user_status'] == '' && $user['int_artist_id'] ){?>
 					<a onclick="javascript:
 					if(confirm('Are you sure? You want to participate in contest?')){
-						setparticipate('<?php echo $val["int_contest_id"]?>','<?php echo $val['int_created_by'] ?>');
+						setparticipate('<?php echo $val["int_contest_id"]?>');
 					}"><i class="fa fa-eye-slash"></i> participate</a>
 					<?php } ?>
 				</td>
@@ -80,11 +78,11 @@
 
 </div>
 <script type="text/javascript">
-	function setparticipate(id,name){
+	function setparticipate(id){
 	$.ajax({
 			type: "POST",
 			url: "<?php echo site_url(); ?>/artist/updateparticipate",
-			data: { 'id' : id  , 'artist_id' : name } ,
+			data: { 'id' : id  } ,
 			cache: false,
 			success: function(data) {
 				window.location='<?php echo site_url(); ?>/content/listcontest/';

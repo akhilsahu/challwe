@@ -4,12 +4,12 @@
 	<div class="container">
 
 		<div class="sixteen columns">
-			<h2>Active Contest</h2>
+			<h2>Manage Challenge</h2>
 			<nav id="breadcrumbs">
 				<ul>
 					<li>You are here:</li>
 					<li><a href="#">Home</a></li>
-					<li>Contest List</li>
+					<li>Manage Challenge</li>
 				</ul>
 			</nav>
 		</div>
@@ -26,8 +26,8 @@
 
 		<?php if($user['logged_in']){?>
 			<span style="float:right;">
-				<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Contest</a>
-				<a href="<?php echo site_url();?>/artist/addContest" class=" button">Create Contest</a>
+				<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Challenges</a>
+				<a href="<?php echo site_url();?>/artist/addContest" class=" button">Create Challenge</a>
 			</span>
 		<?php }?>
 	
@@ -63,7 +63,7 @@
 				<td class="keywords"><?php echo $val['skills'];?></td>
 				<td>$ <?php echo $val['txt_budget'];?></td>
 				<td class="action">
-					<a href="<?php echo site_url();?>/content/viewcontest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i>View</a>
+					<a href="<?php echo site_url();?>/artist/viewcontest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i>View</a>
 					
 				</td>
 			</tr>
