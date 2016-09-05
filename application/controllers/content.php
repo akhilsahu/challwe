@@ -34,7 +34,7 @@ class Content extends CI_Controller{
 	 }
 	
 	function listcontest(){	
-		/*$this->load->model('contest_model');
+		$this->load->model('contest_model');
         $this->load->model('fields_model');
         $i=0;
         $response_data = array();
@@ -58,7 +58,7 @@ class Content extends CI_Controller{
         
 		$data['page_title']='Contest List';        
 		$data['page']='listContest';        
-		$this->load->view('artist/page',$data);		*/
+		$this->load->view('artist/page',$data);		
 	}
 
      function searchlist(){
