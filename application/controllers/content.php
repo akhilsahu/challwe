@@ -34,12 +34,12 @@ class Content extends CI_Controller{
 	 }
 	
 	function listcontest(){	
-		$this->load->model('contest_model');
+		/*$this->load->model('contest_model');
         $this->load->model('fields_model');
         $i=0;
         $response_data = array();
        // $data['list'] = $this->contest_model->allActiveContestlist();
-        /*$data_list =$this->contest_model->allActiveContestlist();
+        $data_list =$this->contest_model->allActiveContestlist();
         foreach($data_list as $value) {
                 $skill = $this->fields_model->allShowActiveDirectorylist($value['int_skill1'],$value['int_skill2'],$value['int_skill3'],$value['int_skill4'],$value['int_skill5']);
                 $response_data[$i]["int_contest_id"] = $value["int_contest_id"];
@@ -52,13 +52,13 @@ class Content extends CI_Controller{
 				$response_data[$i]["user_status"] = $value["user_status"];
                 $response_data[$i]["skills"] = $skill[0]['skill_name'];
                 $i++;   
-        }*/
+        }
         $data['list'] = $response_data;
 
         
 		$data['page_title']='Contest List';        
 		$data['page']='listContest';        
-		$this->load->view('artist/page',$data);		
+		$this->load->view('artist/page',$data);		*/
 	}
 
      function searchlist(){
