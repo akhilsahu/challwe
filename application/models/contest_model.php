@@ -177,6 +177,9 @@ class Contest_model extends CI_Model{
 			where c.int_status=1 and c.int_artist_id=".$session_arr['int_artist_id']." and a.dt_last_date> '".date('Y-m-d H:i:s')."'";
 		$sql.=" order by dt_created_on desc";
 		//if($limit!='') $sql.=" Limit ".$limit." offset ".$limit;
+
+		$result=$query->result_array();
+
 		
 		$query=$this->db->query($sql);
 
