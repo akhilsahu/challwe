@@ -200,11 +200,11 @@ h2.title {
 						<h3>Albums</h3>
                         <ul class="jFiler-items-list jFiler-items-grid">
                             <?php foreach($album_details as $val){
-								if($val['txt_path']=='' && $val['no_of_photos']==1){
-									$no_of_photos=$val['no_of_photos']-1;
-								}else{
+								//if($val['txt_path']=='' && $val['no_of_photos']==1){
+								//	$no_of_photos=$val['no_of_photos']-1;
+								//}else{
 									$no_of_photos=$val['no_of_photos'];
-								}
+								//}
 								?>
                             <li class="jFiler-item" data-jfiler-index="1" style="">                        
                                 <div class="jFiler-item-container">                            

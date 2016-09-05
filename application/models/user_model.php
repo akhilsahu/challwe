@@ -455,8 +455,8 @@ class User_model extends CI_Model{
 	function getArtistAlbum($user){
 		
 		//$sql="select a.*,b.* from ".$this->table_artist_album." a  where a.int_artist_id=$user";
-		$sql="select a.*,b.txt_path,COUNT(*) as no_of_photos from ".$this->table_artist_album." a left join tab_artist_media b on a.int_album_id=b.int_album_id where a.int_artist_id=$user group by a.int_album_id";
-		
+		//$sql="select a.*,b.txt_path,COUNT(*) as no_of_photos from ".$this->table_artist_album." a left join tab_artist_media b on a.int_album_id=b.int_album_id where a.int_artist_id=$user group by a.int_album_id";
+		$sql="select a.*,b.txt_path,( select count(*) from tab_artist_media am where am.int_album_id=a.int_album_id) as no_of_photos from ".$this->table_artist_album." a left join tab_artist_media b on a.int_album_id=b.int_album_id where a.int_artist_id=$user";
 		$query=$this->db->query($sql);
 
 		$result=$query->result_array();
