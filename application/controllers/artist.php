@@ -213,6 +213,7 @@ class Artist extends CI_Controller{
 	
 	function myAlbum($slug){
 		if($slug){
+			echo $slug;
 			$session_arr=$this->session->userdata('user');
 			$this->load->model('user_model');        
 			$data['no_album_media_details']=$this->user_model->getArtistNoAlbumMedia($session_arr['int_artist_id']);
@@ -220,6 +221,7 @@ class Artist extends CI_Controller{
 			$data['album_details']=$this->user_model->getAlbumDetails($slug);
 			$data['page_title']='My Album';
 			$data['page']='myAlbum';
+			print_r($data);
 			$this->load->view('artist/page',$data);
 		}else{
 			redirect('artist/accountPortfolio','refresh');	
