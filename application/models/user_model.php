@@ -156,7 +156,7 @@ class User_model extends CI_Model{
 
 			'txt_office_no'=>$txt_office_no,
 
-			'int_directory_id'=>$int_directory_id,
+			'int_skill1'=>$int_directory_id,
 
 			'txt_experience'=>$txt_experience,
 
@@ -396,8 +396,8 @@ class User_model extends CI_Model{
 
 	function getArtistBusinessDetails($user){
 
-		//$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city = c.id where int_artist_id=$user";
-		$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city::integer = c.id where int_artist_id=$user";
+		$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city = c.id where int_artist_id=$user";
+		//$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city::integer = c.id where int_artist_id=$user";
 
 		$query=$this->db->query($sql);
 
@@ -558,7 +558,11 @@ class User_model extends CI_Model{
 
 			'txt_office_no'=>$txt_office_no,
 
-			'int_directory_id'=>implode($int_directory_id,","),
+			'int_skill1'=>$int_directory_id[0],
+			'int_skill2'=>$int_directory_id[1],
+			'int_skill3'=>$int_directory_id[2],
+			'int_skill4'=>$int_directory_id[3],
+			'int_skill5'=>$int_directory_id[4],
 
 			'txt_experience'=>$txt_experience,
 

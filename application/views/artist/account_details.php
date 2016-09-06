@@ -499,7 +499,7 @@ h2.title {
 
                                         <div class="form-group">
 
-                                          <label class="col-sm-3 control-label" for="inputEmail3">Skills</label>
+                                          <label class="col-sm-3 control-label" for="inputEmail3">Skills (Max.5)</label>
 
                                           <div class="col-sm-7">
 
@@ -507,12 +507,12 @@ h2.title {
 
                                               <option>-Select-</option>
 
-                                            <?php foreach($directory as $val){ 
-                                                $direct = explode(",",$user_details['int_directory_id']);
-                                              ?>
+                                            <?php 
+											 $skill_arr = array($user_details['int_skill1'],$user_details['int_skill2'],$user_details['int_skill3'],$user_details['int_skill4'],$user_details['int_skill5']);
+											 foreach($directory as $val){?>
 
                                        
-                                             <option value="<?php echo $val['int_field_id']?>" <?php echo in_array($val['int_field_id'],$direct)?"selected":"";?>><?php echo $val['txt_field_name']?></option>
+                                             <option value="<?php echo $val['int_field_id']?>" <?php echo in_array($val['int_field_id'],$skill_arr)?"selected":"";?>><?php echo $val['txt_field_name']?></option>
 
 
                                             <?php } ?>
