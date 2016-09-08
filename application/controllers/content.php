@@ -120,8 +120,47 @@ class Content extends CI_Controller{
 		}
 	}
 	
-	function viewPortfolio(){
-		
+	function viewPortfolio($userId){
+		$this->load->library('user_agent');	
+		$this->load->model('fields_model');
+		$this->load->model('follow_model');	
+		$this->load->model('user_model');		
+		//$this->load->library('encrypt');
+		$session_arr=$this->session->userdata('user');
+        if($userId){
+			$data['media_details']=$this->user_model->getArtistNoAlbumMedia($userId);
+			$data['album_details']=$this->user_model->getArtistAlbum($userId);
+			$data['user_details']=$this->user_model->getArtistBasicDetails($userId);
+			$data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['user_details']['int_skill1'],$data['user_details']['int_skill2'],$data['user_details']['int_skill3'],$data['user_details']['int_skill4'],$data['user_details']['int_skill5']);
+			if($session_arr['int_artist_id']) $data['is_follower']=$this->follow_model->getFollowStatus($userId);
+			//echo "<pre>";print_r($data);die();
+			$data['page_title']='Portfoilo';
+            $data['page']='viewPortfolio';
+            $this->load->view('artist/page',$data);
+		}else{
+			redirect($this->agent->referrer());
+		}
+	}
+	
+	function showAlbum($userId,$slug){
+		$this->load->library('user_agent');	
+		$this->load->model('fields_model');
+		$this->load->model('follow_model');	
+		$this->load->model('user_model');		
+		//$this->load->library('encrypt');
+		$session_arr=$this->session->userdata('user');
+        if($userId && $slug){
+			$data['media_details']=$this->user_model->getArtistAlbumMedia($slug,$userId);
+			$data['user_details']=$this->user_model->getArtistBasicDetails($userId);
+			$data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['user_details']['int_skill1'],$data['user_details']['int_skill2'],$data['user_details']['int_skill3'],$data['user_details']['int_skill4'],$data['user_details']['int_skill5']);
+			if($session_arr['int_artist_id']) $data['is_follower']=$this->follow_model->getFollowStatus($userId);
+			//echo "<pre>";print_r($data);die();
+			$data['page_title']='Album';
+            $data['page']='showAlbum';
+            $this->load->view('artist/page',$data);
+		}else{
+			redirect($this->agent->referrer());
+		}
 	}
 
     function blogList(){
