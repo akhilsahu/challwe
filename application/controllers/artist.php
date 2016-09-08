@@ -225,6 +225,38 @@ class Artist extends CI_Controller{
 			redirect('artist/accountPortfolio','refresh');	
 		}
 	}
+	
+	function follow($userId){
+		$this->load->library('user_agent');
+		$this->load->model('follow_model');
+		if($userId){
+			$checkFollow=$this->follow_model->getFollowStatus($userId);
+			if(count($checkFollow)==0){
+				$this->follow_model->followUser($userId);
+				redirect($this->agent->referrer());
+			}else{
+				redirect($this->agent->referrer());
+			}
+		}else{
+			redirect($this->agent->referrer());
+		}
+	}
+	
+	function unfollow($userId){
+		$this->load->library('user_agent');
+		$this->load->model('follow_model');
+		if($userId){
+			$checkFollow=$this->follow_model->getFollowStatus($userId);
+			if(count($checkFollow)>0){
+				$this->follow_model->unfollowUser($userId);
+				redirect($this->agent->referrer());
+			}else{
+				redirect($this->agent->referrer());
+			}
+		}else{
+			redirect($this->agent->referrer());
+		}
+	}
 
     function accountStatistics(){
         $session_arr=$this->session->userdata('user');

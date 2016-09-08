@@ -76,9 +76,18 @@ class Content extends CI_Controller{
     }
 
     function viewProfile($artist_id){
+		$this->load->library('user_agent');	
+		$this->load->model('fields_model');
+		$this->load->model('follow_model');			
+		//$this->load->library('encrypt');
+		$session_arr=$this->session->userdata('user');
         if($artist_id){
+			$data['is_follower']=array();
             $this->load->model('user_model');
             $data['user_details']=$this->user_model->getArtistBasicDetails($artist_id);
+			$data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['user_details']['int_skill1'],$data['user_details']['int_skill2'],$data['user_details']['int_skill3'],$data['user_details']['int_skill4'],$data['user_details']['int_skill5']);
+			if($session_arr['int_artist_id']) $data['is_follower']=$this->follow_model->getFollowStatus($artist_id);
+			//echo "<pre>";print_r($data['getskill']);die();
             $data['business_details']=$this->user_model->getArtistBusinessDetails($artist_id);
             $data['media_details']=$this->user_model->getArtistMedia($artist_id);
             $data['social_details']=$this->user_model->getArtistLinks($artist_id);
@@ -86,9 +95,34 @@ class Content extends CI_Controller{
             $data['page']='artistProfile';
             $this->load->view('artist/page',$data);
         }else{
-            redirect('/content/home/','refresh');
+            redirect($this->agent->referrer());
         }
     }
+	
+	function viewFollowers($userId){
+		$this->load->library('user_agent');	
+		$this->load->model('fields_model');
+		$this->load->model('follow_model');	
+		$this->load->model('user_model');		
+		//$this->load->library('encrypt');
+		$session_arr=$this->session->userdata('user');
+        if($userId){
+			$data['followers']=$this->follow_model->getFollowerList($userId);
+			$data['user_details']=$this->user_model->getArtistBasicDetails($userId);
+			$data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['user_details']['int_skill1'],$data['user_details']['int_skill2'],$data['user_details']['int_skill3'],$data['user_details']['int_skill4'],$data['user_details']['int_skill5']);
+			if($session_arr['int_artist_id']) $data['is_follower']=$this->follow_model->getFollowStatus($userId);
+			//echo "<pre>";print_r($data);die();
+			$data['page_title']='Artist Profile';
+            $data['page']='viewFollowers';
+            $this->load->view('artist/page',$data);
+		}else{
+			redirect($this->agent->referrer());
+		}
+	}
+	
+	function viewPortfolio(){
+		
+	}
 
     function blogList(){
         $data['page_title']='Blog';

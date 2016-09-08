@@ -63,7 +63,17 @@
 			.hover:hover .tooltip {
 				opacity:1;
 			}
+			.profile-view:hover {
+				cursor: pointer;
+			}
     </style>
+	<script>
+		$(document).ready(function(){
+			$(".profile-view").click(function(){
+				window.location = "<?php echo site_url()."/content/viewProfile/".$user['int_artist_id']?>";
+			});
+		});
+	</script>
 
   <body>
 
@@ -128,7 +138,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="<?php echo ($user['txt_profile_image'])?base_url().$user['txt_profile_image']:base_url().'assets/images/avatar-placeholder.png'?>" class="img-circle" alt="User Image" style="max-width: 125px;display: inline-block;">
+                                    <img src="<?php echo ($user['txt_profile_image'])?base_url().$user['txt_profile_image']:base_url().'assets/images/avatar-placeholder.png'?>" class="img-circle profile-view" alt="User Image" style="max-width: 125px;display: inline-block;">
 
                                     <p>
                                         <?php echo $user['txt_fname']?>

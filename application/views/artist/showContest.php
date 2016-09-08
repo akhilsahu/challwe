@@ -315,9 +315,11 @@
                     <div class="user-submission">
                         <div class="row mr-btm">
                             <div class="col-sm-2 text-center">
-                                <img src="<?php echo ($val['txt_profile_image'])? base_url().$val['txt_profile_image']:base_url().'assets/images/profile-placeholder.jpg'; ?>" class="img-circle img-responsive" />
-                                <div class=""><label class="h5"><?php echo $val['txt_fname']." ".$val['txt_lname']?></label></div>
-                            </div>
+                                <a href="<?php echo site_url()."/content/viewProfile/".$val['int_artist_id']?>">
+									<img src="<?php echo ($val['txt_profile_image'])? base_url().$val['txt_profile_image']:base_url().'assets/images/profile-placeholder.jpg'; ?>" class="img-circle img-responsive" />
+									<div class=""><label class="h5"><?php echo $val['txt_fname']." ".$val['txt_lname']?></label></div>
+								</a>
+							</div>
                             <div class="col-sm-10">
                                 <p><?php echo $val['txt_description'];?></p>
                                 <div class="row">
@@ -521,8 +523,10 @@
 						if(result.txt_profile_image) profile_img="<?php echo base_url(); ?>"+result.txt_profile_image;
 						html+='<div class="user-comment">';
 						html+='<div class="col-sm-1 pd-0 text-center">';
+						html+='<a href="<?php echo site_url()."/content/viewProfile/"?>'+result.int_artist_id+'">';
 						html+='<img src="'+profile_img+'" class="img-circle img-responsive" />';
 						html+='<div class=""><label class="h5">'+result.txt_fname+' '+result.txt_lname+'</label></div>';
+						html+='</a>';
 						html+='</div>';
 						html+='<div class="col-sm-10">';
 						html+='<p>'+result.txt_comment+'</p>';

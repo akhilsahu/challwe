@@ -1,113 +1,1 @@
-<div class="divide80"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 margin20">
-                    <h3 class="heading"><?php echo $user_details['txt_fname']." ".$user_details['txt_lname'];?></h3>
-                
-                    <p><?php echo $user_details['txt_description']?></p>
-                    <p><a href="#" class="btn border-black btn-lg">Follow</a></p>
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo ($user_details['txt_profile_image'])?base_url().$user_details['txt_profile_image']:base_url().'assets/img/mas-1.jpg'; ?>" class="img-responsive" alt="">
-                </div>
-            </div><!--about intro-->
-            <div class="divide60"></div>
-            <div class="row">
-                <div class="col-md-4 margin20">
-                    <h3 class="heading">About Me</h3>
-                    <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                        <i class="fa fa-desktop"></i>    Basic Details
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <p>Name: <?php echo $user_details['txt_fname']." ".$user_details['txt_lname']?></p>
-                                    <p>Email: <?php echo $user_details['txt_email']?></p>
-                                    <p>Cell No.: <?php echo $user_details['txt_cell_no']?></p>
-                                    <p>Office Address.: <?php echo $user_details['txt_office_address']." ".$user_details['city_name']." ".$user_details['state_name']." ".$user_details['country_name']?></p>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                        <i class="fa fa-crop"></i>    Professional Details
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseTwo" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <p>Experience (Year): <?php echo $user_details['txt_experience']?></p>
-                                    <p>Hourly Charges: <?php echo $user_details['txt_hourly_charge']?></p>
-                                    <p>Roles: <?php echo $user_details['txt_fashion_community_roles']?></p>
-                                    <p>Biographic Information: <?php echo $user_details['txt_biographic_info']?></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--why hire us-->
-                <div class="col-md-4 margin20">
-                    <h3 class="heading">Social Links</h3>
-                    <div class="skills-wrapper wow animated bounceIn animated" data-wow-delay="0.2s">
-                    <?php foreach ($social_details as $val) {?>
-                           <div><strong><?php echo $val['txt_title']?> : </strong><?php echo $val['txt_url']?></div>            
-                    <?php }?>                        
-                    </div><!--skills-->
-                </div><!--col-->
-                <div class="col-md-4 margin20">
-                    <h3 class="heading">Business Information</h3>
-					<?php foreach($business_details as $val){?>
-					<div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                                        <i class="fa fa-desktop"></i>    Business Details
-                                    </a>
-                                </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                   <div>Name:<?php echo $val['txt_name']?></div>
-                                <div>Description:<?php echo $val['txt_description']?></div>
-                                <div>Website:<?php echo $val['txt_website']?></div>
-								 </div>
-                            </div>
-                        </div>
-                    </div>
-					 <?php } ?>
-                </div>
-            </div><!--row of skills collapse and highlights-->
-            
-            <h3 class="heading">Business Information</h3>
-            <div id="masnory-container" class="cbp">
-            <?php 
-            foreach($media_details as $val){
-                $profile_path=base_url().$val['txt_path'];
-                ?>
-                <div class="cbp-item identity">
-                    <a class="cbp-caption cbp-lightbox" data-title="Easy Note<br>by Cosmin Capitanu" href="<?php echo $profile_path;?>">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="<?php echo $profile_path;?>" alt="">
-                        </div>
-                        <div class="cbp-caption-activeWrap">
-                            <div class="cbp-l-caption-alignCenter">
-                                <div class="cbp-l-caption-body">
-                                    <div class="cbp-l-caption-title"></div>
-                                    <div class="cbp-l-caption-desc"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-               <?php } ?> 
-            </div>
-
-        </div><!--.container-->
+<style>.cl-cover-img{	background: url(<?php echo base_url().$user_details['txt_cover_image'];?>);	background-repeat: no-repeat;    background-attachment: fixed;    background-position: center;}.cl-a-6 {    border-right: 1px solid #e9eaed;    float: left;    font-size: 14px;    font-weight: bold;    height: 43px;    line-height: 3.05;    padding: 0 17px;    position: relative;    vertical-align: middle;    white-space: nowrap;}.cl-a-7 {    border-width: 0 1px;    color: #4b4f56;}.cl-span-6 {    //background-image: url();    //background-repeat: no-repeat;    //background-size: auto;    //background-position: -138px -254px;    bottom: -1px;    display: none;    height: 9px;    left: 50%;    margin-left: -8px;    position: absolute;    width: 17px;}</style><!-- Titlebar================================================== --><div id="titlebar" class="resume <?php if($user_details['txt_cover_image']){ echo 'cl-cover-img'; }?>">	<div class="container">		<div class="ten columns">			<div class="resume-titlebar">				<img src="<?php echo ($user_details['txt_profile_image'])?base_url().$user_details['txt_profile_image']:base_url()."uploads/no-image.png";?>" alt="">				<div class="resumes-list-content">					<h4><?php echo $user_details['txt_fname']." ".$user_details['txt_lname'];?> </h4>					<?php if($user_details['txt_tagline']){?><h6><span><?php echo $user_details['txt_tagline'];?></span></h6><?php }?>					<span class="icons"><i class="fa fa-map-marker"></i><?php echo $user_details['country_name'];?></span>					<?php if($user_details['txt_hourly_charge']){?><span class="icons"><i class="fa fa-money"></i> <?php echo $user_details['txt_hourly_charge'];?> / hour</span><?php }?>					<br><span class="icons"><a href="mailto:<?php echo $user_details['txt_email'];?>"><i class="fa fa-envelope"></i> <?php echo $user_details['txt_email'];?></a></span>					<div class="skills">						<?php echo $getskill;?>					</div>					<div class="clearfix"></div>				</div>			</div>		</div>		<div class="six columns">			<div class="two-buttons">				<!--a href="#small-dialog" class="popup-with-zoom-anim button"><i class="fa fa-envelope"></i> Send Message</a>				<div id="small-dialog" class="zoom-anim-dialog mfp-hide apply-popup">					<div class="small-dialog-headline">						<h2>Send Message to John Doe</h2>					</div>					<div class="small-dialog-content">						<form action="#" method="get" >							<input type="text" placeholder="Full Name" value=""/>							<input type="text" placeholder="Email Address" value=""/>							<textarea placeholder="Message"></textarea>							<button class="send">Send Application</button>						</form>					</div>									</div-->				<?php 				if($user_details['int_artist_id']==$user['int_artist_id']){?>					<a href="<?php echo site_url().'/artist/accountDetails'?>" class="button dark"><i class="fa fa-edit"></i> Edit Profile</a>				<?php }else if($user['int_artist_id'] && count($is_follower)==0){?>					<a href="<?php echo site_url().'/artist/follow/'.$user_details['int_artist_id'];?>" class="button dark"><i class="fa fa-star"></i> Follow</a>				<?php }else if($user['int_artist_id'] && count($is_follower)>0){?>					<a href="<?php echo site_url().'/artist/unfollow/'.$user_details['int_artist_id'];?>" class="button dark"><i class="fa fa-star"></i> UnFollow</a>				<?php }?>			</div>		</div>	</div></div><div class="clearfix" id="menu-outer-container">	<div class="menu-inner-container clearfix">		<a class="cl-a-6 cl-a-7" href="#">Basic Details<span class="cl-span-6"></span></a>		<a class="cl-a-6" href="<?php echo site_url()."/content/viewPortfolio/".$user_details['int_artist_id'];?>">Portfolio<span class="cl-span-6"></span></a>		<a class="cl-a-6" href="<?php echo site_url()."/content/viewFollowers/".$user_details['int_artist_id'];?>">Followers<span class="cl-follower-count"></span><span class="cl-span-6"></span></a>		<a class="cl-a-6" href="#">Post<span class="cl-span-6"></span></a>		<a class="cl-a-6" href="#">Challenge Participation History<span class="cl-span-6"></span></a>	</div></div><!-- Content================================================== --><div class="container">	<!-- Recent Jobs -->	<div class="eight columns">	<div class="padding-right">		<h3 class="margin-bottom-15">About Me</h3>		<p class="margin-reset">			<?php echo $user_details['txt_biographic_info'];?>		</p>		<br>				<ul class="list-1">			<li>Date Of Birth:<?php echo $user_details['dt_dob'];?></li>			<li>Place Of Birth:<?php echo $user_details['txt_place_of_birth'];?></li>			<li>Roles:<?php echo $user_details['txt_fashion_community_roles'];?></li>		</ul>	</div>	</div>	<!-- Widgets -->	<!--div class="eight columns">		<h3 class="margin-bottom-20">Education</h3>		<dl class="resume-table">			<dt>				<small class="date">2012 - 2015</small>				<strong>Bsc Computing at College of West Anglia</strong>			</dt>			<dd>				<p>Captain, why are we out here chasing comets? Maybe we better talk out here; the observation lounge has turned into a swamp. Ensign Babyface!</p>			</dd>					<dt>				<small class="date">2006 - 2010</small>				<strong>GCSE something at King Edward 7th</strong>			</dt>			<dd>				<p>Captain, why are we out here chasing comets? Maybe we better talk out here; the observation lounge has turned into a swamp. Ensign Babyface!</p>			</dd>			<dt>				<small class="date">2004 - 2006</small>				<strong>Test 2 at Test</strong>			</dt>			<dd>				<p>Phasellus vestibulum metus orci, ut facilisis dolor interdum eget. Pellentesque magna sem, hendrerit nec elit sit amet, ornare efficitur est.</p>			</dd>		</dl>	</div--></div>
