@@ -56,10 +56,9 @@ header {
 	margin-left: 0;
 	display: inline-block;
 	float: left;
-        margin-top: 20px;
 }
 
-#logo img { margin-top: 24px; }
+/*#logo img { margin-top: 24px; }*/
 
 
 /* Full-Width Header Styles */
@@ -1738,8 +1737,8 @@ img.mfp-img {
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #666;
-	padding: 45px 15px;
-	max-height: 157px;
+	padding: 0;
+	max-height: 220px;
 }
 
 #popular-categories li a:before {
