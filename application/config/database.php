@@ -53,7 +53,7 @@ $db['default']['username'] = 'kcwtneugijjfmn';
 $db['default']['password'] = 'MZDJ8b_0IylCl9dEfEIDH6R6_X';
 $db['default']['database'] = 'de0ejk6db0rlm8';
 $db['default']['dbdriver'] = 'postgre';
-
+//
 //$db['default']['hostname'] = 'localhost';
 //$db['default']['username'] = 'root';
 //$db['default']['password'] = '';
