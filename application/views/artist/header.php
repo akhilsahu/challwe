@@ -10,7 +10,7 @@
         <link href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/colors/green.css" id="colors">
-        <!--<link rel="stylesheet" href="<?php //echo base_url();  ?>assets/css/vine-ember.css" id="colors">-->
+        <!--<link rel="stylesheet" href="<?php //echo base_url();    ?>assets/css/vine-ember.css" id="colors">-->
         <link href="<?php echo base_url(); ?>assets/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css"><link href="<?php echo base_url(); ?>plugins/select2/select2.min.css" rel="stylesheet" type="text/css">
         <script src="<?php echo base_url(); ?>assets/scripts/jquery-2.1.3.min.js"></script><script src="<?php echo base_url(); ?>plugins/select2/select2.full.min.js"></script>
         <!--[if lt IE 9]>
@@ -304,8 +304,333 @@
             border-bottom: 1px solid #999;
             box-shadow: 0px 0px 3px #ccc;
         }
-        .fixed ul.float-right li a{
-                background-color: #999;
+        .project-cover, .project-cover * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .project-cover {
+            float: left;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            margin: 0 22px 22px 12px;
+            position: relative;
+            width: 202px;
+        }
+        .project-cover .cover-img {
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+        .project-cover .cover-img, .project-cover .cover-img-el {
+            width: 202px;
+            height: 158px;
+            border-radius: 3px 3px 0 0;
+        }
+        .project-cover .cover-img, .project-cover .cover-img-el {
+            width: 202px;
+            height: 158px;
+            border-radius: 3px 3px 0 0;
+        }
+        .project-cover .cover-img-el {
+            -webkit-transition: opacity 0.15s linear;
+            transition: opacity 0.15s linear;
+            -ms-transform: translate(0,0);
+            -webkit-transform: translate(0,0);
+            transform: translate(0,0);
+        }
+        .project-cover .cover-info {
+            background: #fff;
+            padding: 6px 10px 28px;
+        }
+        .project-cover .cover-name {
+            font-weight: bold;
+            height: 32px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .project-cover .cover-by-wrap {
+            border-bottom: 1px solid #e2e2e2;
+            height: 22px;
+            margin-bottom: 4px;
+        }
+        .project-cover .cover-stat-wrap {
+            background-color: #f6f6f6;
+            border-radius: 0 0 3px 3px;
+            border-top: 1px solid #e7e7e7;
+            box-shadow: 0 1px 0 0 #fff inset;
+            padding: 7px 8px 8px;
+            position: relative;
+            height: 30px;
+            line-height: 14px;
+        }
+        .project-cover .cover-by-link {
+            color: #1769ff;
+            width: 100%;
+        }
+        .project-cover .cover-by, .project-cover .cover-by-link {
+            float: left;
+        }
+        .project-cover .cover-by {
+            color: dimgray;
+            margin-right: 5px;
+        }
+        .project-cover .cover-fields {
+            bottom: 34px;
+            font-size: 11px;
+            height: 30px;
+            left: 10px;
+            line-height: 30px;
+            max-width: 160px;
+            overflow: hidden;
+            position: absolute;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .cover-stat {
+            color: #555;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .project-cover .featured {
+            width: 29px;
+            height: 28px;
+            -webkit-transition: color 0.15s linear;
+            transition: color 0.15s linear;
+            border-left: 1px solid #ddd;
+            color: #aaa;
+            cursor: default;
+            position: absolute;
+            right: 1px;
+            text-align: center;
+            top: 1px;
+        }
+        .project-cover .featured .tooltipi {
+            -ms-transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            left: 50%;
+            top: 31px;
+        }
+        .container{
+            max-width:1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 15px;
+        }
+        .display-full{
+            display: inline-block;
+            width: 100%;
+        }
+        .video-section{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            left: 0;
+            max-height: 410px;
+            min-height: 410px;
+        }
+        .video-section:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.35);
+        }
+        .video-section video{
+            width: 100%;
+            height: 100%;
+        }
+        #wrapper, header {
+            background-color: transparent;
+        }
+        header{
+            position: fixed;
+            margin: 0 auto;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 3;
+        }
+        .main-content{
+            position: relative;
+            z-index: 3;
+            margin-top: 410px;
+            background-color: #fff;
+        }
+        .search-container{
+            position: fixed;
+            padding: 100px 0;
+            top: 0;
+        }
+        #footer{
+            z-index: 5;
+            position: relative;
+        }
+        .show-post{
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 4px 4px 15px #c3c3c3;
+            transform: translateZ(0px);
+        }
+        .post-img{
+            min-height: 200px;
+            max-height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .post-controls{
+            padding: 4px 18px;
+            background-color: #454545;
+            color: #fff;
+            font-size: 14px;
+        }
+        .post-description{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 8px 16px;
+            background-color: rgba(0,0,0,0.5)
+        }
+        #popular-categories li{
+            position: relative;
+        }
+        .text-overloy{
+            background-color: #fff;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            z-index: 2;
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: -webkit-transform .25s cubic-bezier(.4,0,.2,1),opacity .25s;
+            transition: transform .25s cubic-bezier(.4,0,.2,1),opacity .25s;
+        }
+        #popular-categories li a:hover .text-overloy{
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        .text-overlay-inner{
+            position: relative;
+            display: table;
+            table-layout: fixed;
+            height: 100%;
+            width: 100%;
+        }
+        .text-holder{
+            position: relative;
+            display: table-cell;
+            height: 100%;
+            width: 100%;
+            vertical-align: middle;
+            text-align: center;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .item-title{
+            line-height: 1.3em;
+        }
+        .category-holder{
+            margin: 6px 0 0;
+        }
+        #full-search{
+            position: absolute;
+            width: 100%;
+            max-width: 750px;
+            left: 50%;
+            transform: translate(-50%);
+            top: 50%;
+        }
+        #full-search .fa{
+            position: absolute;
+            top: 50%;
+            right: 13px;
+            color: #f4740c;
+            transform: translateY(-50%);
+        }
+        #full-search input{
+            border-radius: 5px;
+            font-size: 22px;
+            background-color: #fff;
+            color: #333;
+            padding: 12px;
+        }
+        .user-body a:hover{
+            background-color: transparent !important;
+        }
+        /*    .right_details_items {
+            padding: 20px 0;
+        }*/
+        .right_details_row {
+            border-bottom: 1px solid #ddd;
+            display: block;
+            padding: 3px 20px;
+        }
+        .label-title {
+            display: inline-block;
+            font-weight: bold;
+            width: 50%;
+        }
+        .personal-detail .img-full img{
+            transform: translateY(-50%);
+        }
+        .personal-detail .img-full{
+            position: relative;
+            width: 175px;
+            margin: 0 auto;
+        }
+        .profile-info{
+            margin-top:-70px;
+            margin-bottom:15px;
+        }
+        .profile-detail{
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            flex-flow: wrap;
+            margin-top: -43px;
+        }
+        .challwe-profile{
+            height: 100%;
+            padding: 20px;
+        }
+        .tab-content .post-img{
+            min-height: 130px;
+            max-height: 130px;
+        }
+        .nav-pills li p{
+            margin-bottom: 0px;
+        }
+        .nav-justified>li>a{
+            background: #e1e1e1;
+            margin: 0 10px;
+            color: #777;
+            text-align: left;
+        }
+        .nav-justified>li>a .h4{
+            margin-right: 10px;
+        }
+        .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+            background-color: #f4740c;
+        }
+        .totel-achive{
+            margin-top: 50px;
+        }
+        .btn-shopping-cart:hover{
+            color: #fff;
         }
     </style>
     <script>
@@ -316,7 +641,7 @@
         });
     </script>
 
-    <body>
+    <body class="">
 
         <div id="fade" class="black_overlay" style="display: none; height:1000px;"></div>
         <div id="preloader" class="white_content" style="display:none;left: 42%;width: 12%;top: 50%;">
@@ -325,24 +650,24 @@
         <div id="wrapper">
             <!--    <div id="sidebar">
                     <div id="close-sidebar"><span class="fa fa-close fa-2x">&nbsp;</span></div>
-                    <a id="sidebar-logo" href="<?php //echo base_url();  ?>">
-                        <img src="<?php //echo base_url();  ?>assets/images/logo-challwe.png" alt="VYSUAL - In Select Theaters December 25">
+                    <a id="sidebar-logo" href="<?php //echo base_url();    ?>">
+                        <img src="<?php //echo base_url();    ?>assets/images/logo-challwe.png" alt="VYSUAL - In Select Theaters December 25">
                     </a>MAIN MENU
                     <nav id="navigation" class="hasLogo">
                         <ul id="dropmenu" class="menu">
                             <li class="current-menu-item">
-                                <a href="<?php //echo site_url();  ?>">Home</a>
+                                <a href="<?php //echo site_url();    ?>">Home</a>
                             </li>
-                            <li><a href="<?php //echo site_url();  ?>">About Challwe</a></li>
-                            <li><a href="<?php //echo site_url();  ?>">challenges</a></li>
-                            <li><a href="<?php //echo site_url();  ?>">Blog</a></li>
+                            <li><a href="<?php //echo site_url();    ?>">About Challwe</a></li>
+                            <li><a href="<?php //echo site_url();    ?>">challenges</a></li>
+                            <li><a href="<?php //echo site_url();    ?>">Blog</a></li>
             <?php //if($user['logged_in']){
             ?>
-                            <li><a href="#">wallet&nbsp;(<?php //echo $user['int_challwe_coins'];  ?>)</a></li>
+                            <li><a href="#">wallet&nbsp;(<?php //echo $user['int_challwe_coins'];    ?>)</a></li>
             <?php //} ?>
-                            <li><a href="<?php //echo base_url();   ?>">Login</a></li>
-                            <li><a href="<?php //echo base_url();   ?>">Register</a></li>
-                        </ul>
+                            <li><a href="<?php //echo base_url();     ?>">Login</a></li>
+                            <li><a href="<?php //echo base_url();     ?>">Register</a></li>
+                challwe-profile        </ul>
                     </nav>WIDGET
                     <ul id="sidebar-widgets" style="margin-top: 0px;">
                         <li class="widget">
@@ -445,7 +770,7 @@
                                                     <a href="<?php echo site_url() ?>/artist/dashboard" class="btn btn-default btn-flat">My Account</a>
                                                 </div>
                                                 <div class="pull-right">
-                                                    <!--<a href="<?php //echo site_url()  ?>/user/signoutArt" class="btn btn-default btn-flat">Sign out</a>-->
+                                                    <!--<a href="<?php //echo site_url()    ?>/user/signoutArt" class="btn btn-default btn-flat">Sign out</a>-->
                                                     <?php if ($user['login_type'] == 'web') { ?>
                                                         <a href="<?php echo site_url() ?>/user/signoutArt" class="btn btn-default btn-flat">Signout</a>
                                                     <?php } else { ?>
@@ -493,14 +818,14 @@
                 });
                 var videoH = $(".video-section").height();
                 console.log("height" + videoH);
-                    $(window).scroll(function(){
-                        if($(window).scrollTop() > 410){
-                           $("body").addClass("fixed")
-                        }
-                        else{
-                            $("body").removeClass("fixed");
-                        }
-                    });
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > 410) {
+                        $("body").addClass("fixed")
+                    }
+                    else {
+                        $("body").removeClass("fixed");
+                    }
+                });
                 $("#close-sidebar").click(function () {
                     $("body").removeClass("open-sidebar");
                 });
