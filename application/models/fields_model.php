@@ -180,7 +180,7 @@ class Fields_model extends CI_Model{
 		$sk4=$sk4!=''?$sk4:'0';
 		$sk5=$sk5!=''?$sk5:'0';
 		
-
+/*
 		$sql="select string_agg(txt_field_name,',') as skill_name
 		 from ".$this->table." where int_is_active=1 
 		and ( int_field_id = '".$sk1."' OR int_field_id = '".$sk2."' OR int_field_id = '".$sk3."' OR int_field_id = '".$sk4."'  OR int_field_id = '".$sk5."' ) ";
@@ -190,7 +190,7 @@ class Fields_model extends CI_Model{
 		$result=$query->result_array();
 
 		return $result;
-
+*/
 	}
 
 	function itemsadd(){

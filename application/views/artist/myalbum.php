@@ -8,147 +8,171 @@
 
 <style>
 
-.sidebar .widget, .widget {
+    .sidebar .widget, .widget {
 
-    margin-bottom: 35px;
+        margin-bottom: 35px;
 
-}
+    }
 
-#sidebar h3 {
+    #sidebar h3 {
 
-    padding-top: 7px;
+        padding-top: 7px;
 
-}
+    }
 
-.sidebar-nav li {
+    .sidebar-nav li {
 
-    padding: 10px;
+        padding: 10px;
 
-    background-color: #fafafa;
+        background-color: #fafafa;
 
-    width: 100%;
+        width: 100%;
 
-    margin-bottom: 5px;
+        margin-bottom: 5px;
 
-    color: #000;
+        color: #000;
 
-}
+    }
 
-ul, li, ol {
+    ul, li, ol {
 
-    line-height: 24px;
+        line-height: 24px;
 
-    margin: 0;
+        margin: 0;
 
-}
+    }
 
-#search-form form, ul.post-meta, .sidebar ul, ul.tabs, .testimonials ul, ul.why, .panel-heading h3, .features .panel-heading h4, #options ul, .gallery ul {
+    #search-form form, ul.post-meta, .sidebar ul, ul.tabs, .testimonials ul, ul.why, .panel-heading h3, .features .panel-heading h4, #options ul, .gallery ul {
 
-    margin: 0;
+        margin: 0;
 
-}
+    }
 
-.widget ul {
+    .widget ul {
 
-    list-style: none;
+        list-style: none;
 
-    padding: 0;
+        padding: 0;
 
-}
+    }
 
-ul, li, ol {
+    ul, li, ol {
 
-    line-height: 24px;
+        line-height: 24px;
 
-    margin: 0;
+        margin: 0;
 
-}
+    }
 
-.sidebar-nav li a {
+    .sidebar-nav li a {
 
-    color: #000;
+        color: #000;
 
-    width: 100%;
+        width: 100%;
 
-}
+    }
 
-nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
+    nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
 
-    background-color: #59ab02;
+        background-color: #59ab02;
 
-}
+    }
 
-.sidebar-nav li.active {
+    .sidebar-nav li.active {
 
-    padding: 10px;
+        padding: 10px;
 
-    width: 100%;
+        width: 100%;
 
-    margin-bottom: 5px;
+        margin-bottom: 5px;
 
-    color: #ffffff !important;
+        color: #ffffff !important;
 
-}
+    }
 
-h2.title {
+    h2.title {
 
-    font-size: 26px;
+        font-size: 26px;
 
-    line-height: 40px;
+        line-height: 40px;
 
-    margin: 20px 0;
+        margin: 20px 0;
 
-    color: #fff;
+        color: #fff;
 
-}
+    }
 
-.margin-bottom60 {
+    .margin-bottom60 {
 
-    margin-bottom: 60px;
+        margin-bottom: 60px;
 
-}
+    }
 
-.margin-top60 {
+    .margin-top60 {
 
-    margin-top: 60px;
+        margin-top: 60px;
 
-}
+    }
 
-@media (min-width: 768px)
+    @media (min-width: 768px)
 
-.container {
+    .container {
 
-    width: 750px;
+        width: 750px;
 
-}
+    }
 
-.pricing_plan h3, .pricing_plan.special h3, .sidebar-nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
+    .pricing_plan h3, .pricing_plan.special h3, .sidebar-nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
 
-    background-color: #59ab02;
+        background-color: #59ab02;
 
-}
+    }
 
 
 
-.sidebar-nav li.active {
+    .sidebar-nav li.active {
 
-    padding: 10px;
+        padding: 10px;
 
-    width: 100%;
+        width: 100%;
 
-    margin-bottom: 5px;
+        margin-bottom: 5px;
 
-    color: #ffffff !important;
+        color: #ffffff !important;
 
-}
-
-.pattern-overlay {
-
-    background-color: rgba(89, 171, 2, 0.75);
-
-}
-
-
+    }
+    /*
+    .pattern-overlay {
+    
+        background-color: rgba(89, 171, 2, 0.75);
+    
+    }*/
+    header{
+        background-color: #333; 
+    }
+    .blur-bg{
+        width: 100%;
+        height: 200px;
+        position: relative;
+    }
+    .blur-bg:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.4);
+        content: "";
+        width: 100%;
+        height: 100%;
+    }
+    .personal-detail, .challwe-profile{
+        background: #f2f2f2;
+    }
+    .user-small-profile{
+        width: 25px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+    }
 
 </style>
 
@@ -156,29 +180,10 @@ h2.title {
 
 <section id="main">
 
-    <div class="breadcrumb-wrapper">
-
-        <div class="pattern-overlay">
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-
-                        <h2 class="title">Album - <?php echo $album_details['txt_name']?></h2>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
     <!-- Main Content -->
+	
+	<br><br><br>
+	
 
     <div class="content margin-top60 margin-bottom60">
 
@@ -196,36 +201,33 @@ h2.title {
 			
 					<hr>
 					
-                    <div class="jFiler-items jFiler-row">
-                        <ul class="jFiler-items-list jFiler-items-grid">
-                            <?php foreach($media_details as $val){?>
-                            <li class="jFiler-item" data-jfiler-index="1" style="">                        
-                                <div class="jFiler-item-container">                            
-                                <div class="jFiler-item-inner">                                
-                                <div class="jFiler-item-thumb">                                    
-                                <div class="jFiler-item-status"></div>                                    
-                                <div class="jFiler-item-info">                                        
-                                <!-- <span class="jFiler-item-title"><b title="city_1 (1).jpg">city_1 (1).jpg</b></span>                                                                         -->
-                                </div>                                    
-                                <div class="jFiler-item-thumb-image">
-                                    <img src="<?php echo base_url().$val['txt_path']?>" draggable="false"></div>                                
-                                </div>                                
-                                <div class="jFiler-item-assets jFiler-row">                                    
-                                <ul class="list-inline pull-left">                                        
-                                    <li><div class="jFiler-jProgressBar" style="display: none;">
-                                        <div class="bar" style="width: 100%;"></div></div>
-                                        <div class="jFiler-item-others"><input type="button" id="btn_media_<?php echo $val['int_media_id']?>" class="btn del_btn" value="Delete" ></div>
-                                    </li>                                    
-                                </ul>                                    
-                                <ul class="list-inline pull-right">                                        
-                                <li><a class="icon-jfi-trash jFiler-item-trash-action"></a></li>                                    
-                                </ul>                                </div>                            
-                                </div>                        
-                                </div>                    
-                            </li>
-                            <?php } ?>
-                        </ul>
-                        </div>
+                    <h4>Photo</h4>
+					<div class="row">
+					<?php foreach($media_details as $val){?>
+						<div class="col-sm-4">
+							<div class="show-post">
+								<div class="post-img">
+									<img src="<?php echo base_url().$val['txt_path']?>">
+									<div class="post-description">
+										<!--ul class="list-inline">
+											<li><a href="#">Exorsicm</a></li>
+											<li class="pull-right"><a href="#">By&nbsp;&nbsp;<span>hadia khoury</span></a></li>
+										</ul-->
+										<div class="title"></div>
+									</div>
+								</div>
+								<div class="post-controls">
+									<ul class="list-inline">
+										<li><span class="fa fa-thumbs-up">&nbsp;</span>&nbsp;4</li>
+										<li><span class="fa fa-star">&nbsp;</span>&nbsp;2</li>
+										<li><span class="fa fa-eye">&nbsp;</span>&nbsp;10</li>
+										<li class="pull-right"><span id="btn_media_<?php echo $val['int_media_id']?>" class="fa fa-trash del_photo_btn">&nbsp;</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					<?php }?>
+					</div>
 
 
 
@@ -235,61 +237,6 @@ h2.title {
 
                 <!-- /Left Section -->
 
-                <!-- Sidebar -->
-
-                <div id="sidebar" class="sidebar col-sm-3 col-md-3 col-lg-3">
-
-                    <div class="widget">
-
-                        <h3>My Account</h3>
-
-                        <!-- menu-->
-
-                        <div id="sidebar-nav">
-
-                            <ul class="sidebar-nav">
-
-                                <li>
-
-                                    <a href="<?php echo site_url();?>/artist/dashboard"><i class="fa fa-gears item-icon"></i> My Dashboard</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="<?php echo site_url();?>/artist/accountDetails"><i class="fa fa-user item-icon"></i> Account Details</a>
-
-                                </li>
-
-                                <li class="active">
-
-                                    <a href="<?php echo site_url();?>/artist/accountPortfolio" style="color:#fff"><i class="fa fa-pencil-square-o item-icon"></i> Portfolio</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="<?php echo site_url();?>/artist/accountStatistics"><i class="fa fa-bar-chart item-icon"></i> Statistics</a>
-
-                                </li>
-
-                                <li>
-
-                                    <a href="<?php echo site_url();?>/artist/accountSocial"><i class="fa fa-link item-icon"></i> Social Availabilty</a>
-
-                                </li>
-
-                            </ul>
-
-                        </div>
-
-                        <!-- /menu-->
-
-                    </div>
-
-                </div>
-
-                <!-- /Sidebar -->
 
             </div>
 
@@ -352,7 +299,7 @@ h2.title {
 
     $(document).ready(function(){
 
-        $(".del_btn").click(function(){
+        $(".del_photo_btn").click(function(){
             var id=this.id.split("_");
             $("#fade").show();
             $("#preloader").show();
@@ -363,7 +310,7 @@ h2.title {
                 data: {'id':id[2]},
                 crossDomain: true,
                 success: function(result) {
-                    $("#btn_media_"+id[2]).parent().parent().parent().parent().parent().parent().parent().remove();
+                    $("#btn_media_"+id[2]).parent().parent().parent().parent().parent().remove();
                     $("#fade").hide();
                     $("#preloader").hide();
                 },

@@ -396,8 +396,8 @@ class User_model extends CI_Model{
 
 	function getArtistBusinessDetails($user){
 
-		//$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city = c.id where int_artist_id=$user";
-		$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city::integer = c.id where int_artist_id=$user";
+		$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city = c.id where int_artist_id=$user";
+		//$sql="select a.*,c.name as reg_city from ".$this->table_artist__business." a left join cities c on a.txt_reg_city::integer = c.id where int_artist_id=$user";
 
 		$query=$this->db->query($sql);
 
@@ -546,6 +546,8 @@ class User_model extends CI_Model{
 			
 			'txt_place_of_birth'=>$txt_place_of_birth,
 
+			'int_gender'=>$int_gender,
+			
 			'txt_cell_no'=>$txt_cell_no,
 
 			'int_country_id'=>$int_country_id,
@@ -554,9 +556,9 @@ class User_model extends CI_Model{
 
 			'int_city_id'=>$int_city_id,
 
-			'txt_office_address'=>$txt_office_address,
+			//'txt_office_address'=>$txt_office_address,
 
-			'txt_office_no'=>$txt_office_no,
+			//'txt_office_no'=>$txt_office_no,
 
 			'int_skill1'=>$int_directory_id[0],
 			'int_skill2'=>$int_directory_id[1],
@@ -570,7 +572,7 @@ class User_model extends CI_Model{
 
 			'txt_tagline'=>$txt_tagline,
 
-			'txt_hourly_charge'=>$txt_hourly_charge,
+			//'txt_hourly_charge'=>$txt_hourly_charge,
 
 			'txt_fashion_community_roles'=>$txt_fashion_community_roles,
 
@@ -580,7 +582,7 @@ class User_model extends CI_Model{
 
 			
 		if($txt_password!=$sess_array['txt_password']) $data['txt_password']=md5($txt_password);
-
+	//echo "<pre>";print_r($data);
 
 
 		$artistId=$sess_array['int_artist_id'];
@@ -643,6 +645,7 @@ class User_model extends CI_Model{
 		$data1=array(
 				'int_email'=>$int_email,
 				'int_dob'=>$int_dob,
+				'int_gender'=>$int_gender,
 				'int_place_of_birth'=>$int_place_of_birth,
 				'int_cell_no'=>$int_cell_no,
 				'int_country'=>$int_country,
@@ -653,8 +656,11 @@ class User_model extends CI_Model{
 				'int_hourly_charge'=>$int_hourly_charge,
 				'int_roles'=>$int_roles
 			);
+			//print_r($data1);
 		$this->db->where('int_artist_id',$artistId);
 		$this->db->update($this->table_preferances,$data1);
+		
+		
 	}
 
 

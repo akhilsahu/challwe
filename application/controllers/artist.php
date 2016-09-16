@@ -15,7 +15,23 @@ class Artist extends CI_Controller{
     }
        
     function dashboard(){
-        $data['page_title']='Dashboard';
+		$session_arr=$this->session->userdata('user');
+        $this->load->model('location_model');
+        $this->load->model('user_model'); 
+        $this->load->model('fields_model');
+		$this->load->model('follow_model');
+		$artist_id=$session_arr['int_artist_id'];
+		$data['user_details']=$this->user_model->getArtistBasicDetails($artist_id);
+		$data['directory']=$this->fields_model->allActiveDirectorylist();
+		$data['display_details']=$this->user_model->getArtistShowDetails($artist_id);
+        $data['countries']=$this->location_model->get_all_countries();
+		$data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['user_details']['int_skill1'],$data['user_details']['int_skill2'],$data['user_details']['int_skill3'],$data['user_details']['int_skill4'],$data['user_details']['int_skill5']);
+		$data['business_details']=$this->user_model->getArtistBusinessDetails($artist_id);
+		$data['followers']=$this->follow_model->getFollowerList($artist_id);
+		$data['media_details']=$this->user_model->getArtistNoAlbumMedia($artist_id);
+		$data['album_details']=$this->user_model->getArtistAlbum($artist_id);
+        //echo "<pre>";print_r($data);die();
+		$data['page_title']='Dashboard';
         $data['page']='myaccount';
         $this->load->view('artist/page',$data);
     }		
@@ -82,7 +98,7 @@ class Artist extends CI_Controller{
             $this->user_model->artistUpdatedetails();
             
         }
-        redirect('/artist/accountDetails/', 'refresh'); 
+        redirect('/artist/dashboard/', 'refresh'); 
     }
 
     function porfolioUpload(){
@@ -193,9 +209,9 @@ class Artist extends CI_Controller{
 		$this->form_validation->set_rules('txt_name', 'Album Name', 'required');     
 		if($this->form_validation->run()){                   
 			$this->user_model->createAlbum();     
-			redirect('artist/accountPortfolio','refresh');			
+			redirect('artist/dashboard','refresh');			
 		}else{			
-			redirect('artist/accountPortfolio','refresh');				
+			redirect('artist/dashboard','refresh');				
 		}	
 	}
 	

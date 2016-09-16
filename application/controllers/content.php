@@ -86,12 +86,14 @@ class Content extends CI_Controller{
             $this->load->model('user_model');
             $data['user_details']=$this->user_model->getArtistBasicDetails($artist_id);
 			$data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['user_details']['int_skill1'],$data['user_details']['int_skill2'],$data['user_details']['int_skill3'],$data['user_details']['int_skill4'],$data['user_details']['int_skill5']);
+			$data['display_details']=$this->user_model->getArtistShowDetails($artist_id);
+			$data['followers']=$this->follow_model->getFollowerList($artist_id);
 			if($session_arr['int_artist_id']) $data['is_follower']=$this->follow_model->getFollowStatus($artist_id);
-			//echo "<pre>";print_r($data['getskill']);die();
-            $data['business_details']=$this->user_model->getArtistBusinessDetails($artist_id);
-            $data['media_details']=$this->user_model->getArtistMedia($artist_id);
-            $data['social_details']=$this->user_model->getArtistLinks($artist_id);
-            $data['page_title']='Artist Profile';
+			$data['media_details']=$this->user_model->getArtistNoAlbumMedia($artist_id);
+			$data['album_details']=$this->user_model->getArtistAlbum($artist_id);
+            //print_r($data['followers']);die();
+			//$data['social_details']=$this->user_model->getArtistLinks($artist_id);
+            $data['page_title']='Profile';
             $data['page']='artistProfile';
             $this->load->view('artist/page',$data);
         }else{

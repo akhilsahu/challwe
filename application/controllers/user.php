@@ -22,6 +22,7 @@ class User extends CI_Controller{
 
 		$this->load->library('facebook'); // Automatically picks appId and secret from config
 		$user = $this->facebook->getUser();  
+		$this->load->library('user_agent');
 		if ($user) {
             try {
                 $data['user_profile'] = $this->facebook->api('/me');
@@ -31,7 +32,7 @@ class User extends CI_Controller{
 				$status_array['int_user_type_code']="artist";
 				$status_array['login_type']="facebook";
 				$this->session->set_userdata('user', $status_array);
-				redirect('content/home', 'refresh');
+				redirect($this->agent->referrer());
 
             } catch (FacebookApiException $e) {
                 $user = null;
@@ -78,6 +79,7 @@ class User extends CI_Controller{
 
 	function loginSub(){
 		$this->load->model('user_model');
+		$this->load->library('user_agent');		
         $this->form_validation->set_rules('txt_email', 'Email', 'required');
         $this->form_validation->set_rules('txt_password', 'Password', 'required');
         if($this->form_validation->run())
@@ -91,14 +93,14 @@ class User extends CI_Controller{
 				$status_array['int_user_type_code']="artist";
 				$status_array['login_type']="web";
 				$this->session->set_userdata('user', $status_array);
-				redirect('content/home', 'refresh');
+				redirect($this->agent->referrer());
 			}
 			else
 			{
-				redirect('content/home', 'refresh');			
+				redirect($this->agent->referrer());
 			}
         }else{
-        	redirect('content/home', 'refresh');
+        	redirect($this->agent->referrer());
         }
 	}
 

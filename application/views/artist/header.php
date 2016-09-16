@@ -636,7 +636,7 @@
     <script>
         $(document).ready(function () {
             $(".profile-view").click(function () {
-                window.location = "<?php echo site_url() . "/content/viewProfile/" . $user['int_artist_id'] ?>";
+                window.location = "<?php echo site_url() . "/artist/dashboard/";?>";
             });
         });
     </script>
@@ -733,11 +733,10 @@
                                         <a href="<?php echo site_url(); ?>/wallet/mytransections" class="hover">Wallet (<?php echo $user['int_challwe_coins']; ?>)</a>
                                         <div class="tooltip">asdadasd</div>
                                     </li>
-                                    <li><a href="<?php echo site_url() ?>/artist/dashboard"> My Account</a></li>
                                     <li class="dropdown user user-menu">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                             <img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" class="user-image img-circle" alt="User Image">
-                                            <span class="hidden-xs"> Hi <?php echo $user['txt_fname'] ?></span>
+                                            <span class="hidden-xs"><?php echo $user['txt_fname'] ?></span>
                                         </a>
                                         <ul class="dropdown-menu">
                                             <!--User image--> 
@@ -750,7 +749,7 @@
 
                                             </li>
                                             <!--Menu Body--> 
-                                            <li class="user-body">
+                                            <!--li class="user-body">
                                                 <div class="row" style="margin-bottom: 0;">
                                                     <div class="col-xs-4 text-center">
                                                         <a href="#">Followers</a>
@@ -762,8 +761,7 @@
                                                         <a href="#">Friends</a>
                                                     </div>
                                                 </div>
-                                                <!--/.row--> 
-                                            </li>
+                                            </li-->
                                             <!--Menu Footer-->
                                             <li class="user-footer">
                                                 <div class="pull-left">
@@ -784,7 +782,6 @@
                                 <?php } else { ?>
                                     <li><a href="javascript:void(0);"  data-toggle="modal" data-target="#login-user"><i class="fa fa-lock"></i> Login</a></li>
                                     <li><a href="javascript:void(0);"  data-toggle="modal" data-target="#register-user"><i class="fa fa-lock"></i> Sign Up</a></li>
-                                    <li><a href="<?php echo site_url() ?>/user/adminlogin"><i class="fa fa-user"></i> Admin Login</a></li>
                                 <?php } ?>
                             </ul>
 
