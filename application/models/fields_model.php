@@ -21,7 +21,7 @@ class Fields_model extends CI_Model{
 
 	function allDirectorylist(){
 
-		$sql="select * from ".$this->table." where 1 ";
+		$sql="select * from ".$this->table." ";
 
 		$query=$this->db->query($sql);
 
@@ -256,7 +256,7 @@ class Fields_model extends CI_Model{
 
 	function allItemslist(){
 
-		$sql="select * from tab_items where 1 ";
+		$sql="select * from tab_items";
 
 		$query=$this->db->query($sql);
 
@@ -393,7 +393,7 @@ class Fields_model extends CI_Model{
 
 	function alllevellist(){
 
-		$sql="select * from tab_level where 1 ";
+		$sql="select * from tab_level ";
 
 		$query=$this->db->query($sql);
 
