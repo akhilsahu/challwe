@@ -16,6 +16,15 @@ class Content extends CI_Controller{
         $this->load->view('artist/page',$data);
     }		
 	
+	function postvideos(){
+    	$this->load->model('user_model');
+        $this->load->model('fields_model');
+        $data['directory']=$this->fields_model->allActiveDirectorylist();
+        $data['page_title']='Industry Directory';
+        $data['page']='video-player';
+        $this->load->view('artist/page',$data);
+    }	
+	
 	function contest_download($contest_id,$sno){
 		$this->load->model('contest_model');
 		$data=$this->contest_model->getContestMedia($contest_id);	
