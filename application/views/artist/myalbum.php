@@ -173,6 +173,55 @@
         vertical-align: top;
         margin-right: 10px;
     }
+	
+	
+	
+	.comment textarea{
+        border-radius: 12px;
+        resize: none;
+        height: 80px;
+    }
+    .comment .btn-default{
+        background-color: #58ba2b;
+        color: #fff;
+        margin-top: 20px;
+    }
+    .row-small{
+        margin-left:-5px;
+        margin-right:-5px;
+        margin-bottom: 0;
+    }
+    .row-small > div{
+        padding-left:5px;
+        padding-right:5px;
+    }
+    .comment-profile{
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .user-comment{
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        background-color: #f0f0f0;
+        margin-bottom: 10px;
+    }
+    .pd-0{
+        padding: 0 !important;
+    }
+    .mr-btm{
+        margin-bottom: 0 !important;
+    }
+    .comment-btn{
+        background: transparent;
+        border: none;
+        text-decoration: underline;
+    }
+    .comment-btn:focus, .comment-btn:hover, .comment-btn:active{
+        box-shadow: none;
+        border: none;
+        outline: none;
+    }
 
 </style>
 
@@ -205,9 +254,9 @@
 					<div class="row">
 					<?php foreach($media_details as $val){?>
 						<div class="col-sm-4">
-							<div class="show-post">
+							<div class="show-post" data-toggle="modal" data-target="#show-post-modal" onclick="showImagePreview(<?php echo $val['int_media_id'];?>)">
 								<div class="post-img">
-									<img src="<?php echo base_url().$val['txt_path']?>">
+									<img src="<?php echo base_url().$val['txt_path']?>" id="small-img-<?php echo $val['int_media_id'];?>">
 									<div class="post-description">
 										<!--ul class="list-inline">
 											<li><a href="#">Exorsicm</a></li>
@@ -295,10 +344,112 @@
 </div>
 <!--end modal-->
 
+<div id="show-post-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body display-full">
+                <div class="col-sm-12">
+                   <img id="album-image-preview" src="" style="width:100%;" /> 
+                </div>
+				<div class="col-sm-11">&nbsp;</div>
+				<div class="col-sm-11">
+					<input type="hidden" name="hd_media_id" id="hd_media_id">
+					<div id="media-comments">
+						
+					</div>
+					<div class="loader h5 text-center collapse" id="photo-comment-loader" ><span class="fa fa-refresh fa-spin fa-2x fa-fw" style="color: #58ba2b;">&nbsp;</span></div>
+				</div>	
+				<?php  if ($user['int_artist_id']) {?>
+				<div class="col-sm-12">
+					<div class="comment">
+						<textarea placeholder="your comment..." name="txt_media_comment" id="txt_media_comment" class="cl-comment-box"></textarea>
+						<div class="text-right">
+							<button class="btn btn-default cl-comment-btn" id="btn_mdeia_comment">Submit</button>
+						</div>
+					</div>
+				</div>
+				<?php }?>
+            </div>
+        </div>		 
+    </div>
+</div>
+
 <script>
+
+	function getMediaComments(mediaId){
+		$("#photo-comment-loader").show();
+		$.ajax({
+			type: "POST",
+			url: '<?php echo site_url();?>/content/getPhotoComments',
+			datatype: "json",
+			data: {'id':mediaId},
+			crossDomain: true,
+			success: function(response) {
+				$("#photo-comment-loader").hide();
+				var data=JSON.parse(response);
+				if(data.success){
+					var html='';
+					$.each(data.result, function(id,result) {
+						var d = new Date(result.dt_commented_on);
+						var profile_img="<?php echo base_url(); ?>assets/images/profile-placeholder.jpg";
+						if(result.txt_profile_image) profile_img="<?php echo base_url(); ?>"+result.txt_profile_image;
+						html+='<div class="user-comment">';
+						html+='<div class="col-sm-1 pd-0 text-center">';
+						html+='<a href="<?php echo site_url()."/content/viewProfile/"?>'+result.int_artist_id+'">';
+						html+='<img src="'+profile_img+'" class="img-circle img-responsive" />';
+						html+='<div class=""><label class="h5">'+result.txt_fname+' '+result.txt_lname+'</label></div>';
+						html+='</a>';
+						html+='</div>';
+						html+='<div class="col-sm-10">';
+						html+='<p>'+result.txt_comment+'</p>';
+						html+='</div>';
+						html+='<div class="col-sm-1 pd-0">';
+						html+='<div class="comment-profile">';
+						//html+='<span class="time">'+ d.getHours()+':'+d.getMinutes()+'</span>';
+						html+='<span class="date">'+ d.getDate()+'/'+d.getMonth()+'/'+d.getFullYear()+'</span>';
+						html+='</div>';
+						html+='</div>';
+						html+='</div>';
+					});
+					$("#media-comments").html(html);
+				}
+			},
+			error: function(result) {
+				$("#photo-comment-loader").show();
+			}
+		});
+	}
+	
+	function showImagePreview(mediaId){
+		var img=$("#small-img-"+mediaId).attr("src");
+		$("#album-image-preview").attr("src",img);
+		$("#hd_media_id").val(mediaId);
+		getMediaComments(mediaId);
+		
+	}
 
     $(document).ready(function(){
 
+		$(".cl-comment-btn").click(function(){
+			id=$("#hd_media_id").val();
+			var comment=$("#txt_media_comment").val();
+			if(comment!=''){
+				$.ajax({
+					type: "POST",
+					url: "<?php echo site_url(); ?>/artist/addMediaComment",
+					data: {'id': id,'comment':comment},
+					cache: false,
+					success: function (data) {
+						$("#txt_media_comment").val('');
+						getMediaComments(id);
+					}
+				});
+			}
+			
+		});
+	
         $(".del_photo_btn").click(function(){
             var id=this.id.split("_");
             $("#fade").show();

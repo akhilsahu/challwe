@@ -20,6 +20,7 @@ class Artist extends CI_Controller{
         $this->load->model('user_model'); 
         $this->load->model('fields_model');
 		$this->load->model('follow_model');
+		$this->load->model('post_model');
 		$artist_id=$session_arr['int_artist_id'];
 		$data['user_details']=$this->user_model->getArtistBasicDetails($artist_id);
 		$data['directory']=$this->fields_model->allActiveDirectorylist();
@@ -30,11 +31,22 @@ class Artist extends CI_Controller{
 		$data['followers']=$this->follow_model->getFollowerList($artist_id);
 		$data['media_details']=$this->user_model->getArtistNoAlbumMedia($artist_id);
 		$data['album_details']=$this->user_model->getArtistAlbum($artist_id);
+		$data['post_list']=$this->post_model->getArtistPost($artist_id);
         //echo "<pre>";print_r($data);die();
 		$data['page_title']='Dashboard';
         $data['page']='myaccount';
         $this->load->view('artist/page',$data);
     }		
+	
+	function addPost(){
+		$session_arr=$this->session->userdata('user');
+		$this->load->model('post_model');
+		if($this->input->post('post_description')){
+			$this->post_model->addPost();	
+		}
+		redirect('/artist/dashboard/','refresh');
+		
+	}
 	
 	function addContest(){		
 		$this->load->model('contest_model');		
@@ -396,6 +408,19 @@ function viewcontest(){
         if($this->form_validation->run())
         {       
             $this->contest_model->addComment();   
+			echo "Success";	
+        }else{
+			echo "Failed";
+		}
+	}
+	
+	function addMediaComment(){
+		$this->load->model('user_model');
+		$this->form_validation->set_rules('comment', 'Comment', 'required');
+		$this->form_validation->set_rules('id', 'Media', 'required');
+        if($this->form_validation->run())
+        {       
+            $this->user_model->addMediaComment();   
 			echo "Success";	
         }else{
 			echo "Failed";

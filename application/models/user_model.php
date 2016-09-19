@@ -326,8 +326,27 @@ class User_model extends CI_Model{
 		}
 
 	}
+	
+	function getMediaComments($mediaId){
+		$sql="Select a.*,u.txt_fname,u.txt_lname,u.txt_profile_image from tab_media_comments a inner join tab_artists u on a.int_artist_id=u.int_artist_id where a.int_media_id=".$mediaId." order by dt_commented_on asc";
+		$query=$this->db->query($sql);
+		$result=$query->result_array();
+		return $result;
+	}
 
-
+	function addMediaComment(){
+		$formdata=$this->input->post();
+		extract($formdata);
+		$user=$this->session->userdata('user');
+		$data=array(
+				'int_artist_id'=>$user['int_artist_id'],
+				'int_media_id'=>$id,
+				'txt_comment'=>$comment,
+				'dt_commented_on'=>date('Y-m-d h:i:s')
+			);
+		$this->db->insert('tab_media_comments',$data);	
+	}
+	
 
 	function allMemberlist(){
 

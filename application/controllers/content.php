@@ -16,7 +16,7 @@ class Content extends CI_Controller{
         $this->load->view('artist/page',$data);
     }		
 	
-	function postvideos(){
+	function postvideos($postId){
     	$this->load->model('user_model');
         $this->load->model('fields_model');
         $data['directory']=$this->fields_model->allActiveDirectorylist();
@@ -87,7 +87,8 @@ class Content extends CI_Controller{
     function viewProfile($artist_id){
 		$this->load->library('user_agent');	
 		$this->load->model('fields_model');
-		$this->load->model('follow_model');			
+		$this->load->model('follow_model');	
+		$this->load->model('post_model');		
 		//$this->load->library('encrypt');
 		$session_arr=$this->session->userdata('user');
         if($artist_id){
@@ -100,6 +101,7 @@ class Content extends CI_Controller{
 			if($session_arr['int_artist_id']) $data['is_follower']=$this->follow_model->getFollowStatus($artist_id);
 			$data['media_details']=$this->user_model->getArtistNoAlbumMedia($artist_id);
 			$data['album_details']=$this->user_model->getArtistAlbum($artist_id);
+			$data['post_list']=$this->post_model->getArtistPost($artist_id);
             //print_r($data['followers']);die();
 			//$data['social_details']=$this->user_model->getArtistLinks($artist_id);
             $data['page_title']='Profile';
@@ -185,6 +187,22 @@ class Content extends CI_Controller{
 		if($this->input->post('id')){
 			$id=$this->input->post('id');
 			$result=$this->contest_model->getSubmissionComments($id);
+			$data['msg']="success";
+			$data['result']=$result;
+			$data['success']=true;
+			echo json_encode($data);
+		}else{
+			$data['msg']="failed";
+			$data['success']=true;
+			echo json_encode($data);
+		}
+	}
+	
+	function getPhotoComments(){
+		$this->load->model('user_model');
+		if($this->input->post('id')){
+			$id=$this->input->post('id');
+			$result=$this->user_model->getMediaComments($id);
 			$data['msg']="success";
 			$data['result']=$result;
 			$data['success']=true;
