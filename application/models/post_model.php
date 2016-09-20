@@ -60,6 +60,13 @@ class Post_model extends CI_Model{
 		$result=$query->result_array();
 		return $result;
 	}
+	
+	function getPostDetailById($postId){
+		$sql="Select a.*,b.txt_fname,b.txt_lname,b.txt_profile_image,( select count(*) from tab_follow f where f.int_following_id=b.int_artist_id ) as follow_count from ".$this->table." a inner join tab_artists b on a.int_artist_id=b.int_artist_id where a.int_post_id=".$postId;
+		$query=$this->db->query($sql);
+		$result=$query->row_array();
+		return $result;
+	}
 
 
 /*

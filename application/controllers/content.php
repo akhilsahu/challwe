@@ -17,10 +17,14 @@ class Content extends CI_Controller{
     }		
 	
 	function postvideos($postId){
-    	$this->load->model('user_model');
-        $this->load->model('fields_model');
-        $data['directory']=$this->fields_model->allActiveDirectorylist();
-        $data['page_title']='Industry Directory';
+    	$this->load->model('follow_model');
+        $this->load->model('post_model');
+        $session_arr=$this->session->userdata('user');
+		$data['post_detail']=$this->post_model->getPostDetailById($postId);
+		$data['post_list']=$this->post_model->getArtistPost($data['post_detail']['int_artist_id']);
+		if($session_arr['int_artist_id']) $data['is_follower']=$this->follow_model->getFollowStatus($data['post_detail']['int_artist_id']);
+		//echo "<pre>";print_r($data);die();
+        $data['page_title']='Post View';
         $data['page']='video-player';
         $this->load->view('artist/page',$data);
     }	

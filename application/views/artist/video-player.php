@@ -7,13 +7,27 @@
     <div class="container position-top">
         <div class="col-sm-12 margin-bottom-20">
             <ul class="layout-row align-center">
-                <li style='max-width: 100px;'><img src="<?php echo base_url(); ?>assets/images/avatar-placeholder.png" alt="profile picture" class="img-responsive img-circle" /></li>
+                <li style='max-width: 100px;'>
+					<a href="<?php echo site_url()."/content/viewProfile/".$post_detail['int_artist_id']?>">
+						<img src="<?php echo ($post_detail['txt_profile_image'])?base_url().$post_detail['txt_profile_image']:base_url().'assets/images/avatar-placeholder.png'; ?>" alt="profile picture" class="img-responsive img-circle" />
+					</a>	
+				</li>
                 <li class="layout-column justify-center mr-l-25">
-                    <h3 class='text-uppercase' style='color: #fff;'>amhad dawood</h3>
+                    <h3 class='text-uppercase' style='color: #fff;'>
+						<a href="<?php echo site_url()."/content/viewProfile/".$post_detail['int_artist_id']?>">
+							<?php echo $post_detail['txt_fname']." ".$post_detail['txt_lname']?>
+						</a>	
+					</h3>
                     <ul class="list-inline" style='color: #fff;'>
-                        <li><span class="fa fa-heart">&nbsp;</span>Follow</li>
-                        <li><span>|</span></li>
-                        <li><span>22</span>Followers</li>
+					<?php if($user['int_artist_id'] && $user['int_artist_id']!=$post_detail['int_artist_id']){
+							if(count($is_follower)>0){?>	
+								<li><a href="<?php echo site_url()."/artist/unfollow/".$post_detail['int_artist_id'];?>"><span class="fa fa-heart">&nbsp;</span>UnFollow</a></li>
+							<?php }else{?>
+								<li><a href="<?php echo site_url()."/artist/follow/".$post_detail['int_artist_id'];?>"><span class="fa fa-heart">&nbsp;</span>Follow</a></li>
+							<?php }?>
+						<li><span>|</span></li>
+					<?php }?>	
+                        <li><span><?php echo $post_detail['follow_count'];?></span> Followers</li>
                     </ul>
                 </li>
             </ul>
@@ -22,7 +36,7 @@
             <div class="row">
                 <div class="col-sm-8">
                     <div class="current-video-name margin-bottom-15">
-                        <div class="row margin-bottom-10">
+                        <!--div class="row margin-bottom-10">
                             <div class="col-sm-2" style="border-right: 1px solid #ccc;">
                                 Exorscim
                             </div>
@@ -30,22 +44,26 @@
                                 <div class='layout-row'>
                                 <ul class='list-unstyled' style='margin-right:20px;'>
                                     <li>Description: <a href='#' style='margin-left:20px;'>#Exorsicm</a></li>
-                                    <li>Hashtags:<a href=#'' style='margin-left:20px;'>#Exorsicm</a></li>
+                                    <li>Hashtags:<a href='' style='margin-left:20px;'>#Exorsicm</a></li>
                                 </ul>
                                 <ul class='list-unstyled'>
                                     <li>Tags: <a href='#' style='margin-left:20px;'>Hadi sharif</a></li>
-                                    <li>Art/Music:<a href=#'' style='margin-left:20px;'>Heading here</a></li>
+                                    <li>Art/Music:<a href='' style='margin-left:20px;'>Heading here</a></li>
                                 </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div-->
                     </div>
                     <div class='video-player'>
                         <div class='row'>
                             <div class='col-sm-12'>
+							<?php if($post_detail['int_post_type']==1){?>
+								<img src="<?php echo base_url().$post_detail['txt_filepath'];?>" style="max-width:700px;max-height:500px;" class='display-full'>		
+							<?php }else if($post_detail['int_post_type']==2){?>
                                 <video class='display-full' controls>
-                                    <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
+                                    <source src="<?php echo base_url().$post_detail['txt_filepath'];?>" type="video/mp4">
                                 </video>
+							<?php }?>
                                 <div class='layout-row justify-space-between'>
                                     <ul class='action-btns list-inline'>
                                         <li><span class='fa fa-hand-o-up fa-lg'>&nbsp;</span></li>
@@ -87,20 +105,31 @@
                     <div class="video-list">
                         <h3 class='text-uppercase margin-bottom-20' style='padding: 5px 25px;'>recently added</h3>
                         <div class="layout-column" style='padding: 5px 25px;'>
-                            <div class="layout-row row align-center">
+                            <?php foreach($post_list as $val){
+								if($val['int_post_id']==$post_detail['int_post_id']) continue;
+								?>
+							<div class="layout-row row align-center">
                                 <div class='col-sm-6'>
-                                    <video muted autoplay="no" class='display-full active'>
-                                        <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
-                                    </video>
+									<a href="<?php echo site_url().'/content/postvideos/'.$val['int_post_id']?>">
+										<?php if($val['int_post_type']==1){?>
+											<img src="<?php echo base_url().$val['txt_filepath'];?>" class='display-full' >
+										<?php }else if($val['int_post_type']==2){?>
+										<video muted autoplay="no" class='display-full'>
+											<source src="<?php echo base_url().$val['txt_filepath']; ?>">
+										</video>
+										<?php }?>
+									</a>
                                 </div>
                                 <div class='col-sm-6'>
                                     <div class="layout-column justify-center video-name">
-                                        <h5>Jones 'Melt'</h5>
-                                        <span>from bulllon</span>
+                                        <h5><?php echo $val['txt_title']?></h5>
+                                        <span><?php echo $val['txt_fname']." ".$val['txt_lname']?></span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="layout-row row align-center">
+							<?php }?>
+							
+							<!--div class="layout-row row align-center">
                                 <div class='col-sm-6'>
                                     <video muted autoplay="no" class='display-full'>
                                         <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
@@ -112,98 +141,8 @@
                                         <span>from bulllon</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="layout-row row align-center">
-                                <div class='col-sm-6'>
-                                    <video muted autoplay="no" class='display-full'>
-                                        <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class='col-sm-6'>
-                                    <div class="layout-column justify-center video-name">
-                                        <h5>Jones 'Melt'</h5>
-                                        <span>from bulllon</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layout-row row align-center">
-                                <div class='col-sm-6'>
-                                    <video muted autoplay="no" class='display-full'>
-                                        <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class='col-sm-6'>
-                                    <div class="layout-column justify-center video-name">
-                                        <h5>Jones 'Melt'</h5>
-                                        <span>from bulllon</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layout-row row align-center">
-                                <div class='col-sm-6'>
-                                    <video muted autoplay="no" class='display-full'>
-                                        <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class='col-sm-6'>
-                                    <div class="layout-column justify-center video-name">
-                                        <h5>Jones 'Melt'</h5>
-                                        <span>from bulllon</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layout-row row align-center">
-                                <div class='col-sm-6'>
-                                    <video muted autoplay="no" class='display-full'>
-                                        <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class='col-sm-6'>
-                                    <div class="layout-column justify-center video-name">
-                                        <h5>Jones 'Melt'</h5>
-                                        <span>from bulllon</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layout-row row align-center">
-                                <div class='col-sm-6'>
-                                    <video muted autoplay="no" class='display-full'>
-                                        <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class='col-sm-6'>
-                                    <div class="layout-column justify-center video-name">
-                                        <h5>Jones 'Melt'</h5>
-                                        <span>from bulllon</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layout-row row align-center">
-                                <div class='col-sm-6'>
-                                    <video muted autoplay="no" class='display-full'>
-                                        <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class='col-sm-6'>
-                                    <div class="layout-column justify-center video-name">
-                                        <h5>Jones 'Melt'</h5>
-                                        <span>from bulllon</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="layout-row row align-center">
-                                <div class='col-sm-6'>
-                                    <video muted autoplay="no" class='display-full'>
-                                        <source src="<?php echo base_url(); ?>assets/video/magic-cloth.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class='col-sm-6'>
-                                    <div class="layout-column justify-center video-name">
-                                        <h5>Jones 'Melt'</h5>
-                                        <span>from bulllon</span>
-                                    </div>
-                                </div>
-                            </div>
+                            </div-->
+							
                         </div>
                         <div class='show-more text-center text-capitalize' style='padding: 5px 25px;'><a href='#'>show more</a></div>
                     </div>
