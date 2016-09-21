@@ -89,7 +89,7 @@
                                     </textarea>
                                 </li>
                             </ul>
-                            <div class="dropdown" style='padding: 10px 0;'>
+                            <div class="dropdown">
                                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Top Comment
                                     <span class="caret"></span></button>
                                 <ul class="dropdown-menu">
@@ -97,102 +97,6 @@
                                     <li><a href="#">Comment 2</a></li>
                                     <li><a href="#">Comment 3</a></li>
                                 </ul>
-                            </div>
-                            <div class="row row-small" style="margin-top: 15px;">
-                                <div class="col-sm-1">
-                                   <img src="<?php echo ($post_detail['txt_profile_image'])?base_url().$post_detail['txt_profile_image']:base_url().'assets/images/avatar-placeholder.png'; ?>" alt="profile picture" class="img-responsive" /> 
-                                </div>
-                                <div class="col-sm-11">
-                                    <h5>
-                                        <a href="<?php echo site_url() . "/content/viewProfile/" . $post_detail['int_artist_id'] ?>">
-                                            <?php echo $post_detail['txt_fname'] . " " . $post_detail['txt_lname'] ?>
-                                        </a>
-                                        <span class="comment-time">1 Month ago</span>
-                                    </h5>
-                                    <p class="">
-                                        the pink dress, with the sides of the belly
-                                    </p>
-                                    <ul>
-                                        <li>Reply</li>
-                                        <li>
-                                            <span class="fa fa-thumbs-up">&nbsp;</span>
-                                            <span class="fa fa-thumbs-down">&nbsp;</span>
-                                        </li>
-                                    </ul>
-                                    <a href="#">View all 6 replies&nbsp;<span class="fa fa-arrow-down">&nbsp;</span></a>
-                                    <div class="row row-small" style="margin-top: 15px;">
-                                        <div class="col-sm-1">
-                                            <img src="<?php echo ($post_detail['txt_profile_image']) ? base_url() . $post_detail['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png'; ?>" alt="profile picture" class="img-responsive" /> 
-                                        </div>
-                                        <div class="col-sm-11">
-                                            <h5>
-                                                <a href="<?php echo site_url() . "/content/viewProfile/" . $post_detail['int_artist_id'] ?>">
-                                                    <?php echo $post_detail['txt_fname'] . " " . $post_detail['txt_lname'] ?>
-                                                </a>
-                                                <span class="comment-time">1 Month ago</span>
-                                            </h5>
-                                            <p class="">
-                                                the pink dress, with the sides of the belly
-                                            </p>
-                                            <ul>
-                                                <li>Reply</li>
-                                                <li>
-                                                    <span class="fa fa-thumbs-up">&nbsp;</span>
-                                                    <span class="fa fa-thumbs-down">&nbsp;</span>
-                                                </li>
-                                            </ul>
-                                            <a href="#">View all 6 replies&nbsp;<span class="fa fa-arrow-down">&nbsp;</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row row-small" style="margin-top: 15px;">
-                                <div class="col-sm-1">
-                                   <img src="<?php echo ($post_detail['txt_profile_image'])?base_url().$post_detail['txt_profile_image']:base_url().'assets/images/avatar-placeholder.png'; ?>" alt="profile picture" class="img-responsive" /> 
-                                </div>
-                                <div class="col-sm-11">
-                                    <h5>
-                                        <a href="<?php echo site_url() . "/content/viewProfile/" . $post_detail['int_artist_id'] ?>">
-                                            <?php echo $post_detail['txt_fname'] . " " . $post_detail['txt_lname'] ?>
-                                        </a>
-                                        <span class="comment-time">1 Month ago</span>
-                                    </h5>
-                                    <p class="">
-                                        the pink dress, with the sides of the belly
-                                    </p>
-                                    <ul>
-                                        <li>Reply</li>
-                                        <li>
-                                            <span class="fa fa-thumbs-up">&nbsp;</span>
-                                            <span class="fa fa-thumbs-down">&nbsp;</span>
-                                        </li>
-                                    </ul>
-                                    <a href="#">View all 6 replies&nbsp;<span class="fa fa-arrow-down">&nbsp;</span></a>
-                                    <div class="row row-small" style="margin-top: 15px;">
-                                        <div class="col-sm-1">
-                                            <img src="<?php echo ($post_detail['txt_profile_image']) ? base_url() . $post_detail['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png'; ?>" alt="profile picture" class="img-responsive" /> 
-                                        </div>
-                                        <div class="col-sm-11">
-                                            <h5>
-                                                <a href="<?php echo site_url() . "/content/viewProfile/" . $post_detail['int_artist_id'] ?>">
-                                                    <?php echo $post_detail['txt_fname'] . " " . $post_detail['txt_lname'] ?>
-                                                </a>
-                                                <span class="comment-time">1 Month ago</span>
-                                            </h5>
-                                            <p class="">
-                                                the pink dress, with the sides of the belly
-                                            </p>
-                                            <ul>
-                                                <li>Reply</li>
-                                                <li>
-                                                    <span class="fa fa-thumbs-up">&nbsp;</span>
-                                                    <span class="fa fa-thumbs-down">&nbsp;</span>
-                                                </li>
-                                            </ul>
-                                            <a href="#">View all 6 replies&nbsp;<span class="fa fa-arrow-down">&nbsp;</span></a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
