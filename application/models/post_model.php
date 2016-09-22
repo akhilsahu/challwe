@@ -67,6 +67,34 @@ class Post_model extends CI_Model{
 		$result=$query->row_array();
 		return $result;
 	}
+	
+	function addPostComment(){
+		$formdata=$this->input->post();
+		extract($formdata);
+		$user=$this->session->userdata('user');
+		$data=array(
+				'int_artist_id'=>$user['int_artist_id'],
+				'int_post_id'=>$id,
+				'txt_comment'=>$comment,
+				'int_parent_comment_id'=>($parent_id)?$parent_id:0,
+				'dt_commented_on'=>date('Y-m-d h:i:s')
+			);
+		$this->db->insert('tab_post_comments',$data);	
+	}
+	
+	function getPostComments($postId){
+		$sql="Select a.*,u.txt_fname,u.txt_lname,u.txt_profile_image,( select count(*) from tab_post_comments pc where pc.int_parent_comment_id=a.int_comment_id ) as child_post_count from tab_post_comments a inner join tab_artists u on a.int_artist_id=u.int_artist_id where a.int_post_id=".$postId." and a.int_parent_comment_id=0 order by dt_commented_on asc";
+		$query=$this->db->query($sql);
+		$result=$query->result_array();
+		return $result;
+	}
+	
+	function getPostSubComments($postId,$commentId){
+		$sql="Select a.*,u.txt_fname,u.txt_lname,u.txt_profile_image from tab_post_comments a inner join tab_artists u on a.int_artist_id=u.int_artist_id where a.int_post_id=".$postId." and a.int_parent_comment_id=".$commentId." order by dt_commented_on asc";
+		$query=$this->db->query($sql);
+		$result=$query->result_array();
+		return $result;
+	}
 
 
 /*

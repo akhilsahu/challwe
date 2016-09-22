@@ -427,6 +427,19 @@ function viewcontest(){
 		}
 	}
 	
+	function addPostComment(){
+		$this->load->model('post_model');
+		$this->form_validation->set_rules('comment', 'Comment', 'required');
+		$this->form_validation->set_rules('id', 'Post', 'required');
+        if($this->form_validation->run())
+        {       
+            $this->post_model->addPostComment();   
+			echo "Success";	
+        }else{
+			echo "Failed";
+		}
+	}
+	
 	function voteSubmission(){
 		$this->load->model('contest_model');
 		$this->form_validation->set_rules('id', 'Contest', 'required');

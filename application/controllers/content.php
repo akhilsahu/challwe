@@ -217,6 +217,39 @@ class Content extends CI_Controller{
 			echo json_encode($data);
 		}
 	}
+	
+	function getPostComments(){
+		$this->load->model('post_model');
+		if($this->input->post('id')){
+			$id=$this->input->post('id');
+			$result=$this->post_model->getPostComments($id);
+			$data['msg']="success";
+			$data['result']=$result;
+			$data['success']=true;
+			echo json_encode($data);
+		}else{
+			$data['msg']="failed";
+			$data['success']=true;
+			echo json_encode($data);
+		}
+	}
+	
+	function getPostSubComments(){
+		$this->load->model('post_model');
+		if($this->input->post('id') && $this->input->post('commentId')){
+			$id=$this->input->post('id');
+			$commentId=$this->input->post('commentId');
+			$result=$this->post_model->getPostSubComments($id,$commentId);
+			$data['msg']="success";
+			$data['result']=$result;
+			$data['success']=true;
+			echo json_encode($data);
+		}else{
+			$data['msg']="failed";
+			$data['success']=true;
+			echo json_encode($data);
+		}
+	}
 
     function showcontest(){ 
       
