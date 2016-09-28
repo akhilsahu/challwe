@@ -268,6 +268,15 @@ $user=$this->session->userdata('user');
 
 
             </li>
+            <li class="treeview">
+              <a href="">
+                <i class="fa fa-dashboard"></i> <span>Category</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="<?php echo site_url()."/admin/addcategory";?>"><i class="fa fa-circle-o"></i> Add</a></li>
+                <li><a href="<?php echo site_url()."/admin/managecategory";?>"><i class="fa fa-circle-o"></i> Manage</a></li>
+              </ul>
+            </li>
 	
 		<li class="treeview">
           <a href="<?php echo site_url()."/admin/manageIcons";?>">

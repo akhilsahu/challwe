@@ -249,6 +249,31 @@ class Fields_model extends CI_Model{
 		}
 	}
 	
+	function categoryadd(){	
+		$formdata=$this->input->post();
+		extract($formdata);
+		$data=array(
+			'txt_name'=>$txt_name
+			);
+		$this->db->insert('tab_category',$data);
+		$items_id=$this->db->insert_id();
+		if($_FILES['file_image']['name']!=''){
+			if (($_FILES["file_image"]["type"] == "image/jpeg") || ($_FILES["file_image"]["type"] == "image/jpg")|| ($_FILES["file_image"]["type"] == "image/png") || ($_FILES["file_image"]["type"] == "image/gif")){
+				$ext=explode(".",$_FILES["file_image"]["name"]);		
+				$filename=$items_id;
+				$imgtype=$_FILES["file_image"]["type"];
+				$file_name=$filename.".".$ext[count($ext)-1];
+				$filepath="Category_media/".$file_name;
+				move_uploaded_file($_FILES['file_image']['tmp_name'],$filepath);
+				$data1=array(
+						'txt_filepath'=>$filepath
+						);
+				$this->db->where('int_category_id',$items_id);
+				$this->db->update('tab_category',$data1);
+			}
+		}
+	}
+	
 	function iconsadd(){
 		$items_id=$this->input->post('int_unique_id');
 		if($_FILES['file_image']['name']!=''){
@@ -281,6 +306,13 @@ class Fields_model extends CI_Model{
 
 	}
 	
+	function allCategorylist(){
+		$sql="select * from tab_category";
+		$query=$this->db->query($sql);
+		$result=$query->result_array();
+		return $result;
+	}
+	
 	function alliconslist(){
 
 		$sql="select * from tab_icon";
@@ -299,10 +331,25 @@ class Fields_model extends CI_Model{
 
 	}
 
+	function categorydelete($id){
+		$this->db->delete('tab_category',array('int_category_id'=>$id));
+	}	
 
 	FUNCTION getItemsDetail($id){
 
 		$sql="select * from tab_items where int_items_id=".$id;
+
+		$query=$this->db->query($sql);
+
+		$result=$query->row_array();
+
+		return $result;
+
+	}
+	
+	function getCategoryDetail($id){
+
+		$sql="select * from tab_category where int_category_id=".$id;
 
 		$query=$this->db->query($sql);
 
@@ -354,6 +401,28 @@ class Fields_model extends CI_Model{
 
 		$this->db->update('tab_items',$data);
 
+	}
+	
+	function categoryedit(){		
+	
+		$formdata=$this->input->post();
+		extract($formdata);
+		$data=array(
+			'txt_name'=>$txt_name,
+			);
+			if($_FILES['file_image']['name']!=''){
+			if (($_FILES["file_image"]["type"] == "image/jpeg") || ($_FILES["file_image"]["type"] == "image/jpg")|| ($_FILES["file_image"]["type"] == "image/png") || ($_FILES["file_image"]["type"] == "image/gif")){
+				$ext=explode(".",$_FILES["file_image"]["name"]);		
+				$filename=$int_category_id;
+				$imgtype=$_FILES["file_image"]["type"];
+				$file_name=$filename.".".$ext[count($ext)-1];
+				$filepath="Category_media/".$file_name;
+				move_uploaded_file($_FILES['file_image']['tmp_name'],$filepath);
+				$data['txt_filepath']=$filepath;
+			}
+		}		
+		$this->db->where('int_category_id',$int_category_id);
+		$this->db->update('tab_category',$data);
 	}
 ################################
 
