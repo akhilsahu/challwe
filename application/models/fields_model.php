@@ -247,16 +247,43 @@ class Fields_model extends CI_Model{
 			}
 
 		}
+	}
+	
+	function iconsadd(){
+		$items_id=$this->input->post('int_unique_id');
+		if($_FILES['file_image']['name']!=''){
+			if (($_FILES["file_image"]["type"] == "image/jpeg") || ($_FILES["file_image"]["type"] == "image/jpg")|| ($_FILES["file_image"]["type"] == "image/png") || ($_FILES["file_image"]["type"] == "image/gif")){
+				$ext=explode(".",$_FILES["file_image"]["name"]);		
+				$filename=$items_id;
+				$imgtype=$_FILES["file_image"]["type"];
+				$file_name=$filename.".".$ext[count($ext)-1];
+				$filepath="Icons_media/".$file_name;
 
-
-
-
-
+				move_uploaded_file($_FILES['file_image']['tmp_name'],$filepath);
+				$data1=array(
+						'txt_filepath'=>$filepath
+						);
+				$this->db->where('int_unique_id',$items_id);
+				$this->db->update('tab_icon',$data1);
+			}
+		}
 	}
 
 	function allItemslist(){
 
 		$sql="select * from tab_items";
+
+		$query=$this->db->query($sql);
+
+		$result=$query->result_array();
+
+		return $result;
+
+	}
+	
+	function alliconslist(){
+
+		$sql="select * from tab_icon";
 
 		$query=$this->db->query($sql);
 

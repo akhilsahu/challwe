@@ -268,7 +268,12 @@ $user=$this->session->userdata('user');
 
 
             </li>
-
+	
+		<li class="treeview">
+          <a href="<?php echo site_url()."/admin/manageIcons";?>">
+          <i class="fa fa-dashboard"></i> <span>Icon List</span>
+          </a>
+		</li>
       <li class="treeview">
           <a href="<?php echo site_url()."/admin/manageTransactions";?>">
           <i class="fa fa-history"></i> <span>Transaction History</span>
