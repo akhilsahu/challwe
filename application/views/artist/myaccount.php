@@ -138,15 +138,6 @@
         color: #ffffff !important;
 
     }
-    /*
-    .pattern-overlay {
-    
-        background-color: rgba(89, 171, 2, 0.75);
-    
-    }*/
-    header{
-        background-color: #333; 
-    }
     .blur-bg{
         width: 100%;
         height: 200px;
@@ -358,10 +349,10 @@
                                     </div>									
                                 </div>
 								</form>
-                                <ul class="list-inline layout-row align-center justify-space-between margin-bottom-20" style="width: 100%;">
+<!--                                <ul class="list-inline layout-row align-center justify-space-between margin-bottom-20" style="width: 100%;">
                                     <li></li>
                                     <li class="pull-right"><button id="add-post" class="button" style="padding: 5px 15px;">Add Post</button></li>
-                                </ul>
+                                </ul>-->
                                 
 								<?php 
 								$i=0;

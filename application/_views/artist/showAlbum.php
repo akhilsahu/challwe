@@ -141,6 +141,15 @@
         color: #ffffff !important;
 
     }
+    /*
+    .pattern-overlay {
+    
+        background-color: rgba(89, 171, 2, 0.75);
+    
+    }*/
+    header{
+        background-color: #333; 
+    }
     .blur-bg{
         width: 100%;
         height: 200px;
@@ -164,9 +173,7 @@
         vertical-align: top;
         margin-right: 10px;
     }
-	
-	
-	
+
 	.comment textarea{
         border-radius: 12px;
         resize: none;
@@ -213,7 +220,6 @@
         border: none;
         outline: none;
     }
-
 </style>
 
 
@@ -233,15 +239,10 @@
 
                 <!-- Left Section -->
 
-                <div class="col-sm-9 col-md-9 col-lg-9">
-                    <div class="btn-block text-right">
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#create-album">Edit Album</button>
-                    </div>
-					
+                <div class="col-sm-9 col-md-9 col-lg-9">					
 			
 					<hr>
 					
-                    <h4>Photo</h4>
 					<div class="row">
 					<?php foreach($media_details as $val){?>
 						<div class="col-sm-4">
@@ -261,7 +262,6 @@
 										<li><span class="fa fa-thumbs-up">&nbsp;</span>&nbsp;4</li>
 										<li><span class="fa fa-star">&nbsp;</span>&nbsp;2</li>
 										<li><span class="fa fa-eye">&nbsp;</span>&nbsp;10</li>
-										<li class="pull-right"><span id="btn_media_<?php echo $val['int_media_id']?>" class="fa fa-trash del_photo_btn">&nbsp;</span></li>
 									</ul>
 								</div>
 							</div>
@@ -286,86 +286,39 @@
 
     <!-- /Main Content -->
 
-</section>
-
-<!--modal-->
-<div id="create-album" class="modal fade" role="dialog">
-  <div class="modal-dialog" style="width: 65%;">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header btn-success">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title"><?php echo $album_details['txt_name'];?></h4>
-      </div>
-	  <form method="POST" action="<?php echo site_url()."/artist/editAlbum"?>">
-      <div class="modal-body">
-          <input type="hidden" class="form-control" name="int_album_id" id="int_album_id" value="<?php echo $album_details['int_album_id'];?>" />
-          <div class="margin-top60 btn-block">
-              <ul class="list-inline">			  
-			  <?php foreach($media_details as $val){?>
-                  <li style="display: inline-flex;">
-                      <input type="checkbox" style="margin-right: 10px;" checked class="check-album" name="int_media_id[]" value="<?php echo $val['int_media_id'];?>" />
-                      <img style="max-width:170px;max-height:150px;" src="<?php echo base_url().$val['txt_path'];?>" />
-                  </li>                  
-			  <?php } ?>
-              </ul>
-          </div>
-		  <br>
-		  <hr>
-		  <div class="margin-top60 btn-block">
-              <ul class="list-inline">			  
-			  <?php foreach($no_album_media_details as $val){?>
-                  <li style="display: inline-flex;">
-                      <input type="checkbox" style="margin-right: 10px;" class="check-album" name="int_media_id[]" value="<?php echo $val['int_media_id'];?>" />
-                      <img style="max-width:170px;max-height:150px;" src="<?php echo base_url().$val['txt_path'];?>" />
-                  </li>                  
-			  <?php } ?>
-              </ul>
-          </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <input type="submit" class="btn btn-success" name="btn_create_album" value="Update">
-      </div>
-	  </form>
-    </div>
-
-  </div>
-</div>
-<!--end modal-->
-
-<div id="show-post-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-lg">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-body display-full">
-                <div class="col-sm-12">
-                   <img id="album-image-preview" src="" style="width:100%;" /> 
-                </div>
-				<div class="col-sm-11">&nbsp;</div>
-				<div class="col-sm-11">
-					<input type="hidden" name="hd_media_id" id="hd_media_id">
-					<div id="media-comments">
-						
+	<div id="show-post-modal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-body display-full">
+					<div class="col-sm-12">
+					   <img id="album-image-preview" src="" style="width:100%;" /> 
 					</div>
-					<div class="loader h5 text-center collapse" id="photo-comment-loader" ><span class="fa fa-refresh fa-spin fa-2x fa-fw" style="color: #58ba2b;">&nbsp;</span></div>
-				</div>	
-				<?php  if ($user['int_artist_id']) {?>
-				<div class="col-sm-12">
-					<div class="comment">
-						<textarea placeholder="your comment..." name="txt_media_comment" id="txt_media_comment" class="cl-comment-box"></textarea>
-						<div class="text-right">
-							<button class="btn btn-default cl-comment-btn" id="btn_mdeia_comment">Submit</button>
+					<div class="col-sm-11">&nbsp;</div>
+					<div class="col-sm-11">
+						<input type="hidden" name="hd_media_id" id="hd_media_id">
+						<div id="media-comments">
+							
+						</div>
+						<div class="loader h5 text-center collapse" id="photo-comment-loader" ><span class="fa fa-refresh fa-spin fa-2x fa-fw" style="color: #58ba2b;">&nbsp;</span></div>
+					</div>	
+					<?php  if ($user['int_artist_id']) {?>
+					<div class="col-sm-12">
+						<div class="comment">
+							<textarea placeholder="your comment..." name="txt_media_comment" id="txt_media_comment" class="cl-comment-box"></textarea>
+							<div class="text-right">
+								<button class="btn btn-default cl-comment-btn" id="btn_mdeia_comment">Submit</button>
+							</div>
 						</div>
 					</div>
+					<?php }?>
 				</div>
-				<?php }?>
-            </div>
-        </div>		 
-    </div>
-</div>
+			</div>		 
+		</div>
+	</div>
+	
+	
+</section>
 
 <script>
 
@@ -440,30 +393,6 @@
 			}
 			
 		});
+	});
 	
-        $(".del_photo_btn").click(function(){
-            var id=this.id.split("_");
-            $("#fade").show();
-            $("#preloader").show();
-            $.ajax({
-                type: "POST",
-                url: '<?php echo site_url();?>/artist/removeArtistMedia',
-                datatype: "json",
-                data: {'id':id[2]},
-                crossDomain: true,
-                success: function(result) {
-                    $("#btn_media_"+id[2]).parent().parent().parent().parent().parent().remove();
-                    $("#fade").hide();
-                    $("#preloader").hide();
-                },
-                error: function(result) {
-                    $("#fade").hide();
-                    $("#preloader").hide();
-                }
-            });
-        });
-		
-		
-    });
-
 </script>

@@ -141,15 +141,6 @@
         color: #ffffff !important;
 
     }
-    /*
-    .pattern-overlay {
-    
-        background-color: rgba(89, 171, 2, 0.75);
-    
-    }*/
-    header{
-        background-color: #333; 
-    }
     .blur-bg{
         width: 100%;
         height: 200px;

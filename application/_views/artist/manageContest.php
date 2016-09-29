@@ -1,15 +1,15 @@
 <!-- Titlebar
 ================================================== -->
-<div id="titlebar" class="single margin-top-90">
+<div id="titlebar" class="single">
 	<div class="container">
 
 		<div class="sixteen columns">
-			<h2>Active Challenges</h2>
+			<h2>Manage Challenge</h2>
 			<nav id="breadcrumbs">
 				<ul>
 					<li>You are here:</li>
 					<li><a href="#">Home</a></li>
-					<li>Challenge List</li>
+					<li>Manage Challenge</li>
 				</ul>
 			</nav>
 		</div>
@@ -27,11 +27,10 @@
 		<?php if($user['logged_in']){?>
 			<span style="float:right;">
 				<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Challenges</a>
-				
-				<a href="<?php echo site_url();?>/artist/manageContest" class=" button">Manage Contest</a>
+				<a href="<?php echo site_url();?>/artist/addContest" class=" button">Create Challenge</a>
 			</span>
 		<?php }?>
-		<!-- <a href="<?php echo site_url();?>/artist/addContest" class=" button">Create Contest</a> -->
+	
 
 		<table class="manage-table resumes responsive-table">
 
@@ -46,9 +45,13 @@
 
 			<!-- Item #1 -->
 			<?php 
+		/*	echo "<pre><br>";
+			print_r($directory);
+*/
+
+
 
 			foreach($list as $val){
-
 
 				$s_date=date_create($val['dt_start_date']);
 				$c_date=date_create($val['dt_last_date']);
@@ -60,13 +63,8 @@
 				<td class="keywords"><?php echo $val['skills'];?></td>
 				<td>$ <?php echo $val['txt_budget'];?></td>
 				<td class="action">
-					<a href="<?php echo site_url();?>/content/showContest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i> Show Challenge</a>
-					<?php if($val['user_status'] == '' && $user['int_artist_id'] ){?>
-					<a onclick="javascript:
-					if(confirm('Are you sure? You want to participate in contest?')){
-						setparticipate('<?php echo $val["int_contest_id"]?>');
-					}"><i class="fa fa-eye-slash"></i> participate</a>
-					<?php } ?>
+					<a href="<?php echo site_url();?>/artist/viewcontest?id=<?php echo $val["int_contest_id"]?>"><i class="fa fa-check-circle-o"></i>View</a>
+					
 				</td>
 			</tr>
 			<?php }?>
@@ -77,16 +75,3 @@
 	</div>
 
 </div>
-<script type="text/javascript">
-	function setparticipate(id){
-	$.ajax({
-			type: "POST",
-			url: "<?php echo site_url(); ?>/artist/updateparticipate",
-			data: { 'id' : id  } ,
-			cache: false,
-			success: function(data) {
-				window.location='<?php echo site_url(); ?>/content/listcontest/';
-			}
-	});
-}
-</script>

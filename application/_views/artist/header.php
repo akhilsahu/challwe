@@ -10,7 +10,7 @@
         <link href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/colors/green.css" id="colors">
-        <!--<link rel="stylesheet" href="<?php //echo base_url();       ?>assets/css/vine-ember.css" id="colors">-->
+        <!--<link rel="stylesheet" href="<?php //echo base_url();    ?>assets/css/vine-ember.css" id="colors">-->
         <link href="<?php echo base_url(); ?>assets/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet" type="text/css"><link href="<?php echo base_url(); ?>plugins/select2/select2.min.css" rel="stylesheet" type="text/css">
         <script src="<?php echo base_url(); ?>assets/scripts/jquery-2.1.3.min.js"></script><script src="<?php echo base_url(); ?>plugins/select2/select2.full.min.js"></script>
         <!--[if lt IE 9]>
@@ -471,7 +471,35 @@
             z-index: 5;
             position: relative;
         }
-
+        .show-post{
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 4px 4px 15px #c3c3c3;
+            transform: translateZ(0px);
+        }
+        .post-img{
+            min-height: 200px;
+            max-height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .post-controls{
+            padding: 4px 18px;
+            background-color: #454545;
+            color: #fff;
+            font-size: 14px;
+        }
+        .post-description{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 8px 16px;
+            background-color: rgba(0,0,0,0.5)
+        }
+        #popular-categories li{
+            position: relative;
+        }
         .text-overloy{
             background-color: #fff;
             position: absolute;
@@ -604,12 +632,11 @@
         .btn-shopping-cart:hover{
             color: #fff;
         }
-
     </style>
     <script>
         $(document).ready(function () {
             $(".profile-view").click(function () {
-                window.location = "<?php echo site_url() . "/artist/dashboard/"; ?>";
+                window.location = "<?php echo site_url() . "/artist/dashboard/";?>";
             });
         });
     </script>
@@ -623,23 +650,23 @@
         <div id="wrapper">
             <!--    <div id="sidebar">
                     <div id="close-sidebar"><span class="fa fa-close fa-2x">&nbsp;</span></div>
-                    <a id="sidebar-logo" href="<?php //echo base_url();       ?>">
-                        <img src="<?php //echo base_url();       ?>assets/images/logo-challwe.png" alt="VYSUAL - In Select Theaters December 25">
+                    <a id="sidebar-logo" href="<?php //echo base_url();    ?>">
+                        <img src="<?php //echo base_url();    ?>assets/images/logo-challwe.png" alt="VYSUAL - In Select Theaters December 25">
                     </a>MAIN MENU
                     <nav id="navigation" class="hasLogo">
                         <ul id="dropmenu" class="menu">
                             <li class="current-menu-item">
-                                <a href="<?php //echo site_url();       ?>">Home</a>
+                                <a href="<?php //echo site_url();    ?>">Home</a>
                             </li>
-                            <li><a href="<?php //echo site_url();       ?>">About Challwe</a></li>
-                            <li><a href="<?php //echo site_url();       ?>">challenges</a></li>
-                            <li><a href="<?php //echo site_url();       ?>">Blog</a></li>
+                            <li><a href="<?php //echo site_url();    ?>">About Challwe</a></li>
+                            <li><a href="<?php //echo site_url();    ?>">challenges</a></li>
+                            <li><a href="<?php //echo site_url();    ?>">Blog</a></li>
             <?php //if($user['logged_in']){
             ?>
-                            <li><a href="#">wallet&nbsp;(<?php //echo $user['int_challwe_coins'];       ?>)</a></li>
+                            <li><a href="#">wallet&nbsp;(<?php //echo $user['int_challwe_coins'];    ?>)</a></li>
             <?php //} ?>
-                            <li><a href="<?php //echo base_url();        ?>">Login</a></li>
-                            <li><a href="<?php //echo base_url();        ?>">Register</a></li>
+                            <li><a href="<?php //echo base_url();     ?>">Login</a></li>
+                            <li><a href="<?php //echo base_url();     ?>">Register</a></li>
                 challwe-profile        </ul>
                     </nav>WIDGET
                     <ul id="sidebar-widgets" style="margin-top: 0px;">
@@ -652,14 +679,35 @@
 
             <!-- Header
             ================================================== -->
-
             <header>
-                <div class="container" id="wrapper">
+                <div class="container">
                     <div class="sixteen columns m-top-20">
+
                         <!-- Logo -->
                         <a id="logo" href="<?php echo base_url(); ?>">
                             <img src="<?php echo base_url(); ?>assets/images/logo-challwe.png" alt="VYSUAL - In Select Theaters December 25">
-                        </a> <!-- Menu -->
+                        </a>
+                        <!--        <div class="pull-right header-search">
+                                    <ul class="list-inline">
+                                        <li>
+                                            <a id="link-search" rel="search" data-title="Search" href="#">
+                                                <i class="fa fa-search">&nbsp;</i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div id="menu-control">
+                                                <span>&nbsp;</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>-->
+
+                        <!--            <h1>
+                                         <a href="index-2.html"><img src="images/logo.png" alt="Work Scout" /></a> 
+                                        Challwe
+                                    </h1>-->
+
+                        <!-- Menu -->
                         <nav id="navigation" class="menu">
                             <ul id="responsive" style="margin: 7px 0 0 50px;">
 
@@ -683,52 +731,52 @@
                                     ?>
                                     <li>
                                         <a href="<?php echo site_url(); ?>/wallet/mytransections" class="hover">Wallet (<?php echo $user['int_challwe_coins']; ?>)</a>
+                                        <div class="tooltip">asdadasd</div>
                                     </li>
-                                    <li class="user user-menu">
-                                        <a href="#" class="profile-main hamburger is-closed" data-toggle="offcanvas">
-                                            <img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" data-toggle="tooltip" title="<?php echo $user['txt_fname'] ?>" class="user-image" alt="User Image">
-                                            <!--<span class="hidden-xs"></span>-->
+                                    <li class="dropdown user user-menu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            <img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" class="user-image img-circle" alt="User Image">
+                                            <span class="hidden-xs"><?php echo $user['txt_fname'] ?></span>
                                         </a>
+                                        <ul class="dropdown-menu">
+                                            <!--User image--> 
+                                            <li class="user-header">
+                                                <img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" class="img-circle profile-view" alt="User Image" style="max-width: 125px;display: inline-block;">
 
-                                        <!--                                        <ul class="dropdown-menu">
-                                                                                    User image 
-                                                                                    <li class="user-header">
-                                                                                        <img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" class="img-circle profile-view" alt="User Image" style="max-width: 125px;display: inline-block;">
-                                        
-                                                                                        <p><?php echo $user['txt_fname'] ?>
-                                                                                            <small style="display: block;">Member since Nov. 2012</small>
-                                                                                        </p>
-                                        
-                                                                                    </li>
-                                                                                    Menu Body 
-                                                                                    li class="user-body">
-                                                                                        <div class="row" style="margin-bottom: 0;">
-                                                                                            <div class="col-xs-4 text-center">
-                                                                                                <a href="#">Followers</a>
-                                                                                            </div>
-                                                                                            <div class="col-xs-4 text-center">
-                                                                                                <a href="#">Sales</a>
-                                                                                            </div>
-                                                                                            <div class="col-xs-4 text-center">
-                                                                                                <a href="#">Friends</a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </li
-                                                                                    Menu Footer
-                                                                                    <li class="user-footer">
-                                                                                        <div class="pull-left">
-                                                                                            <a href="<?php echo site_url() ?>/artist/dashboard" class="btn btn-default btn-flat">My Account</a>
-                                                                                        </div>
-                                                                                        <div class="pull-right">
-                                                                                            <a href="<?php //echo site_url()       ?>/user/signoutArt" class="btn btn-default btn-flat">Sign out</a>
-                                        <?php if ($user['login_type'] == 'web') { ?>
-                                                                                                            <a href="<?php echo site_url() ?>/user/signoutArt" class="btn btn-default btn-flat">Signout</a>
-                                        <?php } else { ?>
-                                                                                                            <a href="<?php echo site_url() ?>/user/facebooklogout" class="btn btn-default btn-flat">Signout</a>    
-                                        <?php } ?>
-                                                                                        </div>
-                                                                                    </li>
-                                                                                </ul>-->
+                                                <p><?php echo $user['txt_fname'] ?>
+                                                    <!--<small style="display: block;">Member since Nov. 2012</small>-->
+                                                </p>
+
+                                            </li>
+                                            <!--Menu Body--> 
+                                            <!--li class="user-body">
+                                                <div class="row" style="margin-bottom: 0;">
+                                                    <div class="col-xs-4 text-center">
+                                                        <a href="#">Followers</a>
+                                                    </div>
+                                                    <div class="col-xs-4 text-center">
+                                                        <a href="#">Sales</a>
+                                                    </div>
+                                                    <div class="col-xs-4 text-center">
+                                                        <a href="#">Friends</a>
+                                                    </div>
+                                                </div>
+                                            </li-->
+                                            <!--Menu Footer-->
+                                            <li class="user-footer">
+                                                <div class="pull-left">
+                                                    <a href="<?php echo site_url() ?>/artist/dashboard" class="btn btn-default btn-flat">My Account</a>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <!--<a href="<?php //echo site_url()    ?>/user/signoutArt" class="btn btn-default btn-flat">Sign out</a>-->
+                                                    <?php if ($user['login_type'] == 'web') { ?>
+                                                        <a href="<?php echo site_url() ?>/user/signoutArt" class="btn btn-default btn-flat">Signout</a>
+                                                    <?php } else { ?>
+                                                        <a href="<?php echo site_url() ?>/user/facebooklogout" class="btn btn-default btn-flat">Signout</a>    
+                                                    <?php } ?>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </li>
 
                                 <?php } else { ?>
@@ -736,7 +784,9 @@
                                     <li><a href="javascript:void(0);"  data-toggle="modal" data-target="#register-user"><i class="fa fa-lock"></i> Sign Up</a></li>
                                 <?php } ?>
                             </ul>
+
                         </nav>
+
                         <!-- Navigation -->
                         <div id="mobile-navigation">
                             <a href="#menu" class="menu-trigger"><i class="fa fa-reorder"></i> Menu</a>
@@ -745,117 +795,35 @@
                     </div>
                 </div>
             </header>
-            <div class="overlay" style="display: none;">&nbsp;</div>
-            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
-                <div class="profile-sidebar">
-                    <!-- SIDEBAR USERPIC -->
-                    <a href="javascript:void()" class="pull-right" id="menu-close">
-                        <span class="fa fa-close fa-2x">&nbsp;</span>
-                    </a>
-                    <div class="profile-userpic text-center">
-                        <img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" data-toggle="tooltip" title="<?php echo $user['txt_fname'] ?>" class="img-responsive" alt="User Image">
-                    </div>
-                    <!-- END SIDEBAR USERPIC -->
-                    <!-- SIDEBAR USER TITLE -->
-                    <div class="profile-usertitle text-center">
-                        <div class="profile-usertitle-name">
-                            Marcus Doe
-                        </div>
-                        <div class="profile-usertitle-job">
-                            Developer
-                        </div>
-                    </div>
-                    <!-- END SIDEBAR USER TITLE -->
-                    <!-- SIDEBAR BUTTONS -->
-                    <div class="profile-userbuttons text-center">
-                        <button type="button" class="btn btn-success btn-sm">Follow</button>
-                        <button type="button" class="btn btn-danger btn-sm">Message</button>
-                    </div>
-                    <!-- END SIDEBAR BUTTONS -->
-                    <!-- SIDEBAR MENU -->
-                    <div class="profile-usermenu">
-                        <ul class="nav">
-                            <li class="active">
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-home"></i>
-                                    Overview</a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="glyphicon glyphicon-user"></i>
-                                    Account Settings </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="glyphicon glyphicon-ok"></i>
-                                    Tasks </a>
-                            </li>
-                            <?php //if ($user['login_type'] == 'web') { ?>
-                            <li>
-                                <a href="#">
-                                    <i class="fa fa-power-off"></i>
-                                    logout </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- END MENU -->
-                </div>
-            </nav>
-        </div>
-        <div class="clearfix"></div>
-        <script>
-            var fullSearch = $("#full-search");
-            $("#link-search").click(function (e) {
-                e.preventDefault();
-                fullSearch.show();
-            });
-            fullSearch.click(function () {
-                $(this).hide();
-            });
-            $("#big-input").click(function (e) {
-                e.stopPropagation();
-            });
-            $("#menu-control").click(function (e) {
-                e.preventDefault();
-                $("body").addClass("open-sidebar");
-                //        $("#wrapper").css({"right": 300});
-            });
-            var videoH = $(".video-section").height();
-            console.log("height" + videoH);
-            $(window).scroll(function () {
-                if ($(window).scrollTop() > 410) {
-                    $("body").addClass("fixed")
-                }
-                else {
-                    $("body").removeClass("fixed");
-                }
-            });
-            $("#close-sidebar").click(function () {
-                $("body").removeClass("open-sidebar");
-            });
-
-            $(document).ready(function () {
-                var trigger = $('.hamburger'),
-                        overlay = $('.overlay');
-
-                $("#menu-close").click(function (e) {
+            <div class="clearfix"></div>
+            <script>
+                var fullSearch = $("#full-search");
+                $("#link-search").click(function (e) {
                     e.preventDefault();
-                    $("#wrapper").removeClass("toggled");
-                    $("body").removeClass("overflow-hidden");
-                    overlay.hide();
+                    fullSearch.show();
                 });
-
-                $('[data-toggle="offcanvas"]').click(function () {
-                    $('#wrapper').addClass('toggled');
-                    $("body").addClass("overflow-hidden");
-                    overlay.show();
+                fullSearch.click(function () {
+                    $(this).hide();
                 });
-                if (window.location.pathname == '/challwe/') {
-                    $("body").addClass("video-header")
-                } else {
-                    console.log(window.location.pathname);
-                }
-            });
-
-
-        </script>
+                $("#big-input").click(function (e) {
+                    e.stopPropagation();
+                });
+                $("#menu-control").click(function (e) {
+                    e.preventDefault();
+                    $("body").addClass("open-sidebar");
+                    //        $("#wrapper").css({"right": 300});
+                });
+                var videoH = $(".video-section").height();
+                console.log("height" + videoH);
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > 410) {
+                        $("body").addClass("fixed")
+                    }
+                    else {
+                        $("body").removeClass("fixed");
+                    }
+                });
+                $("#close-sidebar").click(function () {
+                    $("body").removeClass("open-sidebar");
+                });
+            </script>

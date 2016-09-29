@@ -6,202 +6,6 @@
 
 <script type="text/javascript" src="<?php echo base_url(); ?>plugins/jQuery.filer/js/custom.js?v=1.0.5"></script>
 
-<style>
-
-    .sidebar .widget, .widget {
-
-        margin-bottom: 35px;
-
-    }
-
-    #sidebar h3 {
-
-        padding-top: 7px;
-
-    }
-
-    .sidebar-nav li {
-
-        padding: 10px;
-
-        background-color: #fafafa;
-
-        width: 100%;
-
-        margin-bottom: 5px;
-
-        color: #000;
-
-    }
-
-    ul, li, ol {
-
-        line-height: 24px;
-
-        margin: 0;
-
-    }
-
-    #search-form form, ul.post-meta, .sidebar ul, ul.tabs, .testimonials ul, ul.why, .panel-heading h3, .features .panel-heading h4, #options ul, .gallery ul {
-
-        margin: 0;
-
-    }
-
-    .widget ul {
-
-        list-style: none;
-
-        padding: 0;
-
-    }
-
-    ul, li, ol {
-
-        line-height: 24px;
-
-        margin: 0;
-
-    }
-
-    .sidebar-nav li a {
-
-        color: #000;
-
-        width: 100%;
-
-    }
-
-    nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
-
-        background-color: #59ab02;
-
-    }
-
-    .sidebar-nav li.active {
-
-        padding: 10px;
-
-        width: 100%;
-
-        margin-bottom: 5px;
-
-        color: #ffffff !important;
-
-    }
-
-    h2.title {
-
-        font-size: 26px;
-
-        line-height: 40px;
-
-        margin: 20px 0;
-
-        color: #fff;
-
-    }
-
-    .margin-bottom60 {
-
-        margin-bottom: 60px;
-
-    }
-
-    .margin-top60 {
-
-        margin-top: 60px;
-
-    }
-
-    @media (min-width: 768px)
-
-    .container {
-
-        width: 750px;
-
-    }
-
-    .pricing_plan h3, .pricing_plan.special h3, .sidebar-nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
-
-        background-color: #59ab02;
-
-    }
-
-
-
-    .sidebar-nav li.active {
-
-        padding: 10px;
-
-        width: 100%;
-
-        margin-bottom: 5px;
-
-        color: #ffffff !important;
-
-    }
-
-    .pattern-overlay {
-
-        background-color: rgba(89, 171, 2, 0.75);
-
-    }
-
-    .submission .user-submission{
-        font-size: 16px;
-        padding: 15px;
-        background: #e1e1e1;
-        border-radius: 4px;
-        margin-bottom: 15px;
-    }
-    .comment textarea{
-        border-radius: 12px;
-        resize: none;
-        height: 125px;
-    }
-    .comment .btn-default{
-        background-color: #58ba2b;
-        color: #fff;
-        margin-top: 20px;
-    }
-    .row-small{
-        margin-left:-5px;
-        margin-right:-5px;
-        margin-bottom: 0;
-    }
-    .row-small > div{
-        padding-left:5px;
-        padding-right:5px;
-    }
-    .comment-profile{
-        font-size: 10px;
-        line-height: 15px;
-    }
-    .user-comment{
-        display: inline-block;
-        width: 100%;
-        padding: 10px;
-        background-color: #f0f0f0;
-        margin-bottom: 10px;
-    }
-    .pd-0{
-        padding: 0 !important;
-    }
-    .mr-btm{
-        margin-bottom: 0 !important;
-    }
-    .comment-btn{
-        background: transparent;
-        border: none;
-        text-decoration: underline;
-    }
-    .comment-btn:focus, .comment-btn:hover, .comment-btn:active{
-        box-shadow: none;
-        border: none;
-        outline: none;
-    }
-</style>
 <div id="wrapper">
 
 
@@ -211,8 +15,9 @@
 
     <!-- Titlebar
     ================================================== -->
-    <div id="titlebar" class="photo-bg" style="background: url(<?php echo base_url(); ?>assets/images/job-page-photo.jpg)">
+    <div id="titlebar" class="photo-bg margin-top-90" style="background: url(<?php echo base_url(); ?>assets/images/job-page-photo.jpg)">
         <div class="container">
+        <div class="row">
             <div class="ten columns">
                 <span><a href="browse-jobs.html">Show Challenge</a></span>
                 <h2><?php echo $list[0]['txt_contest_name']; ?></h2>
@@ -235,12 +40,14 @@
             </div>
 
         </div>
+        </div>
     </div>
 
 
     <!-- Content
     ================================================== -->
     <div class="container">
+        <div class="row">
         <?php
         $s_date = date_create($val['dt_start_date']);
         $c_date = date_create($val['dt_last_date']);
@@ -429,6 +236,7 @@
         <!-- Widgets / End -->
 
 
+    </div>
     </div>
 
 

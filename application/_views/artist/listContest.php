@@ -1,6 +1,6 @@
 <!-- Titlebar
 ================================================== -->
-<div id="titlebar" class="single margin-top-90">
+<div id="titlebar" class="single">
 	<div class="container">
 
 		<div class="sixteen columns">
