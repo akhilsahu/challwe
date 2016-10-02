@@ -163,17 +163,16 @@
         }
         #big-input {
             display: block;
-            font-size: 250%;
+            font-size: 100%;
             font-weight: lighter;
-            height: 70px;
+            height: 40px;
             left: 0;
             line-height: 50px;
             margin: -45px auto 0;
             max-width: 60%;
             padding: 10px 30px;
             position: relative;
-            top: 50%;
-            width: 600px;
+            width: 500px;
             outline: none;
             z-index: 1;
             background: rgba(255,255,255,.035);
