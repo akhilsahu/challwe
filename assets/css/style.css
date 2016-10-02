@@ -6230,7 +6230,7 @@ label.upload-btn input[type="file"] { display: none; }
     font-size: 11px;
 }
 body:not(.video-header) header{
-    background-color: #f4edf1;
+    background-color: #f2ecf1;
     z-index: 99;
 }
 .margin-top-90{
@@ -6706,3 +6706,9 @@ body:not(.video-header) header{
     .video-content{
         padding: 25px 0 70px;
     }
+	.search_area{
+		
+	}
+	body{
+		font-family: "Trebuchet MS", Helvetica, sans-serif;
+	}

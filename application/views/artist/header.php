@@ -676,10 +676,10 @@
                                 <li><a href="<?php echo site_url() ?>/content/bloglist">Blog</a></li>
                                 <li><a href="#">About Challwe</a></li>
                             </ul>-->
-							<form role="search" method="get" id="full-search" action="the">
+							<div class="search_area">
 								<input type="text" value="Search Site..." onfocus="this.value = '';" name="s" id="big-input">
 								<span class="fa fa-search fa-lg">&nbsp;</span>
-							</form>
+							</div>
 
                             <ul class="float-right">
                                 <?php if ($user['logged_in']) {
