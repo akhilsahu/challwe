@@ -6230,7 +6230,7 @@ label.upload-btn input[type="file"] { display: none; }
     font-size: 11px;
 }
 body:not(.video-header) header{
-    background-color: #fff;
+    background-color: #f4edf1;
     z-index: 99;
 }
 .margin-top-90{
