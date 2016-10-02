@@ -655,7 +655,7 @@
 
             <header>
                 <div class="container" id="wrapper">
-                    <div class="sixteen columns m-top-20">
+                    <div class="sixteen columns m-top-20" id="head_container">
                         <!-- Logo -->
                         <a id="logo" href="<?php echo base_url(); ?>">
                             <img src="<?php echo base_url(); ?>assets/images/logo-challwe.png" alt="VYSUAL - In Select Theaters December 25">
