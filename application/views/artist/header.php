@@ -661,22 +661,25 @@
                             <img src="<?php echo base_url(); ?>assets/images/logo-challwe.png" alt="VYSUAL - In Select Theaters December 25">
                         </a> <!-- Menu -->
                         <nav id="navigation" class="menu">
-                            <ul id="responsive" style="margin: 7px 0 0 50px;">
+                            <!--<ul id="responsive" style="margin: 7px 0 0 50px;">
 
-                                <!--                 <li><a href="index-2.html" id="current">Home</a>
+                                                 <li><a href="index-2.html" id="current">Home</a>
                                                     <ul>
                                                         <li><a href="<?php echo site_url(); ?>/content/home">Home</a></li>
                                                         <li><a href="#">Portfolio</a></li>
                                                         <li><a href="<?php echo site_url() ?>/content/bloglist">Blog</a></li>
                                                         <li><a href="#">About Challwe</a></li>                        
                                                     </ul>
-                                                </li> -->
+                                                </li> 
                                 <li><a href="<?php echo site_url(); ?>/content/home" id="current">Home</a></li>
                                 <li><a href="<?php echo site_url(); ?>/content/listcontest">Challenge</a></li>
                                 <li><a href="<?php echo site_url() ?>/content/bloglist">Blog</a></li>
                                 <li><a href="#">About Challwe</a></li>
-                            </ul>
-
+                            </ul>-->
+							<form role="search" method="get" id="full-search" action="the">
+								<input type="text" value="Search Site..." onfocus="this.value = '';" name="s" id="big-input">
+								<span class="fa fa-search fa-lg">&nbsp;</span>
+							</form>
 
                             <ul class="float-right">
                                 <?php if ($user['logged_in']) {
