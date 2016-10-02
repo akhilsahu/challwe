@@ -13,7 +13,13 @@ class User extends CI_Controller{
 		$this->load->model('user_model');
 
 		$this->user=$this->session->userdata('user');
-
+		
+		$this->load->library('facebook'); // Automatically picks appId and secret from config
+		$fb_login_url = $this->facebook->getLoginUrl(array(
+                'redirect_uri' => site_url('user/facebooklogin'), 
+                'scope' => array("email") // permissions here
+            ));
+		$_SESSION['fb_login_url']=$fb_login_url;	
 		error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
 	}
@@ -64,12 +70,11 @@ class User extends CI_Controller{
 	}
 
 	function login(){
-
-		$this->load->library('facebook'); // Automatically picks appId and secret from config
-	 	$data['login_url'] = $this->facebook->getLoginUrl(array(
+		
+	 	/*$data['login_url'] = $this->facebook->getLoginUrl(array(
                 'redirect_uri' => site_url('user/facebooklogin'), 
                 'scope' => array("email") // permissions here
-            ));
+            ));*/
 		
 		$data['page_title']='Login';
         $data['page']='login';

@@ -5,6 +5,12 @@ class Content extends CI_Controller{
     function __construct()
     {
             parent::__construct();
+			$this->load->library('facebook'); // Automatically picks appId and secret from config
+			$fb_login_url = $this->facebook->getLoginUrl(array(
+					'redirect_uri' => site_url('user/facebooklogin'), 
+					'scope' => array("email") // permissions here
+				));
+			$_SESSION['fb_login_url']=$fb_login_url;
     }
 
     function home(){
