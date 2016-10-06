@@ -18,8 +18,9 @@ class Content extends CI_Controller{
         $this->load->model('fields_model');
         $data['directory']=$this->fields_model->allActiveDirectorylist();
         $data['page_title']='Industry Directory';
-        $data['page']='home';
-        $this->load->view('artist/page',$data);
+        //$data['page']='home';
+		$data['page']='home_content';
+        $this->load->view('artist/page_home',$data);
     }		
 	
 	function postvideos($postId){
