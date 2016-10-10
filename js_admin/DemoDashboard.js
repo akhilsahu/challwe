@@ -19,9 +19,9 @@
 	p.initialize = function() {
 		this._enableEvents();
 
-		this._initCalendarlist();
-		this._initCalendar();
-		this._displayDate();
+		//this._initCalendarlist();
+		//this._initCalendar();
+		//this._displayDate();
 	};
 
 	// =========================================================================
