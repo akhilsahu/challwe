@@ -88,7 +88,7 @@
 			return;
 		}
 
-		var date = new Date();
+		/*var date = new Date();
 		var d = date.getDate();
 		var m = date.getMonth();
 		var y = date.getFullYear();
@@ -143,7 +143,7 @@
 		var selectedDate = $('#calendar').fullCalendar('getDate');
 		$('.selected-day').html($.fullCalendar.formatDate(selectedDate, "dddd"));
 		$('.selected-date').html($.fullCalendar.formatDate(selectedDate, "dd MMMM yyyy"));
-		$('.selected-year').html($.fullCalendar.formatDate(selectedDate, "yyyy"));
+		$('.selected-year').html($.fullCalendar.formatDate(selectedDate, "yyyy"));*/
 	};
 	
 	// =========================================================================
