@@ -1,8 +1,1 @@
-<footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 1.0.0
-        </div>
-        <strong>Copyright &copy; 2015-2016 <a href="http://thethirdthought.in">The Third Thought</a>.</strong> All rights reserved.
-      </footer>
-
-
+	</div><!--end #base-->	<!-- END BASE -->	<script src="<?php echo base_url();?>js/jquery-1.11.0.min.js"></script><script src="<?php echo base_url();?>js/jquery-migrate-1.2.1.min.js"></script><script src="<?php echo base_url();?>js/jquery-ui-1.10.3.custom.min.js"></script><script src="<?php echo base_url();?>js/BootstrapFixed.js"></script><script src="<?php echo base_url();?>js/bootstrap.min.js"></script><script src="<?php echo base_url();?>js/spin.min.js"></script><script src="<?php echo base_url();?>js/moment.min.js"></script><script src="<?php echo base_url();?>js/jquery.flot.min.js"></script><script src="<?php echo base_url();?>js/jquery.flot.time.min.js"></script><script src="<?php echo base_url();?>js/jquery.flot.resize.min.js"></script><script src="<?php echo base_url();?>js/jquery.flot.orderBars.js"></script><script src="<?php echo base_url();?>js/jquery.flot.pie.js"></script><script src="<?php echo base_url();?>js/jquery.knob.js"></script><script src="<?php echo base_url();?>js/jquery.sparkline.min.js"></script><script src="<?php echo base_url();?>js/jquery.slimscroll.min.js"></script><script src="<?php echo base_url();?>js/fullcalendar.min.js"></script><script src="<?php echo base_url();?>js/DemoCharts.js"></script><script src="<?php echo base_url();?>js/DemoDashboard.js"></script><script src="<?php echo base_url();?>js/App.js"></script><script src="<?php echo base_url();?>js/Demo.js"></script>		<!-- END JAVASCRIPT -->		</body></html>
