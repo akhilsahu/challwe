@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'redfont';
-  src: url('../font/redfont1041.eot?67406142');
-  src: url('../font/redfont1041.eot?67406142#iefix') format('embedded-opentype'),
-       url('../font/redfont1041.woff?67406142') format('woff'),
-       url('../font/redfont1041.ttf?67406142') format('truetype'),
-       url('../font/redfont1041.svg?67406142#redfont') format('svg');
+  src: url('../fonts/redfont.eot?67406142');
+  src: url('../fonts/redfont.eot?67406142#iefix') format('embedded-opentype'),
+       url('../fonts/redfont.woff?67406142') format('woff'),
+       url('../fonts/redfont.ttf?67406142') format('truetype'),
+       url('../fonts/redfont.svg?67406142#redfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
