@@ -1423,7 +1423,7 @@ jQuery(document).ready(function($){
         var password = jQuery(this).closest('form').find('input[name="pwd"]').val();
         var remember = jQuery(this).closest('form').find('input[name="rememberme"]').is(':checked') ? 'forever' : 'notforever';
 
-        jQuery.post(Slimvideo.ajaxurl, {
+        /*jQuery.post(Slimvideo.ajaxurl, {
                 action     : 'tsLogUser',
                 ts_security: Slimvideo.ts_security,
                 login      : login,
@@ -1436,7 +1436,7 @@ jQuery(document).ready(function($){
                     thisError.html(data);
                 }
             }
-        );
+        );*/
     });
 
     jQuery('.ts-add-favorite').click(function(e){
