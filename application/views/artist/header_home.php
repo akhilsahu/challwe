@@ -1181,7 +1181,7 @@
                                                             <div class="ts-login">
                                                                 <div class="ts-form-login">
 
-                                                                    <form name="loginform" id="loginform" action="#" method="post">
+                                                                    <form name="loginform" id="loginform" action="<?php echo site_url()?>/user/loginSub" method="post">
 
                                                                         <p class="login-username">
                                                                             <label for="ts_slimvideo_username_id">Username</label>
@@ -1197,8 +1197,7 @@
                                                                             <a href="register/index.html" style="color: #e10d0d; margin-right: 10px;">
                                                                                 Register
                                                                             </a>
-                                                                            <input type="submit" name="wp-submit" id="ts_slimvideo_form_submit" class="button-primary" value="Log In" />
-                                                                            <input type="hidden" name="redirect_to" value="index.html" />
+                                                                            <input type="submit" name="submit" id="ts_slimvideo_form_submit1" class="button-primary" value="Log In" />
                                                                         </p>
 
                                                                     </form>
