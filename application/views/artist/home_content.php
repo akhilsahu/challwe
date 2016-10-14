@@ -4,7 +4,7 @@
 									<div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12 ts-animsition">
 				<div class="joyslider">
 					<div class="slider-container">
-						<ul class="slides-container"><li class="slide" data-custom-font="inherit" data-slide-title="Olly Murs &#8211; Heart Skips a Beat" data-slide-meta-date="April 14, 2015"><img src="images/maxresdefault16-1280x450.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" /><div class="slide-content text-left ">
+						<ul class="slides-container"><li class="slide" data-custom-font="inherit" data-slide-title="Olly Murs &#8211; Heart Skips a Beat" data-slide-meta-date="April 14, 2015"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault16-1280x450.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" /><div class="slide-content text-left ">
 											<div class="container">
 												<ul class="entry-category"><li><a title="Music" href="videos_categories/music/index.html">Music</a></li></ul>
 												<h1 class="entry-title">
@@ -15,7 +15,7 @@
 													<li class="meta-author">by <a href="#">John Doe</a></li>
 											 	</ul>
 										 	</div>
-										</div> </li><li class="slide" data-custom-font="inherit" data-slide-title="Always something good" data-slide-meta-date="April 14, 2015"><img src="images/DSC1215513-1280x450.jpg" alt="Always something good" /><div class="slide-content text-left ">
+										</div> </li><li class="slide" data-custom-font="inherit" data-slide-title="Always something good" data-slide-meta-date="April 14, 2015"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/DSC1215513-1280x450.jpg" alt="Always something good" /><div class="slide-content text-left ">
 											<div class="container">
 												<ul class="entry-category"><li><a title="Creative" href="#">Creative</a></li></ul>
 												<h1 class="entry-title">
@@ -26,7 +26,7 @@
 													<li class="meta-author">by <a href="#">Jessica Beans</a></li>
 											 	</ul>
 										 	</div>
-										</div> </li><li class="slide" data-custom-font="inherit" data-slide-title="Check my Valentine" data-slide-meta-date="April 14, 2015"><img src="images/Screen-Shot-2015-04-14-at-6.05.01-PM-1280x450.jpg" alt="Check my Valentine" /><div class="slide-content text-left ">
+										</div> </li><li class="slide" data-custom-font="inherit" data-slide-title="Check my Valentine" data-slide-meta-date="April 14, 2015"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-6.05.01-PM-1280x450.jpg" alt="Check my Valentine" /><div class="slide-content text-left ">
 											<div class="container">
 												<ul class="entry-category"><li><a title="Music" href="#">Music</a></li></ul>
 												<h1 class="entry-title">
@@ -37,7 +37,7 @@
 													<li class="meta-author">by <a href="#">John Doe</a></li>
 											 	</ul>
 										 	</div>
-										</div> </li><li class="slide" data-custom-font="inherit" data-slide-title="Won&#8217;t look back" data-slide-meta-date="April 14, 2015"><img src="images/Screen-Shot-2015-04-14-at-5.08.07-PM-1280x450.png" alt="Won&#8217;t look back" /><div class="slide-content text-left ">
+										</div> </li><li class="slide" data-custom-font="inherit" data-slide-title="Won&#8217;t look back" data-slide-meta-date="April 14, 2015"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-1280x450.png" alt="Won&#8217;t look back" /><div class="slide-content text-left ">
 											<div class="container">
 												<ul class="entry-category"><li><a title="Music" href="#">Music</a></li></ul>
 												<h1 class="entry-title">
@@ -48,7 +48,7 @@
 													<li class="meta-author">by <a href="#">James Wilder</a></li>
 											 	</ul>
 										 	</div>
-										</div> </li><li class="slide" data-custom-font="inherit" data-slide-title="Just tell me something" data-slide-meta-date="April 14, 2015"><img src="images/maxresdefault15-1280x450.jpg" alt="Just tell me something" /><div class="slide-content text-left ">
+										</div> </li><li class="slide" data-custom-font="inherit" data-slide-title="Just tell me something" data-slide-meta-date="April 14, 2015"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault15-1280x450.jpg" alt="Just tell me something" /><div class="slide-content text-left ">
 											<div class="container">
 												<ul class="entry-category"><li><a title="Funny" href="#">Funny</a></li></ul>
 												<h1 class="entry-title">
@@ -80,7 +80,7 @@
 				</div></div><div class="row content-block "><div style="height: 15px;"></div></div><div class="row content-block "><section class="ts-thumbnail-view cols-by-4 ">	<div data-id="1"  class="item col-lg-3 col-md-3 col-sm-12 ">
 		<article data-title-position="below-image" class="post-88 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music" >
 			<div class="image-holder">
-									<a href="#"><img src="images/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#8217;t look back" /></a>
+									<a href="#"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#8217;t look back" /></a>
 														<a href="#" class="view-video-play">
 						<i class="icon-play"></i>
 					</a>
@@ -111,7 +111,7 @@
 	<div data-id="2"  class="item col-lg-3 col-md-3 col-sm-12 ">
 		<article data-title-position="below-image" class="post-78 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-discovery" >
 			<div class="image-holder">
-									<a href="#"><img src="images/maxresdefault13-450x250.jpg" alt="5 Squash Tricks To Get Healthy" /></a>
+									<a href="#"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault13-450x250.jpg" alt="5 Squash Tricks To Get Healthy" /></a>
 														<a href="#" class="view-video-play">
 						<i class="icon-play"></i>
 					</a>
@@ -142,7 +142,7 @@
 	<div data-id="3"  class="item col-lg-3 col-md-3 col-sm-12 ">
 		<article data-title-position="below-image" class="post-65 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music" >
 			<div class="image-holder">
-									<a href="#"><img src="images/maxresdefault9-450x250.jpg" alt="Grasu XXL &#8211; Blanadeurs" /></a>
+									<a href="#"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault9-450x250.jpg" alt="Grasu XXL &#8211; Blanadeurs" /></a>
 														<a href="#" class="view-video-play">
 						<i class="icon-play"></i>
 					</a>
@@ -173,7 +173,7 @@
 	<div data-id="4"  class="item col-lg-3 col-md-3 col-sm-12 ">
 		<article data-title-position="below-image" class="post-55 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-discovery" >
 			<div class="image-holder">
-									<a href="#"><img src="images/maxresdefault6-450x250.jpg" alt="Discover Moldova" /></a>
+									<a href="#"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault6-450x250.jpg" alt="Discover Moldova" /></a>
 														<a href="#" class="view-video-play">
 						<i class="icon-play"></i>
 					</a>
@@ -205,13 +205,13 @@
 								</div></div></div></div>
 <div data-parallax="no" data-scroll-btn="no" data-alignment="top"  class="site-section "  style=" background-color: transparent;  color: inherit;  margin-top: 0px;  margin-bottom: 0px;  padding-top: 0px;  padding-bottom: 0px; " ><div class="container"><div class="row"><div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-3 col-md-3">
 									
-									<div class="row content-block "><div style="text-align:center" class="col-lg-12 ts-image-element"><a target="_blank" href="http://touchsize.com/"><img  alt="" src="images/slim-red-banner.jpg" /></a></div></div><div class="row content-block "><div style="height: 40px;"></div></div><div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_most_shared-2" class="widget ts_widget  widget_most_shared"><div class="widget-content">			
+									<div class="row content-block "><div style="text-align:center" class="col-lg-12 ts-image-element"><a target="_blank" href="http://touchsize.com/"><img  alt="" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/slim-red-banner.jpg" /></a></div></div><div class="row content-block "><div style="height: 40px;"></div></div><div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_most_shared-2" class="widget ts_widget  widget_most_shared"><div class="widget-content">			
 			
 		<h6 class="widget-title ts_sidebar_title">Most shared posts</h6><div class="widget-delimiter"></div>                <ul class="widget-items row  widget-columns-2 widget-has-image">                    <li class="col-lg-6 col-md-6 col-sm-12">
 						<article class="row">
 										
 								<div class="col-lg-12 col-md-12 col-sm-4">
-	                                <a  class="entry-img" href="#"><img width="450" height="300" src="images/Screen-Shot-2015-04-14-at-5.08.07-PM-450x300.png" class="attachment-grid size-grid" alt="Screen Shot 2015-04-14 at 5.08.07 PM" /></a>
+	                                <a  class="entry-img" href="#"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x300.png" class="attachment-grid size-grid" alt="Screen Shot 2015-04-14 at 5.08.07 PM" /></a>
 	                            </div>
 	                                                    <div class="col-lg-12 col-md-12 col-sm-8">
                             	                            	<div class="entry-content">
@@ -233,7 +233,7 @@
 						<article class="row">
 										
 								<div class="col-lg-12 col-md-12 col-sm-4">
-	                                <a  class="entry-img" href="#"><img width="450" height="300" src="images/maxresdefault16-450x300.jpg" class="attachment-grid size-grid" alt="Olly Murs &#8211; Heart Skips a Beat" /></a>
+	                                <a  class="entry-img" href="#"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault16-450x300.jpg" class="attachment-grid size-grid" alt="Olly Murs &#8211; Heart Skips a Beat" /></a>
 	                            </div>
 	                                                    <div class="col-lg-12 col-md-12 col-sm-8">
                             	                            	<div class="entry-content">
@@ -255,7 +255,7 @@
 						<article class="row">
 										
 								<div class="col-lg-12 col-md-12 col-sm-4">
-	                                <a  class="entry-img" href="#"><img width="450" height="300" src="images/DSC1215513-450x300.jpg" class="attachment-grid size-grid" alt="DSC121551" srcset="images/DSC1215513-450x300.jpg 450w, images/DSC1215513-300x200.jpg 300w, images/DSC1215513-1024x683.jpg 1024w, images/DSC1215513.jpg 1600w" sizes="(max-width: 450px) 100vw, 450px" /></a>
+	                                <a  class="entry-img" href="#"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/DSC1215513-450x300.jpg" class="attachment-grid size-grid" alt="DSC121551" srcset="images/DSC1215513-450x300.jpg 450w, images/DSC1215513-300x200.jpg 300w, images/DSC1215513-1024x683.jpg 1024w, images/DSC1215513.jpg 1600w" sizes="(max-width: 450px) 100vw, 450px" /></a>
 	                            </div>
 	                                                    <div class="col-lg-12 col-md-12 col-sm-8">
                             	                            	<div class="entry-content">
@@ -277,7 +277,7 @@
 						<article class="row">
 										
 								<div class="col-lg-12 col-md-12 col-sm-4">
-	                                <a  class="entry-img" href="video/just-tell-me-something/index.html"><img width="450" height="300" src="images/maxresdefault15-450x300.jpg" class="attachment-grid size-grid" alt="Just tell me something" /></a>
+	                                <a  class="entry-img" href="video/just-tell-me-something/index.html"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault15-450x300.jpg" class="attachment-grid size-grid" alt="Just tell me something" /></a>
 	                            </div>
 	                                                    <div class="col-lg-12 col-md-12 col-sm-8">
                             	                            	<div class="entry-content">
@@ -312,7 +312,7 @@
 												<header class="col-lg-6 col-md-6 col-sm-12">
 						<div class="image-holder">
 							<a href="#" title="Olly Murs &#8211; Heart Skips a Beat">
-								<img src="images/maxresdefault16-720x400.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" />							</a>
+								<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault16-720x400.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" />							</a>
 																						<a href="#" title="Olly Murs &#8211; Heart Skips a Beat" class="view-video-play">
 									<i class="icon-play"></i>
 								</a>
@@ -352,7 +352,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 												<header class="col-lg-6 col-md-6 col-sm-12">
 						<div class="image-holder">
 							<a href="#" title="Always something good">
-								<img src="images/DSC1215513-720x400.jpg" alt="Always something good" />							</a>
+								<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/DSC1215513-720x400.jpg" alt="Always something good" />							</a>
 																						<a href="#" title="Always something good" class="view-video-play">
 									<i class="icon-play"></i>
 								</a>
@@ -368,7 +368,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 																			<div class="entry-section-footer">
 								<div class="entry-author">
 									<a class="author-avatar" href="#">
-										<img src="images/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />									</a>
+										<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />									</a>
 									<ul class="entry-meta">
 										<li class="entry-author-name">
 											<a href="#">
@@ -408,7 +408,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 		<article class=" article-meta-shown title-below-image post-103 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music">
 			<header>
 													<div class="image-holder">
-						<a href="#" title="Olly Murs &#8211; Heart Skips a Beat"><img src="images/maxresdefault16-450x250.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" /></a>
+						<a href="#" title="Olly Murs &#8211; Heart Skips a Beat"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault16-450x250.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" /></a>
 																			<a class="view-video-play" href="#">
 								<i class="icon-play"></i>
 							</a>
@@ -447,7 +447,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 		<article class=" article-meta-shown title-below-image post-88 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music">
 			<header>
 													<div class="image-holder">
-						<a href="#" title="Won&#8217;t look back"><img src="images/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#8217;t look back" /></a>
+						<a href="#" title="Won&#8217;t look back"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#8217;t look back" /></a>
 																			<a class="view-video-play" href="#">
 								<i class="icon-play"></i>
 							</a>
@@ -463,7 +463,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 											<div class="entry-section-footer">
 							<div class="entry-author">
 								<a class="author-avatar" href="#">
-									<img src="images/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of James Wilder" />								</a>
+									<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of James Wilder" />								</a>
 								<ul class="entry-meta">
 									<li class="entry-author-name">
 										<a href="#">
@@ -486,7 +486,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 		<article class=" article-meta-shown title-below-image post-99 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-creative">
 			<header>
 													<div class="image-holder">
-						<a href="#" title="Always something good"><img src="images/DSC1215513-450x250.jpg" alt="Always something good" /></a>
+						<a href="#" title="Always something good"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/DSC1215513-450x250.jpg" alt="Always something good" /></a>
 																			<a class="view-video-play" href="#">
 								<i class="icon-play"></i>
 							</a>
@@ -502,7 +502,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 											<div class="entry-section-footer">
 							<div class="entry-author">
 								<a class="author-avatar" href="#">
-									<img src="images/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />								</a>
+									<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />								</a>
 								<ul class="entry-meta">
 									<li class="entry-author-name">
 										<a href="#">
@@ -525,7 +525,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 		<article class=" article-meta-shown title-below-image post-65 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music">
 			<header>
 													<div class="image-holder">
-						<a href="#" title="Grasu XXL &#8211; Blanadeurs"><img src="images/maxresdefault9-450x250.jpg" alt="Grasu XXL &#8211; Blanadeurs" /></a>
+						<a href="#" title="Grasu XXL &#8211; Blanadeurs"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault9-450x250.jpg" alt="Grasu XXL &#8211; Blanadeurs" /></a>
 																			<a class="view-video-play" href="#">
 								<i class="icon-play"></i>
 							</a>
@@ -541,7 +541,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 											<div class="entry-section-footer">
 							<div class="entry-author">
 								<a class="author-avatar" href="#">
-									<img src="images/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of James Wilder" />								</a>
+									<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of James Wilder" />								</a>
 								<ul class="entry-meta">
 									<li class="entry-author-name">
 										<a href="#">
@@ -564,7 +564,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 		<article class=" article-meta-shown title-below-image post-85 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-funny">
 			<header>
 													<div class="image-holder">
-						<a href="video/just-tell-me-something/index.html" title="Just tell me something"><img src="images/maxresdefault15-450x250.jpg" alt="Just tell me something" /></a>
+						<a href="video/just-tell-me-something/index.html" title="Just tell me something"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault15-450x250.jpg" alt="Just tell me something" /></a>
 																			<a class="view-video-play" href="video/just-tell-me-something/index.html">
 								<i class="icon-play"></i>
 							</a>
@@ -651,7 +651,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
                 <article>
                     <div class="image-holder">
                         <a href="#">
-                            <img src="images/1aa72304414d9385276ac4887944004e-bpfull.png" class="avatar user-170-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />                        </a>
+                            <img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/1aa72304414d9385276ac4887944004e-bpfull.png" class="avatar user-170-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />                        </a>
                     </div>
                     <div class="entry-section">
                         <div class="entry-title">
@@ -669,7 +669,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
                 <article>
                     <div class="image-holder">
                         <a href="#">
-                            <img src="images/1a3bbeb4471224d1297fdeaefbff2a27-bpfull.jpg" class="avatar user-171-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />                        </a>
+                            <img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/1a3bbeb4471224d1297fdeaefbff2a27-bpfull.jpg" class="avatar user-171-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />                        </a>
                     </div>
                     <div class="entry-section">
                         <div class="entry-title">
@@ -708,7 +708,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 			<header>
 				<div class="image-holder">
 					<a href="#">
-						<img src="images/maxresdefault16-800x800.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" />											</a>
+						<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault16-800x800.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" />											</a>
 					<span class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-103" title="Like this"><span class="touchsize-likes-count icon-heart">441</span> <span class="touchsize-likes-postfix"></span></a></span>				</div>
 			</header>
 			<section>
@@ -739,7 +739,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 			<header>
 				<div class="image-holder">
 					<a href="#">
-						<img src="images/DSC1215513-400x400.jpg" alt="Always something good" />											</a>
+						<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/DSC1215513-400x400.jpg" alt="Always something good" />											</a>
 					<span class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-99" title="Like this"><span class="touchsize-likes-count icon-heart">280</span> <span class="touchsize-likes-postfix"></span></a></span>				</div>
 			</header>
 			<section>
@@ -757,7 +757,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 					</div>
 					<div class="entry-meta-author">
 						<a class="author-avatar" href="#">
-							<img src="images/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-20 photo" width="20" height="20" alt="Profile photo of Jessica Beans" />						</a>
+							<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-20 photo" width="20" height="20" alt="Profile photo of Jessica Beans" />						</a>
 						<a href="#">Jessica Beans</a>
 					</div>
 	 			</div>
@@ -770,7 +770,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 			<header>
 				<div class="image-holder">
 					<a href="#">
-						<img src="images/Screen-Shot-2015-04-14-at-6.05.01-PM-400x400.jpg" alt="Check my Valentine" />											</a>
+						<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-6.05.01-PM-400x400.jpg" alt="Check my Valentine" />											</a>
 					<span class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-95" title="Like this"><span class="touchsize-likes-count icon-heart">197</span> <span class="touchsize-likes-postfix"></span></a></span>				</div>
 			</header>
 			<section>
@@ -801,7 +801,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 			<header>
 				<div class="image-holder">
 					<a href="#">
-						<img src="images/Screen-Shot-2015-04-14-at-5.08.07-PM-400x400.png" alt="Won&#8217;t look back" />											</a>
+						<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-400x400.png" alt="Won&#8217;t look back" />											</a>
 					<span class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-88" title="Like this"><span class="touchsize-likes-count icon-heart">375</span> <span class="touchsize-likes-postfix"></span></a></span>				</div>
 			</header>
 			<section>
@@ -819,7 +819,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 					</div>
 					<div class="entry-meta-author">
 						<a class="author-avatar" href="#">
-							<img src="images/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-20 photo" width="20" height="20" alt="Profile photo of James Wilder" />						</a>
+							<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-20 photo" width="20" height="20" alt="Profile photo of James Wilder" />						</a>
 						<a href="#">James Wilder</a>
 					</div>
 	 			</div>
@@ -832,7 +832,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 			<header>
 				<div class="image-holder">
 					<a href="video/just-tell-me-something/index.html">
-						<img src="images/maxresdefault15-400x400.jpg" alt="Just tell me something" />											</a>
+						<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault15-400x400.jpg" alt="Just tell me something" />											</a>
 					<span class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-85" title="Like this"><span class="touchsize-likes-count icon-heart">144</span> <span class="touchsize-likes-postfix"></span></a></span>				</div>
 			</header>
 			<section>
@@ -877,7 +877,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 									<div class="row content-block "><section class="ts-thumbnail-view cols-by-2 ">	<div data-id="1"  class="item col-lg-6 col-md-6 col-sm-12 ">
 		<article data-title-position="over-image" class="post-103 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music" >
 			<div class="image-holder">
-									<div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-103" title="Like this"><span class="touchsize-likes-count icon-heart">441</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="#"><img src="images/maxresdefault16-450x250.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" /></a>
+									<div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-103" title="Like this"><span class="touchsize-likes-count icon-heart">441</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="#"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault16-450x250.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" /></a>
 														<a href="#" class="view-video-play">
 						<i class="icon-play"></i>
 					</a>
@@ -908,7 +908,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 	<div data-id="2"  class="item col-lg-6 col-md-6 col-sm-12 ">
 		<article data-title-position="over-image" class="post-88 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music" >
 			<div class="image-holder">
-									<div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-88" title="Like this"><span class="touchsize-likes-count icon-heart">375</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="#"><img src="images/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#8217;t look back" /></a>
+									<div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-88" title="Like this"><span class="touchsize-likes-count icon-heart">375</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="#"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#8217;t look back" /></a>
 														<a href="#" class="view-video-play">
 						<i class="icon-play"></i>
 					</a>
