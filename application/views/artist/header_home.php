@@ -1197,7 +1197,7 @@
                                                                             <a href="register/index.html" style="color: #e10d0d; margin-right: 10px;">
                                                                                 Register
                                                                             </a>
-                                                                            <input type="button" name="wp-submit" id="ts_slimvideo_form_submit1" class="button-primary" value="Log In" />
+                                                                            <input type="submit" name="submit" id="ts_slimvideo_form_submit1" class="button-primary" value="Log In" />
                                                                         </p>
 
                                                                     </form>
