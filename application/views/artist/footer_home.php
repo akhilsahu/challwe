@@ -465,6 +465,13 @@ var Slimvideo = {"contact_form_token":"57a41261fc","contact_form_success":"Sent 
 <script type='text/javascript' src='<?php echo base_url(); ?>js/modernizr.custom26550.js?ver=1475716846'></script>
 <script type='text/javascript' src='<?php echo base_url(); ?>js/stream6550.js?ver=1475716846'></script>
 <script type='text/javascript' src='<?php echo base_url(); ?>js/isotope6550.js?ver=1475716846'></script>
+<script>
+$(document).ready(function () {
+	$("#ts_slimvideo_form_submit1").click(function(){
+		$("#loginform").submit();
+	});
+});
+</script>
 
 		</body>
 
