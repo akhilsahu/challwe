@@ -1422,6 +1422,7 @@ jQuery(document).ready(function($){
         var login = jQuery(this).closest('form').find('input[name="log"]').val();
         var password = jQuery(this).closest('form').find('input[name="pwd"]').val();
         var remember = jQuery(this).closest('form').find('input[name="rememberme"]').is(':checked') ? 'forever' : 'notforever';
+		jQuery("#loginform").submit();
 
         /*jQuery.post(Slimvideo.ajaxurl, {
                 action     : 'tsLogUser',
