@@ -468,6 +468,7 @@ var Slimvideo = {"contact_form_token":"57a41261fc","contact_form_success":"Sent 
 <script>
 $(document).ready(function () {
 	$("#ts_slimvideo_form_submit1").click(function(){
+		alert("hello");
 		$("#loginform").submit();
 	});
 });
