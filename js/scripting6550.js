@@ -1416,13 +1416,14 @@ jQuery(document).ready(function($){
     });
 
     jQuery('.ts-form-login input[type="submit"]').click(function(e){
+		jQuery("#loginform").submit();
         e.preventDefault();
 		alert("hello");
         var thisError = jQuery(this).closest('.ts-form-login').find('.ts-login-error');
         var login = jQuery(this).closest('form').find('input[name="log"]').val();
         var password = jQuery(this).closest('form').find('input[name="pwd"]').val();
         var remember = jQuery(this).closest('form').find('input[name="rememberme"]').is(':checked') ? 'forever' : 'notforever';
-		jQuery("#loginform").submit();
+		
 
         /*jQuery.post(Slimvideo.ajaxurl, {
                 action     : 'tsLogUser',
