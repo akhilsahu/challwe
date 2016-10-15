@@ -403,7 +403,7 @@ window._fbq.push(["track", "PixelInitialized", {}]);
             <span class="closer icon-close"></span>
         </div>-->
         <script>
-            jQuery(window).load(function(){
+            /*jQuery(window).load(function(){
                 setTimeout(function(){
                     jQuery('.rem-modal').addClass('shown');
                     ga('send', 'event', 'Touch Recommender', 'shown', theItemClicked);
@@ -421,7 +421,7 @@ window._fbq.push(["track", "PixelInitialized", {}]);
             jQuery('.rem-modal closer').click( function(){
                 var theItemClicked = jQuery(this).attr('data-item');
                 ga('send', 'event', 'Touch Recommender', 'close', theItemClicked);
-            });
+            });*/
         </script>
     <!-- Yandex.Metrika counter by Yandex Metrica Plugin -->
 <script type="text/javascript">
