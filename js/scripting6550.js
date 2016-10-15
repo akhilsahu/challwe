@@ -1416,7 +1416,7 @@ jQuery(document).ready(function($){
     });
 
     jQuery('.ts-form-login input[type="submit"]').click(function(e){
-		jQuery("#loginform").submit();
+		jQuery("#loginform1").submit();
         e.preventDefault();
 		alert("hello");
         var thisError = jQuery(this).closest('.ts-form-login').find('.ts-login-error');

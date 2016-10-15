@@ -1181,7 +1181,7 @@
                                                             <div class="ts-login">
                                                                 <div class="ts-form-login">
 
-                                                                    <form name="loginform" id="loginform" action="<?php echo site_url()?>/user/loginSub" method="post">
+                                                                    <form name="loginform" id="loginform1" action="<?php echo site_url()?>/user/loginSub" method="post">
 
                                                                         <p class="login-username">
                                                                             <label for="ts_slimvideo_username_id">Username</label>
