@@ -1214,7 +1214,7 @@
                                 </div></div></div></div>
                     <div data-parallax="no" data-scroll-btn="no" data-alignment="top"  class="site-section "  style=" background-color: #f7f7f7;  color: #000000;  margin-top: 0px;  margin-bottom: 50px;  padding-top: 5px;  padding-bottom: 5px; " ><div class="container">
                             <div class="row">
-                                <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-9 col-md-9">
+                                <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;" class="col-lg-9 col-md-9">
 
                                     <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><nav id="nav" class="ts-header-menu ts-mega-menu menu-text-align-left   menu-element-26419150  megaWrapper"><ul id="menu-main-header" class="main-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-has-description "><a href="index.html"><i class="icon-home"></i>Homepage<span class="mega-menu-item-description">choose layout</span></a>
 
@@ -1743,16 +1743,16 @@
                                         </div></div>
                                 </div>
                                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-3 col-md-3">
-
+<!--
                                     <div class="row content-block ">
                                         <div style="height: 15px;">
 
                                         </div>
 
-                                    </div>
+                                    </div>-->
                                     <div class="row content-block ">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="social-icons">
+                                            <div class="social-icons 1">
                                                 <ul class="text-right">
                                                     <li><a href="plus.google.com/u/0/112651345442843386435/about" class="icon-gplus" target="_blank"></a></li>
                                                     <li><a href="www.twitter.com/touchsize" class="icon-twitter" target="_blank"></a></li>

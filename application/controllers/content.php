@@ -32,12 +32,16 @@ class Content extends CI_Controller {
         $data['page'] = 'video-detail';
         $this->load->view('artist/page', $data);
     }
-    function account() {
-        $data['page'] = 'profile-page';
+    function contactus() {
+        $data['page'] = 'contact_us';
         $this->load->view('artist/page', $data);
     }
-    function productlist() {
-        $data['page'] = 'product-list';
+    function profilepage() {
+        $data['page'] = 'profilepage';
+        $this->load->view('artist/page', $data);
+    }
+    function allchallenges() {
+        $data['page'] = 'challenge-list';
         $this->load->view('artist/page', $data);
     }
 

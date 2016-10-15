@@ -74,7 +74,7 @@
 					<div class="block-title block-title-with-subtitle-above">
 						<div class="block-title-container">
 							
-							<span class="block-title-description" style="color: #cd1c22">STAFF PICKED</span><h4 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>Featured articles</h4>
+							<span class="block-title-description" style="color: #CD1C22">STAFF PICKED</span><h4 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>Featured Challange</h4>
 						</div>
 					</div>
 				</div></div><div class="row content-block "><div style="height: 15px;"></div></div><div class="row content-block "><section class="ts-thumbnail-view cols-by-4 ">	<div data-id="1"  class="item col-lg-3 col-md-3 col-sm-12 ">
@@ -207,7 +207,7 @@
 									
 									<div class="row content-block "><div style="text-align:center" class="col-lg-12 ts-image-element"><a target="_blank" href="http://touchsize.com/"><img  alt="" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/slim-red-banner.jpg" /></a></div></div><div class="row content-block "><div style="height: 40px;"></div></div><div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_most_shared-2" class="widget ts_widget  widget_most_shared"><div class="widget-content">			
 			
-		<h6 class="widget-title ts_sidebar_title">Most shared posts</h6><div class="widget-delimiter"></div>                <ul class="widget-items row  widget-columns-2 widget-has-image">                    <li class="col-lg-6 col-md-6 col-sm-12">
+		<h6 class="widget-title ts_sidebar_title">Most shared Challange</h6><div class="widget-delimiter"></div>                <ul class="widget-items row  widget-columns-2 widget-has-image">                    <li class="col-lg-6 col-md-6 col-sm-12">
 						<article class="row">
 										
 								<div class="col-lg-12 col-md-12 col-sm-4">
@@ -255,7 +255,7 @@
 						<article class="row">
 										
 								<div class="col-lg-12 col-md-12 col-sm-4">
-	                                <a  class="entry-img" href="#"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/DSC1215513-450x300.jpg" class="attachment-grid size-grid" alt="DSC121551" srcset="images/DSC1215513-450x300.jpg 450w, images/DSC1215513-300x200.jpg 300w, images/DSC1215513-1024x683.jpg 1024w, images/DSC1215513.jpg 1600w" sizes="(max-width: 450px) 100vw, 450px" /></a>
+	                                <a  class="entry-img" href="#"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/DSC1215513-450x300.jpg" class="attachment-grid size-grid" alt="DSC121551" /></a>
 	                            </div>
 	                                                    <div class="col-lg-12 col-md-12 col-sm-8">
                             	                            	<div class="entry-content">
@@ -302,7 +302,7 @@
 									<div class="row content-block "><div class="col-lg-12">
 					<div class="block-title block-title-simpleleft">
 						<div class="block-title-container">
-							<h4 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>Music</h4><span class="block-title-description" style="color: #CD1C22">videos</span>
+							<h4 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>New Arrival</h4><span class="block-title-description" style="color: #CD1C22">Challange</span>
 							
 						</div>
 					</div>
@@ -366,9 +366,9 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 
 Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I never got a chance to tell you. About all that talk about screwing up future events, the...							</div>
 																			<div class="entry-section-footer">
-								<div class="entry-author">
+								<div class="entry-author 2">
 									<a class="author-avatar" href="#">
-										<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />									</a>
+										<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/avatars/171/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />									</a>
 									<ul class="entry-meta">
 										<li class="entry-author-name">
 											<a href="#">
@@ -463,7 +463,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 											<div class="entry-section-footer">
 							<div class="entry-author">
 								<a class="author-avatar" href="#">
-									<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of James Wilder" />								</a>
+									<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/avatars/172/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of James Wilder" />								</a>
 								<ul class="entry-meta">
 									<li class="entry-author-name">
 										<a href="#">
@@ -500,9 +500,9 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 
 Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I never got a chance to tell you. About all that talk about screwing up future e...					</div>
 											<div class="entry-section-footer">
-							<div class="entry-author">
+							<div class="entry-author 1">
 								<a class="author-avatar" href="#">
-									<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />								</a>
+									<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/avatars/171/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />								</a>
 								<ul class="entry-meta">
 									<li class="entry-author-name">
 										<a href="#">
@@ -541,7 +541,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 											<div class="entry-section-footer">
 							<div class="entry-author">
 								<a class="author-avatar" href="#">
-									<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of James Wilder" />								</a>
+									<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/avatars/172/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of James Wilder" />								</a>
 								<ul class="entry-meta">
 									<li class="entry-author-name">
 										<a href="#">
@@ -606,7 +606,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 									<div class="row content-block "><div class="col-lg-12">
 					<div class="block-title block-title-simplecenter">
 						<div class="block-title-container">
-							<h4 class="the-title" style="color: #000000"><i class="icon-noicon"></i>Top authors</h4><span class="block-title-description" style="color: #adadad">that uploaded their videos</span>
+							<h4 class="the-title" style="color: #000000"><i class="icon-noicon"></i>Top Challenger</h4><span class="block-title-description" style="color: #adadad">that uploaded their videos</span>
 							
 						</div>
 					</div>
@@ -651,7 +651,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
                 <article>
                     <div class="image-holder">
                         <a href="#">
-                            <img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/1aa72304414d9385276ac4887944004e-bpfull.png" class="avatar user-170-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />                        </a>
+                            <img src="http://www.gravatar.com/avatar/0b262721d8bda9ad9f074c911f7cf253?s=150&r=g&d=mm" class="avatar user-170-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />                        </a>
                     </div>
                     <div class="entry-section">
                         <div class="entry-title">
@@ -669,7 +669,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
                 <article>
                     <div class="image-holder">
                         <a href="#">
-                            <img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/1a3bbeb4471224d1297fdeaefbff2a27-bpfull.jpg" class="avatar user-171-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />                        </a>
+                            <img src="http://www.gravatar.com/avatar/0b262721d8bda9ad9f074c911f7cf253?s=150&r=g&d=mm" class="avatar user-171-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />                        </a>
                     </div>
                     <div class="entry-section">
                         <div class="entry-title">
@@ -685,7 +685,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
             </div>
             </div></div>
 								</div></div></div></div>
-<div data-parallax="no" data-scroll-btn="no" data-alignment="top"  class="site-section  has-row-mask "  style=" background-color: #3a3a3a;  color: #ffffff;  background-image:url('images/maxresdefault6.jpg') ;  background-position: left center;  background-attachment: scroll;  background-repeat: repeat;  margin-top: 0px;  margin-bottom: 50px;  padding-top: 60px;  padding-bottom: 60px;  background-size: cover; " ><div class="row-mask" style="
+<div data-parallax="no" data-scroll-btn="no" data-alignment="top"  class="site-section  has-row-mask "  style=" background-color: #3a3a3a;  color: #ffffff;  background-image:url('<?php echo base_url(); ?>images/maxresdefault6.jpg') ;  background-position: left center;  background-attachment: scroll;  background-repeat: repeat;  margin-top: 0px;  margin-bottom: 50px;  padding-top: 60px;  padding-bottom: 60px;  background-size: cover; " ><div class="row-mask" style="
 							background: #5C258D;
 							background: -moz-linear-gradient(left, #5C258D 0%,  #4389A2 0%, #5C258D 100%, #4389A2 100%);
 							background: -webkit-gradient(linear, left top, right top, color-stop(0%,#5C258D), color-stop(0%, #4389A2), color-stop(100%,#5C258D), color-stop(100%,#4389A2));
@@ -699,7 +699,8 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 					<div class="block-title block-title-with-subtitle-above">
 						<div class="block-title-container">
 							
-							<span class="block-title-description" style="color: #cd1c22">Really cool videos</span><h2 class="the-title" style="color: #ffffff"><i class="icon-noicon"></i>What we recommend</h2>
+							<!--<span class="block-title-description" style="color: #CD1C22">Really cool videos</span>-->
+                                                        <h2 class="the-title" style="color: #ffffff"><i class="icon-noicon"></i>What we recommend</h2>
 						</div>
 					</div>
 				</div></div><div class="row content-block "><div style="height: 30px;"></div></div><div class="row content-block "><div data-scroll="false" class="mosaic-view  mosaic-with-gutter  mosaic-square">
@@ -819,7 +820,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 					</div>
 					<div class="entry-meta-author">
 						<a class="author-avatar" href="#">
-							<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-20 photo" width="20" height="20" alt="Profile photo of James Wilder" />						</a>
+							<img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/avatars/172/800f15459abaaefe555129d97e0eaab7-bpthumb.jpg" class="avatar user-172-avatar avatar-20 photo" width="20" height="20" alt="Profile photo of James Wilder" />						</a>
 						<a href="#">James Wilder</a>
 					</div>
 	 			</div>
@@ -864,7 +865,7 @@ Hello. Doc, Doc. Oh, no. You're alive. Bullet proof vest, how did you know, I ne
 									<div class="row content-block "><div class="col-lg-12">
 					<div class="block-title block-title-simpleleft">
 						<div class="block-title-container">
-							<h4 class="the-title" style="color: #CD5020"><i class="icon-noicon"></i>Top rated videos</h4><span class="block-title-description" style="color: #9da4aa">Check out now</span>
+							<h4 class="the-title" style="color: #CD5020"><i class="icon-noicon"></i>Top Challenge</h4><span class="block-title-description" style="color: #9da4aa">Check out now</span>
 							
 						</div>
 					</div>

@@ -7,7 +7,7 @@
                             <div class="row content-block "><div class="col-lg-12">
                                     <div class="block-title block-title-simpleleft">
                                         <div class="block-title-container">
-                                            <h1 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>About us</h1><span class="block-title-description" style="color: #cd1c22">page</span>
+                                            <h1 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>About us</h1><span class="block-title-description" style="color: #CD1C22">page</span>
 
                                         </div>
                                     </div>
@@ -20,7 +20,7 @@
                             <div class="row content-block "><div class="col-lg-12">
                                     <div class="block-title block-title-simpleleft">
                                         <div class="block-title-container">
-                                            <h5 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i> Who We Are</h5><span class="block-title-description" style="color: #cd1c22">and what we do</span>
+                                            <h5 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i> Who We Are</h5><span class="block-title-description" style="color: #CD1C22">and what we do</span>
 
                                         </div>
                                     </div>
@@ -33,7 +33,7 @@
                             <div class="row content-block "><div class="col-lg-12">
                                     <div class="block-title block-title-simpleleft">
                                         <div class="block-title-container">
-                                            <h5 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>About Our Team</h5><span class="block-title-description" style="color: #cd1c22">and who works for us</span>
+                                            <h5 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>About Our Team</h5><span class="block-title-description" style="color: #CD1C22">and who works for us</span>
 
                                         </div>
                                     </div>
@@ -46,7 +46,7 @@
                             <div class="row content-block "><div class="col-lg-12">
                                     <div class="block-title block-title-simpleleft">
                                         <div class="block-title-container">
-                                            <h5 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>Check out our portfolio</h5><span class="block-title-description" style="color: #cd1c22">and what we did already</span>
+                                            <h5 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>Check out our portfolio</h5><span class="block-title-description" style="color: #CD1C22">and what we did already</span>
 
                                         </div>
                                     </div>

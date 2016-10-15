@@ -1,5 +1,9 @@
+<link rel='stylesheet' href='<?php echo base_url(); ?>assets/includes/js/mediaelement/mediaelementplayer.min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='<?php echo base_url(); ?>assets/includes/js/mediaelement/wp-mediaelement.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/includes/js/mediaelement/mediaelement-and-player.min.js'></script>
+<script type='text/javascript' src='<?php echo base_url(); ?>assets/includes/js/mediaelement/wp-mediaelement.min.js'></script>
 <div class="container text-center ts-advertising-container">
-    <a href="http://touchsize.com/?utm_medium=Banner+slim"><img src="../../wp-content/uploads/sites/28/2015/04/728x90-slim.jpg" alt="SlimVideo" /></a>		</div>
+    <a href="http://touchsize.com/?utm_medium=Banner+slim"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/728x90-slim.jpg" alt="SlimVideo" /></a>		</div>
 <!-- // End of Ad Area 1 -->
 <section id="main">
     <div class="ts-breadcrumbs breadcrumbs-single-post container">
@@ -17,7 +21,7 @@
                                 <div id="videoframe" class="video-frame">
                                     <div class="video-container">
                                             <div style="width: 800px; " class="wp-video"><!--[if lt IE 9]><script>document.createElement('video');</script><![endif]-->
-                                            <video class="wp-video-shortcode" id="video-99-1" width="800" height="334" poster="../../wp-content/uploads/sites/28/2015/04/DSC1215513-1140x760.jpg" preload="metadata" controls="controls"><source type="video/mp4" src="../../wp-content/uploads/sites/28/2015/04/flowers230a.mp4?_=1" /><a href="../../wp-content/uploads/sites/28/2015/04/flowers.mp4">http://demo.touchsize.com/slimvideo/wp-content/uploads/sites/28/2015/04/flowers.mp4</a></video></div>										</div>
+                                            <video class="wp-video-shortcode" id="video-99-1" width="800" height="334" poster="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/DSC1215513-1140x760.jpg" preload="metadata" controls="controls"><source type="video/mp4" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/flowers230a.mp4?_=1" /><a href="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/flowers.mp4">http://demo.touchsize.com/slimvideo/wp-content/uploads/sites/28/2015/04/flowers.mp4</a></video></div>										</div>
                                 </div>
 
                             </div>
@@ -32,7 +36,7 @@
                             <div class="post-meta">
                                 <div class="post-author-avatar">
                                     <a class="author-avatar" href="../../members/jessica/index.html">
-                                        <img src="../../wp-content/uploads/sites/28/avatars/171/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />										</a>x
+                                        <img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/avatars/171/1a3bbeb4471224d1297fdeaefbff2a27-bpthumb.jpg" class="avatar user-171-avatar avatar-40 photo" width="40" height="40" alt="Profile photo of Jessica Beans" />										</a>x
                                 </div>
                                 <div class="post-author-content">
                                     <div class="post-author-name">
@@ -152,12 +156,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h4 class="related-title">Related posts</h4>
+                        <h4 class="related-title">Related Challenge</h4>
                         <div class="row">
                             <section class="ts-thumbnail-view cols-by-2 ">	<div data-id="1"  class="item col-lg-6 col-md-6 col-sm-12 ">
                                     <article data-title-position="over-image" class="post-103 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music" >
                                         <div class="image-holder">
-                                            <div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-103" title="Like this"><span class="touchsize-likes-count icon-heart">441</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="../olly-murs-heart-skips-a-beat/index.html"><img src="../../wp-content/uploads/sites/28/2015/04/maxresdefault16-450x250.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" /></a>
+                                            <div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-103" title="Like this"><span class="touchsize-likes-count icon-heart">441</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="../olly-murs-heart-skips-a-beat/index.html"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault16-450x250.jpg" alt="Olly Murs &#8211; Heart Skips a Beat" /></a>
                                             <a href="../olly-murs-heart-skips-a-beat/index.html" class="view-video-play">
                                                 <i class="icon-play"></i>
                                             </a>
@@ -188,7 +192,7 @@
                                 <div data-id="2"  class="item col-lg-6 col-md-6 col-sm-12 ">
                                     <article data-title-position="over-image" class="post-95 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music" >
                                         <div class="image-holder">
-                                            <div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-95" title="Like this"><span class="touchsize-likes-count icon-heart">197</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="../check-my-valentine/index.html"><img src="../../wp-content/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-6.05.01-PM-450x250.jpg" alt="Check my Valentine" /></a>
+                                            <div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-95" title="Like this"><span class="touchsize-likes-count icon-heart">197</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="../check-my-valentine/index.html"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-6.05.01-PM-450x250.jpg" alt="Check my Valentine" /></a>
                                             <a href="../check-my-valentine/index.html" class="view-video-play">
                                                 <i class="icon-play"></i>
                                             </a>
@@ -219,7 +223,7 @@
                                 <div data-id="3"  class="item col-lg-6 col-md-6 col-sm-12 ">
                                     <article data-title-position="over-image" class="post-88 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-music" >
                                         <div class="image-holder">
-                                            <div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-88" title="Like this"><span class="touchsize-likes-count icon-heart">375</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="../wont-look-back/index.html"><img src="../../wp-content/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#8217;t look back" /></a>
+                                            <div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-88" title="Like this"><span class="touchsize-likes-count icon-heart">375</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="../wont-look-back/index.html"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#8217;t look back" /></a>
                                             <a href="../wont-look-back/index.html" class="view-video-play">
                                                 <i class="icon-play"></i>
                                             </a>
@@ -250,7 +254,7 @@
                                 <div data-id="4"  class="item col-lg-6 col-md-6 col-sm-12 ">
                                     <article data-title-position="over-image" class="post-85 video type-video status-publish has-post-thumbnail hentry tag-slimvideo tag-theme tag-top-video-theme tag-touchsize tag-videotheme tag-wordpress-themes videos_categories-funny" >
                                         <div class="image-holder">
-                                            <div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-85" title="Like this"><span class="touchsize-likes-count icon-heart">144</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="../just-tell-me-something/index.html"><img src="../../wp-content/uploads/sites/28/2015/04/maxresdefault15-450x250.jpg" alt="Just tell me something" /></a>
+                                            <div class="entry-meta-likes"><a href="#" class="touchsize-likes" data-id="touchsize-likes-85" title="Like this"><span class="touchsize-likes-count icon-heart">144</span> <span class="touchsize-likes-postfix"></span></a></div>									<a href="../just-tell-me-something/index.html"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault15-450x250.jpg" alt="Just tell me something" /></a>
                                             <a href="../just-tell-me-something/index.html" class="view-video-play">
                                                 <i class="icon-play"></i>
                                             </a>
@@ -286,7 +290,7 @@
 
         <!-- Ad area 2 -->
         <div class="container text-center ts-advertising-container">
-            <a href="http://touchsize.com/?utm_medium=Banner+slim"><img src="../../wp-content/uploads/sites/28/2015/04/728x90-slim.jpg" alt="SlimVideo" /></a>	</div>
+            <a href="http://touchsize.com/?utm_medium=Banner+slim"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/728x90-slim.jpg" alt="SlimVideo" /></a>	</div>
         <!-- // End of Ad Area 2 -->
 
         <div class="single-video-comments">
@@ -313,3 +317,6 @@
         </div>
     </div>
 </section>
+<script>
+jQuery("body").addClass("single-video");
+</script>
