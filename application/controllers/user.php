@@ -83,7 +83,6 @@ class User extends CI_Controller{
 	}
 
 	function loginSub(){
-		echo "hello";exit;
 		$this->load->model('user_model');
 		$this->load->library('user_agent');		
         $this->form_validation->set_rules('txt_email', 'Email', 'required');
