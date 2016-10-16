@@ -117,6 +117,7 @@
 															</ul>
 														</div>
                                                     </div>
+												</div>
 												<?php }else{?>
 												<div class="user-mini-avatar">
 													<a href="#"><i class="icon-user"></i></a>
@@ -127,8 +128,8 @@
 												</div>
                                                 <?php } ?>
                                                    
-                                                    <div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>
-                                                </div>
+                                                    <!--<div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>-->
+                                                
                                             </div>
 
                                             <div class="modal fade ts-user-login-modal" id="ts-login-modal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
