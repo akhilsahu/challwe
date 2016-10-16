@@ -108,9 +108,10 @@
                                                     <div class="ts-login-button" style="cursor: pointer;"><span data-toggle="dropdown" href="#">User Name</span>
                                                       <span class="caret"></span>
                                                       <ul class="dropdown-menu">
-                                                          <li><a href="#">profile</a></li>
-                                                          <li><a href="#">notification</a></li>
-                                                          <li><a href="#" style="font-weight: bold;">Logout</a></li>
+                                                           <li><a href="#"><i class=""></i>profile</a></li>
+                                                          <li><a href="#"><i class=""></i>notification</a></li>
+                                                          <li><a href="#"><i class=""></i>privacy</a></li>
+                                                          <li><a href="#" style="font-weight: bold;"><i class=""></i>Logout</a></li>
                                                         </ul>
                                                     </div>
                                                     </div>
