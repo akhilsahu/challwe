@@ -10,13 +10,13 @@
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="xmlrpc.php" />
         <title>Welcome to official website Challwe</title>
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
 
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/admin-bar.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/dashicons.min.css' type='text/css' media='all' />
@@ -100,11 +100,8 @@
                                                     <a href="#"><i class="icon-user"></i></a>
                                                 </div>
                                                 <div class="user-info">
-                                                    <?php $i = 1; if($i == 0): ?>
-                                                    <div class="ts-login-button 1"><a id="ts-show-login-modal" href="#">Login</a></div>
-                                                    <div class="ts-register-button"><a href="#">or <span>register</span></a></div>
-                                                    <?php endif; ?>
-                                                    <div class="dropdown">
+                                                    <?php if ($user['logged_in']) { ?>
+													 <div class="dropdown">
                                                     <div class="ts-login-button" style="cursor: pointer;"><span data-toggle="dropdown" href="#">User Name</span>
                                                       <span class="caret"></span>
                                                       <ul class="dropdown-menu">
@@ -115,6 +112,11 @@
                                                         </ul>
                                                     </div>
                                                     </div>
+													<?php }else{?>
+                                                    <div class="ts-login-button 1"><a id="ts-show-login-modal" href="#">Login</a></div>
+                                                    <div class="ts-register-button"><a href="#">or <span>register</span></a></div>
+                                                    <?php } ?>
+                                                   
                                                     <div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>
                                                 </div>
                                             </div>
