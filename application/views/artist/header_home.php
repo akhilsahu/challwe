@@ -108,12 +108,12 @@
 															<span class="caret"></span>
 															<ul class="dropdown-menu">
 																<li><a href="#"><i class=""></i>profile</a></li>
-																<li><a href="<?php echo site_url(); ?>/wallet/mytransections"><i class=""></i>Wallet (<?php echo $user['int_challwe_coins']; ?>)</a></li>
-																<li><a href="<?php echo site_url() ?>/artist/dashboard"><i class=""></i>My Account</a></li>
+																<li><a href="<?php echo site_url(); ?>/wallet/mytransections"><i class="icon-user"></i>Wallet (<?php echo $user['int_challwe_coins']; ?>)</a></li>
+																<li><a href="<?php echo site_url() ?>/artist/dashboard"><i class="icon-user"></i>My Account</a></li>
 																<?php if ($user['login_type'] == 'web') { ?>
-																	<li><a href="<?php echo site_url() ?>/user/signoutArt" style="font-weight: bold;"><i class=""></i>Logout</a></li>
+																	<li><a href="<?php echo site_url() ?>/user/signoutArt" style="font-weight: bold;"><i class="icon-right-arrow"></i>Logout</a></li>
 																<?php }else{ ?>
-																	<li><a href="<?php echo site_url() ?>/user/facebooklogout" style="font-weight: bold;"><i class=""></i>Logout</a></li>
+																	<li><a href="<?php echo site_url() ?>/user/facebooklogout" style="font-weight: bold;"><i class="icon-right-arrow"></i>Logout</a></li>
 																<?php }?>
 															</ul>
 														</div>
