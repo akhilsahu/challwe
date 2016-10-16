@@ -61,7 +61,7 @@
 
                                     <div class="row content-block ">
                                         <div class="col-lg-12 text-left" style="max-width: 120px;">
-                                            <a href="index.html" class="logo">
+                                            <a href="<?php echo site_url(); ?>" class="logo">
                                                 <img src="<?php echo base_url(); ?>assets/images/challwe-logo.png" alt="Slimvideo" style="width: 195px; height: auto;"/>
                                             </a>
                                         </div>
