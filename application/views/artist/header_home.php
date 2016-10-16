@@ -1,3 +1,4 @@
+<?php print_r($user); ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     <head>
@@ -10,13 +11,13 @@
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="xmlrpc.php" />
         <title>Welcome to official website Challwe</title>
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
 
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/admin-bar.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/dashicons.min.css' type='text/css' media='all' />
@@ -96,28 +97,40 @@
                                     <div class="row content-block "><div class="col-lg-12">
 
                                             <div class="ts-user-header-profile align-right">
+												<?php if ($user['logged_in']) { ?>
                                                 <div class="user-mini-avatar">
-                                                    <a href="#"><i class="icon-user"></i></a>
+                                                    <a href="#"><img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" class="icon_user"></a>
                                                 </div>
                                                 <div class="user-info">
-                                                    <?php $i = 1; if($i == 0): ?>
+                                                    <div class="dropdown">
+														<div class="ts-login-button" style="cursor: pointer;">
+															<span data-toggle="dropdown" href="#"><?php echo $user['txt_fname'].$user['txt_lname'] ?></span>
+															<span class="caret"></span>
+															<ul class="dropdown-menu">
+																<li><a href="#"><i class=""></i>profile</a></li>
+																<li><a href="<?php echo site_url(); ?>/wallet/mytransections"><i class=""></i>Wallet (<?php echo $user['int_challwe_coins']; ?>)</a></li>
+																<li><a href="<?php echo site_url() ?>/artist/dashboard"><i class=""></i>My Account</a></li>
+																<?php if ($user['login_type'] == 'web') { ?>
+																	<li><a href="<?php echo site_url() ?>/user/signoutArt" style="font-weight: bold;"><i class=""></i>Logout</a></li>
+																<?php }else{ ?>
+																	<li><a href="<?php echo site_url() ?>/user/facebooklogout" style="font-weight: bold;"><i class=""></i>Logout</a></li>
+																<?php }?>
+															</ul>
+														</div>
+                                                    </div>
+												</div>
+												<?php }else{?>
+												<div class="user-mini-avatar">
+													<a href="#"><i class="icon-user"></i></a>
+												</div>
+												<div class="user-info">
                                                     <div class="ts-login-button 1"><a id="ts-show-login-modal" href="#">Login</a></div>
                                                     <div class="ts-register-button"><a href="#">or <span>register</span></a></div>
-                                                    <?php endif; ?>
-                                                    <div class="dropdown">
-                                                        <div class="ts-login-button" style="cursor: pointer;"><span data-toggle="dropdown" href="#">User Name</span>
-                                                            <span class="caret"></span>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a href="#"><i class="icon-user"></i>profile</a></li>
-                                                                <li><a href="#"><i class="icon-firewall"></i>notification</a></li>
-                                                                <li><a href="#"><i class="icon-protected"></i>privacy</a></li>
-                                                                <li><a href="#"><i class="icon-settings"></i>settings</a></li>
-                                                                <li><a href="#" style="font-weight: bold;"><i class="icon-right-arrow"></i>Logout</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>
-                                                </div>
+												</div>
+                                                <?php } ?>
+                                                   
+                                                    <!--<div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>-->
+                                                
                                             </div>
 
                                             <div class="modal fade ts-user-login-modal" id="ts-login-modal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
@@ -134,19 +147,16 @@
                                                                     <form name="loginform" id="loginform" action="<?php echo site_url() ?>/user/loginSub" method="post">
 
                                                                         <p class="login-username">
-                                                                            <label for="ts_slimvideo_username_id">Username</label>
-                                                                            <input type="text" name="log" id="ts_slimvideo_username_id" class="input" value="" size="20" />
+                                                                            <label for="ts_slimvideo_username_id">Email</label>
+                                                                            <input type="text" name="log" id="txt_email" name="txt_email" class="input" value="" />
                                                                         </p>
                                                                         <p class="login-password">
                                                                             <label for="ts_slimvideo_username_pass">Password</label>
-                                                                            <input type="password" name="pwd" id="ts_slimvideo_username_pass" class="input" value="" size="20" />
+                                                                            <input type="password" name="pwd" id="txt_password" name="txt_password" class="input" value="" />
                                                                         </p>
 
-                                                                        <p class="login-remember"><label><input name="rememberme" type="checkbox" id="ts_slimvideo_username_remember" value="forever" /> Remember Me</label></p>
+                                                                        <!--<p class="login-remember"><label><input name="rememberme" type="checkbox" id="ts_slimvideo_username_remember" value="forever" /> Remember Me</label></p>-->
                                                                         <p class="login-submit">
-                                                                            <a href="register/index.html" style="color: #e10d0d; margin-right: 10px;">
-                                                                                Register
-                                                                            </a>
                                                                             <input type="submit" name="submit" id="ts_slimvideo_form_submit1" class="button-primary" value="Log In" />
                                                                         </p>
 
