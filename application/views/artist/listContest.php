@@ -46,7 +46,6 @@
 
 			<!-- Item #1 -->
 			<?php 
-			print_r($list);exit;
 			foreach($list as $val){
 
 
