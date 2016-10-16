@@ -87,12 +87,15 @@ class User extends CI_Controller{
 		$this->load->library('user_agent');		
         $this->form_validation->set_rules('txt_email', 'Email', 'required');
         $this->form_validation->set_rules('txt_password', 'Password', 'required');
+		echo "hello";
         if($this->form_validation->run())
-        {		
+        {
+			echo "11";
         	$formdata=$this->input->post();
 			$status_array=$this->user_model->verifyArtist($formdata);
 			if(count($status_array)>0)
 			{
+				echo "22";
 				$status_array['logged_in']="1";	
 				$status_array['int_user_type']="2";
 				$status_array['int_user_type_code']="artist";
@@ -102,10 +105,11 @@ class User extends CI_Controller{
 			}
 			else
 			{
-				redirect($this->agent->referrer());
+				//redirect($this->agent->referrer());
 			}
         }else{
-        	redirect($this->agent->referrer());
+			echo "33";
+        	//redirect($this->agent->referrer());
         }
 	}
 
