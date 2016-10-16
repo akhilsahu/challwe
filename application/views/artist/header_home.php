@@ -96,26 +96,36 @@
                                     <div class="row content-block "><div class="col-lg-12">
 
                                             <div class="ts-user-header-profile align-right">
+												<?php if ($user['logged_in']) { ?>
                                                 <div class="user-mini-avatar">
-                                                    <a href="#"><i class="icon-user"></i></a>
+                                                    <a href="#"><img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" class="icon_user"></a>
                                                 </div>
                                                 <div class="user-info">
-                                                    <?php if ($user['logged_in']) { ?>
-													 <div class="dropdown">
-                                                    <div class="ts-login-button" style="cursor: pointer;"><span data-toggle="dropdown" href="#">User Name</span>
-                                                      <span class="caret"></span>
-                                                      <ul class="dropdown-menu">
-                                                           <li><a href="#"><i class=""></i>profile</a></li>
-                                                          <li><a href="#"><i class=""></i>notification</a></li>
-                                                          <li><a href="#"><i class=""></i>privacy</a></li>
-                                                          <li><a href="#" style="font-weight: bold;"><i class=""></i>Logout</a></li>
-                                                        </ul>
+                                                    <div class="dropdown">
+														<div class="ts-login-button" style="cursor: pointer;">
+															<span data-toggle="dropdown" href="#"><?php echo $user['txt_fname'].$user['txt_lname'] ?></span>
+															<span class="caret"></span>
+															<ul class="dropdown-menu">
+																<li><a href="#"><i class=""></i>profile</a></li>
+																<li><a href="<?php echo site_url(); ?>/wallet/mytransections"><i class=""></i>Wallet (<?php echo $user['int_challwe_coins']; ?>)</a></li>
+																<li><a href="<?php echo site_url() ?>/artist/dashboard"><i class=""></i>My Account</a></li>
+																<?php if ($user['login_type'] == 'web') { ?>
+																	<li><a href="<?php echo site_url() ?>/user/signoutArt" style="font-weight: bold;"><i class=""></i>Logout</a></li>
+																<?php }else{ ?>
+																	<li><a href="<?php echo site_url() ?>/user/facebooklogout" style="font-weight: bold;"><i class=""></i>Logout</a></li>
+																<?php }?>
+															</ul>
+														</div>
                                                     </div>
-                                                    </div>
-													<?php }else{?>
+												<?php }else{?>
+												<div class="user-mini-avatar">
+													<a href="#"><i class="icon-user"></i></a>
+												</div>
+												<div class="user-info">
                                                     <div class="ts-login-button 1"><a id="ts-show-login-modal" href="#">Login</a></div>
                                                     <div class="ts-register-button"><a href="#">or <span>register</span></a></div>
-                                                    <?php } ?>
+												</div>
+                                                <?php } ?>
                                                    
                                                     <div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>
                                                 </div>
