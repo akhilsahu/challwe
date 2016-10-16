@@ -21,6 +21,7 @@ class Content extends CI_Controller {
         $data['page_title'] = 'Industry Directory';
         //$data['page']='home';
         $data['page'] = 'home_content';
+		print_r($data);exit;
         $this->load->view('artist/page', $data);
     }
 
