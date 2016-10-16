@@ -147,19 +147,16 @@
                                                                     <form name="loginform" id="loginform" action="<?php echo site_url() ?>/user/loginSub" method="post">
 
                                                                         <p class="login-username">
-                                                                            <label for="ts_slimvideo_username_id">Username</label>
-                                                                            <input type="text" name="log" id="ts_slimvideo_username_id" class="input" value="" size="20" />
+                                                                            <label for="ts_slimvideo_username_id">Email</label>
+                                                                            <input type="text" name="log" id="txt_email" name="txt_email" class="input" value="" />
                                                                         </p>
                                                                         <p class="login-password">
                                                                             <label for="ts_slimvideo_username_pass">Password</label>
-                                                                            <input type="password" name="pwd" id="ts_slimvideo_username_pass" class="input" value="" size="20" />
+                                                                            <input type="password" name="pwd" id="txt_password" name="txt_password" class="input" value="" />
                                                                         </p>
 
-                                                                        <p class="login-remember"><label><input name="rememberme" type="checkbox" id="ts_slimvideo_username_remember" value="forever" /> Remember Me</label></p>
+                                                                        <!--<p class="login-remember"><label><input name="rememberme" type="checkbox" id="ts_slimvideo_username_remember" value="forever" /> Remember Me</label></p>-->
                                                                         <p class="login-submit">
-                                                                            <a href="register/index.html" style="color: #e10d0d; margin-right: 10px;">
-                                                                                Register
-                                                                            </a>
                                                                             <input type="submit" name="submit" id="ts_slimvideo_form_submit1" class="button-primary" value="Log In" />
                                                                         </p>
 
