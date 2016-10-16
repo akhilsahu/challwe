@@ -84,7 +84,9 @@ class User extends CI_Controller{
 
 	function loginSub(){
 		$this->load->model('user_model');
-		$this->load->library('user_agent');		
+		$this->load->library('user_agent');
+		$formdata=$this->input->post();			
+		print_r($formdata);exit;
         $this->form_validation->set_rules('txt_email', 'Email', 'required');
         $this->form_validation->set_rules('txt_password', 'Password', 'required');
 		echo "hello";
