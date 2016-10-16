@@ -175,7 +175,7 @@
 
                                     <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><nav id="nav" class="ts-header-menu ts-mega-menu menu-text-align-left   menu-element-26419150  megaWrapper"><ul id="menu-main-header" class="main-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="<?php echo site_url(); ?>"><i class="icon-home"></i>Homepage</a>
                                                     </li>
-                                                    <li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-videos_categories menu-item-has-description "><a href="videos_categories/music/index.html"><i class="icon-category"></i>Challange</a><div class="ts_is_mega_div ts_is_mega4">
+                                                    <!--<li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-videos_categories menu-item-has-description "><a href="videos_categories/music/index.html"><i class="icon-category"></i>Challange</a><div class="ts_is_mega_div ts_is_mega4">
                                                             <ul class="sub-menu ts_is_mega_submenu ts_is_mega">
                                                                 <li class="ts_is_mega_menu_columns_4"><div class="ts_taxonomy_views">
                                                                         <article class="title-below-image">
@@ -241,8 +241,10 @@
                                                                             </a>
                                                                     </li>
                                                             </ul>
-                                                        </div></li>
+                                                        </div></li>-->
                                                     <!--<li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-videos_categories "><a href="<?php echo site_url() ;?>/content/profilepage"><i class="icon-category"></i>Post</a></li>-->
+													<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url(); ?>/content/listcontest"><i class="icon-blocks"></i>Challenges</a></li>
+													<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url() ?>/content/bloglist"><i class="icon-blocks"></i>Blog</a></li>
                                                     <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url() ;?>/content/profilepage"><i class="icon-blocks"></i>Profile</a></li>
                                                     <li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url(); ?>/content/contactus"><i class="icon-page"></i>Contact Us</a>
                                                     </li>
