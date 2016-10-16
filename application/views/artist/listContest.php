@@ -1,5 +1,3 @@
-<?php print_r(($list);?>
-
 <!-- Titlebar
 ================================================== -->
 <div id="titlebar" class="single margin-top-90">
