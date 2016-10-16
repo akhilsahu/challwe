@@ -24,7 +24,7 @@ class Content extends CI_Controller {
         $this->load->view('artist/page', $data);
     }
 
-    /*function aboutus() {
+   function aboutus() {
         $data['page'] = 'about_us';
         $this->load->view('artist/page', $data);
     }
@@ -311,8 +311,7 @@ class Content extends CI_Controller {
         $data['page_title'] = 'Contest List';
         $data['page'] = 'showContest';
         $this->load->view('artist/page', $data);
-    }*/
-
+    }
 }
 
 ?>

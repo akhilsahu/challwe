@@ -60,7 +60,7 @@
 
                                     <div class="row content-block ">
                                         <div class="col-lg-12 text-left" style="max-width: 120px;">
-                                            <a href="index.html" class="logo">
+                                            <a href="<?php echo site_url(); ?>" class="logo">
                                                 <img src="<?php echo base_url(); ?>assets/images/challwe-logo.png" alt="Slimvideo" style="width: 195px; height: auto;"/>
                                             </a>
                                         </div>
@@ -105,15 +105,16 @@
                                                     <div class="ts-register-button"><a href="#">or <span>register</span></a></div>
                                                     <?php endif; ?>
                                                     <div class="dropdown">
-                                                    <div class="ts-login-button" style="cursor: pointer;"><span data-toggle="dropdown" href="#">User Name</span>
-                                                      <span class="caret"></span>
-                                                      <ul class="dropdown-menu">
-                                                           <li><a href="#"><i class=""></i>profile</a></li>
-                                                          <li><a href="#"><i class=""></i>notification</a></li>
-                                                          <li><a href="#"><i class=""></i>privacy</a></li>
-                                                          <li><a href="#" style="font-weight: bold;"><i class=""></i>Logout</a></li>
-                                                        </ul>
-                                                    </div>
+                                                        <div class="ts-login-button" style="cursor: pointer;"><span data-toggle="dropdown" href="#">User Name</span>
+                                                            <span class="caret"></span>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="#"><i class="icon-user"></i>profile</a></li>
+                                                                <li><a href="#"><i class="icon-firewall"></i>notification</a></li>
+                                                                <li><a href="#"><i class="icon-protected"></i>privacy</a></li>
+                                                                <li><a href="#"><i class="icon-settings"></i>settings</a></li>
+                                                                <li><a href="#" style="font-weight: bold;"><i class="icon-right-arrow"></i>Logout</a></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                     <div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>
                                                 </div>

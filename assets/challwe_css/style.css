@@ -14170,3 +14170,12 @@ yx-axis
     color: #e75750;
     background-color: transparent;
 }
+.dropdown-menu .glyphicon{
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.dropdown-menu i {
+    margin-right: 5px;
+}
