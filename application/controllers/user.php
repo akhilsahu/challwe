@@ -91,6 +91,7 @@ class User extends CI_Controller{
         {		
         	$formdata=$this->input->post();
 			$status_array=$this->user_model->verifyArtist($formdata);
+			print_r($status_array);exit;
 			if(count($status_array)>0)
 			{
 				$status_array['logged_in']="1";	

@@ -1,4 +1,4 @@
-<?php print_r($user);exit; ?>
+<?php print_r($user); ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     <head>
