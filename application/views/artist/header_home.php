@@ -1,4 +1,3 @@
-<?php print_r($user); ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     <head>
@@ -107,7 +106,6 @@
 															<span data-toggle="dropdown" href="#"><?php echo $user['txt_fname'].$user['txt_lname'] ?></span>
 															<span class="caret"></span>
 															<ul class="dropdown-menu">
-																<li><a href="#"><i class=""></i>profile</a></li>
 																<li><a href="<?php echo site_url(); ?>/wallet/mytransections"><i class=""></i>Wallet (<?php echo $user['int_challwe_coins']; ?>)</a></li>
 																<li><a href="<?php echo site_url() ?>/artist/dashboard"><i class=""></i>My Account</a></li>
 																<?php if ($user['login_type'] == 'web') { ?>
