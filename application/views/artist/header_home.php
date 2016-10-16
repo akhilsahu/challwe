@@ -148,11 +148,11 @@
 
                                                                         <p class="login-username">
                                                                             <label for="ts_slimvideo_username_id">Email</label>
-                                                                            <input type="text" name="log" id="txt_email" name="txt_email" class="input" value="" />
+                                                                            <input type="text" id="txt_email" name="txt_email" class="input" value="" />
                                                                         </p>
                                                                         <p class="login-password">
                                                                             <label for="ts_slimvideo_username_pass">Password</label>
-                                                                            <input type="password" name="pwd" id="txt_password" name="txt_password" class="input" value="" />
+                                                                            <input type="password" id="txt_password" name="txt_password" class="input" value="" />
                                                                         </p>
 
                                                                         <!--<p class="login-remember"><label><input name="rememberme" type="checkbox" id="ts_slimvideo_username_remember" value="forever" /> Remember Me</label></p>-->
