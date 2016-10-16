@@ -1,4 +1,3 @@
-<?php print_r($user); ?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     <head>
@@ -107,9 +106,8 @@
 															<span data-toggle="dropdown" href="#"><?php echo $user['txt_fname'].$user['txt_lname'] ?></span>
 															<span class="caret"></span>
 															<ul class="dropdown-menu">
-																<li><a href="#"><i class=""></i>profile</a></li>
-																<li><a href="<?php echo site_url(); ?>/wallet/mytransections"><i class="icon-user"></i>Wallet (<?php echo $user['int_challwe_coins']; ?>)</a></li>
-																<li><a href="<?php echo site_url() ?>/artist/dashboard"><i class="icon-user"></i>My Account</a></li>
+																<li><a href="<?php echo site_url(); ?>/wallet/mytransections"><i class=""></i>Wallet (<?php echo $user['int_challwe_coins']; ?>)</a></li>
+																<li><a href="<?php echo site_url() ?>/artist/dashboard"><i class=""></i>My Account</a></li>
 																<?php if ($user['login_type'] == 'web') { ?>
 																	<li><a href="<?php echo site_url() ?>/user/signoutArt" style="font-weight: bold;"><i class="icon-right-arrow"></i>Logout</a></li>
 																<?php }else{ ?>
@@ -148,11 +146,11 @@
 
                                                                         <p class="login-username">
                                                                             <label for="ts_slimvideo_username_id">Email</label>
-                                                                            <input type="text" name="log" id="txt_email" name="txt_email" class="input" value="" />
+                                                                            <input type="text" id="txt_email" name="txt_email" class="input" value="" />
                                                                         </p>
                                                                         <p class="login-password">
                                                                             <label for="ts_slimvideo_username_pass">Password</label>
-                                                                            <input type="password" name="pwd" id="txt_password" name="txt_password" class="input" value="" />
+                                                                            <input type="password" id="txt_password" name="txt_password" class="input" value="" />
                                                                         </p>
 
                                                                         <!--<p class="login-remember"><label><input name="rememberme" type="checkbox" id="ts_slimvideo_username_remember" value="forever" /> Remember Me</label></p>-->

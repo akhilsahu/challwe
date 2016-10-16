@@ -84,11 +84,12 @@ class User extends CI_Controller{
 
 	function loginSub(){
 		$this->load->model('user_model');
-		$this->load->library('user_agent');		
+		$this->load->library('user_agent');
+		$formdata=$this->input->post();
         $this->form_validation->set_rules('txt_email', 'Email', 'required');
         $this->form_validation->set_rules('txt_password', 'Password', 'required');
         if($this->form_validation->run())
-        {		
+        {
         	$formdata=$this->input->post();
 			$status_array=$this->user_model->verifyArtist($formdata);
 			if(count($status_array)>0)
