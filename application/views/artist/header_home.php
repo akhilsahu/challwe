@@ -25,6 +25,7 @@
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/redfont.css' type='text/css' media='all' />
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/widgets.css' type='text/css' media='all' />
         <link rel='stylesheet'  href='<?php echo base_url(); ?>assets/challwe_css/bootstrap.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='<?php echo base_url(); ?>assets/buddypress/css/buddypress.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/style.css' type='text/css' media='all' />
         <link rel='stylesheet'   href='fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&amp;subset=latin%2Clatin-ext&amp;ver=4.5.4' type='text/css' media='all' />
         <script type='text/javascript' src='<?php echo base_url(); ?>js/jqueryb8ff.js?ver=1.12.4'></script>
@@ -99,8 +100,21 @@
                                                     <a href="#"><i class="icon-user"></i></a>
                                                 </div>
                                                 <div class="user-info">
-                                                    <div class="ts-login-button"><a id="ts-show-login-modal" href="#">Login</a></div>
+                                                    <?php $i = 1; if($i == 0): ?>
+                                                    <div class="ts-login-button 1"><a id="ts-show-login-modal" href="#">Login</a></div>
                                                     <div class="ts-register-button"><a href="#">or <span>register</span></a></div>
+                                                    <?php endif; ?>
+                                                    <div class="dropdown">
+                                                    <div class="ts-login-button" style="cursor: pointer;"><span data-toggle="dropdown" href="#">User Name</span>
+                                                      <span class="caret"></span>
+                                                      <ul class="dropdown-menu">
+                                                          <li><a href="#">profile</a></li>
+                                                          <li><a href="#">notification</a></li>
+                                                          <li><a href="#" style="font-weight: bold;">Logout</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>
                                                 </div>
                                             </div>
 

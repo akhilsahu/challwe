@@ -1,4 +1,3 @@
-<link rel='stylesheet' href='<?php echo base_url(); ?>assets/buddypress/css/buddypress.min.css' type='text/css' media='all' />
 <script type='text/javascript' src='<?php echo base_url(); ?>assets/buddypress/js/password-verify.min.js'></script>
 <script type='text/javascript' src='<?php echo base_url(); ?>assets/buddypress/js/buddypress.min.js'></script>
 <style>
@@ -1232,7 +1231,7 @@
 
                                                         <div id="latest-update">
 
-                                                            Here is a simple status update. Just for testing this! <a href="../../activity/p/7/index.html" rel="nofollow">View</a>
+                                                            Here is a simple status update. Just for testing this! <a href="javascript:void();" rel="nofollow">View</a>
                                                         </div>
 
 
@@ -1852,7 +1851,7 @@
 
                                                         <div class="activity-header">
 
-                                                            <p><a href="index.html" title="John Doe">John Doe</a> posted a new activity comment <a href="../../activity/p/7/index.html#acomment-8" class="view activity-time-since" title="View Discussion"><span class="time-since">1 year, 5 months ago</span></a></p>
+                                                            <p><a href="index.html" title="John Doe">John Doe</a> posted a new activity comment <a href="javascript:void();#acomment-8" class="view activity-time-since" title="View Discussion"><span class="time-since">1 year, 5 months ago</span></a></p>
 
                                                         </div>
 
@@ -1868,7 +1867,7 @@
                                                         <div class="activity-meta">
 
 
-                                                            <a href="../../activity/p/7/index.html#acomment-8" class="button view bp-secondary-action" title="View Conversation">View Conversation</a>
+                                                            <a href="javascript:void();#acomment-8" class="button view bp-secondary-action" title="View Conversation">View Conversation</a>
 
 
 
@@ -1896,7 +1895,7 @@
 
                                                         <div class="activity-header">
 
-                                                            <p><a href="index.html" title="John Doe">John Doe</a> posted an update <a href="../../activity/p/7/index.html" class="view activity-time-since" title="View Discussion"><span class="time-since">1 year, 5 months ago</span></a></p>
+                                                            <p><a href="index.html" title="John Doe">John Doe</a> posted an update <a href="javascript:void();" class="view activity-time-since" title="View Discussion"><span class="time-since">1 year, 5 months ago</span></a></p>
 
                                                         </div>
 
@@ -1929,7 +1928,7 @@
                                                                 </div>
 
                                                                 <div class="acomment-meta">
-                                                                    <a href="index.html">John Doe</a> replied <a href="../../activity/p/7/index.html#acomment-8" class="activity-time-since"><span class="time-since">1 year, 5 months ago</span></a>	</div>
+                                                                    <a href="index.html">John Doe</a> replied <a href="javascript:void();#acomment-8" class="activity-time-since"><span class="time-since">1 year, 5 months ago</span></a>	</div>
 
                                                                 <div class="acomment-content"><p>With a reply here.</p>
                                                                 </div>

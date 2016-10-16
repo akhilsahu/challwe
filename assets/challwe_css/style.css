@@ -14162,3 +14162,11 @@ yx-axis
             .ts-sticky-menu .container .sf-menu li.current-menu-item > a{
                 color: #CD1C22;
             }
+            .dropdown-menu{
+                border-radius:0px;
+            }
+            .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    text-decoration: none;
+    color: #e75750;
+    background-color: transparent;
+}

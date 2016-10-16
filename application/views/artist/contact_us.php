@@ -1,23 +1,23 @@
-asdf
-<!--<div class="ts-breadcrumbs breadcrumbs-single-post container">
+<div class="ts-breadcrumbs breadcrumbs-single-post container">
     <div class="ts-breadcrumbs-content">
-        <a href="../index.html">Home</a> <i class="icon-right"></i> Contact 3</div>
+        <a href="../index.html">Home</a> <i class="icon-right"></i> Contact</div>
 </div>
 <section id="main" class="row"><div id="primary" class=""><div id="content" role="main"><div data-parallax="no" data-scroll-btn="no" data-alignment="top"  class="site-section  ts-expanded-row "  style=" background-color: transparent;  color: inherit;  margin-top: 0px;  margin-bottom: 30px;  padding-top: 0px;  padding-bottom: 0px; " ><div class="row"><div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-12 col-md-12">
                         <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="ts-map-create" id="ts-map-canvas-80908" style="width: 100%%; height: 300px;"
-                                     data-address="San Francisco, CA 94107"
-                                     data-lat="37.7618242"
-                                     data-lng="-122.39858709999999"
-                                     data-type="ROADMAP"
-                                     data-style="map-style-subtle-grayscale"
-                                     data-zoom="11"
-                                     data-type-ctrl="true"
-                                     data-zoom-ctrl="true"
-                                     data-scale-ctrl="false"
-                                     data-scroll="false"
-                                     data-draggable="false"
-                                     data-marker=""></div>
+                                <!--                                <div class="ts-map-create" id="ts-map-canvas-80908" style="width: 100%; height: 300px;"
+                                                                     data-address="San Francisco, CA 94107"
+                                                                     data-lat="37.7618242"
+                                                                     data-lng="-122.39858709999999"
+                                                                     data-type="ROADMAP"
+                                                                     data-style="map-style-subtle-grayscale"
+                                                                     data-zoom="11"
+                                                                     data-type-ctrl="true"
+                                                                     data-zoom-ctrl="true"
+                                                                     data-scale-ctrl="false"
+                                                                     data-scroll="false"
+                                                                     data-draggable="false"
+                                                                     data-marker="">
+                                                                </div>-->
                             </div></div>
                     </div></div></div>
             <div data-parallax="no" data-scroll-btn="no" data-alignment="top"  class="site-section "  style=" background-color: transparent;  color: inherit;  margin-top: 0px;  margin-bottom: 0px;  padding-top: 0px;  padding-bottom: 0px; " ><div class="container"><div class="row"><div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-12 col-md-12">
@@ -25,8 +25,8 @@ asdf
                             <div class="row content-block "><div class="col-lg-12">
                                     <div class="block-title block-title-simplecenter">
                                         <div class="block-title-container">
-                                            <h2 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>Contact</h2><span class="block-title-description" style="color: #CD1C22">page example</span>
-
+                                            <h2 class="the-title" style="color: #3f4549"><i class="icon-noicon"></i>Contact</h2>
+                                            <!--<span class="block-title-description" style="color: #CD1C22">page example</span>-->
                                         </div>
                                     </div>
                                 </div></div><div class="row content-block "><div style="height: 15px;"></div></div><div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12">
@@ -73,4 +73,4 @@ asdf
                         </div>
 
                     </div></div></div></div></div>
-</section>-->
+</section>
