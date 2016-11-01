@@ -34,7 +34,7 @@ class Artist extends CI_Controller{
 		$data['post_list']=$this->post_model->getArtistPost($artist_id);
         //echo "<pre>";print_r($data);die();
 		$data['page_title']='Dashboard';
-        $data['page']='profilepage';
+        $data['page']='myaccount';
         $this->load->view('artist/page',$data);
     }		
 	
