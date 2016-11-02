@@ -8,7 +8,6 @@
                                                                                                                                                                                                         background: -ms-linear-gradient(left, #202737 0%, #190e36 0%,#202737 100%,#190e36 100%);
                                                                                                                                                                                                         background: linear-gradient(to right, #202737 0%, #190e36 0%,#202737 100%,#190e36 100%);
                                                                                                                                                                                                         opacity:0.85"></div><div class="container"><div class="row"><div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-8 col-md-8">
-
                     <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_tweets-2" class="widget ts_widget  tweets"><div class="widget-content"><h6 class="widget-title ts_sidebar_title">Twitter</h6><div class="widget-delimiter"></div><div class="ts-twitter-container dynamic">
                                         <div class="touchsize_twitter">
                                             <div class="slides_container">
@@ -27,7 +26,7 @@
                                                     </li><li class="tweet-entry">
                                                         <div class="tweet-data">
                                                             <i class="icon-twitter"></i>
-                                                            Ștefan Ciorici: <a href="http://twitter.com/davisbrown562">@davisbrown562</a> thanks for the resource!
+                                                            Ștefan Ciorici: <a href="javascript:void();">@davisbrown562</a> thanks for the resource!
                                                         </div>
                                                         <span class="tweet-date date st">112 days ago</span>
                                                     </li><li class="tweet-entry">
@@ -39,26 +38,18 @@
                                                     </li></ul>
                                             </div>
                                         </div>
-
                                     </div></div></aside></div></div>
                 </div>
                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-4 col-md-4">
-
-                    <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_most_viewed-2" class="widget ts_widget  widget_most_viewed"><div class="widget-content">			
-
+                    <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_most_viewed-2" class="widget ts_widget  widget_most_viewed"><div class="widget-content">
                                     <h6 class="widget-title ts_sidebar_title">Top viewed</h6><div class="widget-delimiter"></div></div></aside></div></div>
                 </div>
                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-12 col-md-12">
-
-
                 </div>
                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-3 col-md-3">
-
-                    <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_most_liked-2" class="widget ts_widget  widget_most_liked"><div class="widget-content">			
-
+                    <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_most_liked-2" class="widget ts_widget  widget_most_liked"><div class="widget-content">
                                     <h6 class="widget-title ts_sidebar_title">Top liked videos</h6><div class="widget-delimiter"></div>                <ul class="widget-items row  widget-columns-2 widget-has-image">                    <li class="col-lg-6 col-md-6 col-sm-12">
                                             <article class="row">
-
                                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                                     <a  class="entry-img" href="video/olly-murs-heart-skips-a-beat/index.html"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault16-450x300.jpg" class="attachment-grid size-grid" alt="Olly Murs &#8211; Heart Skips a Beat" /></a>
                                                 </div>
@@ -81,7 +72,6 @@
                                         </li>
                                         <li class="col-lg-6 col-md-6 col-sm-12">
                                             <article class="row">
-
                                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                                     <a  class="entry-img" href="video/wont-look-back/index.html"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x300.png" class="attachment-grid size-grid" alt="Screen Shot 2015-04-14 at 5.08.07 PM" /></a>
                                                 </div>
@@ -104,7 +94,6 @@
                                         </li>
                                         <li class="col-lg-6 col-md-6 col-sm-12">
                                             <article class="row">
-
                                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                                     <a  class="entry-img" href="video/always-something-good/index.html"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/DSC1215513-450x300.jpg" class="attachment-grid size-grid" alt="DSC121551" /></a>
                                                 </div>
@@ -127,7 +116,6 @@
                                         </li>
                                         <li class="col-lg-6 col-md-6 col-sm-12">
                                             <article class="row">
-
                                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                                     <a  class="entry-img" href="video/check-my-valentine/index.html"><img width="450" height="300" src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-6.05.01-PM-450x300.jpg" class="attachment-grid size-grid" alt="Screen-Shot-2015-04-14-at-6.05.01-PM" /></a>
                                                 </div>
@@ -151,52 +139,36 @@
                                     </ul></div></aside></div></div>
                 </div>
                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-5 col-md-5">
-
-                    <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_most_followers-2" class="widget ts_widget  widget_most_followers"><div class="widget-content">			
-
+                    <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_most_followers-2" class="widget ts_widget  widget_most_followers"><div class="widget-content">
                                     <h6 class="widget-title ts_sidebar_title">Most followed</h6><div class="widget-delimiter"></div>            	<ul class="widget-items row  widget-columns-1 widget-has-image">
-
                                         <li class="col-lg-12 col-md-12 col-sm-12">
                                             <article class="">
-
-
                                                 <a class="author-avatar" href="members/karen/index.html">
-                                                    <img src="http://www.gravatar.com/avatar/32056e0ee66df5b209fd9369d202e855?s=150&amp;r=g&amp;d=mm" class="avatar user-178-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />		    					</a>
-
+                                                    <img src="<?php echo base_url(); ?>assets/images/avatar-placeholder.png" class="avatar user-178-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />		    					</a>
                                                 <div class="author-info">
                                                     <div>
                                                         <a class="author-name" href="members/karen/index.html">
                                                             Karen Jenkins        	    					</a>
-
                                                         <span class="author-followers">(2 followers)</span>
                                                     </div>
                                                     <a href="register/index.html">Follow</a>
                                                 </div>
-
                                             </article>
                                         </li>
-
-
                                         <li class="col-lg-12 col-md-12 col-sm-12">
                                             <article class="">
-
-
                                                 <a class="author-avatar" href="members/jessica/index.html">
                                                     <img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/avatars/171/1a3bbeb4471224d1297fdeaefbff2a27-bpfull.jpg" class="avatar user-171-avatar avatar-150 photo" width="150" height="150" alt="Profile Photo" />		    					</a>
-
                                                 <div class="author-info">
                                                     <div>
                                                         <a class="author-name" href="members/jessica/index.html">
                                                             Jessica Beans        	    					</a>
-
                                                         <span class="author-followers">(2 followers)</span>
                                                     </div>
                                                     <a href="register/index.html">Follow</a>
                                                 </div>
-
                                             </article>
                                         </li>
-
                                     </ul>
                                 </div></aside>        <aside id="widget_touchsize_tags-2" class="widget ts_widget  widget_tabber"><div class="widget-content"><h6 class="widget-title ts_sidebar_title">Tags</h6><div class="widget-delimiter"></div>            <!-- panel tags -->
                                     <div class="tab_menu_content tags-container">
@@ -204,16 +176,17 @@
                                 </div></aside></div></div>
                 </div>
                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-4 col-md-4">
-
-                    <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_instagram-2" class="widget ts_widget  instagram_widget"><div class="widget-content"><h6 class="widget-title ts_sidebar_title">Instagram</h6><div class="widget-delimiter"></div>		<ul id='instagram_widget' class='widget-list'><li><div class="relative"><img src='scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14448192_561421684041501_3597052062635917312_neb6d.jpg?ig_cache_key=MTM1MzY3NjQyMjE0OTcwNzY3Ng%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>6</span></p></div></li><li><div class="relative"><img src='scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14504658_179315475809052_5484519554472214528_n4a67.jpg?ig_cache_key=MTM0ODcxODQ4MzkyMDA0MTU5Mg%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>15</span></p></div></li><li><div class="relative"><img src='scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13687226_1235713819781651_2068481060_n0808.jpg?ig_cache_key=MTMyNDAxNDM0NTAyMTk0NzE1Mg%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>9</span></p></div></li><li><div class="relative"><img src='scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13643629_1744443309140552_128850961_na78b.jpg?ig_cache_key=MTMxOTgwNDc1Mjk0MzE5MjE5OA%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>23</span></p></div></li><li><div class="relative"><img src='scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13628005_288399184856475_229899920_nf230.jpg?ig_cache_key=MTMxOTY2NzQ4Njc2OTgzNDU1Nw%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>21</span></p></div></li><li><div class="relative"><img src='scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14027198_192274287855962_2103204175_n993e.jpg?ig_cache_key=MTMxOTU3NzU5MDI1MjMxNzg1NA%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>11</span></p></div></li></ul></div></aside></div></div>
+                    <div class="row content-block ">
+                        <div class="col-lg-12 col-md-12 col-sm-12"><aside id="widget_touchsize_instagram-2" class="widget ts_widget  instagram_widget"><div class="widget-content"><h6 class="widget-title ts_sidebar_title">Instagram</h6><div class="widget-delimiter"></div>		<ul id='instagram_widget' class='widget-list'><li><div class="relative">
+                                                <img src='<?php echo base_url(); ?>assets/instagram/t51.2885-15/s640x640/sh0.08/e35/14448192_561421684041501_3597052062635917312_neb6d.jpg?ig_cache_key=MTM1MzY3NjQyMjE0OTcwNzY3Ng%3D%3D.2' alt=''/>
+                                                <p class='instagram_likes'>Likes: <span class='likes_count'>6</span></p></div></li><li><div class="relative"><img src='<?php echo base_url(); ?>assets/instagram/t51.2885-15/s640x640/sh0.08/e35/14504658_179315475809052_5484519554472214528_n4a67.jpg?ig_cache_key=MTM0ODcxODQ4MzkyMDA0MTU5Mg%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>15</span></p></div></li><li><div class="relative"><img src='<?php echo base_url(); ?>assets/instagram/t51.2885-15/s640x640/sh0.08/e35/13687226_1235713819781651_2068481060_n0808.jpg?ig_cache_key=MTMyNDAxNDM0NTAyMTk0NzE1Mg%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>9</span></p></div></li><li><div class="relative"><img src='<?php echo base_url(); ?>assets/instagram/t51.2885-15/s640x640/sh0.08/e35/13643629_1744443309140552_128850961_na78b.jpg?ig_cache_key=MTMxOTgwNDc1Mjk0MzE5MjE5OA%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>23</span></p></div></li><li><div class="relative"><img src='<?php echo base_url(); ?>assets/instagram/t51.2885-15/s640x640/sh0.08/e35/13628005_288399184856475_229899920_nf230.jpg?ig_cache_key=MTMxOTY2NzQ4Njc2OTgzNDU1Nw%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>21</span></p></div></li><li><div class="relative"><img src='<?php echo base_url(); ?>assets/instagram/t51.2885-15/s640x640/sh0.08/e35/14027198_192274287855962_2103204175_n993e.jpg?ig_cache_key=MTMxOTU3NzU5MDI1MjMxNzg1NA%3D%3D.2' alt=''/><p class='instagram_likes'>Likes: <span class='likes_count'>11</span></p></div></li></ul></div></aside></div></div>
                 </div></div></div></div>
     <div data-parallax="no" data-scroll-btn="no" data-alignment="top"  class="site-section "  style=" background-color: #03052D;  color: #ffffff;  margin-top: 0px;  margin-bottom: 0px;  padding-top: 20px;  padding-bottom: 20px; " ><div class="container"><div class="row"><div style="background-color: transparent;color: inherit;background-position: left;background-attachment: fixed;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-12 col-md-12">
-
                     <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12">
                             Copyright TouchSize. All rights reserved. www.touchsize.com</p>
                         </div></div>
                 </div></div></div></div>		</footer>
-<!--<div class="ts-fb-modal modal fade" id="fbpageModal" tabindex="-1" role="dialog" aria-labelledby="fbpageModalLabel" aria-hidden="true">	
+<!--<div class="ts-fb-modal modal fade" id="fbpageModal" tabindex="-1" role="dialog" aria-labelledby="fbpageModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -242,7 +215,6 @@
         date.setTime(date.getTime() + (m * 60 * 1000));
         jQuery.cookie(content, m, {expires: date, path: '/'});
     }
-
     /* Time calculating in seconds! [example: fb_like_modal(30)] P.S. After 30 seconds, the function will be run */
     function fb_likeus_modal(ShowTime) {
         var modalContainer = jQuery('#fbpageModal');
@@ -250,7 +222,6 @@
         var closeBtn = modalContainer.find('button[data-dismiss="modal"]');
         var cookie = jQuery.cookie('ts_fb_modal_cookie'),
                 setTime = 360;
-
         if (cookie != setTime) {
             modalContainer.delay(timeExe).queue(function () {
                 jQuery(this).hide();
@@ -265,16 +236,12 @@
             ExpireCookie(setTime, 'ts_fb_modal_cookie');
         });
     }
-
     jQuery(window).load(function () {
         fb_likeus_modal(5);
     });
 </script>
-
 <div id="fb-root"></div>
-
 <button id="ts-back-to-top"><i class="icon-up"></i><span>Back to top</span></button>
-
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -287,10 +254,8 @@
         a.src = g;
         m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '../../www.google-analytics.com/analytics.js', 'ga');
-
     ga('create', 'UA-50719144-1', 'touchsize.com');
     ga('send', 'pageview');
-
 </script>
 <script>(function () {
         var _fbq = window._fbq || (window._fbq = []);
@@ -307,9 +272,6 @@
     window._fbq = window._fbq || [];
     window._fbq.push(["track", "PixelInitialized", {}]);
 </script>
-
-
-
 <noscript>
 <div style="display:inline;">
     <img height="1" width="1" style="border-style:none;" alt="" src="#"/>
@@ -417,7 +379,6 @@
     jQuery('.rem-modal .closer').click(function () {
         jQuery('.rem-modal').remove();
     });
-
     // Clicking events
     jQuery('.rem-modal a').click(function () {
         var theItemClicked = jQuery(this).attr('data-item');
@@ -441,7 +402,6 @@
             } catch (e) {
             }
         });
-
         var n = d.getElementsByTagName("script")[0],
                 s = d.createElement("script"),
                 f = function () {
@@ -450,7 +410,6 @@
         s.type = "text/javascript";
         s.async = true;
         s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
         if (w.opera == "[object Opera]") {
             d.addEventListener("DOMContentLoaded", f, false);
         } else {
@@ -475,6 +434,5 @@
 <script type='text/javascript' src='<?php echo base_url(); ?>js/modernizr.custom26550.js?ver=1475716846'></script>
 <script type='text/javascript' src='<?php echo base_url(); ?>js/stream6550.js?ver=1475716846'></script>
 <script type='text/javascript' src='<?php echo base_url(); ?>js/isotope6550.js?ver=1475716846'></script>
-
 </body>
 </html>
