@@ -14179,3 +14179,9 @@ yx-axis
 .dropdown-menu i {
     margin-right: 5px;
 }
+.btn-primary a{
+    color: #fff;
+}
+.table-view{
+    width: 100%;
+}
