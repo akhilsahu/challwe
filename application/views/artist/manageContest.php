@@ -19,12 +19,8 @@
     <div class="sixteen columns">
         <?php if ($user['logged_in']) { ?>
             <div class="btn-block text-right" style="margin-bottom: 20px;">
-                <button class="btn-primary button" type="button" style="padding: 7px 15px;">
-                    <a href="<?php echo site_url(); ?>/artist/myContest">My Challenges</a>
-                </button>
-                <button class="btn-primary button" type="button" style="padding: 7px 15px;">
-                    <a href="<?php echo site_url(); ?>/artist/addContest">Create Challenge</a>
-                </button>
+                <a href="<?php echo site_url(); ?>/artist/myContest" class="btn-primary button btn-challange">My Challenges</a>
+                <a href="<?php echo site_url(); ?>/artist/addContest" class="btn-primary button btn-challange">Create Challenge</a>
             </div>
         <?php } ?>
         <table class="manage-table resumes responsive-table table table-striped">

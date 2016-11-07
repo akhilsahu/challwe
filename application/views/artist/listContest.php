@@ -408,10 +408,14 @@
     <!-- Table -->
     <div class="sixteen columns">
         <?php if ($user['logged_in']) { ?>
-            <span class="pull-right">
-                <a href="<?php echo site_url(); ?>/artist/myContest" class=" button">My Challenges</a>
-                <a href="<?php echo site_url(); ?>/artist/manageContest" class=" button">Manage Contest</a>
-            </span>
+            <div class="btn-block text-right" style="margin-bottom: 20px;">
+                <a href="<?php echo site_url(); ?>/artist/myContest" class="btn-primary button btn-challange">
+                    My Challenges
+                </a>
+                <a href="<?php echo site_url(); ?>/artist/addContest" class="btn-primary button btn-challange">
+                    Create Challenge
+                </a>
+            </div>
         <?php } ?>
 <!-- <a href="<?php echo site_url(); ?>/artist/addContest" class=" button">Create Contest</a> -->
         <table class="manage-table resumes responsive-table table table-striped">
