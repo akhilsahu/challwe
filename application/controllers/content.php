@@ -1,9 +1,6 @@
 <?php
-
 (defined('BASEPATH')) OR exit('No direct script access allowed');
-
 class Content extends CI_Controller {
-
     function __construct() {
         parent::__construct();
         $this->load->library('facebook'); // Automatically picks appId and secret from config
@@ -13,7 +10,6 @@ class Content extends CI_Controller {
         ));
         $_SESSION['fb_login_url'] = $fb_login_url;
     }
-
     function home() {
         $this->load->model('user_model');
         $this->load->model('fields_model');
@@ -23,7 +19,6 @@ class Content extends CI_Controller {
         $data['page'] = 'home_content';
         $this->load->view('artist/page', $data);
     }
-
     function aboutus() {
         $data['page'] = 'about_us';
         $this->load->view('artist/page', $data);
@@ -44,7 +39,6 @@ class Content extends CI_Controller {
         $data['page'] = 'challenge-list';
         $this->load->view('artist/page', $data);
     }
-
     function postvideos($postId) {
         $this->load->model('follow_model');
         $this->load->model('post_model');
@@ -58,7 +52,6 @@ class Content extends CI_Controller {
         $data['page'] = 'video-player';
         $this->load->view('artist/page', $data);
     }
-
     function contest_download($contest_id, $sno) {
         $this->load->model('contest_model');
         $data = $this->contest_model->getContestMedia($contest_id);
@@ -71,11 +64,9 @@ class Content extends CI_Controller {
             header('Content-Length: ' . filesize($dir));
             header('Content-Disposition: attachment; filename="' . basename($dir) . '"');
             header('Content-Transfer-Encoding: binary');
-
             readfile($dir);
         }
     }
-
     function listcontest() {
         $this->load->model('contest_model');
         $this->load->model('fields_model');
@@ -97,13 +88,10 @@ class Content extends CI_Controller {
             $i++;
         }
         $data['list'] = $response_data;
-
-
         $data['page_title'] = 'Contest List';
         $data['page'] = 'listContest';
         $this->load->view('artist/page', $data);
     }
-
     function searchlist() {
         if ($this->input->post('search_directory')) {
             $this->load->model('user_model');
@@ -116,7 +104,6 @@ class Content extends CI_Controller {
             redirect('/content/home/', 'refresh');
         }
     }
-
     function viewProfile($artist_id) {
         $this->load->library('user_agent');
         $this->load->model('fields_model');
@@ -145,7 +132,6 @@ class Content extends CI_Controller {
             redirect($this->agent->referrer());
         }
     }
-
     function viewFollowers($userId) {
         $this->load->library('user_agent');
         $this->load->model('fields_model');
@@ -167,7 +153,6 @@ class Content extends CI_Controller {
             redirect($this->agent->referrer());
         }
     }
-
     function viewPortfolio($userId) {
         $this->load->library('user_agent');
         $this->load->model('fields_model');
@@ -190,7 +175,6 @@ class Content extends CI_Controller {
             redirect($this->agent->referrer());
         }
     }
-
     function showAlbum($userId, $slug) {
         $this->load->library('user_agent');
         $this->load->model('fields_model');
@@ -212,13 +196,11 @@ class Content extends CI_Controller {
             redirect($this->agent->referrer());
         }
     }
-
     function blogList() {
         $data['page_title'] = 'Blog';
         $data['page'] = 'bloglist';
         $this->load->view('artist/page', $data);
     }
-
     function showComment() {
         $this->load->model('contest_model');
         if ($this->input->post('id')) {
@@ -234,7 +216,6 @@ class Content extends CI_Controller {
             echo json_encode($data);
         }
     }
-
     function getPhotoComments() {
         $this->load->model('user_model');
         if ($this->input->post('id')) {
@@ -250,7 +231,6 @@ class Content extends CI_Controller {
             echo json_encode($data);
         }
     }
-
     function getPostComments() {
         $this->load->model('post_model');
         if ($this->input->post('id')) {
@@ -266,7 +246,6 @@ class Content extends CI_Controller {
             echo json_encode($data);
         }
     }
-
     function getPostSubComments() {
         $this->load->model('post_model');
         if ($this->input->post('id') && $this->input->post('commentId')) {
@@ -283,28 +262,23 @@ class Content extends CI_Controller {
             echo json_encode($data);
         }
     }
-
     function showcontest() {
-
         $this->load->model('contest_model');
         $this->load->model('fields_model');
         $user = $this->session->userdata('user');
         $data['list'] = $this->contest_model->showContestDetails($_GET['id']);
         //print_r($data['list']);
         $data['getskill'] = $this->fields_model->allShowActiveDirectorylist($data['list'][0]['int_skill1'], $data['list'][0]['int_skill2'], $data['list'][0]['int_skill3'], $data['list'][0]['int_skill4'], $data['list'][0]['int_skill5']);
-
         $data['userContestStatus'] = $this->contest_model->getUserContestStatus($_GET['id']);
         $data['is_Submitted'] = array();
         if ($user['int_artist_id'])
             $data['is_Submitted'] = $this->contest_model->getUserContestSubmitDetails($user['int_artist_id']);
-
         $data['submission_details'] = $this->contest_model->getContestSubmission($_GET['id']);
         //print_r($data['submission_details']);die();
         $data['page_title'] = 'Contest List';
         $data['page'] = 'showContest';
         $this->load->view('artist/page', $data);
     }
-
     function updateparticipate($id) {
         $this->load->model('contest_model');
         $data['list'] = $this->contest_model->allActiveContestlist();
@@ -312,7 +286,5 @@ class Content extends CI_Controller {
         $data['page'] = 'showContest';
         $this->load->view('artist/page', $data);
     }
-
 }
-
 ?>

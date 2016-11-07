@@ -40,17 +40,14 @@ $user=$this->session->userdata('user');
                     <?php }?>
                     </tbody>
                   </table>
-                  
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
             </div>
-
 <style>
 .datepicker{
   z-index:9999 !important;
 }
 </style>
-          
 <script src="<?php echo base_url();?>plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script>
@@ -73,7 +70,6 @@ $user=$this->session->userdata('user');
               }
           });
       });
-
       $('#example1').DataTable({
           // "paging": true,
           // "lengthChange": false,
@@ -84,7 +80,5 @@ $user=$this->session->userdata('user');
         });
   });
   </script>
-
-
         </section> 
       </div>

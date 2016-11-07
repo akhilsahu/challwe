@@ -1,7 +1,5 @@
 <?php  (defined('BASEPATH')) OR exit('No direct script access allowed');
-
 class Artist extends CI_Controller{
-	
     function __construct()
     {
         parent::__construct();
@@ -12,13 +10,11 @@ class Artist extends CI_Controller{
             die();
         }
     }
-       
     function dashboard(){
         $data['page_title']='Dashboard';
         $data['page']='myaccount';
         $this->load->view('artist/page',$data);
     }		
-	
 	function addContest(){		
 		$this->load->model('contest_model');		
 		$this->load->model('fields_model');		        
@@ -34,9 +30,6 @@ class Artist extends CI_Controller{
 			$this->load->view('artist/page',$data);					
 		}	
 	}		
-	
-	
-
     function accountDetails(){
         $session_arr=$this->session->userdata('user');
         $this->load->model('location_model');
@@ -53,7 +46,6 @@ class Artist extends CI_Controller{
         $data['page']='account_details';
         $this->load->view('artist/page',$data);
     }
-
     function saveBusinessDetails(){
         $session_arr=$this->session->userdata('user');
         $formdata=$this->input->post();
@@ -70,7 +62,6 @@ class Artist extends CI_Controller{
             echo $this->db->insert_id();
         }
     }
-    
     function updateArtistdetails(){
         // echo "<pre>";print_r($this->input->post());print_r($_FILES);die();
         $this->load->model('user_model');
@@ -79,11 +70,9 @@ class Artist extends CI_Controller{
         if($this->form_validation->run())
         {       
             $this->user_model->artistUpdatedetails();
-            
         }
         redirect('/artist/accountDetails/', 'refresh'); 
     }
-
     function porfolioUpload(){
         $sess_array=$this->session->userdata('user');
         $artistId=$sess_array['int_artist_id'];
@@ -95,7 +84,6 @@ class Artist extends CI_Controller{
                 $file_name=$filename.".".$ext[count($ext)-1];
                 $filepath="artist_media/media/".$file_name;
                 move_uploaded_file($_FILES['files']['tmp_name'][0],$filepath);
-                
                 $data=array(
                     'txt_path'=>$filepath,
                     'int_artist_id'=>$artistId,
@@ -105,7 +93,6 @@ class Artist extends CI_Controller{
             }
         }
     }
-
     function removeBusinessDetails(){
         $session_arr=$this->session->userdata('user');
         $id=$this->input->post('id',true);
@@ -116,7 +103,6 @@ class Artist extends CI_Controller{
             echo "failed";
         }
     }
-
     function saveSocialLinks(){
         $session_arr=$this->session->userdata('user');
         $formdata=$this->input->post();
@@ -130,7 +116,6 @@ class Artist extends CI_Controller{
             echo $this->db->insert_id();
         }
     }
-
     function removeSocialLinks(){
         $session_arr=$this->session->userdata('user');
         $id=$this->input->post('id',true);
@@ -141,7 +126,6 @@ class Artist extends CI_Controller{
             echo "failed";
         }
     }
-
     function accountPortfolio(){
         $session_arr=$this->session->userdata('user');
         $this->load->model('user_model');        
@@ -150,7 +134,6 @@ class Artist extends CI_Controller{
         $data['page']='account_portfolio';
         $this->load->view('artist/page',$data);
     }
-
     function accountSocial(){
         $session_arr=$this->session->userdata('user');
         $this->load->model('user_model');        
@@ -159,7 +142,6 @@ class Artist extends CI_Controller{
         $data['page']='account_social';
         $this->load->view('artist/page',$data);
     }
-
     function removeArtistMedia(){
         $session_arr=$this->session->userdata('user');
         $media_id=$this->input->post('id');
@@ -170,7 +152,6 @@ class Artist extends CI_Controller{
             echo "Failed";
         }
     }
-
     function accountStatistics(){
         $session_arr=$this->session->userdata('user');
         $this->load->model('artistview_model');        
@@ -179,9 +160,7 @@ class Artist extends CI_Controller{
         $data['page']='account_statistics';
         $this->load->view('artist/page',$data);
     }
-
 /////////////////////////////////////////////////////Created By Kavita/////////////////////////////////////////
-
     function manageContest(){ 
         $this->load->model('contest_model');
         $this->load->model('fields_model');
@@ -214,12 +193,10 @@ class Artist extends CI_Controller{
             'int_contest_id'=>$id,
             'int_artist_id'=>$artist_id,
             'int_status'=> 1
-
             );
         $this->db->insert('tab_invites',$data);
         echo $invites_id=$this->db->insert_id();
     }
-
     function myContest(){       
         $this->load->model('contest_model');
         $this->load->model('fields_model');
@@ -244,5 +221,4 @@ class Artist extends CI_Controller{
         $data['page']='myContest';      
         $this->load->view('artist/page',$data); 
     }
-
 }

@@ -4,5 +4,3 @@
         </div>
         <strong>Copyright &copy; 2015-2016 <a href="http://thethirdthought.in">The Third Thought</a>.</strong> All rights reserved.
       </footer>
-
-

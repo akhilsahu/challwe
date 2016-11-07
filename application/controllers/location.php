@@ -1,7 +1,5 @@
 <?php
-
 class Location extends CI_Controller {
-
     public function __construct() {
         parent::__construct();
         $this->load->database();
@@ -9,7 +7,6 @@ class Location extends CI_Controller {
         $this->load->model('user_model');
         $this->load->model('location_model');
     }
-
     public function get_states() {
         $formdata = $this->input->post();
         $states = $this->location_model->getStatesByCountry($formdata['cunt_id']);
@@ -32,5 +29,4 @@ class Location extends CI_Controller {
         echo json_encode($result);
         exit();
     }
-
 }

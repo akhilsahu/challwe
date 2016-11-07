@@ -6,7 +6,6 @@
                 <div class="timeline-heading">
                     <img class="img-responsive" src="img/img-6.jpg" alt=""/>
                 </div>
-
                 <div class="timeline-body">
                     <h2><a href="#">Standard image post</a></h2>
                     <ul class="list-inline post-detail">
@@ -16,7 +15,6 @@
                     <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     <a class="btn border-theme" href="#">Read More</a>
                 </div>
-
             </div>
         </li>
         <li class="timeline-inverted">
@@ -33,14 +31,10 @@
                     </ul>
                     <p>Lorem Ipsum is simply dummy text of the printing and type setting industry.printing and type setting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     </p>
-
                     <a class="btn border-theme" href="#">Read More</a>
                 </div>
-
             </div>
         </li>
-        
-        
         <li class="clearfix" style="float: none;"></li>
     </ul>
     </div>

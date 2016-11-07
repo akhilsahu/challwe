@@ -21,7 +21,6 @@
     border-width: 0 1px;
     color: #4b4f56;
 }
-
 .cl-span-6 {
     //background-image: url();
     //background-repeat: no-repeat;
@@ -53,11 +52,9 @@
 						<?php echo $getskill;?>
 					</div>
 					<div class="clearfix"></div>
-
 				</div>
 			</div>
 		</div>
-
 		<div class="six columns">
 			<div class="two-buttons">
 				<?php 
@@ -70,10 +67,8 @@
 				<?php }?>
 			</div>
 		</div>
-
 	</div>
 </div>
-
 <div class="clearfix" id="menu-outer-container">
 	<div class="menu-inner-container clearfix">
 		<a class="cl-a-6 " href="<?php echo site_url()."/content/viewProfile/".$user_details['int_artist_id'];?>">Basic Details<span class="cl-span-6"></span></a>
@@ -83,16 +78,10 @@
 		<a class="cl-a-6" href="#">Challenge Participation History<span class="cl-span-6"></span></a>
 	</div>
 </div>
-
-
 <div class="container">
-
             <div clasjFiler-items jFiler-rows="row">
-
                 <!-- Left Section -->
-
                 <div class="col-sm-9 col-md-9 col-lg-9">				
-					
 					<div class="jFiler-items jFiler-row">
 						<h3>Albums</h3>
                         <ul class="jFiler-items-list jFiler-items-grid">
@@ -135,9 +124,7 @@
                             <?php } ?>
                         </ul>
                     </div>
-					
 					<hr>
-					
                     <div class="jFiler-items jFiler-row">
                         <ul class="jFiler-items-list jFiler-items-grid">
                             <?php foreach($media_details as $val){?>
@@ -168,193 +155,93 @@
                             <?php } ?>
                         </ul>
                         </div>
-
-
-
-
-
                 </div>
-
             </div>
-
         </div>
-
-
 <!-- Footer
 ================================================== -->
 <div class="margin-top-50"></div>
-
-
-
 <!-- Back To Top Button -->
 <div id="backtotop" style="display: none;"><a href="#"></a></div>
-
 </div>
-
 <style>
-
 .sidebar .widget, .widget {
-
     margin-bottom: 35px;
-
 }
-
 #sidebar h3 {
-
     padding-top: 7px;
-
 }
-
 .sidebar-nav li {
-
     padding: 10px;
-
     background-color: #fafafa;
-
     width: 100%;
-
     margin-bottom: 5px;
-
     color: #000;
-
 }
-
 ul, li, ol {
-
     line-height: 24px;
-
     margin: 0;
-
 }
-
 #search-form form, ul.post-meta, .sidebar ul, ul.tabs, .testimonials ul, ul.why, .panel-heading h3, .features .panel-heading h4, #options ul, .gallery ul {
-
     margin: 0;
-
 }
-
 .widget ul {
-
     list-style: none;
-
     padding: 0;
-
 }
-
 ul, li, ol {
-
     line-height: 24px;
-
     margin: 0;
-
 }
-
 .sidebar-nav li a {
-
     color: #000;
-
     width: 100%;
-
 }
-
 nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
-
     background-color: #59ab02;
-
 }
-
 .sidebar-nav li.active {
-
     padding: 10px;
-
     width: 100%;
-
     margin-bottom: 5px;
-
     color: #ffffff !important;
-
 }
-
 h2.title {
-
     font-size: 26px;
-
     line-height: 40px;
-
     margin: 20px 0;
-
     color: #fff;
-
 }
-
 .margin-bottom60 {
-
     margin-bottom: 60px;
-
 }
-
 .margin-top60 {
-
     margin-top: 60px;
-
 }
-
 @media (min-width: 768px)
-
 .container {
-
     width: 750px;
-
 }
-
 .pricing_plan h3, .pricing_plan.special h3, .sidebar-nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
-
     background-color: #59ab02;
-
 }
-
-
-
 .sidebar-nav li.active {
-
     padding: 10px;
-
     width: 100%;
-
     margin-bottom: 5px;
-
     color: #ffffff !important;
-
 }
-
 .pattern-overlay {
-
     background-color: rgba(89, 171, 2, 0.75);
-
 }
-
-
-
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-
     border: 1px solid rgba(89, 171, 2, 0.75);;
-
     background: rgba(89, 171, 2, 0.75);
-
     color: #ffffff;
-
 }
-
 .form-group{
-
       margin-top: 10px;
-
 }
-
-
-
 </style>
 <link href="<?php echo base_url();?>plugins/jQuery.filer/css/jquery.filer.css" type="text/css" rel="stylesheet" />
-
 <link href="<?php echo base_url();?>plugins/jQuery.filer/css/themes/jquery.filer-dragdropbox-theme.css" type="text/css" rel="stylesheet" />
-

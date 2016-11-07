@@ -12,7 +12,6 @@
               <h3 class="box-title">Add Skills</h3>
             </div><!-- /.box-header -->
             <!-- form start -->
-            
                 <div class="row">
                   <div class="form-group">
                     <label class="col-sm-4 control-label" for="inputEmail3">Name</label>
@@ -45,7 +44,6 @@
                   </div>
                 </div>                                                        
               </div><!-- /.box-body -->
-              
             </form>
           </div>
       </div>
@@ -53,8 +51,6 @@
 </div>
 <script>
 $(document).ready(function(){
-
-
   $("#save_contact").click(function(){
     if($("#txt_name").val()=="")
     {

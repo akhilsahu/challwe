@@ -3,10 +3,8 @@
 	     min-height: 400px;
  }
 </style>
-
 <div class="container">
             <div class="cube-masonry">
-
                 <div id="filters-container" class="cbp-l-filters-alignCenter">
                     <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
                         All <div class="cbp-filter-counter"></div>
@@ -24,7 +22,6 @@
                         Web Design & Identity <div class="cbp-filter-counter"></div>
                     </div>
                 </div>
-
                 <div id="masnory-container" class="cbp search-result">
                 <?php foreach($artists as $val){
                 	$profile_path=($val['txt_profile_image'])?base_url().$val['txt_profile_image']:base_url().'assets/img/mas-1.jpg';

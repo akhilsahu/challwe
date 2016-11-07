@@ -1,12 +1,9 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <div id="wrapper">
-
-
 <!-- Header
 ================================================== -->
 <div class="clearfix"></div>
-
 <!-- Titlebar
 ================================================== -->
 <div id="titlebar" class="photo-bg" style="background: url(<?php echo base_url();?>assets/images/job-page-photo.jpg)">
@@ -15,7 +12,6 @@
 			<span><a href="browse-jobs.html">Show Contest</a></span>
 			<h2>Home > Show Contets <span class="full-time">Contst</span></h2>
 		</div>
-
 		<div class="six columns">
 		<?php if($list[0]['int_status'] != 1){ ?>
 			<a href="#"  onclick="javascript:
@@ -26,53 +22,37 @@
 			<a href="#" class="button white"><?php echo "Participated"; ?></a>
 			<?php } ?>
 		</div>
-
 	</div>
 </div>
-
-
 <!-- Content
 ================================================== -->
 <div class="container">
 	<?php 
 		$s_date=date_create($val['dt_start_date']);
 		$c_date=date_create($val['dt_last_date']);
-
 	?>
-	
 	<!-- Recent Jobs -->
 	<div class="eleven columns">
 	<div class="padding-right">
-		
 		<!-- Company Info -->
 		<div class="company-info">
 			<div class="content">
 				<h4><?php echo $list[0]['txt_contest_name']; ?></h4>
-				
 			</div>
 			<div class="clearfix"></div>
 		</div>
-
 		<p class="margin-reset">
 			<div><?php echo $list[0]['txt_contest_description']; ?></div>
 		</p>
-
-		
 	</div>
 	</div>
-
-
 	<!-- Widgets -->
 	<div class="five columns">
-
 		<!-- Sort by -->
 		<div class="widget">
 			<h4>Overview</h4>
-
 			<div class="job-overview">
-				
 				<ul>
-					
 					<li>
 						<i class="fa fa-file-text"></i>
 						<div>
@@ -102,27 +82,16 @@
 						</div>
 					</li>
 				</ul>
-
 			</div>
-
 		</div>
-
 	</div>
 	<!-- Widgets / End -->
-
-
 </div>
-
-
 <!-- Footer
 ================================================== -->
 <div class="margin-top-50"></div>
-
-
-
 <!-- Back To Top Button -->
 <div id="backtotop" style="display: none;"><a href="#"></a></div>
-
 </div>
 <script type="text/javascript">
 	function setparticipate(id,name){

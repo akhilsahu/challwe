@@ -2,7 +2,6 @@
 ================================================== -->
 <div id="titlebar" class="single">
 	<div class="container">
-
 		<div class="sixteen columns">
 			<h2>Active Challenges</h2>
 			<nav id="breadcrumbs">
@@ -13,28 +12,21 @@
 				</ul>
 			</nav>
 		</div>
-
 	</div>
 </div>
-
 <!-- Content
 ================================================== -->
 <div class="container">
-	
 	<!-- Table -->
 	<div class="sixteen columns">
-
 		<?php if($user['logged_in']){?>
 			<span style="float:right;">
 				<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Challenges</a>
-				
 				<a href="<?php echo site_url();?>/artist/manageContest" class=" button">Manage Contest</a>
 			</span>
 		<?php }?>
 		<!-- <a href="<?php echo site_url();?>/artist/addContest" class=" button">Create Contest</a> -->
-
 		<table class="manage-table resumes responsive-table">
-
 			<tr>
 				<th><i class="fa fa-file-text"></i> Title</th>
 				<th><i class="fa fa-calendar"></i> Start Date</th>
@@ -43,13 +35,9 @@
 				<th><i class="fa fa-map-marker"></i> Price</th>
 				<th></th>
 			</tr>
-
 			<!-- Item #1 -->
 			<?php 
-
 			foreach($list as $val){
-
-
 				$s_date=date_create($val['dt_start_date']);
 				$c_date=date_create($val['dt_last_date']);
 				?>
@@ -70,12 +58,10 @@
 				</td>
 			</tr>
 			<?php }?>
-
 		</table>
 	<br>
 	<br>	
 	</div>
-
 </div>
 <script type="text/javascript">
 	function setparticipate(id){

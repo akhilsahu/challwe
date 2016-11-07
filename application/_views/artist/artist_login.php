@@ -3,13 +3,11 @@
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3">
                     <div role="tabpanel" class="login-regiter-tabs">
-
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs text-center" role="tablist">
                             <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Login</a></li>
                             <li role="presentation"><a href="#profile" id="href-register" aria-controls="profile" role="tab" data-toggle="tab">Register</a></li>
                         </ul>
-
                         <!-- Tab panes -->
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="login">
@@ -23,9 +21,7 @@
                                         <input type="password" name="txt_password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                     </div>                                  
                                     <div class="pull-left">
-
                                         <p><a href="#">Forget password?</a></p>
-
                                     </div>
                                     <div class="pull-right">
                                         <button type="submit" class="btn btn-theme-dark">Login</button>
@@ -62,7 +58,6 @@
                                         <label>
                                             <input type="checkbox" required> Accept terms & condition.
                                         </label>
-
                                     </div>
                                     <div class="pull-right">
                                         <button type="submit" class="btn btn-theme-dark btn-lg">Register</button>
@@ -71,7 +66,6 @@
                                 </form>
                             </div><!--register tab end-->
                         </div>
-
                     </div>
                 </div>
             </div>

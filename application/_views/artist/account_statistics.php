@@ -61,7 +61,6 @@ h2.title {
 .pricing_plan h3, .pricing_plan.special h3, .sidebar-nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
     background-color: #59ab02;
 }
-
 .sidebar-nav li.active {
     padding: 10px;
     width: 100%;
@@ -72,7 +71,6 @@ h2.title {
     background-color: rgba(89, 171, 2, 0.75);
 }
 </style>
-
 <section id="main">
     <div class="breadcrumb-wrapper">
         <div class="pattern-overlay">
@@ -138,7 +136,6 @@ foreach($view_details as $val){
 }
 $no_of_views=substr($no_of_views,0,-1);
 ?>
-
 <script>
     $(function () {
     $('#container').highcharts({

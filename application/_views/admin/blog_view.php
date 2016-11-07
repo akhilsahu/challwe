@@ -1,5 +1,4 @@
 <?php 
-
 $fname=($blog['txt_fname'])?$blog['txt_fname']:"Admin";
 $lname=($blog['txt_lname'])?$blog['txt_lname']:"";
 $profile_img=($blog['txt_profile_image'])?$blog['txt_profile_image']:"uploads/no-image.png";
@@ -30,9 +29,7 @@ $date=date_create($blog['dt_created_on']);
               <span class='pull-right text-muted'> <?php echo count($comments)?> comments</span>
             </div><!-- /.box-body -->
             <div class='box-footer box-comments'>
-
             <?php foreach($comments as $val){
-
               $c_fname=($val['txt_fname'])?$val['txt_fname']:"Admin";
               $c_lname=($val['txt_lname'])?$val['txt_lname']:"";
               $c_profile_img=($val['txt_profile_image'])?$val['txt_profile_image']:"uploads/no-image.png";
@@ -50,7 +47,6 @@ $date=date_create($blog['dt_created_on']);
                 </div><!-- /.comment-text -->
               </div><!-- /.box-comment -->
             <?php } ?>  
-
             </div><!-- /.box-footer -->
             <div class="box-footer">
               <!-- <form action="#" method="post"> -->
@@ -68,7 +64,6 @@ $date=date_create($blog['dt_created_on']);
         </div>
     </section>
 </div>
-
 <script>
   $(document).ready(function(){
       $("#btn-comment").click(function(){

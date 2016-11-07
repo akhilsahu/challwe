@@ -1,153 +1,77 @@
 <link href="<?php echo base_url(); ?>plugins/jQuery.filer/css/jquery.filer.css" type="text/css" rel="stylesheet" />
-
 <link href="<?php echo base_url(); ?>plugins/jQuery.filer/css/themes/jquery.filer-dragdropbox-theme.css" type="text/css" rel="stylesheet" />
-
 <script type="text/javascript" src="<?php echo base_url(); ?>plugins/jQuery.filer/js/jquery.filer.min.js?v=1.0.5"></script>
-
 <script type="text/javascript" src="<?php echo base_url(); ?>plugins/jQuery.filer/js/custom.js?v=1.0.5"></script>
-
 <style>
-
     .sidebar .widget, .widget {
-
         margin-bottom: 35px;
-
     }
-
     #sidebar h3 {
-
         padding-top: 7px;
-
     }
-
     .sidebar-nav li {
-
         padding: 10px;
-
         background-color: #fafafa;
-
         width: 100%;
-
         margin-bottom: 5px;
-
         color: #000;
-
     }
-
     ul, li, ol {
-
         line-height: 24px;
-
         margin: 0;
-
     }
-
     #search-form form, ul.post-meta, .sidebar ul, ul.tabs, .testimonials ul, ul.why, .panel-heading h3, .features .panel-heading h4, #options ul, .gallery ul {
-
         margin: 0;
-
     }
-
     .widget ul {
-
         list-style: none;
-
         padding: 0;
-
     }
-
     ul, li, ol {
-
         line-height: 24px;
-
         margin: 0;
-
     }
-
     .sidebar-nav li a {
-
         color: #000;
-
         width: 100%;
-
     }
-
     nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
-
         background-color: #59ab02;
-
     }
-
     .sidebar-nav li.active {
-
         padding: 10px;
-
         width: 100%;
-
         margin-bottom: 5px;
-
         color: #ffffff !important;
-
     }
-
     h2.title {
-
         font-size: 26px;
-
         line-height: 40px;
-
         margin: 20px 0;
-
         color: #fff;
-
     }
-
     .margin-bottom60 {
-
         margin-bottom: 60px;
-
     }
-
     .margin-top60 {
-
         margin-top: 60px;
-
     }
-
     @media (min-width: 768px)
-
     .container {
-
         width: 750px;
-
     }
-
     .pricing_plan h3, .pricing_plan.special h3, .sidebar-nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
-
         background-color: #59ab02;
-
     }
-
-
-
     .sidebar-nav li.active {
-
         padding: 10px;
-
         width: 100%;
-
         margin-bottom: 5px;
-
         color: #ffffff !important;
-
     }
-
     .pattern-overlay {
-
         background-color: rgba(89, 171, 2, 0.75);
-
     }
-
     .submission .user-submission{
         font-size: 16px;
         padding: 15px;
@@ -203,12 +127,9 @@
     }
 </style>
 <div id="wrapper">
-
-
     <!-- Header
     ================================================== -->
     <div class="clearfix"></div>
-
     <!-- Titlebar
     ================================================== -->
     <div id="titlebar" class="photo-bg" style="background: url(<?php echo base_url(); ?>assets/images/job-page-photo.jpg)">
@@ -217,7 +138,6 @@
                 <span><a href="browse-jobs.html">Show Challenge</a></span>
                 <h2><?php echo $list[0]['txt_contest_name']; ?></h2>
             </div>
-
             <div class="six columns">
                 <?php
                 if ($user['int_artist_id']) {
@@ -233,11 +153,8 @@
                    }
                    ?>
             </div>
-
         </div>
     </div>
-
-
     <!-- Content
     ================================================== -->
     <div class="container">
@@ -245,25 +162,19 @@
         $s_date = date_create($val['dt_start_date']);
         $c_date = date_create($val['dt_last_date']);
         ?>
-
         <!-- Recent Jobs -->
         <div class="eleven columns">
             <div class="padding-right">
-
                 <!-- Company Info -->
                 <div class="company-info">
                     <div class="content">
                         <h4><?php echo $list[0]['txt_contest_name']; ?></h4>
-
                     </div>
                     <div class="clearfix"></div>
                 </div>
-
                 <p class="margin-reset">
                 <div><?php echo $list[0]['txt_contest_description']; ?></div>
                 </p>
-
-
             </div>
             <br>
             <h2 style="    border-bottom: 1px solid #e0e0e0;">Attachments</h2>
@@ -303,9 +214,7 @@
                                     </div>                    
                             </li>
 <?php } ?>
-
                     </ul>
-
                 </div>
                 <h3 class="h3 text-capitalize">submission</h3>
                 <?php
@@ -372,24 +281,15 @@
                     </div>
                 </div>
                 <?php } ?>
-
-
-
             </div>
         </div>
-
-
         <!-- Widgets -->
         <div class="five columns">
-
             <!-- Sort by -->
             <div class="widget">
                 <h4>Overview</h4>
-
                 <div class="job-overview">
-
                     <ul>
-
                         <li>
                             <i class="fa fa-file-text"></i>
                             <div>
@@ -419,20 +319,11 @@
                             </div>
                         </li>
                     </ul>
-
                 </div>
-
             </div>
-
         </div>
-
         <!-- Widgets / End -->
-
-
     </div>
-
-
-
     <!--modal-->
     <div id="submit-challenge" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -445,17 +336,13 @@
                 <div class="modal-body">
                     <!-- Login -->
                     <div class="tab-content">
-
                         <!--h3 class="margin-bottom-10 margin-top-10">Login</h3-->
-
                         <form method="post" class="login" action="<?php echo site_url() ?>/artist/submitContest" enctype="multipart/form-data">
-
 							<input type="hidden" name="int_contest_id" id="int_contest_id" value="<?php echo $list[0]['int_contest_id'];?>">
                             <p class="form-row form-row-wide">
                                 <label for="username">Description:</label>
                                 <textarea class="input-text" name="txt_description" id="txt_description" value="" required ></textarea>
                             </p>
-
                             <p class="form-row form-row-wide">
                                 <label for="password">Attachment:</label>
                                 <label class="upload-btn">
@@ -464,11 +351,9 @@
                                 </label>
                                 <span class="fake-input">No file selected</span>
                             </p>
-
                             <p class="form-row">
                                 <input type="submit" class="button" name="login" value="Submit" />
                             </p>
-
                         </form>
                     </div>
                 </div>
@@ -480,17 +365,11 @@
         </div>
     </div>
     <!--end modal-->
-
-
     <!-- Footer
     ================================================== -->
     <div class="margin-top-50"></div>
-
-
-
     <!-- Back To Top Button -->
     <div id="backtotop" style="display: none;"><a href="#"></a></div>
-
 </div>
 <script type="text/javascript">
     function setparticipate(id, name) {
@@ -504,7 +383,6 @@
             }
         });
     }
-	
 	function getComments(id){
 		$("#comment-loader-"+id).show();
 		$.ajax({
@@ -561,9 +439,7 @@
 					}
 				});
 			}
-			
 		});
-		
 		$(".comment-btn").click(function(){
 			var id=this.id.split("-");
 			id=id[2];
@@ -587,5 +463,4 @@
 			});
 		});
 	});
-	
 </script>

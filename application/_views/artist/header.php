@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-
     <!-- Mirrored from vasterad.com/themes/workscout/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Aug 2016 12:48:30 GMT -->
     <head>
         <meta charset="utf-8">
@@ -16,7 +15,6 @@
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-
     </head>
     <style>
         * {
@@ -59,7 +57,6 @@
             width: 100%;
             z-index: 1001;
         } 
-
         .tooltip {
             top:-10px;
             background-color:black;
@@ -640,9 +637,7 @@
             });
         });
     </script>
-
     <body class="">
-
         <div id="fade" class="black_overlay" style="display: none; height:1000px;"></div>
         <div id="preloader" class="white_content" style="display:none;left: 42%;width: 12%;top: 50%;">
             <img src="<?php echo base_url(); ?>uploads/ajax-loader.gif" style="width:100%">
@@ -676,13 +671,11 @@
                         </li>
                     </ul>
                 </div>-->
-
             <!-- Header
             ================================================== -->
             <header>
                 <div class="container">
                     <div class="sixteen columns m-top-20">
-
                         <!-- Logo -->
                         <a id="logo" href="<?php echo base_url(); ?>">
                             <img src="<?php echo base_url(); ?>assets/images/logo-challwe.png" alt="VYSUAL - In Select Theaters December 25">
@@ -701,16 +694,13 @@
                                         </li>
                                     </ul>
                                 </div>-->
-
                         <!--            <h1>
                                          <a href="index-2.html"><img src="images/logo.png" alt="Work Scout" /></a> 
                                         Challwe
                                     </h1>-->
-
                         <!-- Menu -->
                         <nav id="navigation" class="menu">
                             <ul id="responsive" style="margin: 7px 0 0 50px;">
-
                                 <!--                 <li><a href="index-2.html" id="current">Home</a>
                                                     <ul>
                                                         <li><a href="<?php echo site_url(); ?>/content/home">Home</a></li>
@@ -724,8 +714,6 @@
                                 <li><a href="<?php echo site_url() ?>/content/bloglist">Blog</a></li>
                                 <li><a href="#">About Challwe</a></li>
                             </ul>
-
-
                             <ul class="float-right">
                                 <?php if ($user['logged_in']) {
                                     ?>
@@ -742,11 +730,9 @@
                                             <!--User image--> 
                                             <li class="user-header">
                                                 <img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" class="img-circle profile-view" alt="User Image" style="max-width: 125px;display: inline-block;">
-
                                                 <p><?php echo $user['txt_fname'] ?>
                                                     <!--<small style="display: block;">Member since Nov. 2012</small>-->
                                                 </p>
-
                                             </li>
                                             <!--Menu Body--> 
                                             <!--li class="user-body">
@@ -778,20 +764,16 @@
                                             </li>
                                         </ul>
                                     </li>
-
                                 <?php } else { ?>
                                     <li><a href="javascript:void(0);"  data-toggle="modal" data-target="#login-user"><i class="fa fa-lock"></i> Login</a></li>
                                     <li><a href="javascript:void(0);"  data-toggle="modal" data-target="#register-user"><i class="fa fa-lock"></i> Sign Up</a></li>
                                 <?php } ?>
                             </ul>
-
                         </nav>
-
                         <!-- Navigation -->
                         <div id="mobile-navigation">
                             <a href="#menu" class="menu-trigger"><i class="fa fa-reorder"></i> Menu</a>
                         </div>
-
                     </div>
                 </div>
             </header>

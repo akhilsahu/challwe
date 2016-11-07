@@ -91,7 +91,6 @@
 			                      	<label class="col-sm-3 control-label" for="inputEmail3">State</label>
                                     <div class="col-sm-7">
                                         <select name="int_state_id" placeholder="State" class="form-last-name form-control require" id="int_state_id">
-                                            
                                         </select>
                                     </div>
                                 </div>
@@ -101,7 +100,6 @@
 			                      	<label class="col-sm-3 control-label" for="inputEmail3">City</label>
                                     <div class="col-sm-7">
                                         <select type="text" name="int_city_id" class="form-last-name form-control require" id="int_city_id">
-                                            
                                         </select>
                                     </div>
                                 </div>
@@ -293,7 +291,6 @@
         </div>    
      </section>
 </div>
-
 <script>
 var cityoptions='';
 	 $(document).ready(function(){
@@ -325,20 +322,16 @@ var cityoptions='';
 	        readURL(this);
 	    });
 	 });
-	
 	function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-            
             reader.onload = function (e) {
             	$("#span_img_preview").show();
                 $('#img_preview').attr('src', e.target.result);
             }
-            
             reader.readAsDataURL(input.files[0]);
         }
     }
-
 	function getState(country,tagId){
         $.ajax({
             url:"<?php echo site_url()?>/location/get_states",

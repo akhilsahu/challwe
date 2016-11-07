@@ -4,145 +4,75 @@
 <script type="text/javascript" src="<?php echo base_url();?>plugins/jQuery.filer/js/jquery.filer.min.js?v=1.0.5"></script>
 <script type="text/javascript" src="<?php echo base_url();?>plugins/jQuery.filer/js/custom.js?v=1.0.5"></script>
 <style>
-
     .sidebar .widget, .widget {
-
         margin-bottom: 35px;
-
     }
-
     #sidebar h3 {
-
         padding-top: 7px;
-
     }
-
     .sidebar-nav li {
-
         padding: 10px;
-
         background-color: #fafafa;
-
         width: 100%;
-
         margin-bottom: 5px;
-
         color: #000;
-
     }
-
     ul, li, ol {
-
         line-height: 24px;
-
         margin: 0;
-
     }
-
     #search-form form, ul.post-meta, .sidebar ul, ul.tabs, .testimonials ul, ul.why, .panel-heading h3, .features .panel-heading h4, #options ul, .gallery ul {
-
         margin: 0;
-
     }
-
     .widget ul {
-
         list-style: none;
-
         padding: 0;
-
     }
-
     ul, li, ol {
-
         line-height: 24px;
-
         margin: 0;
-
     }
-
     .sidebar-nav li a {
-
         color: #000;
-
         width: 100%;
-
     }
-
     nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
-
         background-color: #59ab02;
-
     }
-
     .sidebar-nav li.active {
-
         padding: 10px;
-
         width: 100%;
-
         margin-bottom: 5px;
-
         color: #ffffff !important;
-
     }
-
     h2.title {
-
         font-size: 26px;
-
         line-height: 40px;
-
         margin: 20px 0;
-
         color: #fff;
-
     }
-
     .margin-bottom60 {
-
         margin-bottom: 60px;
-
     }
-
     .margin-top60 {
-
         margin-top: 60px;
-
     }
-
     @media (min-width: 768px)
-
     .container {
-
         width: 750px;
-
     }
-
     .pricing_plan h3, .pricing_plan.special h3, .sidebar-nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
-
         background-color: #59ab02;
-
     }
-
-
-
     .sidebar-nav li.active {
-
         padding: 10px;
-
         width: 100%;
-
         margin-bottom: 5px;
-
         color: #ffffff !important;
-
     }
     /*
     .pattern-overlay {
-    
         background-color: rgba(89, 171, 2, 0.75);
-    
     }*/
     header{
         background-color: #333; 
@@ -174,10 +104,6 @@
         color: #ccc;
         cursor: pointer;
     }
-	
-	
-	
-	
 	.comment textarea{
         border-radius: 12px;
         resize: none;
@@ -225,10 +151,8 @@
         outline: none;
     }
 </style>
-
 <div id="show-post-modal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">
-
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-body display-full">
@@ -239,7 +163,6 @@
 				<div class="col-sm-11">
 					<input type="hidden" name="hd_media_id" id="hd_media_id">
 					<div id="media-comments">
-						
 					</div>
 					<div class="loader h5 text-center collapse" id="photo-comment-loader" ><span class="fa fa-refresh fa-spin fa-2x fa-fw" style="color: #58ba2b;">&nbsp;</span></div>
 				</div>	
@@ -257,18 +180,13 @@
         </div>		 
     </div>
 </div>
-
 <section id="main" style="margin-top: 90px;">
-
     <!-- Main Content -->
     <div class="content margin-bottom60">
         <div class="blur-bg" style="background: url('<?php echo ($user_details['txt_cover_image'])?base_url().$user_details['txt_cover_image']:base_url()."assets/images/watermarked_cover.png"; ?>') no-repeat center;background-size: cover;">
-
         </div>
         <div class="container">
-
             <!--profile page start-->
-
             <div class="row profile-detail">
                 <div class="col-sm-3" style="width: 30%;">&nbsp;</div>
                 <div class="col-sm-9" style="width: 70%;">
@@ -303,16 +221,12 @@
                                 <span class="label-title">Gender</span><?php echo ($user_details['int_gender']==1)?"Female":"Male";?>                                </div>
                             <div class="right_details_row">
                                 <span class="label-title">Place Of Birth</span><?php echo $user_details['txt_place_of_birth'];?></div>
-
                             <div class="right_details_row">
                                 <span class="label-title">Location</span><?php echo $user_details['country_name'];?>                                </div>
                             <div class="right_details_row">  
                                 <span class="label-title">Phone Number</span><?php echo $user_details['txt_cell_no'];?>                                </div>
-
                             <div class="right_details_row">
                                 <span class="label-title">E-mail</span><?php echo $user_details['txt_email'];?>                               </div>
-
-
                             <div class="right_details_row">
 							<?php 
 								$birthDate = explode("/", date("m/d/Y",strtotime($user_details['dt_dob'])));
@@ -320,7 +234,6 @@
 							?>
                                 <span class="label-title">Age</span><?php echo ($age)? $age." Years Old":"";?>                                </div>
                             <div class="user_bio right_details_row">
-
                                 <div class='label-title'>Skills &nbsp;</div>
 										<?php echo $getskill[0]['skill_name'];?>
                                 <div class="clearfix"></div>
@@ -362,7 +275,6 @@
                                     <li></li>
                                     <li class="pull-right"><button id="add-post" class="button" style="padding: 5px 15px;">Add Post</button></li>
                                 </ul>
-                                
 								<?php 
 								$i=0;
 								foreach($post_list as $val){ $i++;?>
@@ -417,8 +329,6 @@
                                         </div>
 										</a>
                                     </div>
-                                    
-                                    
                                 <?php if($i%2==0){?></div><?php }?>
                                 <?php }?>
                             </div>
@@ -436,7 +346,6 @@
 										$allAlbum_arr[]=$val['int_album_id'];
 										$no_of_photos=$val['no_of_photos'];
 										?>
-
                                     <div class="col-sm-4">
                                         <div class="show-post">
                                             <div class="post-img">
@@ -676,17 +585,11 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     <!-- /Main Content -->
-	
-	
-	
 	<!--modal-->
 <div id="create-album" class="modal fade" role="dialog">
   <div class="modal-dialog" style="width: 65%;">
-
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header btn-success">
@@ -703,7 +606,6 @@
                       <input type="checkbox" style="margin-right: 10px;" class="check-album" name="int_media_id[]" value="<?php echo $val['int_media_id'];?>" />
                       <img style="max-width:170px;max-height:150px;" src="<?php echo base_url().$val['txt_path'];?>" />
                   </li>
-                  
 			  <?php } ?>
               </ul>
           </div>
@@ -714,12 +616,9 @@
       </div>
 	  </form>
     </div>
-
   </div>
 </div>
 <!--end modal-->
-
-
 	<!--modal-->
 <div id="edit-profile" class="modal fade" role="dialog">
   <div class="modal-dialog" style="width: 65%;">
@@ -743,7 +642,6 @@
 					  </div>
 					</div>    
 				</div>
-				
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">Cover Image</label>
@@ -755,7 +653,6 @@
 					  </div>
 					</div>    
 				</div>
-
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">Email</label>
@@ -773,7 +670,6 @@
 					  </div>
 					</div>    
 				</div>
-
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">First Name</label>
@@ -782,7 +678,6 @@
 					  </div>
 					</div>    
 				</div>
-
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">Last Name</label>
@@ -791,7 +686,6 @@
 					  </div>
 					</div>    
 				</div>
-
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">Gender</label>
@@ -804,7 +698,6 @@
 					  </div>
 					</div>    
 				</div>
-				
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">Date oF Birth</label>
@@ -814,7 +707,6 @@
 					  </div>
 					</div>    
 				</div>
-				
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">Place oF Birth</label>
@@ -824,7 +716,6 @@
 					  </div>
 					</div>    
 				</div>
-				
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">Cell No.</label>
@@ -834,7 +725,6 @@
 					  </div>
 					</div>    
 				</div>
-
 				<div class="row">
 					<div class="form-group">
 						<label class="col-sm-3 control-label" for="inputEmail3">Country</label>
@@ -849,8 +739,6 @@
 						</div>
 					</div>
 				</div>
-
-				
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">Biographic Information</label>
@@ -859,7 +747,6 @@
 					  </div>
 					</div>    
 				</div>
-				
 				<div class="row">
 					<div class="form-group">
 					  <label class="col-sm-3 control-label" for="inputEmail3">Skills (Max.5)</label>
@@ -876,7 +763,6 @@
 					  </div>
 					</div>    
 				</div>
-
             </div>
       </div>
       <div class="modal-footer">
@@ -885,15 +771,12 @@
       </div>
 	  </form>
     </div>
-
   </div>
 </div>
 <!--end modal-->
 </section>
-
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <script>
-
 	function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();            
@@ -904,7 +787,6 @@
             reader.readAsDataURL(input.files[0]);
         }
     }
-	
 	function getMediaComments(mediaId){
 		$("#photo-comment-loader").show();
 		$.ajax({
@@ -948,17 +830,13 @@
 			}
 		});
 	}
-	
 	function showImagePreview(mediaId){
 		var img=$("#small-img-"+mediaId).attr("src");
 		$("#album-image-preview").attr("src",img);
 		$("#hd_media_id").val(mediaId);
 		getMediaComments(mediaId);
-		
 	}
-
     $(document).ready(function(){
-		
 		$("#int_directory_id").select2();
         $("#dt_dob").datepicker({
 			changeYear: true,
@@ -971,7 +849,6 @@
 		$("#imgInp").change(function(){
             readURL(this);
         });
-
 		$(".cl-comment-btn").click(function(){
 			id=$("#hd_media_id").val();
 			var comment=$("#txt_media_comment").val();
@@ -987,10 +864,7 @@
 					}
 				});
 			}
-			
 		});
-	
-	
         $(".del_photo_btn").click(function(){
             var id=this.id.split("_");
             $("#fade").show();
@@ -1012,7 +886,6 @@
                 }
             });
         });
-		
 		$(".del_album_btn").click(function(){
             var id=this.id.split("_");
             $("#fade").show();
@@ -1034,7 +907,6 @@
                 }
             });
         });
-	
         $("#add-post").click(function(e){
            e.preventDefault();
             $(this).hide(500);
@@ -1045,8 +917,5 @@
             $(".submit-post").slideUp(1000);
             $("#add-post").show(500);
         });
-        
-        
     });
-
 </script>
