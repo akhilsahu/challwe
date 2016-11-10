@@ -2,85 +2,104 @@
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 <!-- Titlebar
 ================================================== -->
-<div id="titlebar" class="single submit-page margin-top-90">
-    <div class="container">
-        <div class="sixteen columns">
-            <h2><i class="fa fa-plus-circle"></i> Add Challenge</h2>
+<?php if ($user['logged_in']) { ?>
+    <div id="titlebar" class="single submit-page margin-top-90">
+        <div class="container">
+            <div class="sixteen columns">
+                <h2><i class="fa fa-plus-circle"></i> Add Challenge</h2>
+            </div>
         </div>
     </div>
-</div>
-<div class="container">
-
-    <!-- Submit Page -->
-    <div class="sixteen columns">
-        <form method="POST" action="<?php echo site_url() . "/artist/addContest"; ?>" enctype="multipart/form-data">
-            <div class="submit-page" style='margin-bottom: 50px;'>
-                <?php if ($user['logged_in']) { ?>
-                    <span class="pull-right">
-                        <a href="<?php echo site_url(); ?>/artist/myContest" class=" button">My Challenge</a>
-                    </span>
-                <?php } ?>
-                <!-- Title -->
-                <div class="form">
-                    <h5>Title</h5>
-                    <input class="search-field" type="text" name="txt_contest_name" placeholder="" value=""/>
+    <div class="container">
+        <!-- Submit Page -->
+        <div class="sixteen columns">
+            <form method="POST" class="form" action="<?php echo site_url() . "/artist/addContest"; ?>" enctype="multipart/form-data">
+                <div class="submit-page contact-form" style='margin-bottom: 50px;'>
+                    <div class="display-full text-right">
+                        <a href="<?php echo site_url(); ?>/artist/myContest" class="btn-primary button btn-challange">My Challenge</a>
+                    </div>
+                    <!-- Title -->
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <label>Title</label>
+                                    <input class="search-field" type="text" name="txt_contest_name" placeholder="" value=""/>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div class="col-sm-12 form-group">
+                            <label>Description</label>
+                            <textarea class="WYSIWYG" name="txt_description" id="txt_description" cols="35" rows="3" id="summary" spellcheck="true"></textarea>
+                        </div>
+                        <!-- Location -->
+                        <div class="col-sm-12 form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <label>Skills <span>(5 skills max)</span></label>
+                                    <div>
+                                        <select class="" id="int_skills" name="int_skills[]" multiple>
+                                            <option value="">-Select-</option>
+                                            <?php foreach ($skills as $val) { ?>
+                                                <option value="<?php echo $val['int_field_id']; ?>"><?php echo $val['txt_field_name']; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Job Type -->
+                        <div class="col-sm-12 form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <label>Price <span id="span-price"></span></label>
+                                    <div id="slider">
+                                        <input data-role="date" type="text" name="dt_start_date" id="price_range" placeholder="price range">
+                                    </div>
+                                    <input type="hidden" name="txt_budget" id="txt_budget">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <label>Start Date</label>
+                                    <input data-role="date" type="text" name="dt_start_date" id="dt_start_date" placeholder="Start Date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <label>End Date</label>
+                                    <input data-role="date" type="text" name="dt_end_date" id="dt_end_date" placeholder="End Date">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Logo -->
+                        <div class="col-sm-12 form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <label>Attachments <span>(optional)</span></label>
+                                    <div>
+                                        <label class="upload-btn">
+                                            <input type="file" multiple name="image_file[]" id="image_file" />
+                                            <i class="fa fa-upload"></i> Browse
+                                        </label>
+                                        <span class="fake-input">No file selected</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider margin-top-0"></div>
+                        <button type="submit" class="btn-primary button btn-challange" style="border: none;margin-left: 20px;">Create <i class="fa fa-arrow-circle-right"></i></button>
+                    </div>
                 </div>
-
-                <!-- Description -->
-                <div class="form">
-                    <h5>Description</h5>
-                    <textarea class="WYSIWYG" name="txt_description" id="txt_description" cols="35" rows="3" id="summary" spellcheck="true"></textarea>
-                </div>
-
-                <!-- Location -->
-                <div class="form">
-                    <h5>Skills <span>(5 skills max)</span></h5>
-                    <select class="" id="int_skills" name="int_skills[]" multiple>
-                        <option value="">-Select-</option>
-                        <?php foreach ($skills as $val) { ?>
-                            <option value="<?php echo $val['int_field_id']; ?>"><?php echo $val['txt_field_name']; ?></option>	
-                        <?php } ?>
-                    </select>
-                </div>
-
-                <!-- Job Type -->
-                <div class="form">
-                    <h5>Price <span id="span-price"></span></h5>
-                    <div id="slider"></div>
-                    <input type="hidden" name="txt_budget" id="txt_budget">
-                </div> 
-
-                <div class="form">
-                    <h5>Start Date</h5>
-                    <input data-role="date" type="text" name="dt_start_date" id="dt_start_date" placeholder="Start Date">
-                </div>			
-
-                <div class="form">
-                    <h5>End Date</h5>
-                    <input data-role="date" type="text" name="dt_end_date" id="dt_end_date" placeholder="End Date">
-                </div>			
-
-
-                <!-- Logo -->
-                <div class="form">
-                    <h5>Attachments <span>(optional)</span></h5>
-                    <label class="upload-btn">
-                        <input type="file" multiple name="image_file[]" id="image_file" />
-                        <i class="fa fa-upload"></i> Browse
-                    </label>
-                    <span class="fake-input">No file selected</span>
-                </div>
-
-
-                <div class="divider margin-top-0"></div>
-                <button type="submit" class="button big margin-top-5">Create <i class="fa fa-arrow-circle-right"></i></button>
-
-
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-
-</div>
+<?php } ?>
 <!-- WYSIWYG Editor -->
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/ckeditor/ckeditor.js"></script>
 <script>
