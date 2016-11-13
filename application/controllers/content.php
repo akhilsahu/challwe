@@ -14,7 +14,8 @@ class Content extends CI_Controller {
 		
         $this->load->model('user_model');
         $this->load->model('fields_model');
-		$this->user_model->update_vlog($_SERVER['REMOTE_ADDR']);
+		$ip=$_SERVER["HTTP_CLIENT_IP"]!=''?$_SERVER["HTTP_CLIENT_IP"]:($_SERVER["HTTP_X_FORWARDED_FOR"]!=''?$_SERVER["HTTP_X_FORWARDED_FOR"]:$_SERVER["REMOTE_ADDR"]);
+		$this->user_model->update_vlog($ip);
         $data['directory'] = $this->fields_model->allActiveDirectorylist();
 		
         $data['page_title'] = 'Industry Directory';
