@@ -1,3 +1,4 @@
+<?php echo "hello1";exit;?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     <head>
@@ -17,7 +18,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-        <link rel='stylesheet' href='<?php echo "hello1";exit;echo base_url(); ?>assets/challwe_css/admin-bar.min.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/admin-bar.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/dashicons.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/buddypress.min.css' type='text/css' media='screen' />
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/animsition.css' type='text/css' media='all' />
