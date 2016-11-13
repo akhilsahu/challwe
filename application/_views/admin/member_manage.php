@@ -1,6 +1,5 @@
       <div class="content-wrapper">      
          <section class="content">
-            
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
@@ -37,13 +36,10 @@
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
             </div>
-
-          
 <script src="<?php echo base_url();?>plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url();?>plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script>
   $(document).ready(function(){
-      
       $('#example1').DataTable({
           // "paging": true,
           // "lengthChange": false,
@@ -54,7 +50,5 @@
         });
   });
   </script>
-
-
         </section> 
       </div>

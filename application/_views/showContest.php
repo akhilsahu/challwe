@@ -1,11 +1,9 @@
 <!-- Titlebar
 ================================================== -->
 <style>
-
 </style>
 <div id="titlebar" class="single">
 	<div class="container">
-
 		<div class="sixteen columns">
 			<h2>Active Contest</h2>
 			<nav id="breadcrumbs">
@@ -16,26 +14,20 @@
 				</ul>
 			</nav>
 		</div>
-
 	</div>
 </div>
-
 <!-- Content
 ================================================== -->
 <div class="container">
-	
 	<!-- Table -->
 	<div class="sixteen columns">
-
 		<?php if($user['logged_in']){?>
 			<span style="float:right;">
 				<a href="<?php echo site_url();?>/artist/myContest" class=" button">My Contest</a>
 				<a href="<?php echo site_url();?>/artist/addContest" class=" button">Create Contest</a>
 			</span>
 		<?php }?>
-
 		<table class="manage-table resumes responsive-table">
-
 			<tr>
 				<th><i class="fa fa-file-text"></i> Title</th>
 				<th><i class="fa fa-calendar"></i> Start Date</th>
@@ -44,10 +36,8 @@
 				<th><i class="fa fa-map-marker"></i> Price</th>
 				<th></th>
 			</tr>
-
 			<!-- Item #1 -->
 			<?php 
-
 			foreach($list as $val){
 				$getskill = "";
 				if($val['int_skill1']){
@@ -61,7 +51,6 @@
 				}else if($val['int_skill5']){
 					$getskill .= $val['txt_field_name']." ";
 				}
-				
 				$s_date=date_create($val['dt_start_date']);
 				$c_date=date_create($val['dt_last_date']);
 				?>
@@ -74,14 +63,11 @@
 				<td class="action">
 					<a href="#"><i class="fa fa-check-circle-o"></i>Accept</a>
 					<a href="#"><i class="fa fa-check-circle-o"></i>Reject</a>
-					
 				</td>
 			</tr>
 			<?php }?>
-
 		</table>
 	<br>
 	<br>	
 	</div>
-
 </div>

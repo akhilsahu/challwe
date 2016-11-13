@@ -1,5 +1,4 @@
 
- 
 <div class="content-wrapper">
 <div class="row">
     <div class="col-md-12">
@@ -61,8 +60,6 @@
 </script>
 <script>
 $(document).ready(function(){
-
-
   $("#save_contact").click(function(){
     if($("#txt_name").val()=="")
     {

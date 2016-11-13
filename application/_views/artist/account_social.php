@@ -61,7 +61,6 @@ h2.title {
 .pricing_plan h3, .pricing_plan.special h3, .sidebar-nav li.active, .sidebar-nav li:hover, .btn.btn-shopping-cart .fa {
     background-color: #59ab02;
 }
-
 .sidebar-nav li.active {
     padding: 10px;
     width: 100%;
@@ -71,12 +70,10 @@ h2.title {
 .pattern-overlay {
     background-color: rgba(89, 171, 2, 0.75);
 }
-
 .form-group{
       margin-top: 10px;
 }
 </style>
-
 <section id="main">
     <div class="breadcrumb-wrapper">
         <div class="pattern-overlay">
@@ -96,7 +93,6 @@ h2.title {
                 <!-- Left Section -->
                     <div class="col-sm-9 col-md-9 col-lg-9">
                     <div class="title-box">
-                        
                         <div style="float:right;"><input type="button" id="btn_add_business" name="btn_add_business" class="btn" value="Add Social Links" style="background:#59ab02;color:#ffffff;"></div>
                               <table class="table " id="business_table">
                                   <tr>
@@ -112,7 +108,6 @@ h2.title {
                                         </tr>
                                   <?php } ?>                                  
                               </table>
-
                     </div>
                 </div>
                 <!-- /Left Section -->
@@ -149,7 +144,6 @@ h2.title {
     </div>
     <!-- /Main Content -->
 </section>
-
 <div class="modal" id="mymodel">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -183,7 +177,6 @@ h2.title {
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
 <script>
     $(function () {
         $("#btn_add_business").click(function(){

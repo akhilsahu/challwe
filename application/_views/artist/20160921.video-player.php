@@ -128,7 +128,6 @@
                                 </div>
                             </div>
 							<?php }?>
-							
 							<!--div class="layout-row row align-center">
                                 <div class='col-sm-6'>
                                     <video muted autoplay="no" class='display-full'>
@@ -142,7 +141,6 @@
                                     </div>
                                 </div>
                             </div-->
-							
                         </div>
                         <div class='show-more text-center text-capitalize' style='padding: 5px 25px;'><a href='#'>show more</a></div>
                     </div>
@@ -151,4 +149,3 @@
         </div>
     </div>
 </div>
-

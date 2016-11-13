@@ -5,11 +5,8 @@
 ?>
 <?php
 include("header.php");
-
 include("sidebar.php");
-
 include("$page".".php");
-
 include("footer.php");
 ?>
 </body>

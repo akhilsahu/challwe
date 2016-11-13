@@ -2,7 +2,6 @@
 ================================================== -->
 <div id="titlebar" class="single">
 	<div class="container">
-
 		<div class="sixteen columns">
 			<h2Wallet</h2>
 			<nav id="breadcrumbs">
@@ -13,14 +12,11 @@
 				</ul>
 			</nav>
 		</div>
-
 	</div>
 </div>
-
 <!-- Content
 ================================================== -->
 <div class="container">
-	
 	<!-- Table -->
 	<div class="sixteen columns">
 			<span style="float:right;">

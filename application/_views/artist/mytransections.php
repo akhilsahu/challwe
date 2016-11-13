@@ -2,7 +2,6 @@
 ================================================== -->
 <div id="titlebar" class="single">
 	<div class="container">
-
 		<div class="sixteen columns">
 			<h2>My Transactions</h2>
 			<nav id="breadcrumbs">
@@ -13,25 +12,19 @@
 				</ul>
 			</nav>
 		</div>
-
 	</div>
 </div>
-
 <!-- Content
 ================================================== -->
 <div class="container">
-	
 	<!-- Table -->
 	<div class="sixteen columns">
-
 		<?php if($user['logged_in']){?>
 			<span style="float:right;padding-right:5%;">
 				<a href="<?php echo site_url();?>/wallet/addAmount" class=" button">Buy Coins</a>
 			</span>
 		<?php }?>
-
 		<table class="manage-table resumes responsive-table">
-
 			<tr>
 				<th><i class="fa fa-file-text"></i> Transaction Id</th>
 				<th><i class="fa fa-calendar"></i> Amount</th>
@@ -40,7 +33,6 @@
 				<th><i class="fa fa-map-marker"></i> Status</th>
 				<th></th>
 			</tr>
-
 			<?php foreach($list as $val){?>
 				<tr>
 					<td class="alert-name"><?php echo $val['txn_id'];?></td>
@@ -55,11 +47,8 @@
 					</td>
 				</tr>
 			<?php }?>
-
 		</table>
-
 		<br>
 		</div>
 	</div>
-
 </div>

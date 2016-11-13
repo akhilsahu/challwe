@@ -1,12 +1,9 @@
 <?php  (defined('BASEPATH')) OR exit('No direct script access allowed');
-
 class Content extends CI_Controller{
-	
     function __construct()
     {
             parent::__construct();
     }
-
     function home(){
     	$this->load->model('user_model');
         $this->load->model('fields_model');
@@ -22,7 +19,6 @@ class Content extends CI_Controller{
 		$data['page']='listContest';        
 		$this->load->view('artist/page',$data);		
 	}
-
      function searchlist(){
         if($this->input->post('search_directory')){
             $this->load->model('user_model');
@@ -34,9 +30,7 @@ class Content extends CI_Controller{
         }else{
             redirect('/content/home/','refresh');
         }   
-
     }
-
     function viewProfile($artist_id){
         if($artist_id){
             $this->load->model('user_model');
@@ -51,17 +45,12 @@ class Content extends CI_Controller{
             redirect('/content/home/','refresh');
         }
     }
-
     function blogList(){
         $data['page_title']='Blog';
         $data['page']='bloglist';
         $this->load->view('artist/page',$data);
     }
-
-
-
 //////////////////////////////////////////////Created By Me/////////////////////////////////////////////////////
-
 function showcontest(){ 
         $this->load->model('contest_model');
         $data['list']=$this->contest_model->allActiveContestlist();
@@ -69,12 +58,5 @@ function showcontest(){
         $data['page']='showContest';        
         $this->load->view('artist/page',$data);     
     }
-
 }
-
-
-
-
-
-
 ?>

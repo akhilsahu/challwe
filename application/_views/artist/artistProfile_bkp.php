@@ -3,7 +3,6 @@
             <div class="row">
                 <div class="col-md-6 margin20">
                     <h3 class="heading"><?php echo $user_details['txt_fname']." ".$user_details['txt_lname'];?></h3>
-                
                     <p><?php echo $user_details['txt_description']?></p>
                     <p><a href="#" class="btn border-black btn-lg">Follow</a></p>
                 </div>
@@ -30,7 +29,6 @@
                                     <p>Email: <?php echo $user_details['txt_email']?></p>
                                     <p>Cell No.: <?php echo $user_details['txt_cell_no']?></p>
                                     <p>Office Address.: <?php echo $user_details['txt_office_address']." ".$user_details['city_name']." ".$user_details['state_name']." ".$user_details['country_name']?></p>
-
                                 </div>
                             </div>
                         </div>
@@ -85,7 +83,6 @@
 					 <?php } ?>
                 </div>
             </div><!--row of skills collapse and highlights-->
-            
             <h3 class="heading">Business Information</h3>
             <div id="masnory-container" class="cbp">
             <?php 
@@ -109,5 +106,4 @@
                 </div>
                <?php } ?> 
             </div>
-
         </div><!--.container-->

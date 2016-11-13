@@ -46,7 +46,6 @@
                   </div>
                 </div>                                                          
                   </div><!-- /.box-body -->
-          
                 </form>
               </div>
           </div>
@@ -54,8 +53,6 @@
 </div>
 <script>
 $(document).ready(function(){
-
-
   $("#save_contact").click(function(){
     if($("#txt_name").val()=="")
     {

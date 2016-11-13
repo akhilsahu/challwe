@@ -1,12 +1,10 @@
 <?php  (defined('BASEPATH')) OR exit('No direct script access allowed');
-
 class Content extends CI_Controller{
 	public $datas = array();
     function __construct()
     {
             parent::__construct();
     }
-
     function home(){
     	$this->load->model('user_model');
         $this->load->model('fields_model');
@@ -15,7 +13,6 @@ class Content extends CI_Controller{
         $data['page']='home';
         $this->load->view('artist/page',$data);
     }		
-	
 	function listcontest(){	
 		$this->load->model('contest_model');
         $this->load->model('fields_model');
@@ -36,13 +33,10 @@ class Content extends CI_Controller{
                 $i++;   
         }
         $data['list'] = $response_data;
-
-        
 		$data['page_title']='Contest List';        
 		$data['page']='listContest';        
 		$this->load->view('artist/page',$data);		
 	}
-
      function searchlist(){
         if($this->input->post('search_directory')){
             $this->load->model('user_model');
@@ -54,9 +48,7 @@ class Content extends CI_Controller{
         }else{
             redirect('/content/home/','refresh');
         }   
-
     }
-
     function viewProfile($artist_id){
         if($artist_id){
             $this->load->model('user_model');
@@ -71,21 +63,15 @@ class Content extends CI_Controller{
             redirect('/content/home/','refresh');
         }
     }
-
     function blogList(){
         $data['page_title']='Blog';
         $data['page']='bloglist';
         $this->load->view('artist/page',$data);
     }
-
-
-
 //////////////////////////////////////////////Created By Me/////////////////////////////////////////////////////
-
 function viewcontest(){ 
         $this->load->model('contest_model');
         $this->load->model('fields_model');
-
         $data['list']=$this->contest_model->allShowActiveContest($_GET['id']);
         //print_r($data['list']);
         $data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['list'][0]['int_skill1'],$data['list'][0]['int_skill2'],$data['list'][0]['int_skill3'],$data['list'][0]['int_skill4'],$data['list'][0]['int_skill5']);
@@ -105,23 +91,16 @@ function viewcontest(){
                 $i++;   
         }
         $data['participated']= $response_data;
-
-
-        
         $data['page_title']='Contest List';        
         $data['page']='viewContest';        
         $this->load->view('artist/page',$data);     
     }
-
-
     function showcontest(){ 
         $this->load->model('contest_model');
         $this->load->model('fields_model');
-
         $data['list']=$this->contest_model->allShowActiveContest($_GET['id']);
         //print_r($data['list']);
         $data['getskill']=$this->fields_model->allShowActiveDirectorylist($data['list'][0]['int_skill1'],$data['list'][0]['int_skill2'],$data['list'][0]['int_skill3'],$data['list'][0]['int_skill4'],$data['list'][0]['int_skill5']);
-        
         $data['page_title']='Contest List';        
         $data['page']='showContest';        
         $this->load->view('artist/page',$data);     
@@ -133,18 +112,5 @@ function viewcontest(){
         $data['page']='showContest';        
         $this->load->view('artist/page',$data);    
 }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
 ?>

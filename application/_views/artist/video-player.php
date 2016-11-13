@@ -100,12 +100,7 @@
                                 </ul-->
                             </div>
 						<div class="post-comments" id="post-comments">
-						
-                            
-							
 						</div>	
-							
-							
                             <!--div class="row row-small" style="margin-top: 15px;">
                                 <div class="col-sm-1">
                                    <img src="<?php echo ($post_detail['txt_profile_image'])?base_url().$post_detail['txt_profile_image']:base_url().'assets/images/avatar-placeholder.png'; ?>" alt="profile picture" class="img-responsive" /> 
@@ -184,7 +179,6 @@
                                 </div>
                             </div>
 							<?php }?>
-							
 							<!--div class="layout-row row align-center">
                                 <div class='col-sm-6'>
                                     <video muted autoplay="no" class='display-full'>
@@ -198,7 +192,6 @@
                                     </div>
                                 </div>
                             </div-->
-							
                         </div>
                         <div class='show-more text-center text-capitalize' style='padding: 5px 25px;'><a href='#'>show more</a></div>
                     </div>
@@ -207,7 +200,6 @@
         </div>
     </div>
 </div>
-
 <script>
 	function getPostComments(PostId){
 		//$("#photo-comment-loader").show();
@@ -252,7 +244,6 @@
 			}
 		});
 	}
-	
 	function getsubcomments(commentId){
 		PostId=<?php echo $post_detail['int_post_id']?>;
 		$.ajax({
@@ -288,17 +279,13 @@
 				//$("#photo-comment-loader").show();
 			}
 		});
-		
 	}
-
 	$(document).ready(function(){
 		getPostComments(<?php echo $post_detail['int_post_id']?>);
-		
 		$(document).on("click",".cl-child-comment-btn",function(e){
 			id=this.id.split("-");
 			commentid=id[2];	
 			postid=<?php echo $post_detail['int_post_id']?>;
-			
 			var comment=$("#comment-box-"+id[2]).val();
 			if(comment!=''){
 				$.ajax({

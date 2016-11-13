@@ -1,5 +1,4 @@
 <?php  (defined('BASEPATH')) OR exit('No direct script access allowed');
-
 class Wallet extends CI_Controller{
 	public $paypalID;
     function __construct()
@@ -13,7 +12,6 @@ class Wallet extends CI_Controller{
 		$this->load->library('paypal_lib');		
 		$this->paypalID='vsec.shivam-facilitator@gmail.com';
     }
-	
 	function addAmount(){
 		$this->load->model('settings_model');
 		$data['cost_per_coin']=$this->settings_model->getValueByKey('txt_cost_per_coin');
@@ -21,7 +19,6 @@ class Wallet extends CI_Controller{
 		$data['page']='addAmount';
 		$this->load->view('artist/page',$data);
 	}
-	
 	function buy(){
 		$user=$this->session->userdata('user');
 		$this->form_validation->set_rules('txt_no_of_coins', 'No Of COins', 'required');
@@ -37,7 +34,6 @@ class Wallet extends CI_Controller{
 			$notifyURL = site_url().'/paypal/ipn'; //ipn url
 			//get particular product data
 			//$product = $this->product->getRows($id);
-			
 			$price=(integer)$cost_per_coin['txt_meta_value']*(integer)$txt_no_of_coins;
 			//echo $price;die();
 			//$logo = base_url().'assets/images/codexworld-logo.png';			
@@ -51,14 +47,11 @@ class Wallet extends CI_Controller{
 			$this->paypal_lib->add_field('amount',  $price); 
 			$this->paypal_lib->add_field('currency_code',  $txt_currency_type); 		
 			///$this->paypal_lib->image($logo);
-			
 			$this->paypal_lib->paypal_auto_form();
 		}else{
 			redirect('/wallet/addAmount', 'refresh');
 		}
     }
-	
-	
 	function mytransections(){
 		$user=$this->session->userdata('user');
 		$this->load->model('settings_model');
@@ -67,9 +60,5 @@ class Wallet extends CI_Controller{
 		$data['list']=$this->wallet_model->getTransactionsByMember($user['int_artist_id']);
 		$data['page']='mytransections';
 		$this->load->view('artist/page',$data);
-	
 	}
-	
-	
-	
 }

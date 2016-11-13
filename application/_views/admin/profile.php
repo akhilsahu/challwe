@@ -57,14 +57,12 @@ $user=$this->session->userdata('user');
 <script>
 $(document).ready(function(){
   $("#save_profile").click(function(){
-    
     if($("#txt_name").val()=="")
     {
       alert("Please enter name");
       $("#fname").focus();
       return false;
     }
-    
     if($("#txt_password").val()=="")
     {
       alert("Please enter password");

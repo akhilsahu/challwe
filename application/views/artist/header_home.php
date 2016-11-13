@@ -17,7 +17,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&amp;subset=latin" type="text/css" media="all" />
-
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/admin-bar.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/dashicons.min.css' type='text/css' media='all' />
         <link rel='stylesheet' href='<?php echo base_url(); ?>assets/challwe_css/buddypress.min.css' type='text/css' media='screen' />
@@ -42,14 +41,13 @@
         </script>
         <link rel='api.w.org/' href='wp-json/index.html' />
         <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />
-        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
         <meta name="generator" content="WordPress 4.5.4" />
         <link rel='shortlink' href='index.html' />
         <script type="text/javascript">var ajaxurl = 'wp-admin/admin-ajax.html';</script>
         <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
     </head>
     <body class="home-page home page page-id-33 page-template-default admin-bar no-customize-support  slimvideo no-js">
-
         <div id="ts-loading-preload">
             <div class="preloader-center"></div>
         </div>
@@ -57,7 +55,6 @@
             <header id="header" class="row">
                 <div class="col-lg-12">
                     <div data-parallax="no" data-scroll-btn="no" data-alignment="top"  class="site-section  has-row-mask "  style=" background-color: #2f2a3e;  color: #ffffff;  background-image:url('images/header_bg.jpg') ;  background-position: left center;  background-attachment: scroll;  background-repeat: no-repeat;  margin-top: 0px;  margin-bottom: 0px;  padding-top: 50px;  padding-bottom: 50px;  background-size: cover; " ><div class='row-mask' style='background-color:#41395d;opacity:0.7'></div><div class="container"><div class="row"><div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-3 col-md-3">
-
                                     <div class="row content-block ">
                                         <div class="col-lg-12 text-left" style="max-width: 120px;">
                                             <a href="<?php echo site_url(); ?>" class="logo">
@@ -67,7 +64,6 @@
                                     </div>
                                 </div>
                                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-6 col-md-6">
-
                                     <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12">
                                             <div id="searchbox" class="text-left">
                                                 <a href="#" class="search-trigger">
@@ -92,10 +88,9 @@
                                         </div></div>
                                 </div>
                                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;text-align: auto;" class="col-lg-3 col-md-3">
-
                                     <div class="row content-block "><div class="col-lg-12">
-
                                             <div class="ts-user-header-profile align-right">
+<<<<<<< HEAD
 												<?php if ($user['logged_in']) { ?>
                                                 <div class="user-mini-avatar">
                                                     <a href="#"><img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" class="icon_user"></a>
@@ -117,22 +112,40 @@
 																<?php }?>
 															</ul>
 														</div>
+=======
+                                                <?php if ($user['logged_in']) { ?>
+                                                    <div class="user-mini-avatar">
+                                                        <a href="#"><img src="<?php echo ($user['txt_profile_image']) ? base_url() . $user['txt_profile_image'] : base_url() . 'assets/images/avatar-placeholder.png' ?>" class="icon_user"></a>
                                                     </div>
-												</div>
-												<?php }else{?>
-												<div class="user-mini-avatar">
-													<a href="#"><i class="icon-user"></i></a>
-												</div>
-												<div class="user-info">
-                                                    <div class="ts-login-button 1"><a id="ts-show-login-modal" href="#">Login</a></div>
-                                                    <div class="ts-register-button"><a href="#">or <span>register</span></a></div>
-												</div>
+                                                    <div class="user-info">
+                                                        <div class="dropdown">
+                                                            <div class="ts-login-button" style="cursor: pointer;">
+                                                                <span data-toggle="dropdown" href="#"><?php echo $user['txt_fname'] . $user['txt_lname'] ?></span>
+                                                                <span class="caret"></span>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a href="<?php echo site_url(); ?>/wallet/mytransections"><i class=""></i>Wallet (<?php echo $user['int_challwe_coins']; ?>)</a></li>
+                                                                    <li><a href="<?php echo site_url() ?>/artist/dashboard"><i class=""></i>My Account</a></li>
+                                                                    <?php if ($user['login_type'] == 'web') { ?>
+                                                                        <li><a href="<?php echo site_url() ?>/user/signoutArt" style="font-weight: bold;"><i class="icon-right-arrow"></i>Logout</a></li>
+                                                                    <?php } else { ?>
+                                                                        <li><a href="<?php echo site_url() ?>/user/facebooklogout" style="font-weight: bold;"><i class="icon-right-arrow"></i>Logout</a></li>
+                                                                    <?php } ?>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <?php } else { ?>
+                                                    <div class="user-mini-avatar">
+                                                        <a href="#"><i class="icon-user"></i></a>
+                                                    </div>
+                                                    <div class="user-info">
+                                                        <div class="ts-login-button 1"><a id="ts-show-login-modal" href="#">Login</a></div>
+                                                        <div class="ts-register-button"><a href="#">or <span>register</span></a></div>
+>>>>>>> 04fcd95b181a01a5c90577aa00431364fe13ea7b
+                                                    </div>
                                                 <?php } ?>
-                                                   
-                                                    <!--<div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>-->
-                                                
+    <!--<div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>-->
                                             </div>
-
                                             <div class="modal fade ts-user-login-modal" id="ts-login-modal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content text-center">
@@ -143,9 +156,7 @@
                                                         <div class="modal-body" style="display: inline-block;">
                                                             <div class="ts-login">
                                                                 <div class="ts-form-login">
-
                                                                     <form name="loginform" id="loginform" action="<?php echo site_url() ?>/user/loginSub" method="post">
-
                                                                         <p class="login-username">
                                                                             <label for="ts_slimvideo_username_id">Email</label>
                                                                             <input type="text" id="txt_email" name="txt_email" class="input" value="" />
@@ -154,12 +165,10 @@
                                                                             <label for="ts_slimvideo_username_pass">Password</label>
                                                                             <input type="password" id="txt_password" name="txt_password" class="input" value="" />
                                                                         </p>
-
                                                                         <!--<p class="login-remember"><label><input name="rememberme" type="checkbox" id="ts_slimvideo_username_remember" value="forever" /> Remember Me</label></p>-->
                                                                         <p class="login-submit">
                                                                             <input type="submit" name="submit" id="ts_slimvideo_form_submit1" class="button-primary" value="Log In" />
                                                                         </p>
-
                                                                     </form>
                                                                     <div class="ts-login-error"></div>
                                                                 </div>
@@ -174,7 +183,6 @@
                     <div data-parallax="no" data-scroll-btn="no" data-alignment="top"  class="site-section "  style=" background-color: #f7f7f7;  color: #000000;  margin-top: 0px;  margin-bottom: 50px;  padding-top: 5px;  padding-bottom: 5px; " ><div class="container">
                             <div class="row">
                                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;" class="col-lg-9 col-md-9">
-
                                     <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><nav id="nav" class="ts-header-menu ts-mega-menu menu-text-align-left   menu-element-26419150  megaWrapper"><ul id="menu-main-header" class="main-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="<?php echo site_url(); ?>"><i class="icon-home"></i>Homepage</a>
                                                     </li>
                                                     <!--<li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-videos_categories menu-item-has-description "><a href="videos_categories/music/index.html"><i class="icon-category"></i>Challange</a><div class="ts_is_mega_div ts_is_mega4">
@@ -183,7 +191,7 @@
                                                                         <article class="title-below-image">
                                                                             <div class="header">
                                                                                 <div class="image-holder">
-                                                                                    <a href="<?php echo site_url() ;?>/content/videodetail"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-6.05.01-PM-450x250.jpg" alt="Check my Valentine" /></a>
+                                                                                    <a href="<?php echo site_url(); ?>/content/videodetail"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-6.05.01-PM-450x250.jpg" alt="Check my Valentine" /></a>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="section">
@@ -202,7 +210,7 @@
                                                                         <article class="title-below-image">
                                                                             <div class="header">
                                                                                 <div class="image-holder">
-                                                                                    <a href="<?php echo site_url() ;?>/content/videodetail"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#039;t look back" /></a>
+                                                                                    <a href="<?php echo site_url(); ?>/content/videodetail"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#039;t look back" /></a>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="section">
@@ -221,7 +229,7 @@
                                                                         <article class="title-below-image">
                                                                             <div class="header">
                                                                                 <div class="image-holder">
-                                                                                    <a href="<?php echo site_url() ;?>/content/videodetail"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault12-450x250.jpg" alt="Delia - Inimi desenate" /></a>
+                                                                                    <a href="<?php echo site_url(); ?>/content/videodetail"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault12-450x250.jpg" alt="Delia - Inimi desenate" /></a>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="section">
@@ -238,16 +246,16 @@
                                                                     </div>
                                                                     </li>
                                                                     <li class="ts_is_mega_menu_columns_4 more-challange">
-                                                                         <a href="<?php echo site_url() ;?>/content/allchallenges">
+                                                                         <a href="<?php echo site_url(); ?>/content/allchallenges">
                                                                                 <span>View More</span>
                                                                             </a>
                                                                     </li>
                                                             </ul>
                                                         </div></li>-->
-                                                    <!--<li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-videos_categories "><a href="<?php echo site_url() ;?>/content/profilepage"><i class="icon-category"></i>Post</a></li>-->
-													<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url(); ?>/content/listcontest"><i class="icon-blocks"></i>Challenges</a></li>
-													<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url() ?>/content/bloglist"><i class="icon-blocks"></i>Blog</a></li>
-                                                    <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url() ;?>/content/profilepage"><i class="icon-blocks"></i>Profile</a></li>
+                                                    <!--<li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-videos_categories "><a href="<?php echo site_url(); ?>/content/profilepage"><i class="icon-category"></i>Post</a></li>-->
+                                                    <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url(); ?>/content/listcontest"><i class="icon-blocks"></i>Challenges</a></li>
+                                                    <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url() ?>/content/bloglist"><i class="icon-blocks"></i>Blog</a></li>
+                                                    <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url(); ?>/content/profilepage"><i class="icon-blocks"></i>Profile</a></li>
                                                     <li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url(); ?>/content/contactus"><i class="icon-page"></i>Contact Us</a>
                                                     </li>
                                                 </ul></nav>
@@ -258,8 +266,6 @@
                                                     </a>
                                                 </div>
                                                 <div class="mobile_menu  megaWrapper"><ul id="menu-main-header" class="main-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-homemenu-item-has-description "><a href="index.html"><i class="icon-home"></i>Homepage<span class="mega-menu-item-description">choose layout</span></a>
-
-
                                                             <ul class="sub-menu">
                                                                 <li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="homepage-2/index.html">Homepage 2</a></li>
                                                                 <li id="menu-item-482" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="homepage-3/index.html">Homepage 3</a></li>
@@ -270,8 +276,6 @@
                                                             </ul>
                                                         </li>
                                                         <li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-has-description "><a href="#"><i class="icon-puzzle"></i>Browse<span class="mega-menu-item-description">post views</span></a>
-
-
                                                             <ul class="sub-menu">
                                                                 <li id="menu-item-113" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Single video layouts</a>
                                                                     <ul class="sub-menu">
@@ -375,14 +379,10 @@
                                                             </ul>
                                                         </li>
                                                         <li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-videos_categories menu-item-has-description "><a href="javascript:void(0);"><i class="icon-category"></i>Music<span class="mega-menu-item-description"> category</span></a>
-
                                                         </li>
                                                         <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-has-description "><a href="#"><i class="icon-blocks"></i>Elements<span class="mega-menu-item-description">layout builder</span></a>
-
                                                         </li>
                                                         <li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-has-description "><a href="#"><i class="icon-page"></i>Pages<span class="mega-menu-item-description">you can create</span></a>
-
-
                                                             <ul class="sub-menu">
                                                                 <li id="menu-item-423" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contact/index.html">Contact</a></li>
                                                                 <li id="menu-item-422" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="contact-2/index.html">Contact 2</a></li>
@@ -412,6 +412,6 @@
                                         </div></div>
                                 </div></div>
                         </div>
-                    </div>	
+                    </div>
                 </div>
             </header>

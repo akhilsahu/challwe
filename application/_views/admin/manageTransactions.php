@@ -35,7 +35,6 @@
 <script src="<?php echo base_url();?>plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script>
   $(document).ready(function(){			$("#int_user_id").select2();
-      
       $('#example1').DataTable({
           // "paging": true,
           // "lengthChange": false,
@@ -46,7 +45,5 @@
         });
   });
   </script>
-
-
         </section> 
       </div>
