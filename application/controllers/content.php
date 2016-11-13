@@ -19,7 +19,6 @@ class Content extends CI_Controller {
         //$data['page']='home';
 		
         $data['page'] = 'home_content';
-		echo "hello";exit;
         $this->load->view('artist/page', $data);
     }
     function aboutus() {
