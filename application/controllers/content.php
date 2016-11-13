@@ -11,6 +11,7 @@ class Content extends CI_Controller {
         $_SESSION['fb_login_url'] = $fb_login_url;
     }
     function home() {
+		echo "hello";exit;
         $this->load->model('user_model');
         $this->load->model('fields_model');
         $data['directory'] = $this->fields_model->allActiveDirectorylist();
