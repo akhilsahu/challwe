@@ -1,4 +1,3 @@
-<?php echo "sdsad";exit;?>
 <!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     <head>
