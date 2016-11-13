@@ -15,11 +15,12 @@ class Content extends CI_Controller {
         $this->load->model('user_model');
         $this->load->model('fields_model');
         $data['directory'] = $this->fields_model->allActiveDirectorylist();
+		echo "hello";exit;
         $data['page_title'] = 'Industry Directory';
         //$data['page']='home';
 		
         $data['page'] = 'home_content';
-		echo "hello";exit;
+		
         $this->load->view('artist/page', $data);
     }
     function aboutus() {
