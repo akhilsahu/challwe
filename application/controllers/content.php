@@ -11,6 +11,7 @@ class Content extends CI_Controller {
         $_SESSION['fb_login_url'] = $fb_login_url;
     }
     function home() {
+		echo $_SERVER['REMOTE_ADDR'];exit;
 		
         $this->load->model('user_model');
         $this->load->model('fields_model');
