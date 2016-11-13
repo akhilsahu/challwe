@@ -1,13 +1,9 @@
 <?php echo "sdsad";exit;?>
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
     <head>
         <meta charset="UTF-8" />
-        <!-- Viewports for mobile -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--[if IE]>
-                <meta http-equiv="X-UA-Compatible" content="IE=9" />
-        <![endif]-->
         <link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="pingback" href="xmlrpc.php" />
         <title>Welcome to official website Challwe</title>
@@ -31,12 +27,9 @@
         <script type='text/javascript' src='<?php echo base_url(); ?>js/jqueryb8ff.js?ver=1.12.4'></script>
         <script type='text/javascript' src='<?php echo base_url(); ?>js/jquery-migrate.min330a.js?ver=1.4.1'></script>
         <script type='text/javascript'>
-            /* <![CDATA[ */
             var BP_Confirm = {"are_you_sure": "Are you sure?"};
-            /* ]]> */
         </script>
         <script type='text/javascript'>
-            /* <![CDATA[ */
             var BP_DTheme = {"accepted": "Accepted", "close": "Close", "comments": "comments", "leave_group_confirm": "Are you sure you want to leave this group?", "mark_as_fav": "Favorite", "my_favs": "My Favorites", "rejected": "Rejected", "remove_fav": "Remove Favorite", "show_all": "Show all", "show_all_comments": "Show all comments for this thread", "show_x_comments": "Show all %d comments", "unsaved_changes": "Your profile has unsaved changes. If you leave the page, the changes will be lost.", "view": "View"};
             /* ]]> */
         </script>
@@ -145,7 +138,6 @@
 >>>>>>> 04fcd95b181a01a5c90577aa00431364fe13ea7b
                                                     </div>
                                                 <?php } ?>
-    <!--<div class="ts-register-button"><a href="#"><span>3 min ago</span></a></div>-->
                                             </div>
                                             <div class="modal fade ts-user-login-modal" id="ts-login-modal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
@@ -166,7 +158,6 @@
                                                                             <label for="ts_slimvideo_username_pass">Password</label>
                                                                             <input type="password" id="txt_password" name="txt_password" class="input" value="" />
                                                                         </p>
-                                                                        <!--<p class="login-remember"><label><input name="rememberme" type="checkbox" id="ts_slimvideo_username_remember" value="forever" /> Remember Me</label></p>-->
                                                                         <p class="login-submit">
                                                                             <input type="submit" name="submit" id="ts_slimvideo_form_submit1" class="button-primary" value="Log In" />
                                                                         </p>
@@ -186,74 +177,6 @@
                                 <div style="background-color: transparent;color: inherit;background-position: left;background-attachment: scroll;background-repeat: repeat;background-size: auto;padding-top: 0px;padding-right: 20px;padding-left: 20px;padding-bottom: 0px;" class="col-lg-9 col-md-9">
                                     <div class="row content-block "><div class="col-lg-12 col-md-12 col-sm-12"><nav id="nav" class="ts-header-menu ts-mega-menu menu-text-align-left   menu-element-26419150  megaWrapper"><ul id="menu-main-header" class="main-menu"><li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home"><a href="<?php echo site_url(); ?>"><i class="icon-home"></i>Homepage</a>
                                                     </li>
-                                                    <!--<li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-videos_categories menu-item-has-description "><a href="videos_categories/music/index.html"><i class="icon-category"></i>Challange</a><div class="ts_is_mega_div ts_is_mega4">
-                                                            <ul class="sub-menu ts_is_mega_submenu ts_is_mega">
-                                                                <li class="ts_is_mega_menu_columns_4"><div class="ts_taxonomy_views">
-                                                                        <article class="title-below-image">
-                                                                            <div class="header">
-                                                                                <div class="image-holder">
-                                                                                    <a href="<?php echo site_url(); ?>/content/videodetail"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-6.05.01-PM-450x250.jpg" alt="Check my Valentine" /></a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="section">
-                                                                                <div class="entry-title">
-                                                                                    <a href="javascript:void();">
-                                                                                        <h3 class="title">Check my Valentine</h3>
-                                                                                    </a>
-                                                                                </div>
-                                                                                <div class="ts-date">
-                                                                                    1 year ago
-                                                                                </div>
-                                                                            </div>
-                                                                        </article>
-                                                                    </div></li>
-                                                                    <li class="ts_is_mega_menu_columns_4"><div class="ts_taxonomy_views">
-                                                                        <article class="title-below-image">
-                                                                            <div class="header">
-                                                                                <div class="image-holder">
-                                                                                    <a href="<?php echo site_url(); ?>/content/videodetail"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/Screen-Shot-2015-04-14-at-5.08.07-PM-450x250.png" alt="Won&#039;t look back" /></a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="section">
-                                                                                <div class="entry-title">
-                                                                                    <a href="javascript:void();">
-                                                                                        <h3 class="title">Won't look back</h3>
-                                                                                    </a>
-                                                                                </div>
-                                                                                <div class="ts-date">
-                                                                                    1 year ago
-                                                                                </div>
-                                                                            </div>
-                                                                        </article>
-                                                                    </div></li>
-                                                                    <li class="ts_is_mega_menu_columns_4"><div class="ts_taxonomy_views">
-                                                                        <article class="title-below-image">
-                                                                            <div class="header">
-                                                                                <div class="image-holder">
-                                                                                    <a href="<?php echo site_url(); ?>/content/videodetail"><img src="<?php echo base_url(); ?>assets/images/uploads/sites/28/2015/04/maxresdefault12-450x250.jpg" alt="Delia - Inimi desenate" /></a>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="section">
-                                                                                <div class="entry-title">
-                                                                                    <a href="javascript:void();">
-                                                                                        <h3 class="title">Delia - Inimi desenate</h3>
-                                                                                    </a>
-                                                                                </div>
-                                                                                <div class="ts-date">
-                                                                                    1 year ago
-                                                                                </div>
-                                                                            </div>
-                                                                        </article>
-                                                                    </div>
-                                                                    </li>
-                                                                    <li class="ts_is_mega_menu_columns_4 more-challange">
-                                                                         <a href="<?php echo site_url(); ?>/content/allchallenges">
-                                                                                <span>View More</span>
-                                                                            </a>
-                                                                    </li>
-                                                            </ul>
-                                                        </div></li>-->
-                                                    <!--<li id="menu-item-114" class="menu-item menu-item-type-taxonomy menu-item-object-videos_categories "><a href="<?php echo site_url(); ?>/content/profilepage"><i class="icon-category"></i>Post</a></li>-->
                                                     <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url(); ?>/content/listcontest"><i class="icon-blocks"></i>Challenges</a></li>
                                                     <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url() ?>/content/bloglist"><i class="icon-blocks"></i>Blog</a></li>
                                                     <li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="<?php echo site_url(); ?>/content/profilepage"><i class="icon-blocks"></i>Profile</a></li>
@@ -416,3 +339,4 @@
                     </div>
                 </div>
             </header>
+-->
