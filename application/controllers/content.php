@@ -17,9 +17,9 @@ class Content extends CI_Controller {
         $data['directory'] = $this->fields_model->allActiveDirectorylist();
 		
         $data['page_title'] = 'Industry Directory';
-		echo "hello22";exit;
-        $data['page'] = 'home_content';
 		
+        $data['page'] = 'home_content';
+		echo "hello33";exit;
         $this->load->view('artist/page', $data);
     }
     function aboutus() {
