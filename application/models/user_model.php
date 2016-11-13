@@ -45,6 +45,26 @@ class User_model extends CI_Model{
 		return $result[0];
 
 	}
+	
+	function update_vlog($ip)
+	{
+		$sql_find="select * from tab_visitor_log where txt_ip='".trim($ip)."'";
+		$query_find=$this->db->query($sql_find);
+		$result_find=$query_find->result_array();
+		if(count($result_find)>0)
+		{
+			$unique_id=$result_find[0]['int_visitor_id'];
+			$counter=($result_find[0]['int_counter']!=''?$result_find[0]['int_counter']:0)+1;
+			$sql_update="update tab_visitor_log set int_counter='".$counter."',ts_last_visit='".date("Y-m-d H:i:s")."' where int_visitor_id='".$unique_id."'";
+			$query_update=$this->db->query($sql_update);
+		}
+		else
+		{
+			$sql_insert="insert into tab_visitor_log values(DEFAULT,'".trim($ip)."','1','".date("Y-m-d H:i:s")."')";
+			$query_insert=$this->db->query($sql_insert);
+		}
+		return 1;
+	}
 
 	
 
