@@ -752,6 +752,7 @@ class User_model extends CI_Model{
 	
 	function get_dashboard_data($id)
 	{
+		echo "hello";exit;
 		echo $prev_date=date("Y-m-d",strotime("-8 days"));
 		for($i=1;$i<=7;$i++)
 		{
