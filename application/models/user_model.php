@@ -749,6 +749,16 @@ class User_model extends CI_Model{
 		return $query?1:0;
 
 	}
+	
+	function get_dashboard_data($id)
+	{
+		echo $prev_date=date("Y-m-d",strotime("-8 days"));
+		for($i=1;$i<=7;$i++)
+		{
+			echo $act_date=date("Y-m-d", strtotime("".$prev_date." +".$i." days"));
+		}
+		exit;
+	}
 
 
 }
