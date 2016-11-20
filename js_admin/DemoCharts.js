@@ -102,7 +102,7 @@
 		var chart = placeholder.find('.chart');
 		var labelColor = chart.css('color');
 		var legendBack = chart.closest('[class*=style]').css('background-color');
-		var data = [{data: 34, label: '34% visited'}, {data: 66, label: '66% members'}];
+		var data = [{data: 34, label: '34% visited'},{data: 12, label: '12% visited'}, {data: 66, label: '66% members'}];
 		var options = {
 			colors: chart.data('color').split(','),
 			series: {
@@ -150,7 +150,7 @@
 					[1376764696000, 7500], [1379443096000, 6750], [1382035096000, 5500],
 					[1384717096000, 4000], [1387309096000, 3250], [1389987496000, 3000]
 				],
-				last: true
+				last: false
 			},
 			{
 				label: 'Members',
