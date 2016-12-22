@@ -752,12 +752,12 @@ class User_model extends CI_Model{
 	
 	function get_dashboard_data($id)
 	{
-		$prev_date=date("Y-m-d",strtotime("-8 days"));
-		for($i=1;$i<=7;$i++)
-		{
-			echo $act_date=date("Y-m-d", strtotime("".$prev_date." +".$i." days"));
-		}
-		exit;
+		//$prev_date=date("Y-m-d",strtotime("-8 days"));
+		//for($i=1;$i<=7;$i++)
+		//{
+		//	echo $act_date=date("Y-m-d", strtotime("".$prev_date." +".$i." days"));
+		//}
+		//exit;
 	}
 
 

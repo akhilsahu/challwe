@@ -163,7 +163,7 @@ class User extends CI_Controller{
 		if(isset($user['int_user_id']) && $user['int_user_id']!='')
 		{
 			$data["page"]="dashboard";
-			$req_data=$this->user_model->get_dashboard_data($user['int_user_id']);exit;
+			$req_data=$this->user_model->get_dashboard_data($user['int_user_id']);
 			$this->load->view('admin/page',$data);	
 		}
 		else
